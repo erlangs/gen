@@ -1,0 +1,105 @@
+# github.com/bxcodec/faker/v3 v3.5.0
+## explicit
+github.com/bxcodec/faker/v3
+github.com/bxcodec/faker/v3/support/slice
+# github.com/davecgh/go-spew v1.1.1
+## explicit
+github.com/davecgh/go-spew/spew
+# github.com/denisenkom/go-mssqldb v0.9.0
+## explicit
+github.com/denisenkom/go-mssqldb
+github.com/denisenkom/go-mssqldb/internal/cp
+github.com/denisenkom/go-mssqldb/internal/decimal
+github.com/denisenkom/go-mssqldb/internal/querytext
+# github.com/droundy/goopt v0.0.0-20170604162106-0b8effe182da
+## explicit
+github.com/droundy/goopt
+# github.com/go-sql-driver/mysql v1.6.0
+github.com/go-sql-driver/mysql
+# github.com/gobuffalo/logger v1.0.3
+github.com/gobuffalo/logger
+# github.com/gobuffalo/packd v1.0.0
+## explicit
+github.com/gobuffalo/packd
+github.com/gobuffalo/packd/internal/takeon/github.com/markbates/errx
+# github.com/gobuffalo/packr/v2 v2.8.1
+## explicit
+github.com/gobuffalo/packr/v2
+github.com/gobuffalo/packr/v2/file
+github.com/gobuffalo/packr/v2/file/resolver
+github.com/gobuffalo/packr/v2/file/resolver/encoding/hex
+github.com/gobuffalo/packr/v2/jam/parser
+github.com/gobuffalo/packr/v2/plog
+# github.com/gogo/protobuf v1.3.2
+## explicit
+# github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe
+github.com/golang-sql/civil
+# github.com/iancoleman/strcase v0.1.2
+## explicit
+github.com/iancoleman/strcase
+# github.com/jimsmart/schema v0.2.0
+## explicit
+github.com/jimsmart/schema
+# github.com/jinzhu/gorm v1.9.16
+## explicit
+github.com/jinzhu/gorm/dialects/mysql
+# github.com/jinzhu/inflection v1.0.0
+## explicit
+github.com/jinzhu/inflection
+# github.com/karrick/godirwalk v1.16.1
+## explicit
+github.com/karrick/godirwalk
+# github.com/lib/pq v1.10.0
+## explicit
+github.com/lib/pq
+github.com/lib/pq/oid
+github.com/lib/pq/scram
+# github.com/logrusorgru/aurora v2.0.3+incompatible
+## explicit
+github.com/logrusorgru/aurora
+# github.com/markbates/errx v1.1.0
+github.com/markbates/errx
+# github.com/markbates/oncer v1.0.0
+github.com/markbates/oncer
+# github.com/markbates/safe v1.0.1
+github.com/markbates/safe
+# github.com/mattn/go-sqlite3 v2.0.3+incompatible
+## explicit
+github.com/mattn/go-sqlite3
+# github.com/ompluscator/dynamic-struct v1.3.0
+## explicit
+github.com/ompluscator/dynamic-struct
+# github.com/rogpeppe/go-internal v1.6.2
+## explicit
+# github.com/serenize/snaker v0.0.0-20171204205717-a683aaf2d516
+## explicit
+github.com/serenize/snaker
+# github.com/sirupsen/logrus v1.7.0
+## explicit
+github.com/sirupsen/logrus
+# golang.org/x/crypto v0.0.0-20201012173705-84dcc777aaee
+## explicit
+golang.org/x/crypto/md4
+golang.org/x/crypto/ssh/terminal
+# golang.org/x/mod v0.3.0
+golang.org/x/mod/module
+golang.org/x/mod/semver
+# golang.org/x/sys v0.0.0-20210112080510-489259a85091
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# golang.org/x/tools v0.0.0-20210106214847-113979e3529a
+## explicit
+golang.org/x/tools/go/ast/astutil
+golang.org/x/tools/imports
+golang.org/x/tools/internal/event
+golang.org/x/tools/internal/event/core
+golang.org/x/tools/internal/event/keys
+golang.org/x/tools/internal/event/label
+golang.org/x/tools/internal/fastwalk
+golang.org/x/tools/internal/gocommand
+golang.org/x/tools/internal/gopathwalk
+golang.org/x/tools/internal/imports
+# golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
+golang.org/x/xerrors
+golang.org/x/xerrors/internal

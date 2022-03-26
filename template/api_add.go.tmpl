@@ -21,7 +21,7 @@ func Add{{.StructName}}(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 	}
 
 
-   if err := {{.StructName | toLower}}.BeforeSave(); err != nil {
+   if err := {{.StructName | toLower}}.BeforeSave(dao.DB); err != nil {
       returnError(ctx, w, r, {{.daoPackageName}}.ErrBadParams)
    }
 

@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"time"
 	"unsafe"
-	_ "github.com/satori/go.uuid"
+	//_ "github.com/satori/go.uuid"
 
 	"{{.daoFQPN}}"
 	"{{.modelFQPN}}"
@@ -271,7 +271,9 @@ func parseUUID(ps httprouter.Params, key string) (string, error) {
 
 func parseBytes(ps httprouter.Params, key string) (string, error) {
 	idStr := ps.ByName(key)
-	return hex.DecodeString(idStr)
+	decByte, _ := hex.DecodeString(idStr)
+	return string(decByte), nil
+	//return hex.DecodeString(idStr)
 }
 
 

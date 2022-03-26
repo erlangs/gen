@@ -149,7 +149,7 @@ func AddInvoices(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	}
 
 
-   if err := invoices.BeforeSave(); err != nil {
+   if err := invoices.BeforeSave(dao.DB); err != nil {
       returnError(ctx, w, r, dao.ErrBadParams)
    }
 
@@ -219,7 +219,7 @@ func UpdateInvoices(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 		return
 	}
 
-   if err := invoices.BeforeSave(); err != nil {
+   if err := invoices.BeforeSave(dao.DB); err != nil {
       returnError(ctx, w, r, dao.ErrBadParams)
    }
 
