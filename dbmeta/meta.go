@@ -497,7 +497,9 @@ func createGormAnnotation(c ColumnMeta) string {
 
 	if c.DatabaseTypeName() != "" {
 		buf.WriteString("type:")
-		buf.WriteString(c.DatabaseTypeName())
+		buf.WriteString(c.DatabaseTypePretty())
+		// By Kerry
+		//buf.WriteString(c.DatabaseTypeName())
 		buf.WriteString(";")
 
 		if c.ColumnLength() > 0 {

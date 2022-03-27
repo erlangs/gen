@@ -119,7 +119,7 @@ func GetFailedJobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /failedjobs [post]
-// echo '{"id": 79,"uuid": "YkOoNlYoHRRTcCBlbabRsctkg","connection": "nLIapBHHCwAQMaktiWenpaBEj","queue": "ZWAifoyRFBCJHgStgyFglOVVi","payload": "CWMEmEoudhkpZQSLOBDtnZpaR","exception": "dkdBtCVgTYXugBCYJmEUCZrOW","failed_at": "2043-03-31T22:41:09.788694911+08:00"}' | http POST "http://localhost:8080/failedjobs" X-Api-User:user123
+// echo '{"id": 74,"uuid": "JJKeLQwNgkurAmQFJJZvbAPre","connection": "CkWADjSJiDkXcJJtmOrfDsuqR","queue": "ruyeOVAHkinILmoVJZqloMktD","payload": "uwOGTNkJSwFVnLRyJjpCbBnNw","exception": "JGUjdFicOwEsahXYvVZxRrXxJ","failed_at": "2211-09-04T11:11:03.849266181+08:00"}' | http POST "http://localhost:8080/failedjobs" X-Api-User:user123
 func AddFailedJobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	failedjobs := &model.FailedJobs{}
@@ -167,7 +167,7 @@ func AddFailedJobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /failedjobs/{argID} [put]
-// echo '{"id": 79,"uuid": "YkOoNlYoHRRTcCBlbabRsctkg","connection": "nLIapBHHCwAQMaktiWenpaBEj","queue": "ZWAifoyRFBCJHgStgyFglOVVi","payload": "CWMEmEoudhkpZQSLOBDtnZpaR","exception": "dkdBtCVgTYXugBCYJmEUCZrOW","failed_at": "2043-03-31T22:41:09.788694911+08:00"}' | http PUT "http://localhost:8080/failedjobs/1"  X-Api-User:user123
+// echo '{"id": 74,"uuid": "JJKeLQwNgkurAmQFJJZvbAPre","connection": "CkWADjSJiDkXcJJtmOrfDsuqR","queue": "ruyeOVAHkinILmoVJZqloMktD","payload": "uwOGTNkJSwFVnLRyJjpCbBnNw","exception": "JGUjdFicOwEsahXYvVZxRrXxJ","failed_at": "2211-09-04T11:11:03.849266181+08:00"}' | http PUT "http://localhost:8080/failedjobs/1"  X-Api-User:user123
 func UpdateFailedJobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -1,7 +1,7 @@
 package model
 
 import (
-	//"database/sql"
+	"database/sql"
 	"time"
 
 	//"github.com/satori/go.uuid"
@@ -28,7 +28,7 @@ CREATE TABLE `failed_jobs` (
 
 JSON Sample
 -------------------------------------
-{    "id": 79,    "uuid": "YkOoNlYoHRRTcCBlbabRsctkg",    "connection": "nLIapBHHCwAQMaktiWenpaBEj",    "queue": "ZWAifoyRFBCJHgStgyFglOVVi",    "payload": "CWMEmEoudhkpZQSLOBDtnZpaR",    "exception": "dkdBtCVgTYXugBCYJmEUCZrOW",    "failed_at": "2043-03-31T22:41:09.788694911+08:00"}
+{    "id": 74,    "uuid": "JJKeLQwNgkurAmQFJJZvbAPre",    "connection": "CkWADjSJiDkXcJJtmOrfDsuqR",    "queue": "ruyeOVAHkinILmoVJZqloMktD",    "payload": "uwOGTNkJSwFVnLRyJjpCbBnNw",    "exception": "JGUjdFicOwEsahXYvVZxRrXxJ",    "failed_at": "2211-09-04T11:11:03.849266181+08:00"}
 
 
 Comments
@@ -44,15 +44,15 @@ type FailedJobs struct {
 	//[ 0] id                                             ubigint              null: false  primary: true   isArray: false  auto: true   col: ubigint         len: -1      default: []
 	ID uint64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:ubigint;" json:"id"`
 	//[ 1] uuid                                           varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	UUID string `gorm:"column:uuid;type:varchar;size:255;" json:"uuid"`
+	UUID string `gorm:"column:uuid;type:varchar(255);size:255;" json:"uuid"`
 	//[ 2] connection                                     text(65535)          null: false  primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Connection string `gorm:"column:connection;type:text;size:65535;" json:"connection"`
+	Connection string `gorm:"column:connection;type:text(65535);size:65535;" json:"connection"`
 	//[ 3] queue                                          text(65535)          null: false  primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Queue string `gorm:"column:queue;type:text;size:65535;" json:"queue"`
+	Queue string `gorm:"column:queue;type:text(65535);size:65535;" json:"queue"`
 	//[ 4] payload                                        text(4294967295)     null: false  primary: false  isArray: false  auto: false  col: text            len: 4294967295 default: []
-	Payload string `gorm:"column:payload;type:text;size:4294967295;" json:"payload"`
+	Payload string `gorm:"column:payload;type:text(4294967295);size:4294967295;" json:"payload"`
 	//[ 5] exception                                      text(4294967295)     null: false  primary: false  isArray: false  auto: false  col: text            len: 4294967295 default: []
-	Exception string `gorm:"column:exception;type:text;size:4294967295;" json:"exception"`
+	Exception string `gorm:"column:exception;type:text(4294967295);size:4294967295;" json:"exception"`
 	//[ 6] failed_at                                      timestamp            null: false  primary: false  isArray: false  auto: false  col: timestamp       len: -1      default: [CURRENT_TIMESTAMP]
 	FailedAt time.Time `gorm:"column:failed_at;type:timestamp;default:CURRENT_TIMESTAMP;" json:"failed_at"`
 }

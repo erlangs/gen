@@ -31,7 +31,7 @@ CREATE TABLE `personal_access_tokens` (
 
 JSON Sample
 -------------------------------------
-{    "id": 82,    "tokenable_type": "vojeVVsEQIEZPnloftaQfTgTe",    "tokenable_id": 17,    "name": "yOgXdAPBKFKikrxWWMwLyLxWn",    "token": "LgYDcSNxKNbUcDwPDZKKuYKvT",    "abilities": "fkbLiTZLsMtROidRBMUdLtUeS",    "last_used_at": "2083-03-29T10:10:38.995664146+08:00",    "created_at": "2190-10-19T22:11:42.821769738+08:00",    "updated_at": "2151-12-29T17:17:59.98736585+08:00"}
+{    "id": 36,    "tokenable_type": "AvFFhdtNlgVXHUlJmWATWlvOT",    "tokenable_id": 65,    "name": "NMfYDkvIVSavnoURebtdGSsHF",    "token": "cCtSEkDcTSGhMdROITkftYHkr",    "abilities": "amMTbHHFuXjLvUrTtWjWwElPJ",    "last_used_at": "2254-01-23T05:25:01.863239856+08:00",    "created_at": "2205-02-22T16:39:54.987785369+08:00",    "updated_at": "2180-08-07T06:48:30.992701866+08:00"}
 
 
 Comments
@@ -48,15 +48,15 @@ type PersonalAccessTokens struct {
 	//[ 0] id                                             ubigint              null: false  primary: true   isArray: false  auto: true   col: ubigint         len: -1      default: []
 	ID uint64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:ubigint;" json:"id"`
 	//[ 1] tokenable_type                                 varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	TokenableType string `gorm:"column:tokenable_type;type:varchar;size:255;" json:"tokenable_type"`
+	TokenableType string `gorm:"column:tokenable_type;type:varchar(255);size:255;" json:"tokenable_type"`
 	//[ 2] tokenable_id                                   ubigint              null: false  primary: false  isArray: false  auto: false  col: ubigint         len: -1      default: []
 	TokenableID uint64 `gorm:"column:tokenable_id;type:ubigint;" json:"tokenable_id"`
 	//[ 3] name                                           varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Name string `gorm:"column:name;type:varchar;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:varchar(255);size:255;" json:"name"`
 	//[ 4] token                                          varchar(64)          null: false  primary: false  isArray: false  auto: false  col: varchar         len: 64      default: []
-	Token string `gorm:"column:token;type:varchar;size:64;" json:"token"`
+	Token string `gorm:"column:token;type:varchar(64);size:64;" json:"token"`
 	//[ 5] abilities                                      text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Abilities sql.NullString `gorm:"column:abilities;type:text;size:65535;" json:"abilities"`
+	Abilities sql.NullString `gorm:"column:abilities;type:text(65535);size:65535;" json:"abilities"`
 	//[ 6] last_used_at                                   timestamp            null: true   primary: false  isArray: false  auto: false  col: timestamp       len: -1      default: []
 	LastUsedAt time.Time `gorm:"column:last_used_at;type:timestamp;" json:"last_used_at"`
 	//[ 7] created_at                                     timestamp            null: true   primary: false  isArray: false  auto: false  col: timestamp       len: -1      default: []

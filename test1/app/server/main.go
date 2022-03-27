@@ -25,6 +25,7 @@ import (
 	"example.com/rest/example/model"
 
 	"gorm.io/driver/mysql"
+	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )

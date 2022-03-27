@@ -29,7 +29,7 @@ CREATE TABLE `users` (
 
 JSON Sample
 -------------------------------------
-{    "id": 72,    "name": "EAORMCXmwaavELInDekBQSlVl",    "email": "tOofmlbhmnLAwVMCqGcxgZgiA",    "email_verified_at": "2198-12-19T08:07:35.075868176+08:00",    "password": "lcVypuPiryaICfBbgpRNxYXaw",    "remember_token": "lyXLuAeNGsBQtwTOluFsKXBfO",    "created_at": "2137-05-18T17:43:05.301830023+08:00",    "updated_at": "2219-09-28T23:59:16.845202075+08:00"}
+{    "id": 85,    "name": "YxmeqFOGChasUxlbKxTBEZdpe",    "email": "UPyrEaUpwmqtypxpscriCeKgT",    "email_verified_at": "2041-08-17T18:12:15.208363605+08:00",    "password": "nZHGxbXrQKCNxUHCyUvmDWXon",    "remember_token": "TXxRWcQSSQggQiebFKbXLfUVX",    "created_at": "2277-02-10T03:06:55.986321258+08:00",    "updated_at": "2282-07-19T23:33:11.225075029+08:00"}
 
 
 Comments
@@ -45,15 +45,15 @@ type Users_ struct {
 	//[ 0] id                                             ubigint              null: false  primary: true   isArray: false  auto: true   col: ubigint         len: -1      default: []
 	ID uint64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:ubigint;" json:"id"`
 	//[ 1] name                                           varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Name string `gorm:"column:name;type:varchar;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:varchar(255);size:255;" json:"name"`
 	//[ 2] email                                          varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Email string `gorm:"column:email;type:varchar;size:255;" json:"email"`
+	Email string `gorm:"column:email;type:varchar(255);size:255;" json:"email"`
 	//[ 3] email_verified_at                              timestamp            null: true   primary: false  isArray: false  auto: false  col: timestamp       len: -1      default: []
 	EmailVerifiedAt time.Time `gorm:"column:email_verified_at;type:timestamp;" json:"email_verified_at"`
 	//[ 4] password                                       varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Password string `gorm:"column:password;type:varchar;size:255;" json:"password"`
+	Password string `gorm:"column:password;type:varchar(255);size:255;" json:"password"`
 	//[ 5] remember_token                                 varchar(100)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 100     default: []
-	RememberToken sql.NullString `gorm:"column:remember_token;type:varchar;size:100;" json:"remember_token"`
+	RememberToken sql.NullString `gorm:"column:remember_token;type:varchar(100);size:100;" json:"remember_token"`
 	//[ 6] created_at                                     timestamp            null: true   primary: false  isArray: false  auto: false  col: timestamp       len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:timestamp;" json:"created_at"`
 	//[ 7] updated_at                                     timestamp            null: true   primary: false  isArray: false  auto: false  col: timestamp       len: -1      default: []

@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ CREATE TABLE `migrations` (
 
 JSON Sample
 -------------------------------------
-{    "id": 50,    "migration": "ioRcHKoEjiaVRmsvhTEPLkMcv",    "batch": 40}
+{    "id": 95,    "migration": "BJGcgVgOFMWccdVNuwhZlkeTs",    "batch": 82}
 
 
 Comments
@@ -39,7 +39,7 @@ type Migrations struct {
 	//[ 0] id                                             uint                 null: false  primary: true   isArray: false  auto: true   col: uint            len: -1      default: []
 	ID uint32 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:uint;" json:"id"`
 	//[ 1] migration                                      varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Migration string `gorm:"column:migration;type:varchar;size:255;" json:"migration"`
+	Migration string `gorm:"column:migration;type:varchar(255);size:255;" json:"migration"`
 	//[ 2] batch                                          int                  null: false  primary: false  isArray: false  auto: false  col: int             len: -1      default: []
 	Batch int32 `gorm:"column:batch;type:int;" json:"batch"`
 }

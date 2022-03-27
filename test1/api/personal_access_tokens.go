@@ -119,7 +119,7 @@ func GetPersonalAccessTokens(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /personalaccesstokens [post]
-// echo '{"id": 82,"tokenable_type": "vojeVVsEQIEZPnloftaQfTgTe","tokenable_id": 17,"name": "yOgXdAPBKFKikrxWWMwLyLxWn","token": "LgYDcSNxKNbUcDwPDZKKuYKvT","abilities": "fkbLiTZLsMtROidRBMUdLtUeS","last_used_at": "2083-03-29T10:10:38.995664146+08:00","created_at": "2190-10-19T22:11:42.821769738+08:00","updated_at": "2151-12-29T17:17:59.98736585+08:00"}' | http POST "http://localhost:8080/personalaccesstokens" X-Api-User:user123
+// echo '{"id": 36,"tokenable_type": "AvFFhdtNlgVXHUlJmWATWlvOT","tokenable_id": 65,"name": "NMfYDkvIVSavnoURebtdGSsHF","token": "cCtSEkDcTSGhMdROITkftYHkr","abilities": "amMTbHHFuXjLvUrTtWjWwElPJ","last_used_at": "2254-01-23T05:25:01.863239856+08:00","created_at": "2205-02-22T16:39:54.987785369+08:00","updated_at": "2180-08-07T06:48:30.992701866+08:00"}' | http POST "http://localhost:8080/personalaccesstokens" X-Api-User:user123
 func AddPersonalAccessTokens(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	personalaccesstokens := &model.PersonalAccessTokens{}
@@ -167,7 +167,7 @@ func AddPersonalAccessTokens(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /personalaccesstokens/{argID} [put]
-// echo '{"id": 82,"tokenable_type": "vojeVVsEQIEZPnloftaQfTgTe","tokenable_id": 17,"name": "yOgXdAPBKFKikrxWWMwLyLxWn","token": "LgYDcSNxKNbUcDwPDZKKuYKvT","abilities": "fkbLiTZLsMtROidRBMUdLtUeS","last_used_at": "2083-03-29T10:10:38.995664146+08:00","created_at": "2190-10-19T22:11:42.821769738+08:00","updated_at": "2151-12-29T17:17:59.98736585+08:00"}' | http PUT "http://localhost:8080/personalaccesstokens/1"  X-Api-User:user123
+// echo '{"id": 36,"tokenable_type": "AvFFhdtNlgVXHUlJmWATWlvOT","tokenable_id": 65,"name": "NMfYDkvIVSavnoURebtdGSsHF","token": "cCtSEkDcTSGhMdROITkftYHkr","abilities": "amMTbHHFuXjLvUrTtWjWwElPJ","last_used_at": "2254-01-23T05:25:01.863239856+08:00","created_at": "2205-02-22T16:39:54.987785369+08:00","updated_at": "2180-08-07T06:48:30.992701866+08:00"}' | http PUT "http://localhost:8080/personalaccesstokens/1"  X-Api-User:user123
 func UpdatePersonalAccessTokens(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

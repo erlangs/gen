@@ -1,7 +1,6 @@
 package model
 
 import (
-	//"database/sql"
 	"time"
 
 	//"github.com/satori/go.uuid"
@@ -23,7 +22,7 @@ CREATE TABLE `password_resets` (
 
 JSON Sample
 -------------------------------------
-{    "email": "lNeWjiGrBFopIcrKxXrEkNsSl",    "token": "utvMNiELBwNFTCBInOmsmStvP",    "created_at": "2285-12-30T01:37:12.121949946+08:00"}
+{    "email": "EUQirruhWPvWHoBePkYyNSpVp",    "token": "eoBOgjCejeDWdkqSNdovpQHRq",    "created_at": "2261-10-17T13:16:36.964313821+08:00"}
 
 
 Comments
@@ -38,9 +37,9 @@ Comments
 // PasswordResets struct is a row record of the password_resets table in the test1 database
 type PasswordResets struct {
 	//[ 0] email                                          varchar(255)         null: false  primary: true   isArray: false  auto: false  col: varchar         len: 255     default: []
-	Email string `gorm:"primary_key;column:email;type:varchar;size:255;" json:"email"`
+	Email string `gorm:"primary_key;column:email;type:varchar(255);size:255;" json:"email"`
 	//[ 1] token                                          varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Token string `gorm:"column:token;type:varchar;size:255;" json:"token"`
+	Token string `gorm:"column:token;type:varchar(255);size:255;" json:"token"`
 	//[ 2] created_at                                     timestamp            null: true   primary: false  isArray: false  auto: false  col: timestamp       len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:timestamp;" json:"created_at"`
 }
