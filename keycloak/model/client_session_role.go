@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: client_session_role
 
 JSON Sample
 -------------------------------------
-{    "role_id": "RKWIQEKubvRlaBIOByTEWWMeJ",    "client_session": "jrkibwgrXDVGDKxROWAGwGGWw"}
+{    "role_id": "PqWCTvtXwnXJQCVuNBJCVFBTo",    "client_session": "tNMMhIjdbRrscCYZWwnQsHdni"}
 
 
 

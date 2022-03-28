@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -27,7 +27,7 @@ Table: keycloak_role
 
 JSON Sample
 -------------------------------------
-{    "id": "BjFgYWIYfAJBXuLkVixhElUGa",    "client_realm_constraint": "OtGGEtlUObeYotEwaNjIvDSqj",    "client_role": true,    "description": "OHXNaDZVuBdPwuuvIvfWOtbNr",    "name": "ARredGKOKcZSlQhMycUVIvkmi",    "realm_id": "DtkdJKLnkurZTEncAwxexPUYT",    "client": "CSwTqVuxlrQcswoCrQwGhKrTt",    "realm": "ZtXeXuvouNdOAcQgtRvowDEoR"}
+{    "id": "PiJBmXhAGVjNyuNVcBpjgPTua",    "client_realm_constraint": "vRuWJedakSbKUUHZjvhIuboge",    "client_role": false,    "description": "ZHxyUkjPmYakfsgIaHNVtTsyE",    "name": "oCEqPklRGMymMhOmcOuxISsem",    "realm_id": "SnNKFJGIplOIGXjcJVXucyBNT",    "client": "iGNMBfVbawNKioirsRPTFiTaV",    "realm": "vSlVnpFlMZlmRfutXPfiiyqLx"}
 
 
 

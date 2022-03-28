@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: user_required_action
 
 JSON Sample
 -------------------------------------
-{    "user_id": "JRZvhHGkBxibPLTPQAXBtogau",    "required_action": "RPSoynwJRFXZqDBLeaNXTuGvn"}
+{    "user_id": "IJoQWfjtYlRcBjNbpOvYmcPDh",    "required_action": "gLOnrnnYowrdSRNTNfMWeEXTo"}
 
 
 

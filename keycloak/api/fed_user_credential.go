@@ -119,7 +119,7 @@ func GetFedUserCredential(w http.ResponseWriter, r *http.Request, ps httprouter.
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /fedusercredential [post]
-// echo '{"id": "LHpNDIkPFQqQFNGVLOMCZOUSY","salt": "LYLJWVLyhSqUjtSqVYtvhDgse","type": "XuNUZaSPoyaAkIlMItXpbuFGc","created_date": 81,"user_id": "vbSWsQqVhjcmbIGpOqMbwqXoI","realm_id": "qRbToeCkfIFgOtwlaUfpRuKEo","storage_provider_id": "vqhfaLYryMLWIepMmxUCmcniF","user_label": "dygeawQVQoZHuTMVvjPJTgsEw","secret_data": "LTckFpMtlAFIrCpOeBrBsroRU","credential_data": "iSHymXnEQDWJEDHCnCFdhAsPc","priority": 93}' | http POST "http://localhost:8080/fedusercredential" X-Api-User:user123
+// echo '{"id": "FANEcoNcZIMViHrdQDcHnTZUt","salt": "aIIHWOHKVbgVpSoqxWOMlxiWV","type": "wGjYrofvqWqtYnAorFWoqsWIn","created_date": 18,"user_id": "RJgdPQwGRqRvywswNuIIihLrk","realm_id": "OVhQFYMSXKjmMfkdrQXUyZfCY","storage_provider_id": "jxaAFvIwQRqHIYMhCCfIWLbiD","user_label": "jSJAUhchbZKmNogKWUaXWpmMv","secret_data": "xOIWNLvGkTmuFAbIKZfnuVeKU","credential_data": "EXetyFubTdDRhmNTvmnufJxih","priority": 46}' | http POST "http://localhost:8080/fedusercredential" X-Api-User:user123
 func AddFedUserCredential(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	fedusercredential := &model.FedUserCredential{}
@@ -167,7 +167,7 @@ func AddFedUserCredential(w http.ResponseWriter, r *http.Request, ps httprouter.
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /fedusercredential/{argID} [put]
-// echo '{"id": "LHpNDIkPFQqQFNGVLOMCZOUSY","salt": "LYLJWVLyhSqUjtSqVYtvhDgse","type": "XuNUZaSPoyaAkIlMItXpbuFGc","created_date": 81,"user_id": "vbSWsQqVhjcmbIGpOqMbwqXoI","realm_id": "qRbToeCkfIFgOtwlaUfpRuKEo","storage_provider_id": "vqhfaLYryMLWIepMmxUCmcniF","user_label": "dygeawQVQoZHuTMVvjPJTgsEw","secret_data": "LTckFpMtlAFIrCpOeBrBsroRU","credential_data": "iSHymXnEQDWJEDHCnCFdhAsPc","priority": 93}' | http PUT "http://localhost:8080/fedusercredential/hello world"  X-Api-User:user123
+// echo '{"id": "FANEcoNcZIMViHrdQDcHnTZUt","salt": "aIIHWOHKVbgVpSoqxWOMlxiWV","type": "wGjYrofvqWqtYnAorFWoqsWIn","created_date": 18,"user_id": "RJgdPQwGRqRvywswNuIIihLrk","realm_id": "OVhQFYMSXKjmMfkdrQXUyZfCY","storage_provider_id": "jxaAFvIwQRqHIYMhCCfIWLbiD","user_label": "jSJAUhchbZKmNogKWUaXWpmMv","secret_data": "xOIWNLvGkTmuFAbIKZfnuVeKU","credential_data": "EXetyFubTdDRhmNTvmnufJxih","priority": 46}' | http PUT "http://localhost:8080/fedusercredential/hello world"  X-Api-User:user123
 func UpdateFedUserCredential(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

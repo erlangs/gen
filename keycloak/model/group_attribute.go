@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: group_attribute
 
 JSON Sample
 -------------------------------------
-{    "id": "EAXVWyfXRQnuZvcsiJBqlqbEf",    "name": "FcejSCqHDDdowUAkdLTWulnAK",    "value": "tJQllonVOsTQCYaEtcraeKwjj",    "group_id": "JUIcJjfrSIrrqUqowyiULJVQC"}
+{    "id": "kxCmkJJwMMCBAFkhpqIGtEeKv",    "name": "HXEnLsnJGroBFsYCEQVAHfciQ",    "value": "OgdAbtwEpPySbvPvvswdMcqmG",    "group_id": "KIJpYMRqsaKNOBJPVPDlgPsAV"}
 
 
 

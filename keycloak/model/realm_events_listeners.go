@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: realm_events_listeners
 
 JSON Sample
 -------------------------------------
-{    "realm_id": "jZUgadZgOtLUXSELxcWMflqCE",    "value": "MJmLkQrZkIMAfQChTNkIJeCwF"}
+{    "realm_id": "QekRaweABTQdPaNZDFjFPTXZw",    "value": "qVEVKnqwllisLgHEUjyMkoxVl"}
 
 
 

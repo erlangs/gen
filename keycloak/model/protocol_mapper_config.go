@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: protocol_mapper_config
 
 JSON Sample
 -------------------------------------
-{    "protocol_mapper_id": "qeDgFmOJvRpoGYBhCCbamBXEE",    "value": "yVyaRWSDpbclIfpYjvoGrAPUt",    "name": "YtSEdYTqAfQBXaPgGZmLDRvSx"}
+{    "protocol_mapper_id": "OAYdgyZLrFrKkNuaMblZrWehR",    "value": "PbBDCWnbRclxFWpYVAWCDBBUy",    "name": "qtDPYhGarURQDZVrkoDGgihSd"}
 
 
 

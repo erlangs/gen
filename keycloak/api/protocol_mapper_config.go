@@ -127,7 +127,7 @@ func GetProtocolMapperConfig(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /protocolmapperconfig [post]
-// echo '{"protocol_mapper_id": "qeDgFmOJvRpoGYBhCCbamBXEE","value": "yVyaRWSDpbclIfpYjvoGrAPUt","name": "YtSEdYTqAfQBXaPgGZmLDRvSx"}' | http POST "http://localhost:8080/protocolmapperconfig" X-Api-User:user123
+// echo '{"protocol_mapper_id": "JjhNDTPIvjoDxZBVTqYAFrYGB","value": "crhBLEftlqWKfjAoinZOHkRmL","name": "mrBocWpHCHFCRbchspmKdLSds"}' | http POST "http://localhost:8080/protocolmapperconfig" X-Api-User:user123
 func AddProtocolMapperConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	protocolmapperconfig := &model.ProtocolMapperConfig{}
@@ -175,7 +175,7 @@ func AddProtocolMapperConfig(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /protocolmapperconfig/{argProtocolMapperID}/{argName} [put]
-// echo '{"protocol_mapper_id": "qeDgFmOJvRpoGYBhCCbamBXEE","value": "yVyaRWSDpbclIfpYjvoGrAPUt","name": "YtSEdYTqAfQBXaPgGZmLDRvSx"}' | http PUT "http://localhost:8080/protocolmapperconfig/hello world/hello world"  X-Api-User:user123
+// echo '{"protocol_mapper_id": "JjhNDTPIvjoDxZBVTqYAFrYGB","value": "crhBLEftlqWKfjAoinZOHkRmL","name": "mrBocWpHCHFCRbchspmKdLSds"}' | http PUT "http://localhost:8080/protocolmapperconfig/hello world/hello world"  X-Api-User:user123
 func UpdateProtocolMapperConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

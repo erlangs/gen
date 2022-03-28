@@ -119,7 +119,7 @@ func GetIdentityProvider(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /identityprovider [post]
-// echo '{"internal_id": "BmnTvZoaBJWQMahIKVYuFoMRc","enabled": true,"provider_alias": "SEWAfeATnjZQjsMPZVVWPEAlW","provider_id": "fuVFNplsJloflpGqtlVlgZAdk","store_token": true,"authenticate_by_default": false,"realm_id": "fCoaCMvCQltrVDJJxqMtWxmTj","add_token_role": true,"trust_email": true,"first_broker_login_flow_id": "oYQnVcZmiZCsqtuUwlQSIbJDZ","post_broker_login_flow_id": "lkcyUPDElsTCWmKYRDCtVXmhs","provider_display_name": "ecxPaTAbTWhnGRVIcCslYrHyV","link_only": false}' | http POST "http://localhost:8080/identityprovider" X-Api-User:user123
+// echo '{"internal_id": "qWlWYsscrwELsksmumjoMegIP","enabled": false,"provider_alias": "dnWhGOvvtPOvoyxhnnHuBdVkP","provider_id": "WFbNrIADkbWRlgicTompXBBjd","store_token": true,"authenticate_by_default": true,"realm_id": "lFtVTZysXjBHwRccImcCWuqPL","add_token_role": true,"trust_email": true,"first_broker_login_flow_id": "xJiuqDLvhfCUDmVRnsQaMDXlK","post_broker_login_flow_id": "eXboaskRfsfISFYRycgxpxOoE","provider_display_name": "tGUZeYLhlHnFsNlNyPrAyejxR","link_only": true}' | http POST "http://localhost:8080/identityprovider" X-Api-User:user123
 func AddIdentityProvider(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	identityprovider := &model.IdentityProvider{}
@@ -167,7 +167,7 @@ func AddIdentityProvider(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /identityprovider/{argInternalID} [put]
-// echo '{"internal_id": "BmnTvZoaBJWQMahIKVYuFoMRc","enabled": true,"provider_alias": "SEWAfeATnjZQjsMPZVVWPEAlW","provider_id": "fuVFNplsJloflpGqtlVlgZAdk","store_token": true,"authenticate_by_default": false,"realm_id": "fCoaCMvCQltrVDJJxqMtWxmTj","add_token_role": true,"trust_email": true,"first_broker_login_flow_id": "oYQnVcZmiZCsqtuUwlQSIbJDZ","post_broker_login_flow_id": "lkcyUPDElsTCWmKYRDCtVXmhs","provider_display_name": "ecxPaTAbTWhnGRVIcCslYrHyV","link_only": false}' | http PUT "http://localhost:8080/identityprovider/hello world"  X-Api-User:user123
+// echo '{"internal_id": "qWlWYsscrwELsksmumjoMegIP","enabled": false,"provider_alias": "dnWhGOvvtPOvoyxhnnHuBdVkP","provider_id": "WFbNrIADkbWRlgicTompXBBjd","store_token": true,"authenticate_by_default": true,"realm_id": "lFtVTZysXjBHwRccImcCWuqPL","add_token_role": true,"trust_email": true,"first_broker_login_flow_id": "xJiuqDLvhfCUDmVRnsQaMDXlK","post_broker_login_flow_id": "eXboaskRfsfISFYRycgxpxOoE","provider_display_name": "tGUZeYLhlHnFsNlNyPrAyejxR","link_only": true}' | http PUT "http://localhost:8080/identityprovider/hello world"  X-Api-User:user123
 func UpdateIdentityProvider(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

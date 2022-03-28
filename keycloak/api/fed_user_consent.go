@@ -119,7 +119,7 @@ func GetFedUserConsent(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /feduserconsent [post]
-// echo '{"id": "pFMhaLmPNxCOrVOscovXvEmjJ","client_id": "jkYoprGPrslAsUGQGnNZopuLh","user_id": "YJhpLBAVwbqZbsZSWICYarPyC","realm_id": "TYapqgRAEUGZtXTvFSZeWBHAD","storage_provider_id": "eivbwbQaRHGnjTPCfDKngnBGk","created_date": 88,"last_updated_date": 44,"client_storage_provider": "SkwmExEyAnyAJiVuBFtOHRwnY","external_client_id": "bTEtTBiBlkmCgkHIWgNwWQmxn"}' | http POST "http://localhost:8080/feduserconsent" X-Api-User:user123
+// echo '{"id": "HCqLFxywFCYQGobDdLtOiqyPk","client_id": "ftwFKHmQesMaxTQDjruxgcWGv","user_id": "WeOHevgycQEqraxXmqtNWniig","realm_id": "axgLGXjmpItIroTHgZiyElgYi","storage_provider_id": "bcWefmaCkYhvSBnIpaRbJnRJE","created_date": 84,"last_updated_date": 47,"client_storage_provider": "RdVtnEbUHQBqZoFFHcNsVfWsK","external_client_id": "eFKwNEyLygZynnmYrkcrPQPTc"}' | http POST "http://localhost:8080/feduserconsent" X-Api-User:user123
 func AddFedUserConsent(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	feduserconsent := &model.FedUserConsent{}
@@ -167,7 +167,7 @@ func AddFedUserConsent(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /feduserconsent/{argID} [put]
-// echo '{"id": "pFMhaLmPNxCOrVOscovXvEmjJ","client_id": "jkYoprGPrslAsUGQGnNZopuLh","user_id": "YJhpLBAVwbqZbsZSWICYarPyC","realm_id": "TYapqgRAEUGZtXTvFSZeWBHAD","storage_provider_id": "eivbwbQaRHGnjTPCfDKngnBGk","created_date": 88,"last_updated_date": 44,"client_storage_provider": "SkwmExEyAnyAJiVuBFtOHRwnY","external_client_id": "bTEtTBiBlkmCgkHIWgNwWQmxn"}' | http PUT "http://localhost:8080/feduserconsent/hello world"  X-Api-User:user123
+// echo '{"id": "HCqLFxywFCYQGobDdLtOiqyPk","client_id": "ftwFKHmQesMaxTQDjruxgcWGv","user_id": "WeOHevgycQEqraxXmqtNWniig","realm_id": "axgLGXjmpItIroTHgZiyElgYi","storage_provider_id": "bcWefmaCkYhvSBnIpaRbJnRJE","created_date": 84,"last_updated_date": 47,"client_storage_provider": "RdVtnEbUHQBqZoFFHcNsVfWsK","external_client_id": "eFKwNEyLygZynnmYrkcrPQPTc"}' | http PUT "http://localhost:8080/feduserconsent/hello world"  X-Api-User:user123
 func UpdateFedUserConsent(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

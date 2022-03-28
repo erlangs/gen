@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -24,7 +24,7 @@ Table: identity_provider_mapper
 
 JSON Sample
 -------------------------------------
-{    "id": "oVTxNovNKBHBrHrYsQKdGLKHj",    "name": "GPDxOjMRqsNsGDxvPPpKpKRvA",    "idp_alias": "BcQrGdJcojNhCNFTeZtdRclUR",    "idp_mapper_name": "gIeknuRquJbNqdBxcLEdjcRPd",    "realm_id": "BUDYwhRxkaMAAFmrXEcNRTeLN"}
+{    "id": "GCxSZTDHcaCCRWKSMUpcKwXwA",    "name": "sKOBEpUldHGNrxiIARfMWPDEM",    "idp_alias": "iVXXpNDpAWqtrxyNQoNUVxNbR",    "idp_mapper_name": "JwOpAdOmmwmpHstUdXowQtCSi",    "realm_id": "DqTEltwwPsIPqqsMwDDRlDkMv"}
 
 
 

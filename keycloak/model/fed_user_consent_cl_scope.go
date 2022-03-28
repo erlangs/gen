@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: fed_user_consent_cl_scope
 
 JSON Sample
 -------------------------------------
-{    "user_consent_id": "XMsWsTkviZTnxvBVqNclPmpUh",    "scope_id": "uVSZvTgnZWydgpaTjXQeVNIcS"}
+{    "user_consent_id": "qDbrkDYOlCkZQlcKSsMWaNXCT",    "scope_id": "saaYBMdVSGCxvvoAUEMBYlsRC"}
 
 
 

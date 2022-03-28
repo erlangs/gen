@@ -127,7 +127,7 @@ func GetClientScopeClient(w http.ResponseWriter, r *http.Request, ps httprouter.
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientscopeclient [post]
-// echo '{"client_id": "WVyAUqOcLRvAHHhUofxJDCveT","scope_id": "qAsrJKWPQGcsjEINInGDNQYYY","default_scope": false}' | http POST "http://localhost:8080/clientscopeclient" X-Api-User:user123
+// echo '{"client_id": "vOtIVpcSlvcSLrEAmBWrReWYa","scope_id": "ZquYgPqitcIbsfvSXhtaKnyht","default_scope": true}' | http POST "http://localhost:8080/clientscopeclient" X-Api-User:user123
 func AddClientScopeClient(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientscopeclient := &model.ClientScopeClient{}
@@ -175,7 +175,7 @@ func AddClientScopeClient(w http.ResponseWriter, r *http.Request, ps httprouter.
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientscopeclient/{argClientID}/{argScopeID} [put]
-// echo '{"client_id": "WVyAUqOcLRvAHHhUofxJDCveT","scope_id": "qAsrJKWPQGcsjEINInGDNQYYY","default_scope": false}' | http PUT "http://localhost:8080/clientscopeclient/hello world/hello world"  X-Api-User:user123
+// echo '{"client_id": "vOtIVpcSlvcSLrEAmBWrReWYa","scope_id": "ZquYgPqitcIbsfvSXhtaKnyht","default_scope": true}' | http PUT "http://localhost:8080/clientscopeclient/hello world/hello world"  X-Api-User:user123
 func UpdateClientScopeClient(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

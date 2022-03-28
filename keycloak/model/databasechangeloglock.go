@@ -23,7 +23,7 @@ Table: databasechangeloglock
 
 JSON Sample
 -------------------------------------
-{    "id": 93,    "locked": false,    "lockgranted": "2273-01-15T15:18:15.108612853+08:00",    "lockedby": "fjLtQSKplJNgtQiIVkCnIfTtG"}
+{    "id": 88,    "locked": true,    "lockgranted": "2215-08-13T22:29:52.075563585+08:00",    "lockedby": "ctbYDBEDOBNtRgjvsZUjoybLX"}
 
 
 

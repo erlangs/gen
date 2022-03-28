@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -30,7 +30,7 @@ Table: fed_user_credential
 
 JSON Sample
 -------------------------------------
-{    "id": "LHpNDIkPFQqQFNGVLOMCZOUSY",    "salt": "LYLJWVLyhSqUjtSqVYtvhDgse",    "type": "XuNUZaSPoyaAkIlMItXpbuFGc",    "created_date": 81,    "user_id": "vbSWsQqVhjcmbIGpOqMbwqXoI",    "realm_id": "qRbToeCkfIFgOtwlaUfpRuKEo",    "storage_provider_id": "vqhfaLYryMLWIepMmxUCmcniF",    "user_label": "dygeawQVQoZHuTMVvjPJTgsEw",    "secret_data": "LTckFpMtlAFIrCpOeBrBsroRU",    "credential_data": "iSHymXnEQDWJEDHCnCFdhAsPc",    "priority": 93}
+{    "id": "pHieYDqIDQEDiJvLeOZgyYeaY",    "salt": "QdYLUoprwaTqGblQawrLsgAWN",    "type": "oAIEhAkRSnfHkAAlfsbpJIKyi",    "created_date": 10,    "user_id": "vQErZbjHahtbWVZjZshGaJHnL",    "realm_id": "VXLUKDdwEBjWWxyWYZtXcdGHm",    "storage_provider_id": "UorWbAkRFxAlsHpZqQbFPKYwa",    "user_label": "GGGNjWROUGfjTbHCBLbpKlfFt",    "secret_data": "HLiuYoOpxwqkNpqoyYfvOsHZW",    "credential_data": "VfDAEiNdaXQXgVHwtTNUAbtrF",    "priority": 4}
 
 
 
@@ -41,7 +41,7 @@ type FedUserCredential struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
 	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] salt                                           BYTEA                null: true   primary: false  isArray: false  auto: false  col: BYTEA           len: -1      default: []
-	Salt sql.NullString `gorm:"column:salt;type:BYTEA;" json:"salt"`
+	Salt sql.NullString `gorm:"column:salt;type:BLOB;" json:"salt"`
 	//[ 2] type                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
 	Type sql.NullString `gorm:"column:type;type:VARCHAR(255);size:255;" json:"type"`
 	//[ 3] created_date                                   INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []

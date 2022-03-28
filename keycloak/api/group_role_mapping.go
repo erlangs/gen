@@ -127,7 +127,7 @@ func GetGroupRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /grouprolemapping [post]
-// echo '{"role_id": "RwaJLUWmRDtyoDFOPIUpNQbLJ","group_id": "SoCixMFWfDyRKxmqXhxxGjxih"}' | http POST "http://localhost:8080/grouprolemapping" X-Api-User:user123
+// echo '{"role_id": "oOSEiKJXrfLJrXgIWWSlJKNgx","group_id": "CyAXBQNtUiZNZopLrRSJaKESH"}' | http POST "http://localhost:8080/grouprolemapping" X-Api-User:user123
 func AddGroupRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	grouprolemapping := &model.GroupRoleMapping{}
@@ -175,7 +175,7 @@ func AddGroupRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /grouprolemapping/{argRoleID}/{argGroupID} [put]
-// echo '{"role_id": "RwaJLUWmRDtyoDFOPIUpNQbLJ","group_id": "SoCixMFWfDyRKxmqXhxxGjxih"}' | http PUT "http://localhost:8080/grouprolemapping/hello world/hello world"  X-Api-User:user123
+// echo '{"role_id": "oOSEiKJXrfLJrXgIWWSlJKNgx","group_id": "CyAXBQNtUiZNZopLrRSJaKESH"}' | http PUT "http://localhost:8080/grouprolemapping/hello world/hello world"  X-Api-User:user123
 func UpdateGroupRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

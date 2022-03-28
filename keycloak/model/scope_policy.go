@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: scope_policy
 
 JSON Sample
 -------------------------------------
-{    "scope_id": "HEHCwlIwBgRMkKdhbVQEKwCft",    "policy_id": "ffCjWOgFREFjeYaCnTtdOMPrK"}
+{    "scope_id": "hgRvnhmJlmjspxvWnTlRMABDY",    "policy_id": "dnXiMiJbWHGwRsgxITjPhNged"}
 
 
 

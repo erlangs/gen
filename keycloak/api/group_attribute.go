@@ -119,7 +119,7 @@ func GetGroupAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /groupattribute [post]
-// echo '{"id": "EAXVWyfXRQnuZvcsiJBqlqbEf","name": "FcejSCqHDDdowUAkdLTWulnAK","value": "tJQllonVOsTQCYaEtcraeKwjj","group_id": "JUIcJjfrSIrrqUqowyiULJVQC"}' | http POST "http://localhost:8080/groupattribute" X-Api-User:user123
+// echo '{"id": "VQYncgPagZqqEGeaoeCHBpyrT","name": "VrKYaATvgCbMwUAieQrtBgkTN","value": "BbQVpRWVUOyNPOFxlEXvQodcF","group_id": "YXmSRXTOIcdkVlTEVEMsZDcZy"}' | http POST "http://localhost:8080/groupattribute" X-Api-User:user123
 func AddGroupAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	groupattribute := &model.GroupAttribute{}
@@ -167,7 +167,7 @@ func AddGroupAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /groupattribute/{argID} [put]
-// echo '{"id": "EAXVWyfXRQnuZvcsiJBqlqbEf","name": "FcejSCqHDDdowUAkdLTWulnAK","value": "tJQllonVOsTQCYaEtcraeKwjj","group_id": "JUIcJjfrSIrrqUqowyiULJVQC"}' | http PUT "http://localhost:8080/groupattribute/hello world"  X-Api-User:user123
+// echo '{"id": "VQYncgPagZqqEGeaoeCHBpyrT","name": "VrKYaATvgCbMwUAieQrtBgkTN","value": "BbQVpRWVUOyNPOFxlEXvQodcF","group_id": "YXmSRXTOIcdkVlTEVEMsZDcZy"}' | http PUT "http://localhost:8080/groupattribute/hello world"  X-Api-User:user123
 func UpdateGroupAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

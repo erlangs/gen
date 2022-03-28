@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: realm_localizations
 
 JSON Sample
 -------------------------------------
-{    "realm_id": "jCOXUkADnUMfFLdJxgBSvsUmN",    "locale": "FHLfdKtPYvhRhEtAZPoxOXpcZ",    "texts": "blTqIiVBtCHtyVxJbVgZxgqJk"}
+{    "realm_id": "dTTDoUXFePblruSNOGCiKAQnY",    "locale": "eXTVZcFrUNumAMTfJewfawlhT",    "texts": "iIVlEwbiGPgykbyZMLhsPtlgT"}
 
 
 

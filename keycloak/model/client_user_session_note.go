@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_user_session_note
 
 JSON Sample
 -------------------------------------
-{    "name": "oujWrfnwCjCMfktbNlUEClVPx",    "value": "xlyrNviXkLlXhJpYsMhBYcFFU",    "client_session": "tlUQBEsrWgJugQsfpGgwvDASO"}
+{    "name": "xHtJatQlmsIgcIrZqqWOUOvfO",    "value": "rhSndQMrbsSwpSUBgCCaZLmRO",    "client_session": "NiPuDHtRJDnserlSAjOUQqnjv"}
 
 
 

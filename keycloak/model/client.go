@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -18,7 +18,7 @@ Table: client
 [ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
 [ 1] enabled                                        BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 [ 2] full_scope_allowed                             BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
-[ 3] client_id                                      VARCHAR              null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: -1      default: []
+[ 3] client_id                                      VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: -1      default: []
 [ 4] not_before                                     INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 [ 5] public_client                                  BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 [ 6] secret                                         VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
@@ -45,7 +45,7 @@ Table: client
 
 JSON Sample
 -------------------------------------
-{    "id": "sOkiTJXfLNqBFrDPLsnvUsqyW",    "enabled": true,    "full_scope_allowed": false,    "client_id": "WCbtVasOEyXarqeqqlSoYsfrC",    "not_before": 15,    "public_client": false,    "secret": "jqnSKfBwlDmbjWRrnguHynGCC",    "base_url": "gpZWshvKDjapxfpmeboeHOPrV",    "bearer_only": true,    "management_url": "nTEpXTNqBijahuidDSIPJVWau",    "surrogate_auth_required": false,    "realm_id": "EuuMCluuiUHFQajxfELdknfrf",    "protocol": "STpVIbAFqmctaReDNZRpLZTZX",    "node_rereg_timeout": 43,    "frontchannel_logout": true,    "consent_required": true,    "name": "cLTBMCOvBEMMjhTxEehVxbWad",    "service_accounts_enabled": true,    "client_authenticator_type": "wbWmJPbjZVRiLcEoXXQZgpZUQ",    "root_url": "eVtEAHHtjDRwOZAaJVkZRGgOn",    "description": "YQBJUvmnliUISdqfEQRTRYXTa",    "registration_token": "iEALMUmexKoMpRfkMBFYHqjTF",    "standard_flow_enabled": true,    "implicit_flow_enabled": true,    "direct_access_grants_enabled": false,    "always_display_in_console": true}
+{    "id": "dntjwCUkCTqEjwPwSZtsMrEBb",    "enabled": false,    "full_scope_allowed": true,    "client_id": "YISbQNimeYyLKJbfMgmouHoNT",    "not_before": 4,    "public_client": false,    "secret": "syJDSRtDYbfHtTeYScqCVwiGu",    "base_url": "hAVbZHxYtaPHXWnStoHVRnese",    "bearer_only": false,    "management_url": "AiGlhRFaenNkNvmPAKrFklyta",    "surrogate_auth_required": false,    "realm_id": "MrcWEUHmmbNQLdthjnhIjYQeQ",    "protocol": "QYlCwcVtpqdZJaBwdfyvrqhZP",    "node_rereg_timeout": 38,    "frontchannel_logout": false,    "consent_required": false,    "name": "hxmGdrPNbklwIoymUpViGClmn",    "service_accounts_enabled": false,    "client_authenticator_type": "aLXApiwjGFnaBxMFefTOuxhIq",    "root_url": "LbEmkscyObjqAUSCnlJCueYMI",    "description": "YZmCaORPdUpdPOXSEJqvBpybw",    "registration_token": "EZPRvdjbFvTJOhODWkbmQFOOV",    "standard_flow_enabled": true,    "implicit_flow_enabled": true,    "direct_access_grants_enabled": false,    "always_display_in_console": false}
 
 
 
@@ -59,8 +59,8 @@ type Client struct {
 	Enabled bool `gorm:"column:enabled;type:BOOL;default:false;" json:"enabled"`
 	//[ 2] full_scope_allowed                             BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	FullScopeAllowed bool `gorm:"column:full_scope_allowed;type:BOOL;default:false;" json:"full_scope_allowed"`
-	//[ 3] client_id                                      VARCHAR              null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: -1      default: []
-	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR;" json:"client_id"`
+	//[ 3] client_id                                      VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: -1      default: []
+	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR(255);" json:"client_id"`
 	//[ 4] not_before                                     INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	NotBefore sql.NullInt32 `gorm:"column:not_before;type:INT4;" json:"not_before"`
 	//[ 5] public_client                                  BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
@@ -181,7 +181,7 @@ var clientTableInfo = &TableInfo{
 			Notes:              ``,
 			Nullable:           true,
 			DatabaseTypeName:   "VARCHAR",
-			DatabaseTypePretty: "VARCHAR",
+			DatabaseTypePretty: "VARCHAR(255)",
 			IsPrimaryKey:       false,
 			IsAutoIncrement:    false,
 			IsArray:            false,

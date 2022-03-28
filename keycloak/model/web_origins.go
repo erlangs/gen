@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: web_origins
 
 JSON Sample
 -------------------------------------
-{    "client_id": "VicweBNLWfQYQNEvtdhTvidki",    "value": "EKidYXqcXWDWYmmtQqAMkdPth"}
+{    "client_id": "KhiFUaHUvuTLkTFwQHUuBDEqk",    "value": "tAJJvfbpUInRVQpZAFjmmvUMq"}
 
 
 

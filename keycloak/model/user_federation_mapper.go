@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -24,7 +24,7 @@ Table: user_federation_mapper
 
 JSON Sample
 -------------------------------------
-{    "id": "lCcCQgErtaJRvxHIeVLomqAyX",    "name": "enHBOIeXgTRgvdNeVLmmUFunK",    "federation_provider_id": "LIicMIOpltOiDdXnRrMChthiJ",    "federation_mapper_type": "DsgMnVrcbFctwetIUWmDGqBsg",    "realm_id": "sytsLbZDSqEaAMddoKmJvhkcP"}
+{    "id": "oBfbdCTBrCCBtqKkQRxWNyZvK",    "name": "dXRiIfLOwgbCrcIoNesoREITX",    "federation_provider_id": "BdkysQkORLMGhSorOKDZOhhyy",    "federation_mapper_type": "woBimhCRvJEmueBGbmJKlecHj",    "realm_id": "YlVRulMDuJlWoDiDAxdRdTuAQ"}
 
 
 

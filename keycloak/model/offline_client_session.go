@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -26,7 +26,7 @@ Table: offline_client_session
 
 JSON Sample
 -------------------------------------
-{    "user_session_id": "xKSoLsxQLoQBNSdYsIsgVPXbY",    "client_id": "mOcehTmVtTZERRIXpFMAontPh",    "offline_flag": "lDfoknddrfkcmllmeJRpDtOXU",    "timestamp": 71,    "data": "HmMjmWLqjvPtsEqebpfGlOZsP",    "client_storage_provider": "fmkWDNVwFmTgJWcfGKgOGCORX",    "external_client_id": "khwZqiIlmVeKrkYSrIacytaCr"}
+{    "user_session_id": "AkmoyOHMXFgqaLHysDDKhGtZU",    "client_id": "NyfNWrmIlFrFhCoyZCHUlqTPk",    "offline_flag": "YsvYbWtcilJnuDbRGmycHNIKw",    "timestamp": 3,    "data": "JlDGGSgDgncwCRsJMAKWfyuKh",    "client_storage_provider": "ORiMGZFdgJmYLTDcSTUDRHZIb",    "external_client_id": "lLqtwIBOKjEtdSlgyBPpAinyw"}
 
 
 

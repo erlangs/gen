@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: client_scope_role_mapping
 
 JSON Sample
 -------------------------------------
-{    "scope_id": "rNrPqlyatkcElDZGghdXmfULF",    "role_id": "hYMGAoxfqbdICgyJVxyQOKkyL"}
+{    "scope_id": "dGNfMPLdeodLifuoSQODVmNIh",    "role_id": "QhwNnjxaKSLMfKGFihWdrctRN"}
 
 
 

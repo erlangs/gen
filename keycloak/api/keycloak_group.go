@@ -119,7 +119,7 @@ func GetKeycloakGroup(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /keycloakgroup [post]
-// echo '{"id": "ESjBwZutCEebPUpHCbrjNnHsE","name": "hgXgNNbXeBChIwHhBiWKdvvoM","parent_group": "OJDHPQbqQFXPNWkxBVcJDfNQk","realm_id": "sApfURnSoDnAosnmjneYTWiIv"}' | http POST "http://localhost:8080/keycloakgroup" X-Api-User:user123
+// echo '{"id": "HrdvYmTJrSUlviHYlfeRRDhJw","name": "inspwCDOOEqiGYyHvxgJmHkMk","parent_group": "hEUBnYjfYnRKQOwPriVjKwDGo","realm_id": "CAhYGEBjhIpucutquRactfpUE"}' | http POST "http://localhost:8080/keycloakgroup" X-Api-User:user123
 func AddKeycloakGroup(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	keycloakgroup := &model.KeycloakGroup{}
@@ -167,7 +167,7 @@ func AddKeycloakGroup(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /keycloakgroup/{argID} [put]
-// echo '{"id": "ESjBwZutCEebPUpHCbrjNnHsE","name": "hgXgNNbXeBChIwHhBiWKdvvoM","parent_group": "OJDHPQbqQFXPNWkxBVcJDfNQk","realm_id": "sApfURnSoDnAosnmjneYTWiIv"}' | http PUT "http://localhost:8080/keycloakgroup/hello world"  X-Api-User:user123
+// echo '{"id": "HrdvYmTJrSUlviHYlfeRRDhJw","name": "inspwCDOOEqiGYyHvxgJmHkMk","parent_group": "hEUBnYjfYnRKQOwPriVjKwDGo","realm_id": "CAhYGEBjhIpucutquRactfpUE"}' | http PUT "http://localhost:8080/keycloakgroup/hello world"  X-Api-User:user123
 func UpdateKeycloakGroup(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

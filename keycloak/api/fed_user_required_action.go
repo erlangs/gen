@@ -127,7 +127,7 @@ func GetFedUserRequiredAction(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /feduserrequiredaction [post]
-// echo '{"required_action": "ttakOnwVnJqYqOEWwtPyeqkMb","user_id": "vuGDtgnASggKKkntdnCWJmkvI","realm_id": "QyjnUqlBPPSDfHYgkpUMrCEjh","storage_provider_id": "fHsObhVUyguetgvyJKmQSgIeB"}' | http POST "http://localhost:8080/feduserrequiredaction" X-Api-User:user123
+// echo '{"required_action": "MdqgkNgeENGGdqFEIGUWpykiq","user_id": "cnyjqNAkGZGIKEvoOVGoZmYGp","realm_id": "RQeFPclUFxColZVyYpVSyGdNe","storage_provider_id": "CwEnPTCryVKrskooLbUyYPXos"}' | http POST "http://localhost:8080/feduserrequiredaction" X-Api-User:user123
 func AddFedUserRequiredAction(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	feduserrequiredaction := &model.FedUserRequiredAction{}
@@ -175,7 +175,7 @@ func AddFedUserRequiredAction(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /feduserrequiredaction/{argRequiredAction}/{argUserID} [put]
-// echo '{"required_action": "ttakOnwVnJqYqOEWwtPyeqkMb","user_id": "vuGDtgnASggKKkntdnCWJmkvI","realm_id": "QyjnUqlBPPSDfHYgkpUMrCEjh","storage_provider_id": "fHsObhVUyguetgvyJKmQSgIeB"}' | http PUT "http://localhost:8080/feduserrequiredaction/hello world/hello world"  X-Api-User:user123
+// echo '{"required_action": "MdqgkNgeENGGdqFEIGUWpykiq","user_id": "cnyjqNAkGZGIKEvoOVGoZmYGp","realm_id": "RQeFPclUFxColZVyYpVSyGdNe","storage_provider_id": "CwEnPTCryVKrskooLbUyYPXos"}' | http PUT "http://localhost:8080/feduserrequiredaction/hello world/hello world"  X-Api-User:user123
 func UpdateFedUserRequiredAction(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

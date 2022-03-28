@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: role_attribute
 
 JSON Sample
 -------------------------------------
-{    "id": "dGPMVQhEfHCnYwyYiYtJAOxoM",    "role_id": "lZNbxdolAcZuUqTFdePykTKVX",    "name": "NRwmCpEDFZwFQGgchfKNfBZSp",    "value": "NWXcurKcBhlsFWtMvtjHdipTX"}
+{    "id": "qTBfrJUMxnLniuhLfUfgHsDyy",    "role_id": "ZBKYYlUnBiQZnHXUqxSFTaLZt",    "name": "RUgjTsVkxFkUHcbiagSHFMNID",    "value": "jafEQHyleejUCPwyaItSqOTVZ"}
 
 
 

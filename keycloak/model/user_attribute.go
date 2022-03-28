@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: user_attribute
 
 JSON Sample
 -------------------------------------
-{    "name": "CHtgpiLLHAqsPWgZBcfWQGqpJ",    "value": "ViAWITKwTMEKsHFJgvPbPosbg",    "user_id": "aAiVeRwJkuHqVcXtbCMmpCiKE",    "id": "bGlwSCMOxlkyUiywSTxGnOCJf"}
+{    "name": "XpsvSlZqOrxJfoGTpXjwvBGsX",    "value": "ivIrTVeSBfpgrDPTmFDCncADh",    "user_id": "PZIcfynCebZEGljlgnCUbFgCW",    "id": "nGVmcvQCBKvsXGWGXumJxVuff"}
 
 
 

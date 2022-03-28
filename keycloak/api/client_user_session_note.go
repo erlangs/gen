@@ -127,7 +127,7 @@ func GetClientUserSessionNote(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientusersessionnote [post]
-// echo '{"name": "oujWrfnwCjCMfktbNlUEClVPx","value": "xlyrNviXkLlXhJpYsMhBYcFFU","client_session": "tlUQBEsrWgJugQsfpGgwvDASO"}' | http POST "http://localhost:8080/clientusersessionnote" X-Api-User:user123
+// echo '{"name": "XFLYECahQeuBHdkhcwSyqVHvO","value": "mJKqnsdZwlexxHcJyJcDSSkDj","client_session": "UVCGAeJpaTsWwJRokuBUmrEyQ"}' | http POST "http://localhost:8080/clientusersessionnote" X-Api-User:user123
 func AddClientUserSessionNote(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientusersessionnote := &model.ClientUserSessionNote{}
@@ -175,7 +175,7 @@ func AddClientUserSessionNote(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientusersessionnote/{argName}/{argClientSession} [put]
-// echo '{"name": "oujWrfnwCjCMfktbNlUEClVPx","value": "xlyrNviXkLlXhJpYsMhBYcFFU","client_session": "tlUQBEsrWgJugQsfpGgwvDASO"}' | http PUT "http://localhost:8080/clientusersessionnote/hello world/hello world"  X-Api-User:user123
+// echo '{"name": "XFLYECahQeuBHdkhcwSyqVHvO","value": "mJKqnsdZwlexxHcJyJcDSSkDj","client_session": "UVCGAeJpaTsWwJRokuBUmrEyQ"}' | http PUT "http://localhost:8080/clientusersessionnote/hello world/hello world"  X-Api-User:user123
 func UpdateClientUserSessionNote(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

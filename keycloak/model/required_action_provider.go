@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -27,7 +27,7 @@ Table: required_action_provider
 
 JSON Sample
 -------------------------------------
-{    "id": "QPDVPUZySXcRRePKJNxySZggo",    "alias": "JBiUViIYurGhQpPxtYFaESwBS",    "name": "ADZFDDVZTcgxJycRQoxBOLkTc",    "realm_id": "UEDYlroONgqoKKbdjibyepggL",    "enabled": false,    "default_action": true,    "provider_id": "GBiKicikEyMhjWqQWvdVHxoJF",    "priority": 59}
+{    "id": "XDQtlUybiZXVqDfbPJLYFMMDy",    "alias": "RGNwpqeOvqcnlGCkUJDlCDTqP",    "name": "qvHFenmYHrvlpKvibnTystlXX",    "realm_id": "LxelmUEArIpPHMECedHHpsNHy",    "enabled": false,    "default_action": true,    "provider_id": "GjSvkNeqUSuwoKquHNBBWixim",    "priority": 40}
 
 
 

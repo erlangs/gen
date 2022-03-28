@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: scope_mapping
 
 JSON Sample
 -------------------------------------
-{    "client_id": "MJGHpTjgIglcmsIIPiAhAHdlK",    "role_id": "wsOsTJOxvLlfIYnSWEutviHsV"}
+{    "client_id": "ANvxufhaxECPiXjtDuoabGYJv",    "role_id": "FnANBClNmgqwUZSEgwCuSIPvv"}
 
 
 

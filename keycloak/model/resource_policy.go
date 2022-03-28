@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: resource_policy
 
 JSON Sample
 -------------------------------------
-{    "resource_id": "GwAXGoJByvpycHOkSTNlBjtTr",    "policy_id": "QRwgJlTFtOPRYEDeOESpXfcZN"}
+{    "resource_id": "urOUOFUgmpXpomdPUfqPmedyT",    "policy_id": "AKolnYCwnxxQnxyZaBLQRvhha"}
 
 
 

@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: idp_mapper_config
 
 JSON Sample
 -------------------------------------
-{    "idp_mapper_id": "APoYpugfLEYgmNRpjYKVQxLye",    "value": "afqRLuXAQpjrecBwnVOkBXoMC",    "name": "nvufSJDbDmAhldjLNYZflAwpb"}
+{    "idp_mapper_id": "LFCrkAdATAtCSilHGWrwYKXbE",    "value": "RMkQPEMDNSyEaVcQeEhGLuZRC",    "name": "MlFBKPMhOkxLvdoevBjfOoOxZ"}
 
 
 

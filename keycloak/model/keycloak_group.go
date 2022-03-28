@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: keycloak_group
 
 JSON Sample
 -------------------------------------
-{    "id": "ESjBwZutCEebPUpHCbrjNnHsE",    "name": "hgXgNNbXeBChIwHhBiWKdvvoM",    "parent_group": "OJDHPQbqQFXPNWkxBVcJDfNQk",    "realm_id": "sApfURnSoDnAosnmjneYTWiIv"}
+{    "id": "wQguAkeQvlsZIePAwKpGftJUS",    "name": "FdTHXtaTdtXQxHwvgwTcCLLtA",    "parent_group": "VCQZGJCUcprbnhVGdQReijJHn",    "realm_id": "XHywEDkqRoVsIowoVTCYcMgQg"}
 
 
 

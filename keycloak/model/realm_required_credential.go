@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -24,7 +24,7 @@ Table: realm_required_credential
 
 JSON Sample
 -------------------------------------
-{    "type": "NHsYVarclSoTtlrZZLUbsAdnW",    "form_label": "iYWbOwaVhWxhWlBWVuOyiCXEy",    "input": false,    "secret": true,    "realm_id": "QapekyECHnYfGPNcZGqrYgcvW"}
+{    "type": "ZvOPSDIYnPFRGhaStURUIhVGv",    "form_label": "MNMtZOrqkTlUwMhZdCdMKvFeU",    "input": true,    "secret": false,    "realm_id": "oLJrFsEZyHJLROpKFDITYtLEP"}
 
 
 

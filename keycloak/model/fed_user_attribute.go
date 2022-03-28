@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -25,7 +25,7 @@ Table: fed_user_attribute
 
 JSON Sample
 -------------------------------------
-{    "id": "RevUOwFjYNJaqxmsmdcYwKLlD",    "name": "QaSVrMhLaHjsmLyIalhOXovEw",    "user_id": "xyysvmeQIYkSPdEBPHnUChvta",    "realm_id": "kKJHnyYSLvAMYGWsoDrMDwNTY",    "storage_provider_id": "qMijWdlGrrABDSVLChsaGUMUV",    "value": "uZBVBfqMGaqxNSTEimKLLxlDI"}
+{    "id": "VCaGOejueGuorMjsJFnTiUMJr",    "name": "mGkdtwymvADuWaGyFTKKkAwAJ",    "user_id": "AelwGSdvqWvQlHgLFjlFQyUOx",    "realm_id": "NQdXdJRkDXwLcReWVauyBEsaG",    "storage_provider_id": "hHNrnZBQMbApwZvVZRnBjHtLq",    "value": "lQjHsQehESYgUGFFCoKVIgDlm"}
 
 
 

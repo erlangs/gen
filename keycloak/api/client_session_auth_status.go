@@ -127,7 +127,7 @@ func GetClientSessionAuthStatus(w http.ResponseWriter, r *http.Request, ps httpr
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientsessionauthstatus [post]
-// echo '{"authenticator": "VRJhmxcWYxgRjYetKlDiPvhJB","status": 75,"client_session": "iOahSUvpNSpYyAAOMcOZkahOY"}' | http POST "http://localhost:8080/clientsessionauthstatus" X-Api-User:user123
+// echo '{"authenticator": "irheVBRjHBDgIaNhIBWcZKayV","status": 45,"client_session": "VbJrPFjUwaVxhyRkKKFENRBdm"}' | http POST "http://localhost:8080/clientsessionauthstatus" X-Api-User:user123
 func AddClientSessionAuthStatus(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientsessionauthstatus := &model.ClientSessionAuthStatus{}
@@ -175,7 +175,7 @@ func AddClientSessionAuthStatus(w http.ResponseWriter, r *http.Request, ps httpr
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientsessionauthstatus/{argAuthenticator}/{argClientSession} [put]
-// echo '{"authenticator": "VRJhmxcWYxgRjYetKlDiPvhJB","status": 75,"client_session": "iOahSUvpNSpYyAAOMcOZkahOY"}' | http PUT "http://localhost:8080/clientsessionauthstatus/hello world/hello world"  X-Api-User:user123
+// echo '{"authenticator": "irheVBRjHBDgIaNhIBWcZKayV","status": 45,"client_session": "VbJrPFjUwaVxhyRkKKFENRBdm"}' | http PUT "http://localhost:8080/clientsessionauthstatus/hello world/hello world"  X-Api-User:user123
 func UpdateClientSessionAuthStatus(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

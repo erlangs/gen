@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_session_auth_status
 
 JSON Sample
 -------------------------------------
-{    "authenticator": "VRJhmxcWYxgRjYetKlDiPvhJB",    "status": 75,    "client_session": "iOahSUvpNSpYyAAOMcOZkahOY"}
+{    "authenticator": "epyqCjpGXMwVqMURpHQVYHuNs",    "status": 75,    "client_session": "geHSimQNPLWIcqNjmYklfrbmY"}
 
 
 

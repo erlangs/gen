@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: resource_scope
 
 JSON Sample
 -------------------------------------
-{    "resource_id": "aGpGQOWQHlqSxTyRjNMbPTwsH",    "scope_id": "hUoIgyqHcAAOtvlwKvlmbqqGM"}
+{    "resource_id": "QmyHVXwTxKWLhtAIBYdkANvms",    "scope_id": "jfnNNJSHpYVJlgpIsWfaEcgdR"}
 
 
 

@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -28,7 +28,7 @@ Table: credential
 
 JSON Sample
 -------------------------------------
-{    "id": "GisBamUHwPBCMcXRvJLoTrMFy",    "salt": "cXCtperDeHigirgMYryMdcwEw",    "type": "hiJXfcRXcOVCXTsViWMvPscxe",    "user_id": "RRwkouTMiXQNPtAijaZgiWFAZ",    "created_date": 33,    "user_label": "wxgvZKODKIHQRQcoGepvtXQHH",    "secret_data": "atyMFyiPiUsgIyGyKkQSqRLtY",    "credential_data": "RaYNcZDeGAqvKuWLQqRMSrngF",    "priority": 49}
+{    "id": "uUWRYpSJLhFrUkQWokZRNoLmL",    "salt": "kStdGZkqCPEkcOjMyakFvglpw",    "type": "bKfwjhckUVVUKjAhvRwMEnsaj",    "user_id": "wyxniYaPtYoKPDsEJBoPTcZYf",    "created_date": 67,    "user_label": "gatfKiAKbgDirJKitudQHaPvn",    "secret_data": "FPfRaNGQeApfcLUarCXorUGlf",    "credential_data": "RPoGPkuCtCxhTPyrSSFKpikXG",    "priority": 89}
 
 
 
@@ -39,7 +39,7 @@ type Credential struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
 	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] salt                                           BYTEA                null: true   primary: false  isArray: false  auto: false  col: BYTEA           len: -1      default: []
-	Salt sql.NullString `gorm:"column:salt;type:BYTEA;" json:"salt"`
+	Salt sql.NullString `gorm:"column:salt;type:blob;" json:"salt"`
 	//[ 2] type                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
 	Type sql.NullString `gorm:"column:type;type:VARCHAR(255);size:255;" json:"type"`
 	//[ 3] user_id                                        VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []

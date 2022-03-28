@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -31,7 +31,7 @@ Table: user_session
 
 JSON Sample
 -------------------------------------
-{    "id": "oDFkCXbJSuSukqWrKXAXKeBHn",    "auth_method": "EcrgoFcLWPFYHqrmkjIvkevpO",    "ip_address": "gWJTLfIRedpsbDUOGpyZKvBcJ",    "last_session_refresh": 45,    "login_username": "DZVoqmstYoFTwUggeUdOidgJQ",    "realm_id": "OvTemRUSMbxuUCemFbtVyXnxN",    "remember_me": true,    "started": 91,    "user_id": "NFuwVWWKDmYQrFADDLrYHMpNH",    "user_session_state": 60,    "broker_session_id": "EvftXXfKKPjrFnJebKTIYiJBl",    "broker_user_id": "ELDGdHbrMUSjKFcnOQhaxKILA"}
+{    "id": "oVeYAUHKQMGbhQxJGtdeHrlqv",    "auth_method": "GGubLHOkeZRjRBLwZNtlsIEUK",    "ip_address": "TnDaquMPVTagHCZLfhEMJvZEW",    "last_session_refresh": 78,    "login_username": "tbxwySJQUAUvnkaADqxovABqZ",    "realm_id": "ThRtNipuDWcmALaWavDTjGcsE",    "remember_me": true,    "started": 50,    "user_id": "HGmdxWFwWvQxjlcYtFlIymbGl",    "user_session_state": 29,    "broker_session_id": "mVYrQhlkXtGcVYqxtPZpPUMUx",    "broker_user_id": "CeYiZZaOvVBmZIqnLdscHwJoO"}
 
 
 

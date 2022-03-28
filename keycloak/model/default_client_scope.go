@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: default_client_scope
 
 JSON Sample
 -------------------------------------
-{    "realm_id": "eRrKBHpKewOlmlcwcAmnJkSdB",    "scope_id": "pFEIcuOHIkAAEfnbvZgXUxhLC",    "default_scope": false}
+{    "realm_id": "LXMILsMSbkhUxQoAduOqEydHW",    "scope_id": "aJaZFbTYFoXiisXyjhkVTcvkH",    "default_scope": true}
 
 
 

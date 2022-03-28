@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -32,7 +32,7 @@ Table: user_entity
 
 JSON Sample
 -------------------------------------
-{    "id": "hXaAuMRkfoSTwdZtPXFdtbETT",    "email": "WcMwEckuMbOYSBdLnxVBNUQgh",    "email_constraint": "tKrRGKhlfskFYWExyMTAMARxe",    "email_verified": true,    "enabled": true,    "federation_link": "MQZBhyMauTUmepXeYVOevFdwg",    "first_name": "mkYNQWlWBixchMOWekuhslAZo",    "last_name": "oAWxleewsPewsaJtqcQTXWmvt",    "realm_id": "YpvLaSYsBkLRahZsLxNIGBmKO",    "username": "JAQDEsHCdHXGnYDQbOwnsDhbp",    "created_timestamp": 82,    "service_account_client_link": "hcjNVwOJkKVLLcOAxJUrfassh",    "not_before": 57}
+{    "id": "dyIBRZGbKiEufpUaopbhYvLaf",    "email": "lJhfNwqVmBEnPiaFlgBXjXwKQ",    "email_constraint": "cUPxLHVIpxupDjiXqkphLhhDN",    "email_verified": false,    "enabled": false,    "federation_link": "TedyjuHhGGILgoEDwHgqOeyCx",    "first_name": "TIgfUPCImpjDQHCYyoqcFbvJQ",    "last_name": "YUrnfWINsaLjrSvOevApeZnlM",    "realm_id": "KBdBgKBQtKetZPLAlAlLtjkki",    "username": "dDCejQxavbrxjOfDVBCMeFbmb",    "created_timestamp": 92,    "service_account_client_link": "hPFBWUdBXpZQdlpsJpQuOhYdE",    "not_before": 24}
 
 
 

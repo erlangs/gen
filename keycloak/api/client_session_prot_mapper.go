@@ -127,7 +127,7 @@ func GetClientSessionProtMapper(w http.ResponseWriter, r *http.Request, ps httpr
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientsessionprotmapper [post]
-// echo '{"protocol_mapper_id": "mmiFIchDPsmuTBkphtkXtraam","client_session": "nILFXMfJWDWNVYJfflGORnLXb"}' | http POST "http://localhost:8080/clientsessionprotmapper" X-Api-User:user123
+// echo '{"protocol_mapper_id": "ObEAgESZwVUVKuLEvOWyygPGf","client_session": "MCcaHoUXxIpxMWAMBnegubSls"}' | http POST "http://localhost:8080/clientsessionprotmapper" X-Api-User:user123
 func AddClientSessionProtMapper(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientsessionprotmapper := &model.ClientSessionProtMapper{}
@@ -175,7 +175,7 @@ func AddClientSessionProtMapper(w http.ResponseWriter, r *http.Request, ps httpr
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientsessionprotmapper/{argProtocolMapperID}/{argClientSession} [put]
-// echo '{"protocol_mapper_id": "mmiFIchDPsmuTBkphtkXtraam","client_session": "nILFXMfJWDWNVYJfflGORnLXb"}' | http PUT "http://localhost:8080/clientsessionprotmapper/hello world/hello world"  X-Api-User:user123
+// echo '{"protocol_mapper_id": "ObEAgESZwVUVKuLEvOWyygPGf","client_session": "MCcaHoUXxIpxMWAMBnegubSls"}' | http PUT "http://localhost:8080/clientsessionprotmapper/hello world/hello world"  X-Api-User:user123
 func UpdateClientSessionProtMapper(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

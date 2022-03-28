@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: policy_config
 
 JSON Sample
 -------------------------------------
-{    "policy_id": "mOuVXtorrjiuVBxnpamRSubKU",    "name": "tgIKcBZZHDpFOUcGIECtYPviu",    "value": "DZGgIJZCNKaCnukHLxAQpcjNk"}
+{    "policy_id": "kEgDOXNvZHbunnQAbAyrFqWTA",    "name": "PDLMotnygcQbRLGKTVembFRqS",    "value": "wxeceSpMEmNlrbVhULbFToxtj"}
 
 
 

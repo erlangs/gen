@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: resource_uris
 
 JSON Sample
 -------------------------------------
-{    "resource_id": "oMhQPFbIQqIlrANNKidRjlJlr",    "value": "pUhIvyLoFTMcLMAGPvQiDAots"}
+{    "resource_id": "IqAmhqHBflHmPBABqfuMgyiqD",    "value": "jQRWhVDMBKMZisaeQQGtEcPUE"}
 
 
 

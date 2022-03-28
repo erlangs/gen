@@ -127,7 +127,7 @@ func GetFedUserGroupMembership(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /fedusergroupmembership [post]
-// echo '{"group_id": "gwNhohsWlgIdSwSrYagWmlnSk","user_id": "GxkmXJKUVTeSmqMXNwiQIWiQT","realm_id": "YNHhlVsfRQwTAoGVJFStKTHom","storage_provider_id": "UdhtgURKCwyaKpuSOfdIXIfGR"}' | http POST "http://localhost:8080/fedusergroupmembership" X-Api-User:user123
+// echo '{"group_id": "vVCaEKlqpeHCYrwSWrvpdtGHj","user_id": "eXSVMjgHfGpyKcxXDNKYSHUNg","realm_id": "XDvhrFXrrnLZZeJAqsPRMqoEE","storage_provider_id": "kpUygnMUMIiEpfYCIgMFKVWoZ"}' | http POST "http://localhost:8080/fedusergroupmembership" X-Api-User:user123
 func AddFedUserGroupMembership(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	fedusergroupmembership := &model.FedUserGroupMembership{}
@@ -175,7 +175,7 @@ func AddFedUserGroupMembership(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /fedusergroupmembership/{argGroupID}/{argUserID} [put]
-// echo '{"group_id": "gwNhohsWlgIdSwSrYagWmlnSk","user_id": "GxkmXJKUVTeSmqMXNwiQIWiQT","realm_id": "YNHhlVsfRQwTAoGVJFStKTHom","storage_provider_id": "UdhtgURKCwyaKpuSOfdIXIfGR"}' | http PUT "http://localhost:8080/fedusergroupmembership/hello world/hello world"  X-Api-User:user123
+// echo '{"group_id": "vVCaEKlqpeHCYrwSWrvpdtGHj","user_id": "eXSVMjgHfGpyKcxXDNKYSHUNg","realm_id": "XDvhrFXrrnLZZeJAqsPRMqoEE","storage_provider_id": "kpUygnMUMIiEpfYCIgMFKVWoZ"}' | http PUT "http://localhost:8080/fedusergroupmembership/hello world/hello world"  X-Api-User:user123
 func UpdateFedUserGroupMembership(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

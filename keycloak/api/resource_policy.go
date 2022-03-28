@@ -127,7 +127,7 @@ func GetResourcePolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourcepolicy [post]
-// echo '{"resource_id": "GwAXGoJByvpycHOkSTNlBjtTr","policy_id": "QRwgJlTFtOPRYEDeOESpXfcZN"}' | http POST "http://localhost:8080/resourcepolicy" X-Api-User:user123
+// echo '{"resource_id": "ygcscZvFyQejROUGQiZCrWxeh","policy_id": "soejKPolRhYhobgIZdTIQmtmv"}' | http POST "http://localhost:8080/resourcepolicy" X-Api-User:user123
 func AddResourcePolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	resourcepolicy := &model.ResourcePolicy{}
@@ -175,7 +175,7 @@ func AddResourcePolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourcepolicy/{argResourceID}/{argPolicyID} [put]
-// echo '{"resource_id": "GwAXGoJByvpycHOkSTNlBjtTr","policy_id": "QRwgJlTFtOPRYEDeOESpXfcZN"}' | http PUT "http://localhost:8080/resourcepolicy/hello world/hello world"  X-Api-User:user123
+// echo '{"resource_id": "ygcscZvFyQejROUGQiZCrWxeh","policy_id": "soejKPolRhYhobgIZdTIQmtmv"}' | http PUT "http://localhost:8080/resourcepolicy/hello world/hello world"  X-Api-User:user123
 func UpdateResourcePolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

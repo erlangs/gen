@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -29,7 +29,7 @@ Table: client_session
 
 JSON Sample
 -------------------------------------
-{    "id": "aUPyCHbcQNyqoUhBomVogEFnu",    "client_id": "KipPBZHggtiKEVynnhAdmAxrc",    "redirect_uri": "VoGFgjWAEiyYIBHskewmmDsal",    "state": "hJSMXsTUaHZNsGyWQvwlLtYQJ",    "timestamp": 75,    "session_id": "ahrBsNKPNYQNxgYRDxwjLrVxd",    "auth_method": "eAYgUKJxJNbqLjyJAKErQsVvb",    "realm_id": "XEBTrxoIanpkEsuSQCrAeCfBu",    "auth_user_id": "xadmvSkbXUbwqBEswxvrVhqpP",    "current_action": "VfPYMuoavgBBHiypnhhFbRcdY"}
+{    "id": "OadbGwxVhvoZjDTxykBRoYrNt",    "client_id": "OGBWybYCtVBlvTvUGYpTuGjoV",    "redirect_uri": "qTBCpnoAbBAdQXNrDgsiURUUX",    "state": "rsuugoVRrdnxIyJyDvnYvaWZU",    "timestamp": 40,    "session_id": "auQShefJiEjPiPmNusGcFCjcU",    "auth_method": "tCRyTlMQTgJRUfayGUiDOCDxZ",    "realm_id": "uchPtCodUPshPbQbFeFQjZnYE",    "auth_user_id": "dNlikohkjCiKdUqnRdRrVBmnm",    "current_action": "CrsQanusFHXiIQARmrLOnKyGq"}
 
 
 

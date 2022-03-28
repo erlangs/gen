@@ -119,7 +119,7 @@ func GetProtocolMapper(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /protocolmapper [post]
-// echo '{"id": "TnBcdHbCOqDbURVDSxuMcOOYV","name": "WKCQxmTPerDhYosDNEcNrlOoL","protocol": "yDsummFjjyfOJTInAllpRVelx","protocol_mapper_name": "siaoXfYNyemegoCUwhtZAhOOp","client_id": "HZNqErvFZkCEYNfWVVYislgJE","client_scope_id": "kPNPyqQlgjKjvCplqiqcXmoEa"}' | http POST "http://localhost:8080/protocolmapper" X-Api-User:user123
+// echo '{"id": "ybyCOswbKmTGWRsKlOqjkQGtE","name": "IKLFVrTeHuOVfuThJfpMgoDqD","protocol": "DcfnDOYerQWlFwkhLwjCumYLK","protocol_mapper_name": "NZHfHQUQHeMUSLbEylmjOdrrs","client_id": "trtJoWPvbaNiINWVKEMeatnik","client_scope_id": "mPvqMLWZHGmiPVqHckdpUoTTU"}' | http POST "http://localhost:8080/protocolmapper" X-Api-User:user123
 func AddProtocolMapper(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	protocolmapper := &model.ProtocolMapper{}
@@ -167,7 +167,7 @@ func AddProtocolMapper(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /protocolmapper/{argID} [put]
-// echo '{"id": "TnBcdHbCOqDbURVDSxuMcOOYV","name": "WKCQxmTPerDhYosDNEcNrlOoL","protocol": "yDsummFjjyfOJTInAllpRVelx","protocol_mapper_name": "siaoXfYNyemegoCUwhtZAhOOp","client_id": "HZNqErvFZkCEYNfWVVYislgJE","client_scope_id": "kPNPyqQlgjKjvCplqiqcXmoEa"}' | http PUT "http://localhost:8080/protocolmapper/hello world"  X-Api-User:user123
+// echo '{"id": "ybyCOswbKmTGWRsKlOqjkQGtE","name": "IKLFVrTeHuOVfuThJfpMgoDqD","protocol": "DcfnDOYerQWlFwkhLwjCumYLK","protocol_mapper_name": "NZHfHQUQHeMUSLbEylmjOdrrs","client_id": "trtJoWPvbaNiINWVKEMeatnik","client_scope_id": "mPvqMLWZHGmiPVqHckdpUoTTU"}' | http PUT "http://localhost:8080/protocolmapper/hello world"  X-Api-User:user123
 func UpdateProtocolMapper(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

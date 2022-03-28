@@ -127,7 +127,7 @@ func GetRealmRequiredCredential(w http.ResponseWriter, r *http.Request, ps httpr
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmrequiredcredential [post]
-// echo '{"type": "NHsYVarclSoTtlrZZLUbsAdnW","form_label": "iYWbOwaVhWxhWlBWVuOyiCXEy","input": false,"secret": true,"realm_id": "QapekyECHnYfGPNcZGqrYgcvW"}' | http POST "http://localhost:8080/realmrequiredcredential" X-Api-User:user123
+// echo '{"type": "PTJIXPSCyiKLsjBcuyYqWgvno","form_label": "UmRVLAtSbaVPHYKZlNuJoiLjd","input": false,"secret": true,"realm_id": "YccILRTUcGvkoBRWUWHxiaYlm"}' | http POST "http://localhost:8080/realmrequiredcredential" X-Api-User:user123
 func AddRealmRequiredCredential(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	realmrequiredcredential := &model.RealmRequiredCredential{}
@@ -175,7 +175,7 @@ func AddRealmRequiredCredential(w http.ResponseWriter, r *http.Request, ps httpr
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmrequiredcredential/{argType}/{argRealmID} [put]
-// echo '{"type": "NHsYVarclSoTtlrZZLUbsAdnW","form_label": "iYWbOwaVhWxhWlBWVuOyiCXEy","input": false,"secret": true,"realm_id": "QapekyECHnYfGPNcZGqrYgcvW"}' | http PUT "http://localhost:8080/realmrequiredcredential/hello world/hello world"  X-Api-User:user123
+// echo '{"type": "PTJIXPSCyiKLsjBcuyYqWgvno","form_label": "UmRVLAtSbaVPHYKZlNuJoiLjd","input": false,"secret": true,"realm_id": "YccILRTUcGvkoBRWUWHxiaYlm"}' | http PUT "http://localhost:8080/realmrequiredcredential/hello world/hello world"  X-Api-User:user123
 func UpdateRealmRequiredCredential(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

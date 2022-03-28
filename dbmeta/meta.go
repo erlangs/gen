@@ -166,7 +166,12 @@ func (ci *columnMeta) DatabaseTypeName() string {
 func (ci *columnMeta) DatabaseTypePretty() string {
 	if ci.columnLen > 0 {
 		return fmt.Sprintf("%s(%d)", ci.columnType, ci.columnLen)
+	} else if strings.EqualFold(ci.columnType, "varchar") {
+		return fmt.Sprintf("%s(%d)", ci.columnType, 255)
 	}
+	//else if strings.Contains(strings.ToLower(ci.columnType), "int") {
+	//	return fmt.Sprintf("%s", ci.columnType)
+	//}
 
 	return ci.columnType
 }

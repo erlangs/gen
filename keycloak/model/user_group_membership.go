@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: user_group_membership
 
 JSON Sample
 -------------------------------------
-{    "group_id": "TmSHkecVMTfwAWKHNleFJnYxx",    "user_id": "reToaBvYyMPktXQIbTpFsaThY"}
+{    "group_id": "TwZtJJcNgkbAntNwTDPAGgMus",    "user_id": "AudkHODbcIphBQnTJWfjWpsCv"}
 
 
 

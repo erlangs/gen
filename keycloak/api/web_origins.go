@@ -127,7 +127,7 @@ func GetWebOrigins(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /weborigins [post]
-// echo '{"client_id": "VicweBNLWfQYQNEvtdhTvidki","value": "EKidYXqcXWDWYmmtQqAMkdPth"}' | http POST "http://localhost:8080/weborigins" X-Api-User:user123
+// echo '{"client_id": "nrLdbujLJXrPYbAcFnmFnWGGh","value": "UsEmdvImVbnPmuQhKECnBlDGv"}' | http POST "http://localhost:8080/weborigins" X-Api-User:user123
 func AddWebOrigins(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	weborigins := &model.WebOrigins{}
@@ -175,7 +175,7 @@ func AddWebOrigins(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /weborigins/{argClientID}/{argValue} [put]
-// echo '{"client_id": "VicweBNLWfQYQNEvtdhTvidki","value": "EKidYXqcXWDWYmmtQqAMkdPth"}' | http PUT "http://localhost:8080/weborigins/hello world/hello world"  X-Api-User:user123
+// echo '{"client_id": "nrLdbujLJXrPYbAcFnmFnWGGh","value": "UsEmdvImVbnPmuQhKECnBlDGv"}' | http PUT "http://localhost:8080/weborigins/hello world/hello world"  X-Api-User:user123
 func UpdateWebOrigins(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

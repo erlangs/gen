@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: authenticator_config
 
 JSON Sample
 -------------------------------------
-{    "id": "GuOQdaKwlZCboeQMHVZSPTrNS",    "alias": "HjotNcivigqiUbinPxtPFEVvN",    "realm_id": "PYFeWBermXtJhQHXiLQkmxGiA"}
+{    "id": "eJZKsLMaHmYTjHFDQXIXXywEe",    "alias": "myAMFYRmHXtbIQHHKjkgFnGsy",    "realm_id": "lSGytvbcMOQEshbioWurfrPEi"}
 
 
 

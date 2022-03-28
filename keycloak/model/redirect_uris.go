@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: redirect_uris
 
 JSON Sample
 -------------------------------------
-{    "client_id": "CZmKZvSCXoUCxaeaEEuxAiqgs",    "value": "lPCBkVNNGuseXtpYJtUXMJTkL"}
+{    "client_id": "RDQWGUGmegybBpaYcUSZDlPSs",    "value": "CmtaPVbRSNnSqMoRlYMmyvLGU"}
 
 
 

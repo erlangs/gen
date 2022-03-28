@@ -119,7 +119,7 @@ func GetUserEntity(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userentity [post]
-// echo '{"id": "hXaAuMRkfoSTwdZtPXFdtbETT","email": "WcMwEckuMbOYSBdLnxVBNUQgh","email_constraint": "tKrRGKhlfskFYWExyMTAMARxe","email_verified": true,"enabled": true,"federation_link": "MQZBhyMauTUmepXeYVOevFdwg","first_name": "mkYNQWlWBixchMOWekuhslAZo","last_name": "oAWxleewsPewsaJtqcQTXWmvt","realm_id": "YpvLaSYsBkLRahZsLxNIGBmKO","username": "JAQDEsHCdHXGnYDQbOwnsDhbp","created_timestamp": 82,"service_account_client_link": "hcjNVwOJkKVLLcOAxJUrfassh","not_before": 57}' | http POST "http://localhost:8080/userentity" X-Api-User:user123
+// echo '{"id": "BCEvUPIbDhabGKsJSwipWrZcM","email": "QJyhgtpbZrGMwcTNtyOOvKbWh","email_constraint": "fFSejBmbIomSilqdjFQvIjASE","email_verified": true,"enabled": false,"federation_link": "JfVjDKjBdOgWYuHVwvfvOMMON","first_name": "xXQXZMvRaVXyGAKyToypmbakM","last_name": "lFbjqMhhWNfMwseVLYFZEhZdQ","realm_id": "hmPfNUIEbLfArqgluRuDOwATL","username": "JIoAuchKjDZqWBjOUwDpLHdam","created_timestamp": 1,"service_account_client_link": "nuGrHiuNJoqoPlMqILlHdbyuX","not_before": 4}' | http POST "http://localhost:8080/userentity" X-Api-User:user123
 func AddUserEntity(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	userentity := &model.UserEntity{}
@@ -167,7 +167,7 @@ func AddUserEntity(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userentity/{argID} [put]
-// echo '{"id": "hXaAuMRkfoSTwdZtPXFdtbETT","email": "WcMwEckuMbOYSBdLnxVBNUQgh","email_constraint": "tKrRGKhlfskFYWExyMTAMARxe","email_verified": true,"enabled": true,"federation_link": "MQZBhyMauTUmepXeYVOevFdwg","first_name": "mkYNQWlWBixchMOWekuhslAZo","last_name": "oAWxleewsPewsaJtqcQTXWmvt","realm_id": "YpvLaSYsBkLRahZsLxNIGBmKO","username": "JAQDEsHCdHXGnYDQbOwnsDhbp","created_timestamp": 82,"service_account_client_link": "hcjNVwOJkKVLLcOAxJUrfassh","not_before": 57}' | http PUT "http://localhost:8080/userentity/hello world"  X-Api-User:user123
+// echo '{"id": "BCEvUPIbDhabGKsJSwipWrZcM","email": "QJyhgtpbZrGMwcTNtyOOvKbWh","email_constraint": "fFSejBmbIomSilqdjFQvIjASE","email_verified": true,"enabled": false,"federation_link": "JfVjDKjBdOgWYuHVwvfvOMMON","first_name": "xXQXZMvRaVXyGAKyToypmbakM","last_name": "lFbjqMhhWNfMwseVLYFZEhZdQ","realm_id": "hmPfNUIEbLfArqgluRuDOwATL","username": "JIoAuchKjDZqWBjOUwDpLHdam","created_timestamp": 1,"service_account_client_link": "nuGrHiuNJoqoPlMqILlHdbyuX","not_before": 4}' | http PUT "http://localhost:8080/userentity/hello world"  X-Api-User:user123
 func UpdateUserEntity(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

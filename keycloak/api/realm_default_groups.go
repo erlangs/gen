@@ -127,7 +127,7 @@ func GetRealmDefaultGroups(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmdefaultgroups [post]
-// echo '{"realm_id": "ttDuRQhnCWCDHRhNZIOvZmOvT","group_id": "WfcBYmAvtxRBsyEWNjowAMoLC"}' | http POST "http://localhost:8080/realmdefaultgroups" X-Api-User:user123
+// echo '{"realm_id": "uReXxTWqjKyDvWEVdgDhDuxQh","group_id": "tSCbORMHegchNofOiHNtLolES"}' | http POST "http://localhost:8080/realmdefaultgroups" X-Api-User:user123
 func AddRealmDefaultGroups(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	realmdefaultgroups := &model.RealmDefaultGroups{}
@@ -175,7 +175,7 @@ func AddRealmDefaultGroups(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmdefaultgroups/{argRealmID}/{argGroupID} [put]
-// echo '{"realm_id": "ttDuRQhnCWCDHRhNZIOvZmOvT","group_id": "WfcBYmAvtxRBsyEWNjowAMoLC"}' | http PUT "http://localhost:8080/realmdefaultgroups/hello world/hello world"  X-Api-User:user123
+// echo '{"realm_id": "uReXxTWqjKyDvWEVdgDhDuxQh","group_id": "tSCbORMHegchNofOiHNtLolES"}' | http PUT "http://localhost:8080/realmdefaultgroups/hello world/hello world"  X-Api-User:user123
 func UpdateRealmDefaultGroups(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

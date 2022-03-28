@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: user_federation_mapper_config
 
 JSON Sample
 -------------------------------------
-{    "user_federation_mapper_id": "EjefCyrnjlGcflKaGtMGgaxdS",    "value": "QKsmMvoSHGLweFjbbCmdHOXEP",    "name": "JxdrkitsNthuFdRIeXTGQCMAS"}
+{    "user_federation_mapper_id": "TtAYPInunoEuQpAvKaTrrHghB",    "value": "YGHLYLLZZZlpYeQkoRubxxBYN",    "name": "OpfkLvtDoHNQnebMqVrokepEc"}
 
 
 

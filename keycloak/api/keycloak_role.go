@@ -119,7 +119,7 @@ func GetKeycloakRole(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /keycloakrole [post]
-// echo '{"id": "BjFgYWIYfAJBXuLkVixhElUGa","client_realm_constraint": "OtGGEtlUObeYotEwaNjIvDSqj","client_role": true,"description": "OHXNaDZVuBdPwuuvIvfWOtbNr","name": "ARredGKOKcZSlQhMycUVIvkmi","realm_id": "DtkdJKLnkurZTEncAwxexPUYT","client": "CSwTqVuxlrQcswoCrQwGhKrTt","realm": "ZtXeXuvouNdOAcQgtRvowDEoR"}' | http POST "http://localhost:8080/keycloakrole" X-Api-User:user123
+// echo '{"id": "IdTCXkLskyPmCfVDNpCXDtiOH","client_realm_constraint": "QCxLaMfCwNJfXjXjXaCjnqcqn","client_role": true,"description": "CcaNfyEwOdhydhKhlDwCoFvKb","name": "WvYArUTyovsIYUiKOckjQAShY","realm_id": "fFxaNuPpxDeILQkRybLehMvRM","client": "EjsjvdUJbVoPVdtOlpmtHVIEb","realm": "lLXOlWAuxAjlRVQcsxnYcJAtJ"}' | http POST "http://localhost:8080/keycloakrole" X-Api-User:user123
 func AddKeycloakRole(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	keycloakrole := &model.KeycloakRole{}
@@ -167,7 +167,7 @@ func AddKeycloakRole(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /keycloakrole/{argID} [put]
-// echo '{"id": "BjFgYWIYfAJBXuLkVixhElUGa","client_realm_constraint": "OtGGEtlUObeYotEwaNjIvDSqj","client_role": true,"description": "OHXNaDZVuBdPwuuvIvfWOtbNr","name": "ARredGKOKcZSlQhMycUVIvkmi","realm_id": "DtkdJKLnkurZTEncAwxexPUYT","client": "CSwTqVuxlrQcswoCrQwGhKrTt","realm": "ZtXeXuvouNdOAcQgtRvowDEoR"}' | http PUT "http://localhost:8080/keycloakrole/hello world"  X-Api-User:user123
+// echo '{"id": "IdTCXkLskyPmCfVDNpCXDtiOH","client_realm_constraint": "QCxLaMfCwNJfXjXjXaCjnqcqn","client_role": true,"description": "CcaNfyEwOdhydhKhlDwCoFvKb","name": "WvYArUTyovsIYUiKOckjQAShY","realm_id": "fFxaNuPpxDeILQkRybLehMvRM","client": "EjsjvdUJbVoPVdtOlpmtHVIEb","realm": "lLXOlWAuxAjlRVQcsxnYcJAtJ"}' | http PUT "http://localhost:8080/keycloakrole/hello world"  X-Api-User:user123
 func UpdateKeycloakRole(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -127,7 +127,7 @@ func GetPolicyConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /policyconfig [post]
-// echo '{"policy_id": "mOuVXtorrjiuVBxnpamRSubKU","name": "tgIKcBZZHDpFOUcGIECtYPviu","value": "DZGgIJZCNKaCnukHLxAQpcjNk"}' | http POST "http://localhost:8080/policyconfig" X-Api-User:user123
+// echo '{"policy_id": "kxVdAvupPJySApPFYBnSkmWLn","name": "tsGambqbKOLCNsLNVIfQqmAWv","value": "SFeYIdAUTCQvSxtIciNanqXUo"}' | http POST "http://localhost:8080/policyconfig" X-Api-User:user123
 func AddPolicyConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	policyconfig := &model.PolicyConfig{}
@@ -175,7 +175,7 @@ func AddPolicyConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /policyconfig/{argPolicyID}/{argName} [put]
-// echo '{"policy_id": "mOuVXtorrjiuVBxnpamRSubKU","name": "tgIKcBZZHDpFOUcGIECtYPviu","value": "DZGgIJZCNKaCnukHLxAQpcjNk"}' | http PUT "http://localhost:8080/policyconfig/hello world/hello world"  X-Api-User:user123
+// echo '{"policy_id": "kxVdAvupPJySApPFYBnSkmWLn","name": "tsGambqbKOLCNsLNVIfQqmAWv","value": "SFeYIdAUTCQvSxtIciNanqXUo"}' | http PUT "http://localhost:8080/policyconfig/hello world/hello world"  X-Api-User:user123
 func UpdatePolicyConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

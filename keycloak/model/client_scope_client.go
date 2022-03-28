@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_scope_client
 
 JSON Sample
 -------------------------------------
-{    "client_id": "WVyAUqOcLRvAHHhUofxJDCveT",    "scope_id": "qAsrJKWPQGcsjEINInGDNQYYY",    "default_scope": false}
+{    "client_id": "CppoqSFUjtTFsTbVXZQsEOrSx",    "scope_id": "FTOlvvWHCAGHpcNLvZMfdYgcc",    "default_scope": true}
 
 
 

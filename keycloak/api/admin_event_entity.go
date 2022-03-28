@@ -119,7 +119,7 @@ func GetAdminEventEntity(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /adminevententity [post]
-// echo '{"id": "hhgQdFPQPxeaYvuhihShgSGfW","admin_event_time": 95,"realm_id": "kkNqKTOrLeAyjMeWisfFIuqhm","operation_type": "YkLdZAThdeFRgOkGKdlhILyLV","auth_realm_id": "JuvVEbusUAhWhjBsmCtxdbAVH","auth_client_id": "vsXhPZpDmGEcKYlSsrPEPECeI","auth_user_id": "tTXRXMEJqYdRwTBRYUVFZqjOX","ip_address": "HNdKJMEOmkwodxFedyvxvrIQG","resource_path": "DewLuUTtVmKWermbihGMQInDU","representation": "nQRUXewXcrPKBQINOLfwqVAUN","error": "IeljSOSeVXaPRIlWjsiIeEsAd","resource_type": "LIdwvmemAbIXXBBbMeWOguxPO"}' | http POST "http://localhost:8080/adminevententity" X-Api-User:user123
+// echo '{"id": "yFnCrnQFhBBplCAFgBmMXgGwi","admin_event_time": 73,"realm_id": "sDDKctFOTpCxovXNhmlFQquCe","operation_type": "BvWRjvNGPoaShTlssqbwnJPOW","auth_realm_id": "HbiFvrQErBbLOyHENCkGDMMJe","auth_client_id": "lMnIeIDrfpJvfZGGQAxWlyepV","auth_user_id": "ZAcktnRBmAngeQqwGkisSnwsg","ip_address": "kbOAQoGpIpxwOjvTfGqGupySi","resource_path": "oBNjoSOyQgAYrqjkDyeRduxHy","representation": "vvbUKFvDNQnWobsTfbpiyUepN","error": "ZKROLXsRWUhjiHdGCxlRUkVkd","resource_type": "NSlfZZNHohHXxPWqsCGuFYoro"}' | http POST "http://localhost:8080/adminevententity" X-Api-User:user123
 func AddAdminEventEntity(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	adminevententity := &model.AdminEventEntity{}
@@ -167,7 +167,7 @@ func AddAdminEventEntity(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /adminevententity/{argID} [put]
-// echo '{"id": "hhgQdFPQPxeaYvuhihShgSGfW","admin_event_time": 95,"realm_id": "kkNqKTOrLeAyjMeWisfFIuqhm","operation_type": "YkLdZAThdeFRgOkGKdlhILyLV","auth_realm_id": "JuvVEbusUAhWhjBsmCtxdbAVH","auth_client_id": "vsXhPZpDmGEcKYlSsrPEPECeI","auth_user_id": "tTXRXMEJqYdRwTBRYUVFZqjOX","ip_address": "HNdKJMEOmkwodxFedyvxvrIQG","resource_path": "DewLuUTtVmKWermbihGMQInDU","representation": "nQRUXewXcrPKBQINOLfwqVAUN","error": "IeljSOSeVXaPRIlWjsiIeEsAd","resource_type": "LIdwvmemAbIXXBBbMeWOguxPO"}' | http PUT "http://localhost:8080/adminevententity/hello world"  X-Api-User:user123
+// echo '{"id": "yFnCrnQFhBBplCAFgBmMXgGwi","admin_event_time": 73,"realm_id": "sDDKctFOTpCxovXNhmlFQquCe","operation_type": "BvWRjvNGPoaShTlssqbwnJPOW","auth_realm_id": "HbiFvrQErBbLOyHENCkGDMMJe","auth_client_id": "lMnIeIDrfpJvfZGGQAxWlyepV","auth_user_id": "ZAcktnRBmAngeQqwGkisSnwsg","ip_address": "kbOAQoGpIpxwOjvTfGqGupySi","resource_path": "oBNjoSOyQgAYrqjkDyeRduxHy","representation": "vvbUKFvDNQnWobsTfbpiyUepN","error": "ZKROLXsRWUhjiHdGCxlRUkVkd","resource_type": "NSlfZZNHohHXxPWqsCGuFYoro"}' | http PUT "http://localhost:8080/adminevententity/hello world"  X-Api-User:user123
 func UpdateAdminEventEntity(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

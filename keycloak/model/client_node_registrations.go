@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_node_registrations
 
 JSON Sample
 -------------------------------------
-{    "client_id": "mJHkvfEhooGuQuUmLrhHRcNWU",    "value": 9,    "name": "QuJIcPcsGMYDqKbaYJnBDIJUd"}
+{    "client_id": "ZGXaYyTjYPeqamgxeBRhWsoyN",    "value": 53,    "name": "FgpPXXcXkObKRItuamOmihhgG"}
 
 
 

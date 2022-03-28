@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -26,7 +26,7 @@ Table: broker_link
 
 JSON Sample
 -------------------------------------
-{    "identity_provider": "QEurbkYQdyPMYqjOaqyaygvYB",    "storage_provider_id": "VxncJhRcRbLNyyricLWbbTCXE",    "realm_id": "nCjjpkVMBmLfDptfjNRYKpUmq",    "broker_user_id": "KCBuppUsptYPfvFUhXPnTBdhh",    "broker_username": "kACOSGEJkiTJdaYGuNssIvtyJ",    "token": "RuQkoSeviRaGkEPCwWZkBHWln",    "user_id": "JqFQICbDdRyWJQaIRxNKTVPXI"}
+{    "identity_provider": "QGqTqRABuXiQxYUgHTnBfFjpF",    "storage_provider_id": "QLVenRoRdqNOVYMKqDAKWFLEg",    "realm_id": "YlMVoxAVcKWxZvmxpIPtBmdbx",    "broker_user_id": "IKeoAslXsRjoFVKVVtFeTQMSA",    "broker_username": "TdgJeupTDleySgqmfFFBmDaLX",    "token": "MQKXjLPlMfqmegSpbOnClvBnG",    "user_id": "BsXRmCcYhpaOameseETNvUcje"}
 
 
 

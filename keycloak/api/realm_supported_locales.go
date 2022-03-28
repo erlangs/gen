@@ -127,7 +127,7 @@ func GetRealmSupportedLocales(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmsupportedlocales [post]
-// echo '{"realm_id": "ZyTVBposPmLGcQNyShGHrhsni","value": "RdioqyiRNhmWeRxEqdAIYHkOw"}' | http POST "http://localhost:8080/realmsupportedlocales" X-Api-User:user123
+// echo '{"realm_id": "GjCeSTlTfVQIuektMNPSTDbdy","value": "eRIuTirtkHRKIOioRjvWJdmyB"}' | http POST "http://localhost:8080/realmsupportedlocales" X-Api-User:user123
 func AddRealmSupportedLocales(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	realmsupportedlocales := &model.RealmSupportedLocales{}
@@ -175,7 +175,7 @@ func AddRealmSupportedLocales(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmsupportedlocales/{argRealmID}/{argValue} [put]
-// echo '{"realm_id": "ZyTVBposPmLGcQNyShGHrhsni","value": "RdioqyiRNhmWeRxEqdAIYHkOw"}' | http PUT "http://localhost:8080/realmsupportedlocales/hello world/hello world"  X-Api-User:user123
+// echo '{"realm_id": "GjCeSTlTfVQIuektMNPSTDbdy","value": "eRIuTirtkHRKIOioRjvWJdmyB"}' | http PUT "http://localhost:8080/realmsupportedlocales/hello world/hello world"  X-Api-User:user123
 func UpdateRealmSupportedLocales(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

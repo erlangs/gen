@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -29,7 +29,7 @@ Table: event_entity
 
 JSON Sample
 -------------------------------------
-{    "id": "IvLpjvvpUJnycgJcrblZiZGZw",    "client_id": "rCgjdCbhvBidEOAGyIeGQosGW",    "details_json": "CRHrilyyfspQOFrZGZTrvmZCv",    "error": "EkLdDsIhiMMGZCvOSEJbnmTPH",    "ip_address": "LjrpHPfZovGjUidGdIKaLCyke",    "realm_id": "LpvnClEbUPVokedoHjMYgveRB",    "session_id": "tRrDPFkQPGjfLHaXeDRpUSiZL",    "event_time": 8,    "type": "clZfcixSOdYQgeGBrmnHcqOEL",    "user_id": "nUcoAeFTKhdXweJyQFiNWLtYr"}
+{    "id": "xUnRFZwtqjKNFmuuOcIxyVAbp",    "client_id": "APwcrQEqAWfuFZSfKrmJmvtlp",    "details_json": "aZstsPApaXLJMtyxfTkVyURhJ",    "error": "egqlJpcQnTvmaxhrdwaddOSPd",    "ip_address": "mRejiDvdlCbnsZhltRtlmWRoQ",    "realm_id": "UXKgjffOPKVIUJQOPJpSboVZp",    "session_id": "HjpAZntnEuQIhNMyIpiQYLdBg",    "event_time": 22,    "type": "LgLGTWrTcfqmBCvqCYuGviEOS",    "user_id": "odnSyCAAXnYPBgBoCtexyhoPl"}
 
 
 

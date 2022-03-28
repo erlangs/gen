@@ -119,7 +119,7 @@ func GetResourceServerPermTicket(w http.ResponseWriter, r *http.Request, ps http
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceserverpermticket [post]
-// echo '{"id": "bxuMYqMHAtgHwRjoMcjTrrGMI","owner": "JsbsCtAOhMNRenuQgDcKdTpHZ","requester": "yNNvZcjRAuUpAHGAdepPpaMpo","created_timestamp": 7,"granted_timestamp": 94,"resource_id": "uggISDNfestDaNEPByVlDqXkq","scope_id": "IXkelesOkRncHMIrewlVGVGvr","resource_server_id": "lITxJPovTwIswDeLUgQbHtIyv","policy_id": "KSmtYUQnbnAcHtEwJibgHDwJA"}' | http POST "http://localhost:8080/resourceserverpermticket" X-Api-User:user123
+// echo '{"id": "nxpnfSnqmbpHVTkolTMFhPXGI","owner": "JcsEMakhpjUbjNkftnIrWMnKl","requester": "UnerndWuyrZJgxKiHiwCXSeNX","created_timestamp": 8,"granted_timestamp": 14,"resource_id": "YsLRWOLwQuAIZCwJQYyeJRjBg","scope_id": "xeXBXUqmXkZQxiBxQtuVaBNDO","resource_server_id": "XKTblGsmXlkaAyLocZgSPxlit","policy_id": "BCCGOoLlnfxdGjCNUqcKVmqVj"}' | http POST "http://localhost:8080/resourceserverpermticket" X-Api-User:user123
 func AddResourceServerPermTicket(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	resourceserverpermticket := &model.ResourceServerPermTicket{}
@@ -167,7 +167,7 @@ func AddResourceServerPermTicket(w http.ResponseWriter, r *http.Request, ps http
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceserverpermticket/{argID} [put]
-// echo '{"id": "bxuMYqMHAtgHwRjoMcjTrrGMI","owner": "JsbsCtAOhMNRenuQgDcKdTpHZ","requester": "yNNvZcjRAuUpAHGAdepPpaMpo","created_timestamp": 7,"granted_timestamp": 94,"resource_id": "uggISDNfestDaNEPByVlDqXkq","scope_id": "IXkelesOkRncHMIrewlVGVGvr","resource_server_id": "lITxJPovTwIswDeLUgQbHtIyv","policy_id": "KSmtYUQnbnAcHtEwJibgHDwJA"}' | http PUT "http://localhost:8080/resourceserverpermticket/hello world"  X-Api-User:user123
+// echo '{"id": "nxpnfSnqmbpHVTkolTMFhPXGI","owner": "JcsEMakhpjUbjNkftnIrWMnKl","requester": "UnerndWuyrZJgxKiHiwCXSeNX","created_timestamp": 8,"granted_timestamp": 14,"resource_id": "YsLRWOLwQuAIZCwJQYyeJRjBg","scope_id": "xeXBXUqmXkZQxiBxQtuVaBNDO","resource_server_id": "XKTblGsmXlkaAyLocZgSPxlit","policy_id": "BCCGOoLlnfxdGjCNUqcKVmqVj"}' | http PUT "http://localhost:8080/resourceserverpermticket/hello world"  X-Api-User:user123
 func UpdateResourceServerPermTicket(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

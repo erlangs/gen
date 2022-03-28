@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: identity_provider_config
 
 JSON Sample
 -------------------------------------
-{    "identity_provider_id": "RElFebQaVnCZRgMVhgHMOMLxL",    "value": "kSgHcJsjvYYosftaoqynYyEKw",    "name": "lndnjOWLsAKxYSOEgofRTiOCD"}
+{    "identity_provider_id": "QnoSVotFcrBtQrAqqEcgXymUt",    "value": "EYaYgBXDBSlUwigJCIwRlCmeh",    "name": "KwpnFLSfsPekdhClqgqOtLwZp"}
 
 
 

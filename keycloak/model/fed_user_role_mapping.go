@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: fed_user_role_mapping
 
 JSON Sample
 -------------------------------------
-{    "role_id": "aAZBoFRSRosYdsEuWgWLOqXEI",    "user_id": "QEJjxqeXMiRNpalYcWcHARqXa",    "realm_id": "vHioeFiowmNxTerZQIAbmjNry",    "storage_provider_id": "IUQfGYyQCfpAyoyKvCdspdIbb"}
+{    "role_id": "JqkQcHeAPEdvADEplZVnogGIF",    "user_id": "ifCSYoMEhUBfATUCPTQeioWZm",    "realm_id": "cmRQeedMCNwFCIPUDNQCRULTU",    "storage_provider_id": "quStTKEOCsCACcnViqClOxiCG"}
 
 
 

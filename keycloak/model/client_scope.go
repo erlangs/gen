@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -24,7 +24,7 @@ Table: client_scope
 
 JSON Sample
 -------------------------------------
-{    "id": "egQUicPaYYIAbOHqukjbrTtWo",    "name": "lCtHtiHQaltFCnSWcxjAAaggM",    "realm_id": "uWTVHBjrosijwDVUvjuFInRyw",    "description": "cllGmJtCRTlxlxrObFbmEwZMo",    "protocol": "urFDvRuKFotlMkdwogcosZJeH"}
+{    "id": "IHJQRVcjfkWtDQJeMGWaHvQys",    "name": "NSCyJuUVcWSLGRHdkyPFNxypr",    "realm_id": "SMiVMCisqfRGgjYtbZRgoRNbN",    "description": "DOLDYOTjpbSMMFbqwOXphMglp",    "protocol": "kfxlxvqnsKaHTCANFiwvwgGHI"}
 
 
 

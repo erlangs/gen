@@ -127,7 +127,7 @@ func GetRealmLocalizations(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmlocalizations [post]
-// echo '{"realm_id": "jCOXUkADnUMfFLdJxgBSvsUmN","locale": "FHLfdKtPYvhRhEtAZPoxOXpcZ","texts": "blTqIiVBtCHtyVxJbVgZxgqJk"}' | http POST "http://localhost:8080/realmlocalizations" X-Api-User:user123
+// echo '{"realm_id": "gyXsmYTLiXKAKhfICHMPNNQNY","locale": "blLaKsbcaDPPoiYpcgIgCHbdB","texts": "uBkmeEIDXcNWrhjMNDtcfGCdD"}' | http POST "http://localhost:8080/realmlocalizations" X-Api-User:user123
 func AddRealmLocalizations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	realmlocalizations := &model.RealmLocalizations{}
@@ -175,7 +175,7 @@ func AddRealmLocalizations(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmlocalizations/{argRealmID}/{argLocale} [put]
-// echo '{"realm_id": "jCOXUkADnUMfFLdJxgBSvsUmN","locale": "FHLfdKtPYvhRhEtAZPoxOXpcZ","texts": "blTqIiVBtCHtyVxJbVgZxgqJk"}' | http PUT "http://localhost:8080/realmlocalizations/hello world/hello world"  X-Api-User:user123
+// echo '{"realm_id": "gyXsmYTLiXKAKhfICHMPNNQNY","locale": "blLaKsbcaDPPoiYpcgIgCHbdB","texts": "uBkmeEIDXcNWrhjMNDtcfGCdD"}' | http PUT "http://localhost:8080/realmlocalizations/hello world/hello world"  X-Api-User:user123
 func UpdateRealmLocalizations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

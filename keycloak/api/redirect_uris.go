@@ -127,7 +127,7 @@ func GetRedirectUris(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /redirecturis [post]
-// echo '{"client_id": "CZmKZvSCXoUCxaeaEEuxAiqgs","value": "lPCBkVNNGuseXtpYJtUXMJTkL"}' | http POST "http://localhost:8080/redirecturis" X-Api-User:user123
+// echo '{"client_id": "NpdgcdurcwGDXvADVFWmUfwuJ","value": "EiLKDSOObNXfPARpxIpEynrdW"}' | http POST "http://localhost:8080/redirecturis" X-Api-User:user123
 func AddRedirectUris(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	redirecturis := &model.RedirectUris{}
@@ -175,7 +175,7 @@ func AddRedirectUris(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /redirecturis/{argClientID}/{argValue} [put]
-// echo '{"client_id": "CZmKZvSCXoUCxaeaEEuxAiqgs","value": "lPCBkVNNGuseXtpYJtUXMJTkL"}' | http PUT "http://localhost:8080/redirecturis/hello world/hello world"  X-Api-User:user123
+// echo '{"client_id": "NpdgcdurcwGDXvADVFWmUfwuJ","value": "EiLKDSOObNXfPARpxIpEynrdW"}' | http PUT "http://localhost:8080/redirecturis/hello world/hello world"  X-Api-User:user123
 func UpdateRedirectUris(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

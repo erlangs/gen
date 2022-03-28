@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: group_role_mapping
 
 JSON Sample
 -------------------------------------
-{    "role_id": "RwaJLUWmRDtyoDFOPIUpNQbLJ",    "group_id": "SoCixMFWfDyRKxmqXhxxGjxih"}
+{    "role_id": "VJVmVRVXdrwUlPAcoWpOxvdvl",    "group_id": "QocXtbuqoHvWgseRdecPOQBNT"}
 
 
 

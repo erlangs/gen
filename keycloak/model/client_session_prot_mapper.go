@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: client_session_prot_mapper
 
 JSON Sample
 -------------------------------------
-{    "protocol_mapper_id": "mmiFIchDPsmuTBkphtkXtraam",    "client_session": "nILFXMfJWDWNVYJfflGORnLXb"}
+{    "protocol_mapper_id": "notbRmOupGtFIyFaSyXilDJRp",    "client_session": "ShbjucuyIhPsODfEBiZSoqKaM"}
 
 
 

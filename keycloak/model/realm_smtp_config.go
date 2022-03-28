@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: realm_smtp_config
 
 JSON Sample
 -------------------------------------
-{    "realm_id": "jiJDSFKlNvVqmNfgiWTqFDydF",    "value": "KSIanaZJqcHNsgDBSKyHQKKKS",    "name": "SLgnvwcvcfVDMnLExNBNhQUkk"}
+{    "realm_id": "UvyqerUUWBlRSLeUYKUAmdgDR",    "value": "plnVQreYZAttYHDWrJsSbxNGv",    "name": "EsUKAxZxHdcknQrfTbKLXRuXO"}
 
 
 

@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: fed_user_required_action
 
 JSON Sample
 -------------------------------------
-{    "required_action": "ttakOnwVnJqYqOEWwtPyeqkMb",    "user_id": "vuGDtgnASggKKkntdnCWJmkvI",    "realm_id": "QyjnUqlBPPSDfHYgkpUMrCEjh",    "storage_provider_id": "fHsObhVUyguetgvyJKmQSgIeB"}
+{    "required_action": "pQUbuTJGRiGmcWFcQNtCFXPrd",    "user_id": "BQDtTtkyilPApotSYSooRvMQF",    "realm_id": "SwqAyXFLTQiBqxEgvyNVXSSbD",    "storage_provider_id": "yUADiELdeLcESEAAEscnhqFJX"}
 
 
 

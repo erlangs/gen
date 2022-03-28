@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: realm_attribute
 
 JSON Sample
 -------------------------------------
-{    "name": "xwCNwgeJRiWNeiSZKbeZMkCyb",    "realm_id": "sxbkmvZSbExAFdxdOASCgnhgT",    "value": "cFRQVbsvPVoxlqVusTysCpZsN"}
+{    "name": "HaHpxJhaOxDASfUbbFRQSCSBr",    "realm_id": "RoNFvXUNKLyiLZekTLpADvHux",    "value": "lGIRWxmftWCTetUfRYWnpsXQJ"}
 
 
 

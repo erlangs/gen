@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_attributes
 
 JSON Sample
 -------------------------------------
-{    "client_id": "xMfYYJVgHTRZODpXwyjrBXZaQ",    "value": "MBnJJXhOsWNRrFMLJnIDGqGpK",    "name": "tPlZHGVqXhMuJDtatmyCbamPQ"}
+{    "client_id": "HJbluaWdkbkXXpGhcDRcvhAgP",    "value": "kuFHdCQtZZbBIJVtFSbeqSZRJ",    "name": "WDLhpYRrqNYPxstbamGTCQcOc"}
 
 
 

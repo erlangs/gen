@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -28,7 +28,7 @@ Table: resource_server_perm_ticket
 
 JSON Sample
 -------------------------------------
-{    "id": "bxuMYqMHAtgHwRjoMcjTrrGMI",    "owner": "JsbsCtAOhMNRenuQgDcKdTpHZ",    "requester": "yNNvZcjRAuUpAHGAdepPpaMpo",    "created_timestamp": 7,    "granted_timestamp": 94,    "resource_id": "uggISDNfestDaNEPByVlDqXkq",    "scope_id": "IXkelesOkRncHMIrewlVGVGvr",    "resource_server_id": "lITxJPovTwIswDeLUgQbHtIyv",    "policy_id": "KSmtYUQnbnAcHtEwJibgHDwJA"}
+{    "id": "rVtEGRTuClBAmTxrErMLSoiNM",    "owner": "eyOmstIoKDrrrUMckPtnKPLCO",    "requester": "BRoxexUvnYyrQGkCPkhDcGRDn",    "created_timestamp": 98,    "granted_timestamp": 61,    "resource_id": "obyeiNJYrInTYfxqwDIyjgEmR",    "scope_id": "hhGhCPXEGfyVZnVVAwDZZByih",    "resource_server_id": "IdoSdIdakhjVVAPmUnovvBgek",    "policy_id": "SqAFgoiejxDutECuRguNBnFMx"}
 
 
 

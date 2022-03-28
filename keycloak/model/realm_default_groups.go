@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: realm_default_groups
 
 JSON Sample
 -------------------------------------
-{    "realm_id": "ttDuRQhnCWCDHRhNZIOvZmOvT",    "group_id": "WfcBYmAvtxRBsyEWNjowAMoLC"}
+{    "realm_id": "LpNyclxfKhcnOkkBHDcrSlgVj",    "group_id": "UkHtlSoaxZDEmQNxWBdNdXvkt"}
 
 
 

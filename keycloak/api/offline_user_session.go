@@ -127,7 +127,7 @@ func GetOfflineUserSession(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /offlineusersession [post]
-// echo '{"user_session_id": "DmXLgctOwjIpjTUyFhuaJAOdr","user_id": "fJSMDlBXSLESZbmTstTSoqAZy","realm_id": "TaquAGLHEiionRflMXXCaHfPH","created_on": 12,"offline_flag": "iLXUmVRuspjdgnhHQoJlgRKgr","data": "BCCIsATtRiPfQeHdgPrAdgfSX","last_session_refresh": 36}' | http POST "http://localhost:8080/offlineusersession" X-Api-User:user123
+// echo '{"user_session_id": "nRvsZPuGfgMFYHgUETstMfwoM","user_id": "wFMVOGoJPcwJZcHiNeuhlolFn","realm_id": "ogsNNBTjwTMjCAHBgGrMVLaBZ","created_on": 32,"offline_flag": "MmoitLDISGFoaCgsJUPkejDdk","data": "asfBRfHyxPkrKxgbYcCZWuQPG","last_session_refresh": 9}' | http POST "http://localhost:8080/offlineusersession" X-Api-User:user123
 func AddOfflineUserSession(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	offlineusersession := &model.OfflineUserSession{}
@@ -175,7 +175,7 @@ func AddOfflineUserSession(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /offlineusersession/{argUserSessionID}/{argOfflineFlag} [put]
-// echo '{"user_session_id": "DmXLgctOwjIpjTUyFhuaJAOdr","user_id": "fJSMDlBXSLESZbmTstTSoqAZy","realm_id": "TaquAGLHEiionRflMXXCaHfPH","created_on": 12,"offline_flag": "iLXUmVRuspjdgnhHQoJlgRKgr","data": "BCCIsATtRiPfQeHdgPrAdgfSX","last_session_refresh": 36}' | http PUT "http://localhost:8080/offlineusersession/hello world/hello world"  X-Api-User:user123
+// echo '{"user_session_id": "nRvsZPuGfgMFYHgUETstMfwoM","user_id": "wFMVOGoJPcwJZcHiNeuhlolFn","realm_id": "ogsNNBTjwTMjCAHBgGrMVLaBZ","created_on": 32,"offline_flag": "MmoitLDISGFoaCgsJUPkejDdk","data": "asfBRfHyxPkrKxgbYcCZWuQPG","last_session_refresh": 9}' | http PUT "http://localhost:8080/offlineusersession/hello world/hello world"  X-Api-User:user123
 func UpdateOfflineUserSession(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

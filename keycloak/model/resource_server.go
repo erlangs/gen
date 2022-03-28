@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: resource_server
 
 JSON Sample
 -------------------------------------
-{    "id": "UimvTunbmGsItxTFKPwHAylQa",    "allow_rs_remote_mgmt": true,    "policy_enforce_mode": "lHQqeDwZLehPZMDvlirLfkHxB",    "decision_strategy": 63}
+{    "id": "yYnyRrPicHrxcwrMsevwBDnmx",    "allow_rs_remote_mgmt": false,    "policy_enforce_mode": "jHfXGPSomwDqDypkTHYxOjoSJ",    "decision_strategy": 17}
 
 
 

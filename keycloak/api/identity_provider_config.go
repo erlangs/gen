@@ -127,7 +127,7 @@ func GetIdentityProviderConfig(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /identityproviderconfig [post]
-// echo '{"identity_provider_id": "RElFebQaVnCZRgMVhgHMOMLxL","value": "kSgHcJsjvYYosftaoqynYyEKw","name": "lndnjOWLsAKxYSOEgofRTiOCD"}' | http POST "http://localhost:8080/identityproviderconfig" X-Api-User:user123
+// echo '{"identity_provider_id": "nnaZoAVgGymMayPnobXMcytQI","value": "oNVHTkBLbnBoSNEdbIUAJTCAQ","name": "uQDEadRioPsZdYxySVkZowhSu"}' | http POST "http://localhost:8080/identityproviderconfig" X-Api-User:user123
 func AddIdentityProviderConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	identityproviderconfig := &model.IdentityProviderConfig{}
@@ -175,7 +175,7 @@ func AddIdentityProviderConfig(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /identityproviderconfig/{argIdentityProviderID}/{argName} [put]
-// echo '{"identity_provider_id": "RElFebQaVnCZRgMVhgHMOMLxL","value": "kSgHcJsjvYYosftaoqynYyEKw","name": "lndnjOWLsAKxYSOEgofRTiOCD"}' | http PUT "http://localhost:8080/identityproviderconfig/hello world/hello world"  X-Api-User:user123
+// echo '{"identity_provider_id": "nnaZoAVgGymMayPnobXMcytQI","value": "oNVHTkBLbnBoSNEdbIUAJTCAQ","name": "uQDEadRioPsZdYxySVkZowhSu"}' | http PUT "http://localhost:8080/identityproviderconfig/hello world/hello world"  X-Api-User:user123
 func UpdateIdentityProviderConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

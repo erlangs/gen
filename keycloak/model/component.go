@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -26,7 +26,7 @@ Table: component
 
 JSON Sample
 -------------------------------------
-{    "id": "DZaaAZuaACrMEsAbDsBmWYpMX",    "name": "CjQEENFOanBTrRZmLaQkyFmTq",    "parent_id": "THtxXXULFEKEHYOExeIJjiqku",    "provider_id": "JIZZLGRwhlittnUvhckwdwkiO",    "provider_type": "UMHUdfbqQjnQaChfJCrcncZPc",    "realm_id": "NnCFZTDecqccpaiPdlLLZufqa",    "sub_type": "YpFslimHGAtrHaZXTRXwKmkSs"}
+{    "id": "UMoWQitboxfxAWnQnGXruXhJg",    "name": "RhmaKsncRQYXptBrZsUIHmMWD",    "parent_id": "mTukPcpWvyLCFIBRfEvtDtiAu",    "provider_id": "HlHDPnEKTUbYvtTxFNaeqakfx",    "provider_type": "PIeMMvOQlfWNEEbRrjYwbgmUX",    "realm_id": "mKpPbZYYuGXXodxAvmNaPKjEb",    "sub_type": "BcJZcZnYjMqTHabcggnMVnBYZ"}
 
 
 

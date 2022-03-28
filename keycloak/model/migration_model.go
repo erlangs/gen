@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: migration_model
 
 JSON Sample
 -------------------------------------
-{    "id": "emQmeyTlKOQXklsRDITllfBSQ",    "version": "EunxXxgZsCNyTNKPrhEigJRwY",    "update_time": 54}
+{    "id": "xLRGpVotSyMsNBMVSEDsiomlm",    "version": "UJUGkRFFOTGBFKTFAECIsvpRA",    "update_time": 6}
 
 
 

@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -28,7 +28,7 @@ Table: fed_user_consent
 
 JSON Sample
 -------------------------------------
-{    "id": "pFMhaLmPNxCOrVOscovXvEmjJ",    "client_id": "jkYoprGPrslAsUGQGnNZopuLh",    "user_id": "YJhpLBAVwbqZbsZSWICYarPyC",    "realm_id": "TYapqgRAEUGZtXTvFSZeWBHAD",    "storage_provider_id": "eivbwbQaRHGnjTPCfDKngnBGk",    "created_date": 88,    "last_updated_date": 44,    "client_storage_provider": "SkwmExEyAnyAJiVuBFtOHRwnY",    "external_client_id": "bTEtTBiBlkmCgkHIWgNwWQmxn"}
+{    "id": "nyZBIWrYCyGyccZtdjrVvwgOI",    "client_id": "RBPXKcdxFtAnQDodTcmNdqbFs",    "user_id": "UYNDKEufMPQLZxjUvFMFPxZtY",    "realm_id": "YIBcmoMMCWsQvvTDHWFrdHhZS",    "storage_provider_id": "RKSpxpNyiSxufEJSclQslYXPT",    "created_date": 62,    "last_updated_date": 40,    "client_storage_provider": "GayKhBmiIflZvqOkulIosURjj",    "external_client_id": "mFLavVtFdZEAgGeRZJCWpJXoF"}
 
 
 

@@ -29,7 +29,7 @@ Table: admin_event_entity
 
 JSON Sample
 -------------------------------------
-{    "id": "hhgQdFPQPxeaYvuhihShgSGfW",    "admin_event_time": 95,    "realm_id": "kkNqKTOrLeAyjMeWisfFIuqhm",    "operation_type": "YkLdZAThdeFRgOkGKdlhILyLV",    "auth_realm_id": "JuvVEbusUAhWhjBsmCtxdbAVH",    "auth_client_id": "vsXhPZpDmGEcKYlSsrPEPECeI",    "auth_user_id": "tTXRXMEJqYdRwTBRYUVFZqjOX",    "ip_address": "HNdKJMEOmkwodxFedyvxvrIQG",    "resource_path": "DewLuUTtVmKWermbihGMQInDU",    "representation": "nQRUXewXcrPKBQINOLfwqVAUN",    "error": "IeljSOSeVXaPRIlWjsiIeEsAd",    "resource_type": "LIdwvmemAbIXXBBbMeWOguxPO"}
+{    "id": "uqDCdSBKUlfRmvOptirarUAuD",    "admin_event_time": 1,    "realm_id": "jlMMybMBaBFwsloamclIUmaCK",    "operation_type": "prGHyFkDleYpdECtiRVEpudMc",    "auth_realm_id": "wHueHZgXRPdgkHrGgEXuqjIMu",    "auth_client_id": "geTFsrRFRbyxlLFccGjmhPWEr",    "auth_user_id": "AwIvWUdXVmCnfIRnvrJuiRhAb",    "ip_address": "vWZosPuxNRMNbcgilGWDcchwy",    "resource_path": "tejFwvSbNtqXraGMFNbyuRTfa",    "representation": "nocZxQAgaHNJMrlgjvKcxDnZN",    "error": "KJnDJHpqMAfoElqMNpjuJqjVv",    "resource_type": "kGhEGTUHAGxTQFgvSOUfHMobD"}
 
 
 

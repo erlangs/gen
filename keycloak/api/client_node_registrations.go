@@ -127,7 +127,7 @@ func GetClientNodeRegistrations(w http.ResponseWriter, r *http.Request, ps httpr
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientnoderegistrations [post]
-// echo '{"client_id": "mJHkvfEhooGuQuUmLrhHRcNWU","value": 9,"name": "QuJIcPcsGMYDqKbaYJnBDIJUd"}' | http POST "http://localhost:8080/clientnoderegistrations" X-Api-User:user123
+// echo '{"client_id": "hPVWuYUSNKcJBQLTBycKkFxpi","value": 87,"name": "FGQqaRhdZNSROlmEyNwLwfDFx"}' | http POST "http://localhost:8080/clientnoderegistrations" X-Api-User:user123
 func AddClientNodeRegistrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientnoderegistrations := &model.ClientNodeRegistrations{}
@@ -175,7 +175,7 @@ func AddClientNodeRegistrations(w http.ResponseWriter, r *http.Request, ps httpr
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientnoderegistrations/{argClientID}/{argName} [put]
-// echo '{"client_id": "mJHkvfEhooGuQuUmLrhHRcNWU","value": 9,"name": "QuJIcPcsGMYDqKbaYJnBDIJUd"}' | http PUT "http://localhost:8080/clientnoderegistrations/hello world/hello world"  X-Api-User:user123
+// echo '{"client_id": "hPVWuYUSNKcJBQLTBycKkFxpi","value": 87,"name": "FGQqaRhdZNSROlmEyNwLwfDFx"}' | http PUT "http://localhost:8080/clientnoderegistrations/hello world/hello world"  X-Api-User:user123
 func UpdateClientNodeRegistrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

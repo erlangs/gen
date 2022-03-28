@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -27,7 +27,7 @@ Table: resource_server_resource
 
 JSON Sample
 -------------------------------------
-{    "id": "WOeeJVLfRdsPUeuGWpRXSFWgn",    "name": "FsdsvncdNVgbxscIZNjBtyJgL",    "type": "lwwkrGZBiQTSgiLvMPEbHApTl",    "icon_uri": "jgGXyOwJntbDLtvwYIeCqWXbh",    "owner": "uyAQDLjiCwWpJZRTSIsrgsUgk",    "resource_server_id": "EqOaksmdjWjMYMcLCqIsKdiZG",    "owner_managed_access": false,    "display_name": "mnmYOygSGOVUQtwslDaRpXRsK"}
+{    "id": "MXlKoKjoqFYHUmOjgduDgvJms",    "name": "xOABprfHkSuHbpInBbFabIrrB",    "type": "KZIjfSaywIkjpffTHvEEeiVRf",    "icon_uri": "faqwCbtUaNGcpottnQmqiCOVj",    "owner": "OvCDlFUhmfxwGCorSRpNWjZeQ",    "resource_server_id": "AoeGheBAopiEdpsiCOEecCSMf",    "owner_managed_access": true,    "display_name": "bibuwdNZDxEEoBIUDhFNnNwcY"}
 
 
 

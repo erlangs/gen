@@ -119,7 +119,7 @@ func GetUserFederationProvider(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userfederationprovider [post]
-// echo '{"id": "nghUEvEcEsCwZsOTjglkgDaUM","changed_sync_period": 4,"display_name": "bLrNPLTSwUYlfZwiTDobXkwty","full_sync_period": 82,"last_sync": 37,"priority": 5,"provider_name": "rhqjYPDtWqKjvlLCNpXUAiOmH","realm_id": "AYymvtqDjsDpPCEcTWUsRALLQ"}' | http POST "http://localhost:8080/userfederationprovider" X-Api-User:user123
+// echo '{"id": "VKQZGymyePBcXissaSCrPLoNZ","changed_sync_period": 90,"display_name": "iflsEkYRybBoeUIVtbZUkbnAi","full_sync_period": 62,"last_sync": 75,"priority": 16,"provider_name": "eqFWMLlqRHqhFEJRpdELeHTWn","realm_id": "LNJGLykbhkPdbOqkESvqVOXbC"}' | http POST "http://localhost:8080/userfederationprovider" X-Api-User:user123
 func AddUserFederationProvider(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	userfederationprovider := &model.UserFederationProvider{}
@@ -167,7 +167,7 @@ func AddUserFederationProvider(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userfederationprovider/{argID} [put]
-// echo '{"id": "nghUEvEcEsCwZsOTjglkgDaUM","changed_sync_period": 4,"display_name": "bLrNPLTSwUYlfZwiTDobXkwty","full_sync_period": 82,"last_sync": 37,"priority": 5,"provider_name": "rhqjYPDtWqKjvlLCNpXUAiOmH","realm_id": "AYymvtqDjsDpPCEcTWUsRALLQ"}' | http PUT "http://localhost:8080/userfederationprovider/hello world"  X-Api-User:user123
+// echo '{"id": "VKQZGymyePBcXissaSCrPLoNZ","changed_sync_period": 90,"display_name": "iflsEkYRybBoeUIVtbZUkbnAi","full_sync_period": 62,"last_sync": 75,"priority": 16,"provider_name": "eqFWMLlqRHqhFEJRpdELeHTWn","realm_id": "LNJGLykbhkPdbOqkESvqVOXbC"}' | http PUT "http://localhost:8080/userfederationprovider/hello world"  X-Api-User:user123
 func UpdateUserFederationProvider(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

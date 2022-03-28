@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: user_federation_config
 
 JSON Sample
 -------------------------------------
-{    "user_federation_provider_id": "vOvEonKSntComOgYfbPVBByFj",    "value": "ekktjJFlpWknqkEApdGtkTCrC",    "name": "AXYLhjurscjiQxmCiqSCPTkPB"}
+{    "user_federation_provider_id": "nsqoGlqJRwWOMOrsQLAwulFjZ",    "value": "dRTQDDDgkMEgRxHZrVTrVVAXx",    "name": "TMAUNgKtBSgdwYGgNnrQFbXHU"}
 
 
 

@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_auth_flow_bindings
 
 JSON Sample
 -------------------------------------
-{    "client_id": "KtfNwnLMSuHonDTHkDgGxFQPC",    "flow_id": "VhEwKYNsToVhgFMbIWJdiJPaH",    "binding_name": "potSwJnPWISnjBroDOxtceYED"}
+{    "client_id": "NyyVthyeGjRuEBfUwVUrZVNSf",    "flow_id": "dYFwETVYwnHxLmSFfwmLqOnbR",    "binding_name": "XcEBRgyuYqCRBHMOapQAvVMJT"}
 
 
 

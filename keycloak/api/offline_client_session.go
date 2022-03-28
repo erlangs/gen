@@ -151,7 +151,7 @@ func GetOfflineClientSession(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /offlineclientsession [post]
-// echo '{"user_session_id": "xKSoLsxQLoQBNSdYsIsgVPXbY","client_id": "mOcehTmVtTZERRIXpFMAontPh","offline_flag": "lDfoknddrfkcmllmeJRpDtOXU","timestamp": 71,"data": "HmMjmWLqjvPtsEqebpfGlOZsP","client_storage_provider": "fmkWDNVwFmTgJWcfGKgOGCORX","external_client_id": "khwZqiIlmVeKrkYSrIacytaCr"}' | http POST "http://localhost:8080/offlineclientsession" X-Api-User:user123
+// echo '{"user_session_id": "dGLdvddddUCWDrcjAxAwQWNFv","client_id": "vynOselRaFpFOuNadpdqGIFgQ","offline_flag": "hJJoRvGZLAOOlMdhOGliVMNOu","timestamp": 22,"data": "kXAZcBFqOcGtDcDMCLRCqocdO","client_storage_provider": "bPKkktGhvVdULDGjWyXfhwLQs","external_client_id": "VfMSHGoOfKKYkNmFMAVXbWSMV"}' | http POST "http://localhost:8080/offlineclientsession" X-Api-User:user123
 func AddOfflineClientSession(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	offlineclientsession := &model.OfflineClientSession{}
@@ -199,7 +199,7 @@ func AddOfflineClientSession(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /offlineclientsession/{argUserSessionID}/{argClientID}/{argOfflineFlag}/{argClientStorageProvider}/{argExternalClientID} [put]
-// echo '{"user_session_id": "xKSoLsxQLoQBNSdYsIsgVPXbY","client_id": "mOcehTmVtTZERRIXpFMAontPh","offline_flag": "lDfoknddrfkcmllmeJRpDtOXU","timestamp": 71,"data": "HmMjmWLqjvPtsEqebpfGlOZsP","client_storage_provider": "fmkWDNVwFmTgJWcfGKgOGCORX","external_client_id": "khwZqiIlmVeKrkYSrIacytaCr"}' | http PUT "http://localhost:8080/offlineclientsession/hello world/hello world/hello world/hello world/hello world"  X-Api-User:user123
+// echo '{"user_session_id": "dGLdvddddUCWDrcjAxAwQWNFv","client_id": "vynOselRaFpFOuNadpdqGIFgQ","offline_flag": "hJJoRvGZLAOOlMdhOGliVMNOu","timestamp": 22,"data": "kXAZcBFqOcGtDcDMCLRCqocdO","client_storage_provider": "bPKkktGhvVdULDGjWyXfhwLQs","external_client_id": "VfMSHGoOfKKYkNmFMAVXbWSMV"}' | http PUT "http://localhost:8080/offlineclientsession/hello world/hello world/hello world/hello world/hello world"  X-Api-User:user123
 func UpdateOfflineClientSession(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

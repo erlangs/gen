@@ -1,8 +1,8 @@
 package model
 
 import (
-	"database/sql"
-	"time"
+	//"database/sql"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: composite_role
 
 JSON Sample
 -------------------------------------
-{    "composite": "jMYoumZBSntorKYImMBbyLhRm",    "child_role": "suFYXEHslhJkipLfQPCfsfwAk"}
+{    "composite": "puEOWsRbRBuhsAScuAZPHMuyr",    "child_role": "nvCiXNEbbZksZOeSgsHcOCHND"}
 
 
 

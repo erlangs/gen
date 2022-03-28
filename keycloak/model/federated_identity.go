@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -25,7 +25,7 @@ Table: federated_identity
 
 JSON Sample
 -------------------------------------
-{    "identity_provider": "SdPxPjwhfdwnGkFHSLwHRVnJe",    "realm_id": "oyWVkqaHYJplKCmTLTUdJLqxB",    "federated_user_id": "ZxTkgnKhnbIhSTkgxdBTadRaW",    "federated_username": "fTsAvLvgWkwNEAehGSkDuRWkA",    "token": "CJuOMYQtCOhnxibEPHMqpNxKc",    "user_id": "TeojvKKpqZmUFAVfXmUASvKcw"}
+{    "identity_provider": "ZUkGDTlLRVDYSUdMNLjxXJrcI",    "realm_id": "FTVCptMnsVISfinmHCKXkCUpW",    "federated_user_id": "tGyncDkJHMdtiAyjFJbixXPcL",    "federated_username": "dwgJZVriypnyXwOsgNivQllro",    "token": "FvUAcywXOFBKdnLhDHYNJsVYl",    "user_id": "sbtswCOjgeWygVJmysyhqDKcB"}
 
 
 

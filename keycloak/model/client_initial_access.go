@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -25,7 +25,7 @@ Table: client_initial_access
 
 JSON Sample
 -------------------------------------
-{    "id": "yqRZvriWlmsRgscQODAueWfte",    "realm_id": "MNycTiqwJDSRXbhdUlOYdGwLn",    "timestamp": 83,    "expiration": 76,    "count": 21,    "remaining_count": 15}
+{    "id": "GQKZIrObNdyIdnJGoCcHagZsa",    "realm_id": "pyFFLbqoBCUkeHCinXAnTVtiW",    "timestamp": 41,    "expiration": 96,    "count": 37,    "remaining_count": 29}
 
 
 

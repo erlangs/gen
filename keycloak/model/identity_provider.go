@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -32,7 +32,7 @@ Table: identity_provider
 
 JSON Sample
 -------------------------------------
-{    "internal_id": "BmnTvZoaBJWQMahIKVYuFoMRc",    "enabled": true,    "provider_alias": "SEWAfeATnjZQjsMPZVVWPEAlW",    "provider_id": "fuVFNplsJloflpGqtlVlgZAdk",    "store_token": true,    "authenticate_by_default": false,    "realm_id": "fCoaCMvCQltrVDJJxqMtWxmTj",    "add_token_role": true,    "trust_email": true,    "first_broker_login_flow_id": "oYQnVcZmiZCsqtuUwlQSIbJDZ",    "post_broker_login_flow_id": "lkcyUPDElsTCWmKYRDCtVXmhs",    "provider_display_name": "ecxPaTAbTWhnGRVIcCslYrHyV",    "link_only": false}
+{    "internal_id": "nJGwDQNQAWZJODxMOhSSsFmYY",    "enabled": true,    "provider_alias": "bMPJSOkHxIvglGmAvcMQPoYlG",    "provider_id": "oAhgLDYOYDSCkyUmxYyZmPpGa",    "store_token": false,    "authenticate_by_default": true,    "realm_id": "LfCuLulMTungTAGcVUAsnCLTB",    "add_token_role": true,    "trust_email": true,    "first_broker_login_flow_id": "UcTglQurVBkCBLKiLyUycaLgr",    "post_broker_login_flow_id": "indXrUCXEaBEUMfReQxImMIbj",    "provider_display_name": "UaeYYxMLEkQMFycJvmGJJrrmv",    "link_only": false}
 
 
 

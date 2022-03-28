@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: resource_attribute
 
 JSON Sample
 -------------------------------------
-{    "id": "YErwTAoTgxSSYkErVLYVDqgIu",    "name": "edeMxMjWFXefYOiPngctsoJbB",    "value": "dBLZNOUSHVZKLwtYaTEmZvVjM",    "resource_id": "suLTEECjDyLEDYrhnLACAuIPZ"}
+{    "id": "OuDdTBDSOuQNguUtMAhrsYNVY",    "name": "RyaBuBlFLSXAfnobeZRmUcpVq",    "value": "NvQNCXyBFMXKENlXPhsviIyAH",    "resource_id": "xADbajMFoUODTCXwJjEyCUoJg"}
 
 
 

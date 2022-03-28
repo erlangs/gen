@@ -119,7 +119,7 @@ func GetDatabasechangeloglock(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /databasechangeloglock [post]
-// echo '{"id": 93,"locked": false,"lockgranted": "2273-01-15T15:18:15.108612853+08:00","lockedby": "fjLtQSKplJNgtQiIVkCnIfTtG"}' | http POST "http://localhost:8080/databasechangeloglock" X-Api-User:user123
+// echo '{"id": 70,"locked": false,"lockgranted": "2115-03-27T14:44:08.931874199+08:00","lockedby": "JNPMbFaUWxmkJkHWliOGWyjfh"}' | http POST "http://localhost:8080/databasechangeloglock" X-Api-User:user123
 func AddDatabasechangeloglock(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	databasechangeloglock := &model.Databasechangeloglock{}
@@ -167,7 +167,7 @@ func AddDatabasechangeloglock(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /databasechangeloglock/{argID} [put]
-// echo '{"id": 93,"locked": false,"lockgranted": "2273-01-15T15:18:15.108612853+08:00","lockedby": "fjLtQSKplJNgtQiIVkCnIfTtG"}' | http PUT "http://localhost:8080/databasechangeloglock/1"  X-Api-User:user123
+// echo '{"id": 70,"locked": false,"lockgranted": "2115-03-27T14:44:08.931874199+08:00","lockedby": "JNPMbFaUWxmkJkHWliOGWyjfh"}' | http PUT "http://localhost:8080/databasechangeloglock/1"  X-Api-User:user123
 func UpdateDatabasechangeloglock(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

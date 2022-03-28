@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -27,7 +27,7 @@ Table: user_federation_provider
 
 JSON Sample
 -------------------------------------
-{    "id": "nghUEvEcEsCwZsOTjglkgDaUM",    "changed_sync_period": 4,    "display_name": "bLrNPLTSwUYlfZwiTDobXkwty",    "full_sync_period": 82,    "last_sync": 37,    "priority": 5,    "provider_name": "rhqjYPDtWqKjvlLCNpXUAiOmH",    "realm_id": "AYymvtqDjsDpPCEcTWUsRALLQ"}
+{    "id": "BbSlQGLhksekDllPKmLucpLeG",    "changed_sync_period": 19,    "display_name": "DUYmKTQyOddgfdoxRlJlORBuo",    "full_sync_period": 69,    "last_sync": 92,    "priority": 41,    "provider_name": "hHPhjpFYFwjKRhHgtNMNesTuB",    "realm_id": "iwqXbytQcuNSbpbrSFOrGMVxd"}
 
 
 

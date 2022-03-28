@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -29,7 +29,7 @@ Table: authentication_execution
 
 JSON Sample
 -------------------------------------
-{    "id": "kHjcZESkGJcnKMDlLyGJObfFe",    "alias": "CmMuHaSWyGkWiOMkILPeyBSMU",    "authenticator": "CaYxPSvWPvdKFwTHPPMPDZAiC",    "realm_id": "cWPRVmKTKZCXdAIOokPdbENLk",    "flow_id": "epifXlgjJobfAonQrZYknTNJG",    "requirement": 11,    "priority": 45,    "authenticator_flow": false,    "auth_flow_id": "OgRaatruOvfCjGnnrFYtsaODy",    "auth_config": "KiOjMwBwAsKhrZNyQmULBIuFO"}
+{    "id": "UgvgclbLqQiTwbGIYpHqBqlWM",    "alias": "bpMgXEaJxZiBZNaKwmFICydGE",    "authenticator": "VbFgRokqulvcuoMawhanSDohp",    "realm_id": "ksSamvlonsvBwNYSIeWHkhKGW",    "flow_id": "ihHDbVRrwYnoHhCOJKJGUgYTX",    "requirement": 31,    "priority": 12,    "authenticator_flow": false,    "auth_flow_id": "bCKgGrJAotYleHBDHHVfyZXhC",    "auth_config": "SQNaGQFlAiUMFtmqgAKXqRBqF"}
 
 
 

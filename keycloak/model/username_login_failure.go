@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -25,7 +25,7 @@ Table: username_login_failure
 
 JSON Sample
 -------------------------------------
-{    "realm_id": "rmPQqAYkxBvQCvaQqCUbTADMR",    "username": "kHPLWTwUHRdeiYcbqrquAZneg",    "failed_login_not_before": 52,    "last_failure": 41,    "last_ip_failure": "jEUfjaKUayYvTdRnsPWxpFFqd",    "num_failures": 79}
+{    "realm_id": "pmyLsVdCWDxpXFTGixYLxHDCc",    "username": "xapjDQTPjATeVdaFjuLZGHVqc",    "failed_login_not_before": 10,    "last_failure": 82,    "last_ip_failure": "iKmpyeaNGObjBRFPFywTIiQwi",    "num_failures": 60}
 
 
 

@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	"time"
+	//"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: required_action_config
 
 JSON Sample
 -------------------------------------
-{    "required_action_id": "aswSkwkLcwSXDadsLBQkqeqQM",    "value": "tJQeNAEiUaPhPNuEkcTcMpedT",    "name": "uKWbKRKQChwUeAnCXXnlUGaCB"}
+{    "required_action_id": "oFZSqJYRhnSxiRoYlbSJdvqby",    "value": "SlYGFHoMtHKgxbFFAgTeRKdlW",    "name": "eYxxIMjxTyVedfZlieCZoCLVR"}
 
 
 
