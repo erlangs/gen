@@ -119,7 +119,7 @@ func GetUserAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userattribute [post]
-// echo '{"name": "ZMqwglCFYcMOwbgNNqvsBcrZb","value": "CeRiCVDsUVFYJREsRFoLwTsgX","user_id": "ycOwjTVsOnOvBvUTcTWaHNhOJ","id": "bxkDLDKPLJfmhknXjbYrwiqNd"}' | http POST "http://localhost:8080/userattribute" X-Api-User:user123
+// echo '{"name": "CHtgpiLLHAqsPWgZBcfWQGqpJ","value": "ViAWITKwTMEKsHFJgvPbPosbg","user_id": "aAiVeRwJkuHqVcXtbCMmpCiKE","id": "bGlwSCMOxlkyUiywSTxGnOCJf"}' | http POST "http://localhost:8080/userattribute" X-Api-User:user123
 func AddUserAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	userattribute := &model.UserAttribute{}
@@ -167,7 +167,7 @@ func AddUserAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userattribute/{argID} [put]
-// echo '{"name": "ZMqwglCFYcMOwbgNNqvsBcrZb","value": "CeRiCVDsUVFYJREsRFoLwTsgX","user_id": "ycOwjTVsOnOvBvUTcTWaHNhOJ","id": "bxkDLDKPLJfmhknXjbYrwiqNd"}' | http PUT "http://localhost:8080/userattribute/hello world"  X-Api-User:user123
+// echo '{"name": "CHtgpiLLHAqsPWgZBcfWQGqpJ","value": "ViAWITKwTMEKsHFJgvPbPosbg","user_id": "aAiVeRwJkuHqVcXtbCMmpCiKE","id": "bGlwSCMOxlkyUiywSTxGnOCJf"}' | http PUT "http://localhost:8080/userattribute/hello world"  X-Api-User:user123
 func UpdateUserAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

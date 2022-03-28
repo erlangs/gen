@@ -127,7 +127,7 @@ func GetClientScopeAttributes(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientscopeattributes [post]
-// echo '{"scope_id": "besGpPNvJtgeaYZAWsMOmHgkN","value": "FOconlfDnswvWLPKwerVVSOBG","name": "FTOyhsNNkyNiRnRPKfepvelaU"}' | http POST "http://localhost:8080/clientscopeattributes" X-Api-User:user123
+// echo '{"scope_id": "sZLGcCskroVJIsQsVCAcAuSPq","value": "dkgciIqSMCpTCFCnkhPQxPOuy","name": "DBQKYfkGOApscfjBGiLsFNGpc"}' | http POST "http://localhost:8080/clientscopeattributes" X-Api-User:user123
 func AddClientScopeAttributes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientscopeattributes := &model.ClientScopeAttributes{}
@@ -175,7 +175,7 @@ func AddClientScopeAttributes(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientscopeattributes/{argScopeID}/{argName} [put]
-// echo '{"scope_id": "besGpPNvJtgeaYZAWsMOmHgkN","value": "FOconlfDnswvWLPKwerVVSOBG","name": "FTOyhsNNkyNiRnRPKfepvelaU"}' | http PUT "http://localhost:8080/clientscopeattributes/hello world/hello world"  X-Api-User:user123
+// echo '{"scope_id": "sZLGcCskroVJIsQsVCAcAuSPq","value": "dkgciIqSMCpTCFCnkhPQxPOuy","name": "DBQKYfkGOApscfjBGiLsFNGpc"}' | http PUT "http://localhost:8080/clientscopeattributes/hello world/hello world"  X-Api-User:user123
 func UpdateClientScopeAttributes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

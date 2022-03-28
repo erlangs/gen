@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -27,7 +27,7 @@ Table: user_federation_provider
 
 JSON Sample
 -------------------------------------
-{    "id": "AbYAXDvRukjuTLlbJmQMllvKX",    "changed_sync_period": 72,    "display_name": "BidAXjtZxIPDCoQceeyfyRHBy",    "full_sync_period": 17,    "last_sync": 75,    "priority": 87,    "provider_name": "CdTcQQCwkKPLiyOFDpvDmnXNa",    "realm_id": "EnVbBSyXHeHTRHbkGjTvVbRHd"}
+{    "id": "nghUEvEcEsCwZsOTjglkgDaUM",    "changed_sync_period": 4,    "display_name": "bLrNPLTSwUYlfZwiTDobXkwty",    "full_sync_period": 82,    "last_sync": 37,    "priority": 5,    "provider_name": "rhqjYPDtWqKjvlLCNpXUAiOmH",    "realm_id": "AYymvtqDjsDpPCEcTWUsRALLQ"}
 
 
 
@@ -36,11 +36,11 @@ JSON Sample
 // UserFederationProvider struct is a row record of the user_federation_provider table in the keycloak database
 type UserFederationProvider struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] changed_sync_period                            INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	ChangedSyncPeriod sql.NullInt32 `gorm:"column:changed_sync_period;type:INT4;" json:"changed_sync_period"`
 	//[ 2] display_name                                   VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	DisplayName sql.NullString `gorm:"column:display_name;type:VARCHAR;size:255;" json:"display_name"`
+	DisplayName sql.NullString `gorm:"column:display_name;type:VARCHAR(255);size:255;" json:"display_name"`
 	//[ 3] full_sync_period                               INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	FullSyncPeriod sql.NullInt32 `gorm:"column:full_sync_period;type:INT4;" json:"full_sync_period"`
 	//[ 4] last_sync                                      INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
@@ -48,9 +48,9 @@ type UserFederationProvider struct {
 	//[ 5] priority                                       INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	Priority sql.NullInt32 `gorm:"column:priority;type:INT4;" json:"priority"`
 	//[ 6] provider_name                                  VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ProviderName sql.NullString `gorm:"column:provider_name;type:VARCHAR;size:255;" json:"provider_name"`
+	ProviderName sql.NullString `gorm:"column:provider_name;type:VARCHAR(255);size:255;" json:"provider_name"`
 	//[ 7] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 }
 
 var user_federation_providerTableInfo = &TableInfo{

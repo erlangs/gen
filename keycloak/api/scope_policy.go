@@ -127,7 +127,7 @@ func GetScopePolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /scopepolicy [post]
-// echo '{"scope_id": "tXbLpCtcWTUXNHRRKKRWrXiIW","policy_id": "DglAcGpQwAlWmKeTcwQQkUrKB"}' | http POST "http://localhost:8080/scopepolicy" X-Api-User:user123
+// echo '{"scope_id": "HEHCwlIwBgRMkKdhbVQEKwCft","policy_id": "ffCjWOgFREFjeYaCnTtdOMPrK"}' | http POST "http://localhost:8080/scopepolicy" X-Api-User:user123
 func AddScopePolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	scopepolicy := &model.ScopePolicy{}
@@ -175,7 +175,7 @@ func AddScopePolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /scopepolicy/{argScopeID}/{argPolicyID} [put]
-// echo '{"scope_id": "tXbLpCtcWTUXNHRRKKRWrXiIW","policy_id": "DglAcGpQwAlWmKeTcwQQkUrKB"}' | http PUT "http://localhost:8080/scopepolicy/hello world/hello world"  X-Api-User:user123
+// echo '{"scope_id": "HEHCwlIwBgRMkKdhbVQEKwCft","policy_id": "ffCjWOgFREFjeYaCnTtdOMPrK"}' | http PUT "http://localhost:8080/scopepolicy/hello world/hello world"  X-Api-User:user123
 func UpdateScopePolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

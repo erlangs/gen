@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_session_auth_status
 
 JSON Sample
 -------------------------------------
-{    "authenticator": "giAqhgYBQydghwUwTUTpgtaFQ",    "status": 58,    "client_session": "GRCXOVleodNJFtTJpNprSTbVn"}
+{    "authenticator": "VRJhmxcWYxgRjYetKlDiPvhJB",    "status": 75,    "client_session": "iOahSUvpNSpYyAAOMcOZkahOY"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // ClientSessionAuthStatus struct is a row record of the client_session_auth_status table in the keycloak database
 type ClientSessionAuthStatus struct {
 	//[ 0] authenticator                                  VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	Authenticator string `gorm:"primary_key;column:authenticator;type:VARCHAR;size:36;" json:"authenticator"`
+	Authenticator string `gorm:"primary_key;column:authenticator;type:VARCHAR(36);size:36;" json:"authenticator"`
 	//[ 1] status                                         INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	Status sql.NullInt32 `gorm:"column:status;type:INT4;" json:"status"`
 	//[ 2] client_session                                 VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientSession string `gorm:"primary_key;column:client_session;type:VARCHAR;size:36;" json:"client_session"`
+	ClientSession string `gorm:"primary_key;column:client_session;type:VARCHAR(36);size:36;" json:"client_session"`
 }
 
 var client_session_auth_statusTableInfo = &TableInfo{

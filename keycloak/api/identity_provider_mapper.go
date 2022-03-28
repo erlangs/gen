@@ -119,7 +119,7 @@ func GetIdentityProviderMapper(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /identityprovidermapper [post]
-// echo '{"id": "ZYvVUOmgbGOfkvNjrPStpGaYk","name": "dFGdxReXQRYGxhyANdQABbsTl","idp_alias": "tArQdTQZbtKavNymBCWnVCixB","idp_mapper_name": "hSpWYptSYaPtApRGigrwuMUbt","realm_id": "VNGOZHsjBpRxjDlyYwgysQXbE"}' | http POST "http://localhost:8080/identityprovidermapper" X-Api-User:user123
+// echo '{"id": "oVTxNovNKBHBrHrYsQKdGLKHj","name": "GPDxOjMRqsNsGDxvPPpKpKRvA","idp_alias": "BcQrGdJcojNhCNFTeZtdRclUR","idp_mapper_name": "gIeknuRquJbNqdBxcLEdjcRPd","realm_id": "BUDYwhRxkaMAAFmrXEcNRTeLN"}' | http POST "http://localhost:8080/identityprovidermapper" X-Api-User:user123
 func AddIdentityProviderMapper(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	identityprovidermapper := &model.IdentityProviderMapper{}
@@ -167,7 +167,7 @@ func AddIdentityProviderMapper(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /identityprovidermapper/{argID} [put]
-// echo '{"id": "ZYvVUOmgbGOfkvNjrPStpGaYk","name": "dFGdxReXQRYGxhyANdQABbsTl","idp_alias": "tArQdTQZbtKavNymBCWnVCixB","idp_mapper_name": "hSpWYptSYaPtApRGigrwuMUbt","realm_id": "VNGOZHsjBpRxjDlyYwgysQXbE"}' | http PUT "http://localhost:8080/identityprovidermapper/hello world"  X-Api-User:user123
+// echo '{"id": "oVTxNovNKBHBrHrYsQKdGLKHj","name": "GPDxOjMRqsNsGDxvPPpKpKRvA","idp_alias": "BcQrGdJcojNhCNFTeZtdRclUR","idp_mapper_name": "gIeknuRquJbNqdBxcLEdjcRPd","realm_id": "BUDYwhRxkaMAAFmrXEcNRTeLN"}' | http PUT "http://localhost:8080/identityprovidermapper/hello world"  X-Api-User:user123
 func UpdateIdentityProviderMapper(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

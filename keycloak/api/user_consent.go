@@ -119,7 +119,7 @@ func GetUserConsent(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userconsent [post]
-// echo '{"id": "irFLsJNOgJeGBMgABLaMPpRQB","client_id": "XCFYakLThaTgMHiOtZwVaWUSd","user_id": "sQZQCHbpLvrmNbtwkFLKyhSqn","created_date": 21,"last_updated_date": 75,"client_storage_provider": "dlegZOOTPMUkZFmRRWeYhDosf","external_client_id": "CYdBMClodBCIcuxKNoRjJVvSn"}' | http POST "http://localhost:8080/userconsent" X-Api-User:user123
+// echo '{"id": "IZyviYHJTBUQTwyrDfxmQxZTM","client_id": "MxkxyahjivaSuyiKrxAVQUDTJ","user_id": "VpTapSpTfdIUdgeHEupUHgPoM","created_date": 16,"last_updated_date": 22,"client_storage_provider": "sniheGVErcEFSwMLVYHDdNNux","external_client_id": "KbnvKSRZIVLakMsYRwnrmVqPy"}' | http POST "http://localhost:8080/userconsent" X-Api-User:user123
 func AddUserConsent(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	userconsent := &model.UserConsent{}
@@ -167,7 +167,7 @@ func AddUserConsent(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userconsent/{argID} [put]
-// echo '{"id": "irFLsJNOgJeGBMgABLaMPpRQB","client_id": "XCFYakLThaTgMHiOtZwVaWUSd","user_id": "sQZQCHbpLvrmNbtwkFLKyhSqn","created_date": 21,"last_updated_date": 75,"client_storage_provider": "dlegZOOTPMUkZFmRRWeYhDosf","external_client_id": "CYdBMClodBCIcuxKNoRjJVvSn"}' | http PUT "http://localhost:8080/userconsent/hello world"  X-Api-User:user123
+// echo '{"id": "IZyviYHJTBUQTwyrDfxmQxZTM","client_id": "MxkxyahjivaSuyiKrxAVQUDTJ","user_id": "VpTapSpTfdIUdgeHEupUHgPoM","created_date": 16,"last_updated_date": 22,"client_storage_provider": "sniheGVErcEFSwMLVYHDdNNux","external_client_id": "KbnvKSRZIVLakMsYRwnrmVqPy"}' | http PUT "http://localhost:8080/userconsent/hello world"  X-Api-User:user123
 func UpdateUserConsent(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

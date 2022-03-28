@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -26,7 +26,7 @@ Table: broker_link
 
 JSON Sample
 -------------------------------------
-{    "identity_provider": "VbBwcFYmAPYbisXkIudsaauRY",    "storage_provider_id": "GMlICqqfosPQrNJuPZPmfoWEu",    "realm_id": "udcYVINwxgLMAYOlNaOBcRald",    "broker_user_id": "PCvPxwtHxjIyIgljnahJXxvRd",    "broker_username": "YPHCCKlqmwKyUDrOpvMQwpaqH",    "token": "xoKyNGkfHsBgCIojdRpgWdBqQ",    "user_id": "MxECrnwusbNOclwPEeSjiXIPZ"}
+{    "identity_provider": "QEurbkYQdyPMYqjOaqyaygvYB",    "storage_provider_id": "VxncJhRcRbLNyyricLWbbTCXE",    "realm_id": "nCjjpkVMBmLfDptfjNRYKpUmq",    "broker_user_id": "KCBuppUsptYPfvFUhXPnTBdhh",    "broker_username": "kACOSGEJkiTJdaYGuNssIvtyJ",    "token": "RuQkoSeviRaGkEPCwWZkBHWln",    "user_id": "JqFQICbDdRyWJQaIRxNKTVPXI"}
 
 
 
@@ -35,19 +35,19 @@ JSON Sample
 // BrokerLink struct is a row record of the broker_link table in the keycloak database
 type BrokerLink struct {
 	//[ 0] identity_provider                              VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	IdentityProvider string `gorm:"primary_key;column:identity_provider;type:VARCHAR;size:255;" json:"identity_provider"`
+	IdentityProvider string `gorm:"primary_key;column:identity_provider;type:VARCHAR(255);size:255;" json:"identity_provider"`
 	//[ 1] storage_provider_id                            VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR;size:255;" json:"storage_provider_id"`
+	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR(255);size:255;" json:"storage_provider_id"`
 	//[ 2] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 3] broker_user_id                                 VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	BrokerUserID sql.NullString `gorm:"column:broker_user_id;type:VARCHAR;size:255;" json:"broker_user_id"`
+	BrokerUserID sql.NullString `gorm:"column:broker_user_id;type:VARCHAR(255);size:255;" json:"broker_user_id"`
 	//[ 4] broker_username                                VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	BrokerUsername sql.NullString `gorm:"column:broker_username;type:VARCHAR;size:255;" json:"broker_username"`
+	BrokerUsername sql.NullString `gorm:"column:broker_username;type:VARCHAR(255);size:255;" json:"broker_username"`
 	//[ 5] token                                          TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Token sql.NullString `gorm:"column:token;type:TEXT;" json:"token"`
 	//[ 6] user_id                                        VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR;size:255;" json:"user_id"`
+	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR(255);size:255;" json:"user_id"`
 }
 
 var broker_linkTableInfo = &TableInfo{

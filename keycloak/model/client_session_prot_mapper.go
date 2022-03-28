@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: client_session_prot_mapper
 
 JSON Sample
 -------------------------------------
-{    "protocol_mapper_id": "GYIsBvaYKXNiSdrcQOxwadfiK",    "client_session": "LhYoGBJMsowcGOZlYEOABQwto"}
+{    "protocol_mapper_id": "mmiFIchDPsmuTBkphtkXtraam",    "client_session": "nILFXMfJWDWNVYJfflGORnLXb"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // ClientSessionProtMapper struct is a row record of the client_session_prot_mapper table in the keycloak database
 type ClientSessionProtMapper struct {
 	//[ 0] protocol_mapper_id                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ProtocolMapperID string `gorm:"primary_key;column:protocol_mapper_id;type:VARCHAR;size:36;" json:"protocol_mapper_id"`
+	ProtocolMapperID string `gorm:"primary_key;column:protocol_mapper_id;type:VARCHAR(36);size:36;" json:"protocol_mapper_id"`
 	//[ 1] client_session                                 VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientSession string `gorm:"primary_key;column:client_session;type:VARCHAR;size:36;" json:"client_session"`
+	ClientSession string `gorm:"primary_key;column:client_session;type:VARCHAR(36);size:36;" json:"client_session"`
 }
 
 var client_session_prot_mapperTableInfo = &TableInfo{

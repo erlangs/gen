@@ -119,7 +119,7 @@ func GetUsers_(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /users_ [post]
-// echo '{"id": 85,"name": "YxmeqFOGChasUxlbKxTBEZdpe","email": "UPyrEaUpwmqtypxpscriCeKgT","email_verified_at": "2041-08-17T18:12:15.208363605+08:00","password": "nZHGxbXrQKCNxUHCyUvmDWXon","remember_token": "TXxRWcQSSQggQiebFKbXLfUVX","created_at": "2277-02-10T03:06:55.986321258+08:00","updated_at": "2282-07-19T23:33:11.225075029+08:00"}' | http POST "http://localhost:8080/users_" X-Api-User:user123
+// echo '{"id": 99,"name": "GbetpspZCcXvpboqQJIEGAxIu","email": "gERVBNaEAlaVMGDGwieidtYTl","email_verified_at": "2313-11-04T14:45:24.14331099+08:00","password": "pTXktmiZfZRrfepcuLpHFZCwY","remember_token": "fItyIfeGTRZqhvDHUOOMjdBEG","created_at": "2128-02-19T06:45:47.533554071+08:00","updated_at": "2029-06-16T04:10:25.288480636+08:00"}' | http POST "http://localhost:8080/users_" X-Api-User:user123
 func AddUsers_(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	users_ := &model.Users_{}
@@ -167,7 +167,7 @@ func AddUsers_(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /users_/{argID} [put]
-// echo '{"id": 85,"name": "YxmeqFOGChasUxlbKxTBEZdpe","email": "UPyrEaUpwmqtypxpscriCeKgT","email_verified_at": "2041-08-17T18:12:15.208363605+08:00","password": "nZHGxbXrQKCNxUHCyUvmDWXon","remember_token": "TXxRWcQSSQggQiebFKbXLfUVX","created_at": "2277-02-10T03:06:55.986321258+08:00","updated_at": "2282-07-19T23:33:11.225075029+08:00"}' | http PUT "http://localhost:8080/users_/1"  X-Api-User:user123
+// echo '{"id": 99,"name": "GbetpspZCcXvpboqQJIEGAxIu","email": "gERVBNaEAlaVMGDGwieidtYTl","email_verified_at": "2313-11-04T14:45:24.14331099+08:00","password": "pTXktmiZfZRrfepcuLpHFZCwY","remember_token": "fItyIfeGTRZqhvDHUOOMjdBEG","created_at": "2128-02-19T06:45:47.533554071+08:00","updated_at": "2029-06-16T04:10:25.288480636+08:00"}' | http PUT "http://localhost:8080/users_/1"  X-Api-User:user123
 func UpdateUsers_(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

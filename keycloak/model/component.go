@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -26,7 +26,7 @@ Table: component
 
 JSON Sample
 -------------------------------------
-{    "id": "HUdyTtkfZpjaWXNrOdvTfdfYo",    "name": "raJsjpVNYLdXZRRZiJIeoEZpv",    "parent_id": "gKFPaecqllinRybBsIGjhjTmT",    "provider_id": "CJSJoDCmmXKbpXvIqxoEBTNLE",    "provider_type": "ojGqgWOlYWbINyQLXgOMCOGKg",    "realm_id": "MdPnTCLoFiPDSWJaAaOdaEghD",    "sub_type": "omMtAOjZVGmDqyouHDJSMxbtL"}
+{    "id": "DZaaAZuaACrMEsAbDsBmWYpMX",    "name": "CjQEENFOanBTrRZmLaQkyFmTq",    "parent_id": "THtxXXULFEKEHYOExeIJjiqku",    "provider_id": "JIZZLGRwhlittnUvhckwdwkiO",    "provider_type": "UMHUdfbqQjnQaChfJCrcncZPc",    "realm_id": "NnCFZTDecqccpaiPdlLLZufqa",    "sub_type": "YpFslimHGAtrHaZXTRXwKmkSs"}
 
 
 
@@ -35,19 +35,19 @@ JSON Sample
 // Component struct is a row record of the component table in the keycloak database
 type Component struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name sql.NullString `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name sql.NullString `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] parent_id                                      VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ParentID sql.NullString `gorm:"column:parent_id;type:VARCHAR;size:36;" json:"parent_id"`
+	ParentID sql.NullString `gorm:"column:parent_id;type:VARCHAR(36);size:36;" json:"parent_id"`
 	//[ 3] provider_id                                    VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ProviderID sql.NullString `gorm:"column:provider_id;type:VARCHAR;size:36;" json:"provider_id"`
+	ProviderID sql.NullString `gorm:"column:provider_id;type:VARCHAR(36);size:36;" json:"provider_id"`
 	//[ 4] provider_type                                  VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ProviderType sql.NullString `gorm:"column:provider_type;type:VARCHAR;size:255;" json:"provider_type"`
+	ProviderType sql.NullString `gorm:"column:provider_type;type:VARCHAR(255);size:255;" json:"provider_type"`
 	//[ 5] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 6] sub_type                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	SubType sql.NullString `gorm:"column:sub_type;type:VARCHAR;size:255;" json:"sub_type"`
+	SubType sql.NullString `gorm:"column:sub_type;type:VARCHAR(255);size:255;" json:"sub_type"`
 }
 
 var componentTableInfo = &TableInfo{

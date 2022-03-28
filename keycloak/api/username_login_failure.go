@@ -127,7 +127,7 @@ func GetUsernameLoginFailure(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /usernameloginfailure [post]
-// echo '{"realm_id": "UTKWvlRGyeSJsupDwvUGbusoF","username": "gCBkmuYbXUPcLTYjQBClsDqto","failed_login_not_before": 30,"last_failure": 64,"last_ip_failure": "TrmeDvZjyIAfyHMecfxEfMhLw","num_failures": 37}' | http POST "http://localhost:8080/usernameloginfailure" X-Api-User:user123
+// echo '{"realm_id": "rmPQqAYkxBvQCvaQqCUbTADMR","username": "kHPLWTwUHRdeiYcbqrquAZneg","failed_login_not_before": 52,"last_failure": 41,"last_ip_failure": "jEUfjaKUayYvTdRnsPWxpFFqd","num_failures": 79}' | http POST "http://localhost:8080/usernameloginfailure" X-Api-User:user123
 func AddUsernameLoginFailure(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	usernameloginfailure := &model.UsernameLoginFailure{}
@@ -175,7 +175,7 @@ func AddUsernameLoginFailure(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /usernameloginfailure/{argRealmID}/{argUsername} [put]
-// echo '{"realm_id": "UTKWvlRGyeSJsupDwvUGbusoF","username": "gCBkmuYbXUPcLTYjQBClsDqto","failed_login_not_before": 30,"last_failure": 64,"last_ip_failure": "TrmeDvZjyIAfyHMecfxEfMhLw","num_failures": 37}' | http PUT "http://localhost:8080/usernameloginfailure/hello world/hello world"  X-Api-User:user123
+// echo '{"realm_id": "rmPQqAYkxBvQCvaQqCUbTADMR","username": "kHPLWTwUHRdeiYcbqrquAZneg","failed_login_not_before": 52,"last_failure": 41,"last_ip_failure": "jEUfjaKUayYvTdRnsPWxpFFqd","num_failures": 79}' | http PUT "http://localhost:8080/usernameloginfailure/hello world/hello world"  X-Api-User:user123
 func UpdateUsernameLoginFailure(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

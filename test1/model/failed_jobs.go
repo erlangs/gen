@@ -1,7 +1,6 @@
 package model
 
 import (
-	"database/sql"
 	"time"
 
 	//"github.com/satori/go.uuid"
@@ -28,7 +27,7 @@ CREATE TABLE `failed_jobs` (
 
 JSON Sample
 -------------------------------------
-{    "id": 74,    "uuid": "JJKeLQwNgkurAmQFJJZvbAPre",    "connection": "CkWADjSJiDkXcJJtmOrfDsuqR",    "queue": "ruyeOVAHkinILmoVJZqloMktD",    "payload": "uwOGTNkJSwFVnLRyJjpCbBnNw",    "exception": "JGUjdFicOwEsahXYvVZxRrXxJ",    "failed_at": "2211-09-04T11:11:03.849266181+08:00"}
+{    "id": 7,    "uuid": "ObQjugGmUJGYVmoKckIiFTFOq",    "connection": "TywWlCGDXbUjUhABnAcpudZRu",    "queue": "PMbdtMWOxNgaHbsnZQmqifdut",    "payload": "YbIqsvpqKoanPQKWRJZpMXFGR",    "exception": "TjJtBnkWPqNqICUSVcbrlqUgE",    "failed_at": "2197-12-28T09:07:46.608362161+08:00"}
 
 
 Comments

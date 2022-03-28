@@ -119,7 +119,7 @@ func GetResourceServer(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceserver [post]
-// echo '{"id": "pFtKSdHxPcvvJebpZXMHxjbeq","allow_rs_remote_mgmt": true,"policy_enforce_mode": "syYgWgiZrYjIRvGZLwKdpPlWa","decision_strategy": 35}' | http POST "http://localhost:8080/resourceserver" X-Api-User:user123
+// echo '{"id": "UimvTunbmGsItxTFKPwHAylQa","allow_rs_remote_mgmt": true,"policy_enforce_mode": "lHQqeDwZLehPZMDvlirLfkHxB","decision_strategy": 63}' | http POST "http://localhost:8080/resourceserver" X-Api-User:user123
 func AddResourceServer(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	resourceserver := &model.ResourceServer{}
@@ -167,7 +167,7 @@ func AddResourceServer(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceserver/{argID} [put]
-// echo '{"id": "pFtKSdHxPcvvJebpZXMHxjbeq","allow_rs_remote_mgmt": true,"policy_enforce_mode": "syYgWgiZrYjIRvGZLwKdpPlWa","decision_strategy": 35}' | http PUT "http://localhost:8080/resourceserver/hello world"  X-Api-User:user123
+// echo '{"id": "UimvTunbmGsItxTFKPwHAylQa","allow_rs_remote_mgmt": true,"policy_enforce_mode": "lHQqeDwZLehPZMDvlirLfkHxB","decision_strategy": 63}' | http PUT "http://localhost:8080/resourceserver/hello world"  X-Api-User:user123
 func UpdateResourceServer(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

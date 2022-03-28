@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: realm_localizations
 
 JSON Sample
 -------------------------------------
-{    "realm_id": "aNXQbaSUlkOitqbvEyuZPFKTK",    "locale": "RYfnMNDxrhWAfWIXpVhdCnWsf",    "texts": "civZADCnHTUqdStakYYfyylEO"}
+{    "realm_id": "jCOXUkADnUMfFLdJxgBSvsUmN",    "locale": "FHLfdKtPYvhRhEtAZPoxOXpcZ",    "texts": "blTqIiVBtCHtyVxJbVgZxgqJk"}
 
 
 
@@ -31,9 +31,9 @@ JSON Sample
 // RealmLocalizations struct is a row record of the realm_localizations table in the keycloak database
 type RealmLocalizations struct {
 	//[ 0] realm_id                                       VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR;size:255;" json:"realm_id"`
+	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR(255);size:255;" json:"realm_id"`
 	//[ 1] locale                                         VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Locale string `gorm:"primary_key;column:locale;type:VARCHAR;size:255;" json:"locale"`
+	Locale string `gorm:"primary_key;column:locale;type:VARCHAR(255);size:255;" json:"locale"`
 	//[ 2] texts                                          TEXT                 null: false  primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Texts string `gorm:"column:texts;type:TEXT;" json:"texts"`
 }

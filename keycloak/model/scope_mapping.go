@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: scope_mapping
 
 JSON Sample
 -------------------------------------
-{    "client_id": "bqZVIRFXqTfmLbInnTGNHXJlf",    "role_id": "lTeeFxYdDoNYycTvJBoPUnuXZ"}
+{    "client_id": "MJGHpTjgIglcmsIIPiAhAHdlK",    "role_id": "wsOsTJOxvLlfIYnSWEutviHsV"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // ScopeMapping struct is a row record of the scope_mapping table in the keycloak database
 type ScopeMapping struct {
 	//[ 0] client_id                                      VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR;size:36;" json:"client_id"`
+	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR(36);size:36;" json:"client_id"`
 	//[ 1] role_id                                        VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RoleID string `gorm:"primary_key;column:role_id;type:VARCHAR;size:36;" json:"role_id"`
+	RoleID string `gorm:"primary_key;column:role_id;type:VARCHAR(36);size:36;" json:"role_id"`
 }
 
 var scope_mappingTableInfo = &TableInfo{

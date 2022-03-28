@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: component_config
 
 JSON Sample
 -------------------------------------
-{    "id": "cfwYuMpmTlQAvAGKYwaTLuXnZ",    "component_id": "QZUEQOfTshkQKUwikyJMyPejj",    "name": "eFbhPVhknaCNaLCHBbKofhERn",    "value": "XRflMRvPZgCUaLVBuwDAaLkAb"}
+{    "id": "KVeKvUqcnVlrlGGYfEnoVgFRD",    "component_id": "JNTUCEphapWEiPaCTmWpEUjQY",    "name": "UlBKqMHfGpLyKSfQVgToOPwix",    "value": "aNYTCyTRAZhUSMnUtlpMACNeV"}
 
 
 
@@ -32,13 +32,13 @@ JSON Sample
 // ComponentConfig struct is a row record of the component_config table in the keycloak database
 type ComponentConfig struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] component_id                                   VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ComponentID string `gorm:"column:component_id;type:VARCHAR;size:36;" json:"component_id"`
+	ComponentID string `gorm:"column:component_id;type:VARCHAR(36);size:36;" json:"component_id"`
 	//[ 2] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 3] value                                          VARCHAR(4000)        null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 4000    default: []
-	Value sql.NullString `gorm:"column:value;type:VARCHAR;size:4000;" json:"value"`
+	Value sql.NullString `gorm:"column:value;type:VARCHAR(4000);size:4000;" json:"value"`
 }
 
 var component_configTableInfo = &TableInfo{

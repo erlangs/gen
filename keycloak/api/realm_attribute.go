@@ -127,7 +127,7 @@ func GetRealmAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmattribute [post]
-// echo '{"name": "nVrZJdSgvQltNDTuOdapOPcoH","realm_id": "pWOaRGSgTkaWeBwGAsAYItuys","value": "FlYYBFcYgcthBKqSEGkoClSab"}' | http POST "http://localhost:8080/realmattribute" X-Api-User:user123
+// echo '{"name": "xwCNwgeJRiWNeiSZKbeZMkCyb","realm_id": "sxbkmvZSbExAFdxdOASCgnhgT","value": "cFRQVbsvPVoxlqVusTysCpZsN"}' | http POST "http://localhost:8080/realmattribute" X-Api-User:user123
 func AddRealmAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	realmattribute := &model.RealmAttribute{}
@@ -175,7 +175,7 @@ func AddRealmAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmattribute/{argName}/{argRealmID} [put]
-// echo '{"name": "nVrZJdSgvQltNDTuOdapOPcoH","realm_id": "pWOaRGSgTkaWeBwGAsAYItuys","value": "FlYYBFcYgcthBKqSEGkoClSab"}' | http PUT "http://localhost:8080/realmattribute/hello world/hello world"  X-Api-User:user123
+// echo '{"name": "xwCNwgeJRiWNeiSZKbeZMkCyb","realm_id": "sxbkmvZSbExAFdxdOASCgnhgT","value": "cFRQVbsvPVoxlqVusTysCpZsN"}' | http PUT "http://localhost:8080/realmattribute/hello world/hello world"  X-Api-User:user123
 func UpdateRealmAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

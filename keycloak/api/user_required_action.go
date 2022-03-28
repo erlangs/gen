@@ -127,7 +127,7 @@ func GetUserRequiredAction(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userrequiredaction [post]
-// echo '{"user_id": "gPrgMnkbXuHegnCxSOhwtvTtK","required_action": "XaXHExvHKqtTgoBnCYRMPcfZA"}' | http POST "http://localhost:8080/userrequiredaction" X-Api-User:user123
+// echo '{"user_id": "JRZvhHGkBxibPLTPQAXBtogau","required_action": "RPSoynwJRFXZqDBLeaNXTuGvn"}' | http POST "http://localhost:8080/userrequiredaction" X-Api-User:user123
 func AddUserRequiredAction(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	userrequiredaction := &model.UserRequiredAction{}
@@ -175,7 +175,7 @@ func AddUserRequiredAction(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userrequiredaction/{argUserID}/{argRequiredAction} [put]
-// echo '{"user_id": "gPrgMnkbXuHegnCxSOhwtvTtK","required_action": "XaXHExvHKqtTgoBnCYRMPcfZA"}' | http PUT "http://localhost:8080/userrequiredaction/hello world/hello world"  X-Api-User:user123
+// echo '{"user_id": "JRZvhHGkBxibPLTPQAXBtogau","required_action": "RPSoynwJRFXZqDBLeaNXTuGvn"}' | http PUT "http://localhost:8080/userrequiredaction/hello world/hello world"  X-Api-User:user123
 func UpdateUserRequiredAction(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

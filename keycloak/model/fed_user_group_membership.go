@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: fed_user_group_membership
 
 JSON Sample
 -------------------------------------
-{    "group_id": "rNwvHXJqqucrBEtjeJbMjrAwl",    "user_id": "yXUgTgoVuPyTkLVIRxhqRkfDG",    "realm_id": "WadofeOhigHijFmPchHxvZywJ",    "storage_provider_id": "yhwhTKpohdwrVQQDgHFYvStXK"}
+{    "group_id": "gwNhohsWlgIdSwSrYagWmlnSk",    "user_id": "GxkmXJKUVTeSmqMXNwiQIWiQT",    "realm_id": "YNHhlVsfRQwTAoGVJFStKTHom",    "storage_provider_id": "UdhtgURKCwyaKpuSOfdIXIfGR"}
 
 
 
@@ -32,13 +32,13 @@ JSON Sample
 // FedUserGroupMembership struct is a row record of the fed_user_group_membership table in the keycloak database
 type FedUserGroupMembership struct {
 	//[ 0] group_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	GroupID string `gorm:"primary_key;column:group_id;type:VARCHAR;size:36;" json:"group_id"`
+	GroupID string `gorm:"primary_key;column:group_id;type:VARCHAR(36);size:36;" json:"group_id"`
 	//[ 1] user_id                                        VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR;size:255;" json:"user_id"`
+	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR(255);size:255;" json:"user_id"`
 	//[ 2] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 3] storage_provider_id                            VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR;size:36;" json:"storage_provider_id"`
+	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR(36);size:36;" json:"storage_provider_id"`
 }
 
 var fed_user_group_membershipTableInfo = &TableInfo{

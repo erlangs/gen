@@ -119,7 +119,7 @@ func GetEventEntity(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /evententity [post]
-// echo '{"id": "vphmmvJyNmRBeKiOGYlsSAEFr","client_id": "sjXLrDfeHhYsANDlPEstQUASl","details_json": "cJGMjLvDxeHPSSPQZZhpyLDEC","error": "uQutaliRrYUgfjVvZswRgOPsf","ip_address": "cGXNUckuyiZtjoOBTIApihYjH","realm_id": "tGJIqsRDqRKTMxyaYiXedqVen","session_id": "SMSxXTaTyhtSsVTFWlFYDbcBD","event_time": 52,"type": "oKlDOnlHnOsuKdbuTujMnwalr","user_id": "PCBTmPaXfuGjfvuKIqUhVLSIa"}' | http POST "http://localhost:8080/evententity" X-Api-User:user123
+// echo '{"id": "IvLpjvvpUJnycgJcrblZiZGZw","client_id": "rCgjdCbhvBidEOAGyIeGQosGW","details_json": "CRHrilyyfspQOFrZGZTrvmZCv","error": "EkLdDsIhiMMGZCvOSEJbnmTPH","ip_address": "LjrpHPfZovGjUidGdIKaLCyke","realm_id": "LpvnClEbUPVokedoHjMYgveRB","session_id": "tRrDPFkQPGjfLHaXeDRpUSiZL","event_time": 8,"type": "clZfcixSOdYQgeGBrmnHcqOEL","user_id": "nUcoAeFTKhdXweJyQFiNWLtYr"}' | http POST "http://localhost:8080/evententity" X-Api-User:user123
 func AddEventEntity(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	evententity := &model.EventEntity{}
@@ -167,7 +167,7 @@ func AddEventEntity(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /evententity/{argID} [put]
-// echo '{"id": "vphmmvJyNmRBeKiOGYlsSAEFr","client_id": "sjXLrDfeHhYsANDlPEstQUASl","details_json": "cJGMjLvDxeHPSSPQZZhpyLDEC","error": "uQutaliRrYUgfjVvZswRgOPsf","ip_address": "cGXNUckuyiZtjoOBTIApihYjH","realm_id": "tGJIqsRDqRKTMxyaYiXedqVen","session_id": "SMSxXTaTyhtSsVTFWlFYDbcBD","event_time": 52,"type": "oKlDOnlHnOsuKdbuTujMnwalr","user_id": "PCBTmPaXfuGjfvuKIqUhVLSIa"}' | http PUT "http://localhost:8080/evententity/hello world"  X-Api-User:user123
+// echo '{"id": "IvLpjvvpUJnycgJcrblZiZGZw","client_id": "rCgjdCbhvBidEOAGyIeGQosGW","details_json": "CRHrilyyfspQOFrZGZTrvmZCv","error": "EkLdDsIhiMMGZCvOSEJbnmTPH","ip_address": "LjrpHPfZovGjUidGdIKaLCyke","realm_id": "LpvnClEbUPVokedoHjMYgveRB","session_id": "tRrDPFkQPGjfLHaXeDRpUSiZL","event_time": 8,"type": "clZfcixSOdYQgeGBrmnHcqOEL","user_id": "nUcoAeFTKhdXweJyQFiNWLtYr"}' | http PUT "http://localhost:8080/evententity/hello world"  X-Api-User:user123
 func UpdateEventEntity(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

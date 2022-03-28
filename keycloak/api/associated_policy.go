@@ -127,7 +127,7 @@ func GetAssociatedPolicy(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /associatedpolicy [post]
-// echo '{"policy_id": "sflSbOiBHPDBkVqAhSpvgkYHI","associated_policy_id": "knwQIbMtAgaCjWXgryxAnoHte"}' | http POST "http://localhost:8080/associatedpolicy" X-Api-User:user123
+// echo '{"policy_id": "wVtWmTHnfrwNhhtKAovYkAnrZ","associated_policy_id": "PwtrxgYUlGUomgHfLwArBWaYm"}' | http POST "http://localhost:8080/associatedpolicy" X-Api-User:user123
 func AddAssociatedPolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	associatedpolicy := &model.AssociatedPolicy{}
@@ -175,7 +175,7 @@ func AddAssociatedPolicy(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /associatedpolicy/{argPolicyID}/{argAssociatedPolicyID} [put]
-// echo '{"policy_id": "sflSbOiBHPDBkVqAhSpvgkYHI","associated_policy_id": "knwQIbMtAgaCjWXgryxAnoHte"}' | http PUT "http://localhost:8080/associatedpolicy/hello world/hello world"  X-Api-User:user123
+// echo '{"policy_id": "wVtWmTHnfrwNhhtKAovYkAnrZ","associated_policy_id": "PwtrxgYUlGUomgHfLwArBWaYm"}' | http PUT "http://localhost:8080/associatedpolicy/hello world/hello world"  X-Api-User:user123
 func UpdateAssociatedPolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

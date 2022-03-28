@@ -119,7 +119,7 @@ func GetAuthenticationExecution(w http.ResponseWriter, r *http.Request, ps httpr
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /authenticationexecution [post]
-// echo '{"id": "nEdSOPjJLCZmAQGTgdwmLiaWd","alias": "aWYpWcyalMIZALRRogRxlyyxi","authenticator": "ybsqRBDoSLIdMskGUPMgnKgXI","realm_id": "fLhMptFSegMSIeaQaUmmEtQxN","flow_id": "qrOTbdJsTeEHoJgMkPJsiThnU","requirement": 31,"priority": 12,"authenticator_flow": false,"auth_flow_id": "EBGUFotUVnhtpuVbqiucUkUvL","auth_config": "oPaaSrirdoYLaFclSuFGuVRph"}' | http POST "http://localhost:8080/authenticationexecution" X-Api-User:user123
+// echo '{"id": "kHjcZESkGJcnKMDlLyGJObfFe","alias": "CmMuHaSWyGkWiOMkILPeyBSMU","authenticator": "CaYxPSvWPvdKFwTHPPMPDZAiC","realm_id": "cWPRVmKTKZCXdAIOokPdbENLk","flow_id": "epifXlgjJobfAonQrZYknTNJG","requirement": 11,"priority": 45,"authenticator_flow": false,"auth_flow_id": "OgRaatruOvfCjGnnrFYtsaODy","auth_config": "KiOjMwBwAsKhrZNyQmULBIuFO"}' | http POST "http://localhost:8080/authenticationexecution" X-Api-User:user123
 func AddAuthenticationExecution(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	authenticationexecution := &model.AuthenticationExecution{}
@@ -167,7 +167,7 @@ func AddAuthenticationExecution(w http.ResponseWriter, r *http.Request, ps httpr
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /authenticationexecution/{argID} [put]
-// echo '{"id": "nEdSOPjJLCZmAQGTgdwmLiaWd","alias": "aWYpWcyalMIZALRRogRxlyyxi","authenticator": "ybsqRBDoSLIdMskGUPMgnKgXI","realm_id": "fLhMptFSegMSIeaQaUmmEtQxN","flow_id": "qrOTbdJsTeEHoJgMkPJsiThnU","requirement": 31,"priority": 12,"authenticator_flow": false,"auth_flow_id": "EBGUFotUVnhtpuVbqiucUkUvL","auth_config": "oPaaSrirdoYLaFclSuFGuVRph"}' | http PUT "http://localhost:8080/authenticationexecution/hello world"  X-Api-User:user123
+// echo '{"id": "kHjcZESkGJcnKMDlLyGJObfFe","alias": "CmMuHaSWyGkWiOMkILPeyBSMU","authenticator": "CaYxPSvWPvdKFwTHPPMPDZAiC","realm_id": "cWPRVmKTKZCXdAIOokPdbENLk","flow_id": "epifXlgjJobfAonQrZYknTNJG","requirement": 11,"priority": 45,"authenticator_flow": false,"auth_flow_id": "OgRaatruOvfCjGnnrFYtsaODy","auth_config": "KiOjMwBwAsKhrZNyQmULBIuFO"}' | http PUT "http://localhost:8080/authenticationexecution/hello world"  X-Api-User:user123
 func UpdateAuthenticationExecution(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

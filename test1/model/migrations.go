@@ -23,7 +23,7 @@ CREATE TABLE `migrations` (
 
 JSON Sample
 -------------------------------------
-{    "id": 95,    "migration": "BJGcgVgOFMWccdVNuwhZlkeTs",    "batch": 82}
+{    "id": 64,    "migration": "rmmKgFYxGwNJRtpUIFqtdPHaf",    "batch": 10}
 
 
 Comments

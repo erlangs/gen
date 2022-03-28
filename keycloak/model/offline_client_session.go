@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -26,7 +26,7 @@ Table: offline_client_session
 
 JSON Sample
 -------------------------------------
-{    "user_session_id": "aUwTFqXppFhOFwVFjedeeGgRR",    "client_id": "UpBHWYrCaeCXTbNJyREdrfEam",    "offline_flag": "htIOwVjdsGrGaiPOvlJVqnhFE",    "timestamp": 16,    "data": "qIlFCmmOoTTPdKHrwTCeNMfMO",    "client_storage_provider": "rNQaQRIAHupmrNXQwgXBThhgR",    "external_client_id": "AVEFdShRhkEATACSuEbuSkKto"}
+{    "user_session_id": "xKSoLsxQLoQBNSdYsIsgVPXbY",    "client_id": "mOcehTmVtTZERRIXpFMAontPh",    "offline_flag": "lDfoknddrfkcmllmeJRpDtOXU",    "timestamp": 71,    "data": "HmMjmWLqjvPtsEqebpfGlOZsP",    "client_storage_provider": "fmkWDNVwFmTgJWcfGKgOGCORX",    "external_client_id": "khwZqiIlmVeKrkYSrIacytaCr"}
 
 
 
@@ -35,19 +35,19 @@ JSON Sample
 // OfflineClientSession struct is a row record of the offline_client_session table in the keycloak database
 type OfflineClientSession struct {
 	//[ 0] user_session_id                                VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	UserSessionID string `gorm:"primary_key;column:user_session_id;type:VARCHAR;size:36;" json:"user_session_id"`
+	UserSessionID string `gorm:"primary_key;column:user_session_id;type:VARCHAR(36);size:36;" json:"user_session_id"`
 	//[ 1] client_id                                      VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR;size:255;" json:"client_id"`
+	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR(255);size:255;" json:"client_id"`
 	//[ 2] offline_flag                                   VARCHAR(4)           null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 4       default: []
-	OfflineFlag string `gorm:"primary_key;column:offline_flag;type:VARCHAR;size:4;" json:"offline_flag"`
+	OfflineFlag string `gorm:"primary_key;column:offline_flag;type:VARCHAR(4);size:4;" json:"offline_flag"`
 	//[ 3] timestamp                                      INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	Timestamp sql.NullInt32 `gorm:"column:timestamp;type:INT4;" json:"timestamp"`
 	//[ 4] data                                           TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Data sql.NullString `gorm:"column:data;type:TEXT;" json:"data"`
 	//[ 5] client_storage_provider                        VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: [local]
-	ClientStorageProvider string `gorm:"primary_key;column:client_storage_provider;type:VARCHAR;size:36;default:local;" json:"client_storage_provider"`
+	ClientStorageProvider string `gorm:"primary_key;column:client_storage_provider;type:VARCHAR(36);size:36;default:local;" json:"client_storage_provider"`
 	//[ 6] external_client_id                             VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: [local]
-	ExternalClientID string `gorm:"primary_key;column:external_client_id;type:VARCHAR;size:255;default:local;" json:"external_client_id"`
+	ExternalClientID string `gorm:"primary_key;column:external_client_id;type:VARCHAR(255);size:255;default:local;" json:"external_client_id"`
 }
 
 var offline_client_sessionTableInfo = &TableInfo{

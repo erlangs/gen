@@ -107,6 +107,7 @@ func init() {
 	tables["role_attribute"] = role_attributeTableInfo
 	tables["scope_mapping"] = scope_mappingTableInfo
 	tables["scope_policy"] = scope_policyTableInfo
+	tables["user"] = userTableInfo
 	tables["user_attribute"] = user_attributeTableInfo
 	tables["user_consent"] = user_consentTableInfo
 	tables["user_consent_client_scope"] = user_consent_client_scopeTableInfo

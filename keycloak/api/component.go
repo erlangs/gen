@@ -119,7 +119,7 @@ func GetComponent(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /component [post]
-// echo '{"id": "HUdyTtkfZpjaWXNrOdvTfdfYo","name": "raJsjpVNYLdXZRRZiJIeoEZpv","parent_id": "gKFPaecqllinRybBsIGjhjTmT","provider_id": "CJSJoDCmmXKbpXvIqxoEBTNLE","provider_type": "ojGqgWOlYWbINyQLXgOMCOGKg","realm_id": "MdPnTCLoFiPDSWJaAaOdaEghD","sub_type": "omMtAOjZVGmDqyouHDJSMxbtL"}' | http POST "http://localhost:8080/component" X-Api-User:user123
+// echo '{"id": "DZaaAZuaACrMEsAbDsBmWYpMX","name": "CjQEENFOanBTrRZmLaQkyFmTq","parent_id": "THtxXXULFEKEHYOExeIJjiqku","provider_id": "JIZZLGRwhlittnUvhckwdwkiO","provider_type": "UMHUdfbqQjnQaChfJCrcncZPc","realm_id": "NnCFZTDecqccpaiPdlLLZufqa","sub_type": "YpFslimHGAtrHaZXTRXwKmkSs"}' | http POST "http://localhost:8080/component" X-Api-User:user123
 func AddComponent(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	component := &model.Component{}
@@ -167,7 +167,7 @@ func AddComponent(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /component/{argID} [put]
-// echo '{"id": "HUdyTtkfZpjaWXNrOdvTfdfYo","name": "raJsjpVNYLdXZRRZiJIeoEZpv","parent_id": "gKFPaecqllinRybBsIGjhjTmT","provider_id": "CJSJoDCmmXKbpXvIqxoEBTNLE","provider_type": "ojGqgWOlYWbINyQLXgOMCOGKg","realm_id": "MdPnTCLoFiPDSWJaAaOdaEghD","sub_type": "omMtAOjZVGmDqyouHDJSMxbtL"}' | http PUT "http://localhost:8080/component/hello world"  X-Api-User:user123
+// echo '{"id": "DZaaAZuaACrMEsAbDsBmWYpMX","name": "CjQEENFOanBTrRZmLaQkyFmTq","parent_id": "THtxXXULFEKEHYOExeIJjiqku","provider_id": "JIZZLGRwhlittnUvhckwdwkiO","provider_type": "UMHUdfbqQjnQaChfJCrcncZPc","realm_id": "NnCFZTDecqccpaiPdlLLZufqa","sub_type": "YpFslimHGAtrHaZXTRXwKmkSs"}' | http PUT "http://localhost:8080/component/hello world"  X-Api-User:user123
 func UpdateComponent(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

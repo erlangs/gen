@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -18,7 +18,7 @@ Table: client
 [ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
 [ 1] enabled                                        BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 [ 2] full_scope_allowed                             BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
-[ 3] client_id                                      VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
+[ 3] client_id                                      VARCHAR              null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: -1      default: []
 [ 4] not_before                                     INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 [ 5] public_client                                  BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 [ 6] secret                                         VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
@@ -45,7 +45,7 @@ Table: client
 
 JSON Sample
 -------------------------------------
-{    "id": "RUxjlQfcoClRhwbkXSKtvWkWI",    "enabled": false,    "full_scope_allowed": false,    "client_id": "jAvRuieDwpArhZNtdDURaEaEV",    "not_before": 66,    "public_client": false,    "secret": "KKrByHxiKkyxnMoidAkTlkMQw",    "base_url": "lSrOboSkyHCNNxwadOopZETOv",    "bearer_only": false,    "management_url": "eEgbrZPHTaFqIXIuOxohNAclj",    "surrogate_auth_required": true,    "realm_id": "AHqtlbIjnYLXVYTtAOmMDOqhZ",    "protocol": "jSeAoJFsSFVWLcZTsUSXUTLYn",    "node_rereg_timeout": 34,    "frontchannel_logout": true,    "consent_required": true,    "name": "YacSGFapuyCZgdlREIMEYcDJT",    "service_accounts_enabled": true,    "client_authenticator_type": "fkcflHvQSGLFSPTqBWvmpPDWy",    "root_url": "mUCqSTPACCuuxCadjtaKjJonj",    "description": "nGXqTbXOtqdoBLSEgmVIsyepQ",    "registration_token": "mECHvYkoBgYZhTHWrBaKrYurW",    "standard_flow_enabled": true,    "implicit_flow_enabled": false,    "direct_access_grants_enabled": false,    "always_display_in_console": true}
+{    "id": "sOkiTJXfLNqBFrDPLsnvUsqyW",    "enabled": true,    "full_scope_allowed": false,    "client_id": "WCbtVasOEyXarqeqqlSoYsfrC",    "not_before": 15,    "public_client": false,    "secret": "jqnSKfBwlDmbjWRrnguHynGCC",    "base_url": "gpZWshvKDjapxfpmeboeHOPrV",    "bearer_only": true,    "management_url": "nTEpXTNqBijahuidDSIPJVWau",    "surrogate_auth_required": false,    "realm_id": "EuuMCluuiUHFQajxfELdknfrf",    "protocol": "STpVIbAFqmctaReDNZRpLZTZX",    "node_rereg_timeout": 43,    "frontchannel_logout": true,    "consent_required": true,    "name": "cLTBMCOvBEMMjhTxEehVxbWad",    "service_accounts_enabled": true,    "client_authenticator_type": "wbWmJPbjZVRiLcEoXXQZgpZUQ",    "root_url": "eVtEAHHtjDRwOZAaJVkZRGgOn",    "description": "YQBJUvmnliUISdqfEQRTRYXTa",    "registration_token": "iEALMUmexKoMpRfkMBFYHqjTF",    "standard_flow_enabled": true,    "implicit_flow_enabled": true,    "direct_access_grants_enabled": false,    "always_display_in_console": true}
 
 
 
@@ -54,31 +54,31 @@ JSON Sample
 // Client struct is a row record of the client table in the keycloak database
 type Client struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] enabled                                        BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	Enabled bool `gorm:"column:enabled;type:BOOL;default:false;" json:"enabled"`
 	//[ 2] full_scope_allowed                             BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	FullScopeAllowed bool `gorm:"column:full_scope_allowed;type:BOOL;default:false;" json:"full_scope_allowed"`
-	//[ 3] client_id                                      VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR;size:255;" json:"client_id"`
+	//[ 3] client_id                                      VARCHAR              null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: -1      default: []
+	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR;" json:"client_id"`
 	//[ 4] not_before                                     INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	NotBefore sql.NullInt32 `gorm:"column:not_before;type:INT4;" json:"not_before"`
 	//[ 5] public_client                                  BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	PublicClient bool `gorm:"column:public_client;type:BOOL;default:false;" json:"public_client"`
 	//[ 6] secret                                         VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Secret sql.NullString `gorm:"column:secret;type:VARCHAR;size:255;" json:"secret"`
+	Secret sql.NullString `gorm:"column:secret;type:VARCHAR(255);size:255;" json:"secret"`
 	//[ 7] base_url                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	BaseURL sql.NullString `gorm:"column:base_url;type:VARCHAR;size:255;" json:"base_url"`
+	BaseURL sql.NullString `gorm:"column:base_url;type:VARCHAR(255);size:255;" json:"base_url"`
 	//[ 8] bearer_only                                    BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	BearerOnly bool `gorm:"column:bearer_only;type:BOOL;default:false;" json:"bearer_only"`
 	//[ 9] management_url                                 VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ManagementURL sql.NullString `gorm:"column:management_url;type:VARCHAR;size:255;" json:"management_url"`
+	ManagementURL sql.NullString `gorm:"column:management_url;type:VARCHAR(255);size:255;" json:"management_url"`
 	//[10] surrogate_auth_required                        BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	SurrogateAuthRequired bool `gorm:"column:surrogate_auth_required;type:BOOL;default:false;" json:"surrogate_auth_required"`
 	//[11] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[12] protocol                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Protocol sql.NullString `gorm:"column:protocol;type:VARCHAR;size:255;" json:"protocol"`
+	Protocol sql.NullString `gorm:"column:protocol;type:VARCHAR(255);size:255;" json:"protocol"`
 	//[13] node_rereg_timeout                             INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: [0]
 	NodeReregTimeout sql.NullInt32 `gorm:"column:node_rereg_timeout;type:INT4;default:0;" json:"node_rereg_timeout"`
 	//[14] frontchannel_logout                            BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
@@ -86,17 +86,17 @@ type Client struct {
 	//[15] consent_required                               BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	ConsentRequired bool `gorm:"column:consent_required;type:BOOL;default:false;" json:"consent_required"`
 	//[16] name                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name sql.NullString `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name sql.NullString `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[17] service_accounts_enabled                       BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	ServiceAccountsEnabled bool `gorm:"column:service_accounts_enabled;type:BOOL;default:false;" json:"service_accounts_enabled"`
 	//[18] client_authenticator_type                      VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ClientAuthenticatorType sql.NullString `gorm:"column:client_authenticator_type;type:VARCHAR;size:255;" json:"client_authenticator_type"`
+	ClientAuthenticatorType sql.NullString `gorm:"column:client_authenticator_type;type:VARCHAR(255);size:255;" json:"client_authenticator_type"`
 	//[19] root_url                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RootURL sql.NullString `gorm:"column:root_url;type:VARCHAR;size:255;" json:"root_url"`
+	RootURL sql.NullString `gorm:"column:root_url;type:VARCHAR(255);size:255;" json:"root_url"`
 	//[20] description                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Description sql.NullString `gorm:"column:description;type:VARCHAR;size:255;" json:"description"`
+	Description sql.NullString `gorm:"column:description;type:VARCHAR(255);size:255;" json:"description"`
 	//[21] registration_token                             VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RegistrationToken sql.NullString `gorm:"column:registration_token;type:VARCHAR;size:255;" json:"registration_token"`
+	RegistrationToken sql.NullString `gorm:"column:registration_token;type:VARCHAR(255);size:255;" json:"registration_token"`
 	//[22] standard_flow_enabled                          BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [true]
 	StandardFlowEnabled bool `gorm:"column:standard_flow_enabled;type:BOOL;default:true;" json:"standard_flow_enabled"`
 	//[23] implicit_flow_enabled                          BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
@@ -181,12 +181,12 @@ var clientTableInfo = &TableInfo{
 			Notes:              ``,
 			Nullable:           true,
 			DatabaseTypeName:   "VARCHAR",
-			DatabaseTypePretty: "VARCHAR(255)",
+			DatabaseTypePretty: "VARCHAR",
 			IsPrimaryKey:       false,
 			IsAutoIncrement:    false,
 			IsArray:            false,
 			ColumnType:         "VARCHAR",
-			ColumnLength:       255,
+			ColumnLength:       -1,
 			GoFieldName:        "ClientID",
 			GoFieldType:        "sql.NullString",
 			JSONFieldName:      "client_id",

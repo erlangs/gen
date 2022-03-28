@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -29,7 +29,7 @@ Table: authentication_execution
 
 JSON Sample
 -------------------------------------
-{    "id": "nEdSOPjJLCZmAQGTgdwmLiaWd",    "alias": "aWYpWcyalMIZALRRogRxlyyxi",    "authenticator": "ybsqRBDoSLIdMskGUPMgnKgXI",    "realm_id": "fLhMptFSegMSIeaQaUmmEtQxN",    "flow_id": "qrOTbdJsTeEHoJgMkPJsiThnU",    "requirement": 31,    "priority": 12,    "authenticator_flow": false,    "auth_flow_id": "EBGUFotUVnhtpuVbqiucUkUvL",    "auth_config": "oPaaSrirdoYLaFclSuFGuVRph"}
+{    "id": "kHjcZESkGJcnKMDlLyGJObfFe",    "alias": "CmMuHaSWyGkWiOMkILPeyBSMU",    "authenticator": "CaYxPSvWPvdKFwTHPPMPDZAiC",    "realm_id": "cWPRVmKTKZCXdAIOokPdbENLk",    "flow_id": "epifXlgjJobfAonQrZYknTNJG",    "requirement": 11,    "priority": 45,    "authenticator_flow": false,    "auth_flow_id": "OgRaatruOvfCjGnnrFYtsaODy",    "auth_config": "KiOjMwBwAsKhrZNyQmULBIuFO"}
 
 
 
@@ -38,15 +38,15 @@ JSON Sample
 // AuthenticationExecution struct is a row record of the authentication_execution table in the keycloak database
 type AuthenticationExecution struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] alias                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Alias sql.NullString `gorm:"column:alias;type:VARCHAR;size:255;" json:"alias"`
+	Alias sql.NullString `gorm:"column:alias;type:VARCHAR(255);size:255;" json:"alias"`
 	//[ 2] authenticator                                  VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	Authenticator sql.NullString `gorm:"column:authenticator;type:VARCHAR;size:36;" json:"authenticator"`
+	Authenticator sql.NullString `gorm:"column:authenticator;type:VARCHAR(36);size:36;" json:"authenticator"`
 	//[ 3] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 4] flow_id                                        VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	FlowID sql.NullString `gorm:"column:flow_id;type:VARCHAR;size:36;" json:"flow_id"`
+	FlowID sql.NullString `gorm:"column:flow_id;type:VARCHAR(36);size:36;" json:"flow_id"`
 	//[ 5] requirement                                    INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	Requirement sql.NullInt32 `gorm:"column:requirement;type:INT4;" json:"requirement"`
 	//[ 6] priority                                       INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
@@ -54,9 +54,9 @@ type AuthenticationExecution struct {
 	//[ 7] authenticator_flow                             BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	AuthenticatorFlow bool `gorm:"column:authenticator_flow;type:BOOL;default:false;" json:"authenticator_flow"`
 	//[ 8] auth_flow_id                                   VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	AuthFlowID sql.NullString `gorm:"column:auth_flow_id;type:VARCHAR;size:36;" json:"auth_flow_id"`
+	AuthFlowID sql.NullString `gorm:"column:auth_flow_id;type:VARCHAR(36);size:36;" json:"auth_flow_id"`
 	//[ 9] auth_config                                    VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	AuthConfig sql.NullString `gorm:"column:auth_config;type:VARCHAR;size:36;" json:"auth_config"`
+	AuthConfig sql.NullString `gorm:"column:auth_config;type:VARCHAR(36);size:36;" json:"auth_config"`
 }
 
 var authentication_executionTableInfo = &TableInfo{

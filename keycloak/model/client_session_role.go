@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: client_session_role
 
 JSON Sample
 -------------------------------------
-{    "role_id": "dJTOuMHoaEYlcUOlQpQLqHign",    "client_session": "RiUFVdxaJhZpFNcklVaamjfix"}
+{    "role_id": "RKWIQEKubvRlaBIOByTEWWMeJ",    "client_session": "jrkibwgrXDVGDKxROWAGwGGWw"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // ClientSessionRole struct is a row record of the client_session_role table in the keycloak database
 type ClientSessionRole struct {
 	//[ 0] role_id                                        VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RoleID string `gorm:"primary_key;column:role_id;type:VARCHAR;size:255;" json:"role_id"`
+	RoleID string `gorm:"primary_key;column:role_id;type:VARCHAR(255);size:255;" json:"role_id"`
 	//[ 1] client_session                                 VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientSession string `gorm:"primary_key;column:client_session;type:VARCHAR;size:36;" json:"client_session"`
+	ClientSession string `gorm:"primary_key;column:client_session;type:VARCHAR(36);size:36;" json:"client_session"`
 }
 
 var client_session_roleTableInfo = &TableInfo{

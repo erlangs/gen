@@ -127,7 +127,7 @@ func GetRealmEventsListeners(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmeventslisteners [post]
-// echo '{"realm_id": "DFGkeOftHTgQsuNLqprGxNDfi","value": "jDEXnjsdymBrRvjCgZtvLkZTN"}' | http POST "http://localhost:8080/realmeventslisteners" X-Api-User:user123
+// echo '{"realm_id": "jZUgadZgOtLUXSELxcWMflqCE","value": "MJmLkQrZkIMAfQChTNkIJeCwF"}' | http POST "http://localhost:8080/realmeventslisteners" X-Api-User:user123
 func AddRealmEventsListeners(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	realmeventslisteners := &model.RealmEventsListeners{}
@@ -175,7 +175,7 @@ func AddRealmEventsListeners(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmeventslisteners/{argRealmID}/{argValue} [put]
-// echo '{"realm_id": "DFGkeOftHTgQsuNLqprGxNDfi","value": "jDEXnjsdymBrRvjCgZtvLkZTN"}' | http PUT "http://localhost:8080/realmeventslisteners/hello world/hello world"  X-Api-User:user123
+// echo '{"realm_id": "jZUgadZgOtLUXSELxcWMflqCE","value": "MJmLkQrZkIMAfQChTNkIJeCwF"}' | http PUT "http://localhost:8080/realmeventslisteners/hello world/hello world"  X-Api-User:user123
 func UpdateRealmEventsListeners(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

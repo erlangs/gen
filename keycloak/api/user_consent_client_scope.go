@@ -127,7 +127,7 @@ func GetUserConsentClientScope(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userconsentclientscope [post]
-// echo '{"user_consent_id": "oiKGIBwOPQaryYlUivHirITQx","scope_id": "JAcbwfYMlYveWATRMKGIlrNoO"}' | http POST "http://localhost:8080/userconsentclientscope" X-Api-User:user123
+// echo '{"user_consent_id": "NDmTGUHGWPXDRhkrvqycvCSyy","scope_id": "hojjxUVWyZStIOxXqThwGLVIY"}' | http POST "http://localhost:8080/userconsentclientscope" X-Api-User:user123
 func AddUserConsentClientScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	userconsentclientscope := &model.UserConsentClientScope{}
@@ -175,7 +175,7 @@ func AddUserConsentClientScope(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userconsentclientscope/{argUserConsentID}/{argScopeID} [put]
-// echo '{"user_consent_id": "oiKGIBwOPQaryYlUivHirITQx","scope_id": "JAcbwfYMlYveWATRMKGIlrNoO"}' | http PUT "http://localhost:8080/userconsentclientscope/hello world/hello world"  X-Api-User:user123
+// echo '{"user_consent_id": "NDmTGUHGWPXDRhkrvqycvCSyy","scope_id": "hojjxUVWyZStIOxXqThwGLVIY"}' | http PUT "http://localhost:8080/userconsentclientscope/hello world/hello world"  X-Api-User:user123
 func UpdateUserConsentClientScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

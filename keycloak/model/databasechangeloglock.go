@@ -23,7 +23,7 @@ Table: databasechangeloglock
 
 JSON Sample
 -------------------------------------
-{    "id": 72,    "locked": true,    "lockgranted": "2288-04-24T23:34:42.700317113+08:00",    "lockedby": "OTCgjPoSLgdKsegDNNbxyHZVj"}
+{    "id": 93,    "locked": false,    "lockgranted": "2273-01-15T15:18:15.108612853+08:00",    "lockedby": "fjLtQSKplJNgtQiIVkCnIfTtG"}
 
 
 
@@ -38,7 +38,7 @@ type Databasechangeloglock struct {
 	//[ 2] lockgranted                                    TIMESTAMP            null: true   primary: false  isArray: false  auto: false  col: TIMESTAMP       len: -1      default: []
 	Lockgranted time.Time `gorm:"column:lockgranted;type:TIMESTAMP;" json:"lockgranted"`
 	//[ 3] lockedby                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Lockedby sql.NullString `gorm:"column:lockedby;type:VARCHAR;size:255;" json:"lockedby"`
+	Lockedby sql.NullString `gorm:"column:lockedby;type:VARCHAR(255);size:255;" json:"lockedby"`
 }
 
 var databasechangeloglockTableInfo = &TableInfo{

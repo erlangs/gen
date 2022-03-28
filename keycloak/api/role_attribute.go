@@ -119,7 +119,7 @@ func GetRoleAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /roleattribute [post]
-// echo '{"id": "CNETGJbyhjSbmisVIPqGbhbop","role_id": "RvxBlCXIRwgDHSwXIrucDsQrj","name": "iLldJPcudrJDfagRviDQNCYIF","value": "LhAlXdgjKuvYsjfIZnJkRqKkW"}' | http POST "http://localhost:8080/roleattribute" X-Api-User:user123
+// echo '{"id": "dGPMVQhEfHCnYwyYiYtJAOxoM","role_id": "lZNbxdolAcZuUqTFdePykTKVX","name": "NRwmCpEDFZwFQGgchfKNfBZSp","value": "NWXcurKcBhlsFWtMvtjHdipTX"}' | http POST "http://localhost:8080/roleattribute" X-Api-User:user123
 func AddRoleAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	roleattribute := &model.RoleAttribute{}
@@ -167,7 +167,7 @@ func AddRoleAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /roleattribute/{argID} [put]
-// echo '{"id": "CNETGJbyhjSbmisVIPqGbhbop","role_id": "RvxBlCXIRwgDHSwXIrucDsQrj","name": "iLldJPcudrJDfagRviDQNCYIF","value": "LhAlXdgjKuvYsjfIZnJkRqKkW"}' | http PUT "http://localhost:8080/roleattribute/hello world"  X-Api-User:user123
+// echo '{"id": "dGPMVQhEfHCnYwyYiYtJAOxoM","role_id": "lZNbxdolAcZuUqTFdePykTKVX","name": "NRwmCpEDFZwFQGgchfKNfBZSp","value": "NWXcurKcBhlsFWtMvtjHdipTX"}' | http PUT "http://localhost:8080/roleattribute/hello world"  X-Api-User:user123
 func UpdateRoleAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

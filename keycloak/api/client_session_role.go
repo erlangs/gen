@@ -127,7 +127,7 @@ func GetClientSessionRole(w http.ResponseWriter, r *http.Request, ps httprouter.
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientsessionrole [post]
-// echo '{"role_id": "dJTOuMHoaEYlcUOlQpQLqHign","client_session": "RiUFVdxaJhZpFNcklVaamjfix"}' | http POST "http://localhost:8080/clientsessionrole" X-Api-User:user123
+// echo '{"role_id": "RKWIQEKubvRlaBIOByTEWWMeJ","client_session": "jrkibwgrXDVGDKxROWAGwGGWw"}' | http POST "http://localhost:8080/clientsessionrole" X-Api-User:user123
 func AddClientSessionRole(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientsessionrole := &model.ClientSessionRole{}
@@ -175,7 +175,7 @@ func AddClientSessionRole(w http.ResponseWriter, r *http.Request, ps httprouter.
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientsessionrole/{argRoleID}/{argClientSession} [put]
-// echo '{"role_id": "dJTOuMHoaEYlcUOlQpQLqHign","client_session": "RiUFVdxaJhZpFNcklVaamjfix"}' | http PUT "http://localhost:8080/clientsessionrole/hello world/hello world"  X-Api-User:user123
+// echo '{"role_id": "RKWIQEKubvRlaBIOByTEWWMeJ","client_session": "jrkibwgrXDVGDKxROWAGwGGWw"}' | http PUT "http://localhost:8080/clientsessionrole/hello world/hello world"  X-Api-User:user123
 func UpdateClientSessionRole(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

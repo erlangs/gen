@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -27,7 +27,7 @@ Table: keycloak_role
 
 JSON Sample
 -------------------------------------
-{    "id": "biAiEChYdRQPpowvIyFAgRjDx",    "client_realm_constraint": "qEWDaMwkitIADFjSQvEfwxGVs",    "client_role": true,    "description": "bfydNrobUjCUyXMFEBQQUmZYK",    "name": "HxBnnwTrXxZowbrdwdPDcoGQJ",    "realm_id": "BtPngPKabjUrPvBymHPqNvIgv",    "client": "jZeAEkCLjOJYrjcQTeFDLGZYv",    "realm": "axvdPNYeuUAScgZTGICgOhEvP"}
+{    "id": "BjFgYWIYfAJBXuLkVixhElUGa",    "client_realm_constraint": "OtGGEtlUObeYotEwaNjIvDSqj",    "client_role": true,    "description": "OHXNaDZVuBdPwuuvIvfWOtbNr",    "name": "ARredGKOKcZSlQhMycUVIvkmi",    "realm_id": "DtkdJKLnkurZTEncAwxexPUYT",    "client": "CSwTqVuxlrQcswoCrQwGhKrTt",    "realm": "ZtXeXuvouNdOAcQgtRvowDEoR"}
 
 
 
@@ -36,21 +36,21 @@ JSON Sample
 // KeycloakRole struct is a row record of the keycloak_role table in the keycloak database
 type KeycloakRole struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] client_realm_constraint                        VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ClientRealmConstraint sql.NullString `gorm:"column:client_realm_constraint;type:VARCHAR;size:255;" json:"client_realm_constraint"`
+	ClientRealmConstraint sql.NullString `gorm:"column:client_realm_constraint;type:VARCHAR(255);size:255;" json:"client_realm_constraint"`
 	//[ 2] client_role                                    BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	ClientRole bool `gorm:"column:client_role;type:BOOL;default:false;" json:"client_role"`
 	//[ 3] description                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Description sql.NullString `gorm:"column:description;type:VARCHAR;size:255;" json:"description"`
+	Description sql.NullString `gorm:"column:description;type:VARCHAR(255);size:255;" json:"description"`
 	//[ 4] name                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name sql.NullString `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name sql.NullString `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 5] realm_id                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:255;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(255);size:255;" json:"realm_id"`
 	//[ 6] client                                         VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	Client sql.NullString `gorm:"column:client;type:VARCHAR;size:36;" json:"client"`
+	Client sql.NullString `gorm:"column:client;type:VARCHAR(36);size:36;" json:"client"`
 	//[ 7] realm                                          VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	Realm sql.NullString `gorm:"column:realm;type:VARCHAR;size:36;" json:"realm"`
+	Realm sql.NullString `gorm:"column:realm;type:VARCHAR(36);size:36;" json:"realm"`
 }
 
 var keycloak_roleTableInfo = &TableInfo{

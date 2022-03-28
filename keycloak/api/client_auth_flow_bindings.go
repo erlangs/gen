@@ -127,7 +127,7 @@ func GetClientAuthFlowBindings(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientauthflowbindings [post]
-// echo '{"client_id": "dUATkNAoKsTSRVspsvIYpshxX","flow_id": "coybbZVPIVwTGtbdrZIllwAyp","binding_name": "RPBDgLwrmckvZGTMZmDADLlfT"}' | http POST "http://localhost:8080/clientauthflowbindings" X-Api-User:user123
+// echo '{"client_id": "KtfNwnLMSuHonDTHkDgGxFQPC","flow_id": "VhEwKYNsToVhgFMbIWJdiJPaH","binding_name": "potSwJnPWISnjBroDOxtceYED"}' | http POST "http://localhost:8080/clientauthflowbindings" X-Api-User:user123
 func AddClientAuthFlowBindings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientauthflowbindings := &model.ClientAuthFlowBindings{}
@@ -175,7 +175,7 @@ func AddClientAuthFlowBindings(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientauthflowbindings/{argClientID}/{argBindingName} [put]
-// echo '{"client_id": "dUATkNAoKsTSRVspsvIYpshxX","flow_id": "coybbZVPIVwTGtbdrZIllwAyp","binding_name": "RPBDgLwrmckvZGTMZmDADLlfT"}' | http PUT "http://localhost:8080/clientauthflowbindings/hello world/hello world"  X-Api-User:user123
+// echo '{"client_id": "KtfNwnLMSuHonDTHkDgGxFQPC","flow_id": "VhEwKYNsToVhgFMbIWJdiJPaH","binding_name": "potSwJnPWISnjBroDOxtceYED"}' | http PUT "http://localhost:8080/clientauthflowbindings/hello world/hello world"  X-Api-User:user123
 func UpdateClientAuthFlowBindings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: resource_policy
 
 JSON Sample
 -------------------------------------
-{    "resource_id": "UDnWkmUmyCJDqgfcnlIDbQFgq",    "policy_id": "WEUQqgCCUdMGiIoUixkfXMNSs"}
+{    "resource_id": "GwAXGoJByvpycHOkSTNlBjtTr",    "policy_id": "QRwgJlTFtOPRYEDeOESpXfcZN"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // ResourcePolicy struct is a row record of the resource_policy table in the keycloak database
 type ResourcePolicy struct {
 	//[ 0] resource_id                                    VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ResourceID string `gorm:"primary_key;column:resource_id;type:VARCHAR;size:36;" json:"resource_id"`
+	ResourceID string `gorm:"primary_key;column:resource_id;type:VARCHAR(36);size:36;" json:"resource_id"`
 	//[ 1] policy_id                                      VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	PolicyID string `gorm:"primary_key;column:policy_id;type:VARCHAR;size:36;" json:"policy_id"`
+	PolicyID string `gorm:"primary_key;column:policy_id;type:VARCHAR(36);size:36;" json:"policy_id"`
 }
 
 var resource_policyTableInfo = &TableInfo{

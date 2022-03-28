@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_scope_client
 
 JSON Sample
 -------------------------------------
-{    "client_id": "quHAJYEuritytwWkPGxQdmFMX",    "scope_id": "sTdMvLSlUWdeAkndufgjiZakO",    "default_scope": false}
+{    "client_id": "WVyAUqOcLRvAHHhUofxJDCveT",    "scope_id": "qAsrJKWPQGcsjEINInGDNQYYY",    "default_scope": false}
 
 
 
@@ -31,9 +31,9 @@ JSON Sample
 // ClientScopeClient struct is a row record of the client_scope_client table in the keycloak database
 type ClientScopeClient struct {
 	//[ 0] client_id                                      VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR;size:255;" json:"client_id"`
+	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR(255);size:255;" json:"client_id"`
 	//[ 1] scope_id                                       VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ScopeID string `gorm:"primary_key;column:scope_id;type:VARCHAR;size:255;" json:"scope_id"`
+	ScopeID string `gorm:"primary_key;column:scope_id;type:VARCHAR(255);size:255;" json:"scope_id"`
 	//[ 2] default_scope                                  BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	DefaultScope bool `gorm:"column:default_scope;type:BOOL;default:false;" json:"default_scope"`
 }

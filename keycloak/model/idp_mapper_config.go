@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: idp_mapper_config
 
 JSON Sample
 -------------------------------------
-{    "idp_mapper_id": "GmKJRaaPrYnwcFFcLbekHOlEu",    "value": "RPJAVNZGSLkEmcdUfhBDCJQgi",    "name": "UQMmCeBihKnyTKwxIWCOEYKfV"}
+{    "idp_mapper_id": "APoYpugfLEYgmNRpjYKVQxLye",    "value": "afqRLuXAQpjrecBwnVOkBXoMC",    "name": "nvufSJDbDmAhldjLNYZflAwpb"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // IdpMapperConfig struct is a row record of the idp_mapper_config table in the keycloak database
 type IdpMapperConfig struct {
 	//[ 0] idp_mapper_id                                  VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	IdpMapperID string `gorm:"primary_key;column:idp_mapper_id;type:VARCHAR;size:36;" json:"idp_mapper_id"`
+	IdpMapperID string `gorm:"primary_key;column:idp_mapper_id;type:VARCHAR(36);size:36;" json:"idp_mapper_id"`
 	//[ 1] value                                          TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Value sql.NullString `gorm:"column:value;type:TEXT;" json:"value"`
 	//[ 2] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 }
 
 var idp_mapper_configTableInfo = &TableInfo{

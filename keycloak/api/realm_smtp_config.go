@@ -127,7 +127,7 @@ func GetRealmSMTPConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmsmtpconfig [post]
-// echo '{"realm_id": "WTseRGcelrsUvkDriuEDKWCoC","value": "gJZGAYAjooSURMscSmMwVFIUA","name": "WiYYqHMlKoIJOXKyIXrKxkKoI"}' | http POST "http://localhost:8080/realmsmtpconfig" X-Api-User:user123
+// echo '{"realm_id": "jiJDSFKlNvVqmNfgiWTqFDydF","value": "KSIanaZJqcHNsgDBSKyHQKKKS","name": "SLgnvwcvcfVDMnLExNBNhQUkk"}' | http POST "http://localhost:8080/realmsmtpconfig" X-Api-User:user123
 func AddRealmSMTPConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	realmsmtpconfig := &model.RealmSMTPConfig{}
@@ -175,7 +175,7 @@ func AddRealmSMTPConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmsmtpconfig/{argRealmID}/{argName} [put]
-// echo '{"realm_id": "WTseRGcelrsUvkDriuEDKWCoC","value": "gJZGAYAjooSURMscSmMwVFIUA","name": "WiYYqHMlKoIJOXKyIXrKxkKoI"}' | http PUT "http://localhost:8080/realmsmtpconfig/hello world/hello world"  X-Api-User:user123
+// echo '{"realm_id": "jiJDSFKlNvVqmNfgiWTqFDydF","value": "KSIanaZJqcHNsgDBSKyHQKKKS","name": "SLgnvwcvcfVDMnLExNBNhQUkk"}' | http PUT "http://localhost:8080/realmsmtpconfig/hello world/hello world"  X-Api-User:user123
 func UpdateRealmSMTPConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

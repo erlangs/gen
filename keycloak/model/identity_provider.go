@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -32,7 +32,7 @@ Table: identity_provider
 
 JSON Sample
 -------------------------------------
-{    "internal_id": "bufABomFBuTnIVLjfCyQeOPaQ",    "enabled": false,    "provider_alias": "GeFfRfltlnXRPPndWMPoMnkCU",    "provider_id": "lqruxhlrpPiOxrXkqgeinGkoU",    "store_token": false,    "authenticate_by_default": false,    "realm_id": "hyOvhMvKsSrbcOxOMNKharPvN",    "add_token_role": false,    "trust_email": true,    "first_broker_login_flow_id": "YqiVMXrxhGfkHfoWTnYoXHASh",    "post_broker_login_flow_id": "ZFGQMmWjfXoElCrWjuyLcbuxE",    "provider_display_name": "QWrZZnSKiaDCcAjNcbHhobdId",    "link_only": false}
+{    "internal_id": "BmnTvZoaBJWQMahIKVYuFoMRc",    "enabled": true,    "provider_alias": "SEWAfeATnjZQjsMPZVVWPEAlW",    "provider_id": "fuVFNplsJloflpGqtlVlgZAdk",    "store_token": true,    "authenticate_by_default": false,    "realm_id": "fCoaCMvCQltrVDJJxqMtWxmTj",    "add_token_role": true,    "trust_email": true,    "first_broker_login_flow_id": "oYQnVcZmiZCsqtuUwlQSIbJDZ",    "post_broker_login_flow_id": "lkcyUPDElsTCWmKYRDCtVXmhs",    "provider_display_name": "ecxPaTAbTWhnGRVIcCslYrHyV",    "link_only": false}
 
 
 
@@ -41,29 +41,29 @@ JSON Sample
 // IdentityProvider struct is a row record of the identity_provider table in the keycloak database
 type IdentityProvider struct {
 	//[ 0] internal_id                                    VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	InternalID string `gorm:"primary_key;column:internal_id;type:VARCHAR;size:36;" json:"internal_id"`
+	InternalID string `gorm:"primary_key;column:internal_id;type:VARCHAR(36);size:36;" json:"internal_id"`
 	//[ 1] enabled                                        BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	Enabled bool `gorm:"column:enabled;type:BOOL;default:false;" json:"enabled"`
 	//[ 2] provider_alias                                 VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ProviderAlias sql.NullString `gorm:"column:provider_alias;type:VARCHAR;size:255;" json:"provider_alias"`
+	ProviderAlias sql.NullString `gorm:"column:provider_alias;type:VARCHAR(255);size:255;" json:"provider_alias"`
 	//[ 3] provider_id                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ProviderID sql.NullString `gorm:"column:provider_id;type:VARCHAR;size:255;" json:"provider_id"`
+	ProviderID sql.NullString `gorm:"column:provider_id;type:VARCHAR(255);size:255;" json:"provider_id"`
 	//[ 4] store_token                                    BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	StoreToken bool `gorm:"column:store_token;type:BOOL;default:false;" json:"store_token"`
 	//[ 5] authenticate_by_default                        BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	AuthenticateByDefault bool `gorm:"column:authenticate_by_default;type:BOOL;default:false;" json:"authenticate_by_default"`
 	//[ 6] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 7] add_token_role                                 BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [true]
 	AddTokenRole bool `gorm:"column:add_token_role;type:BOOL;default:true;" json:"add_token_role"`
 	//[ 8] trust_email                                    BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	TrustEmail bool `gorm:"column:trust_email;type:BOOL;default:false;" json:"trust_email"`
 	//[ 9] first_broker_login_flow_id                     VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	FirstBrokerLoginFlowID sql.NullString `gorm:"column:first_broker_login_flow_id;type:VARCHAR;size:36;" json:"first_broker_login_flow_id"`
+	FirstBrokerLoginFlowID sql.NullString `gorm:"column:first_broker_login_flow_id;type:VARCHAR(36);size:36;" json:"first_broker_login_flow_id"`
 	//[10] post_broker_login_flow_id                      VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	PostBrokerLoginFlowID sql.NullString `gorm:"column:post_broker_login_flow_id;type:VARCHAR;size:36;" json:"post_broker_login_flow_id"`
+	PostBrokerLoginFlowID sql.NullString `gorm:"column:post_broker_login_flow_id;type:VARCHAR(36);size:36;" json:"post_broker_login_flow_id"`
 	//[11] provider_display_name                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ProviderDisplayName sql.NullString `gorm:"column:provider_display_name;type:VARCHAR;size:255;" json:"provider_display_name"`
+	ProviderDisplayName sql.NullString `gorm:"column:provider_display_name;type:VARCHAR(255);size:255;" json:"provider_display_name"`
 	//[12] link_only                                      BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	LinkOnly bool `gorm:"column:link_only;type:BOOL;default:false;" json:"link_only"`
 }

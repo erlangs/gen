@@ -2,8 +2,6 @@ package model
 
 import (
 	"database/sql"
-	//"time"
-
 	//"github.com/satori/go.uuid"
 
 	"gorm.io/gorm"
@@ -31,7 +29,7 @@ Table: admin_event_entity
 
 JSON Sample
 -------------------------------------
-{    "id": "kcSmkxDrKXkaKcOYhUQHOwMlA",    "admin_event_time": 33,    "realm_id": "ndaKMhMTEERmbPQRJaMMIbhHj",    "operation_type": "oQgmfaESLsOxuWhoQgRGjiTNr",    "auth_realm_id": "IBtFPflBsxdlwFmdpYuXMJQOl",    "auth_client_id": "tZRakkvudjUgeESFtbBJbPlWS",    "auth_user_id": "JIasrHhqmCHMyLMCkBJovrlSM",    "ip_address": "FuKJBHMnqMexQWqtoxjJMxcjw",    "resource_path": "pLuCSWeAVbDkLeUqZreASbvXB",    "representation": "GMjobyIwSQYAoOlLEqbsOlrlI",    "error": "AZiwLhNDpoqNhVvqTNPybUlhB",    "resource_type": "EfqeejpcWplcebsRYBieWZGZN"}
+{    "id": "hhgQdFPQPxeaYvuhihShgSGfW",    "admin_event_time": 95,    "realm_id": "kkNqKTOrLeAyjMeWisfFIuqhm",    "operation_type": "YkLdZAThdeFRgOkGKdlhILyLV",    "auth_realm_id": "JuvVEbusUAhWhjBsmCtxdbAVH",    "auth_client_id": "vsXhPZpDmGEcKYlSsrPEPECeI",    "auth_user_id": "tTXRXMEJqYdRwTBRYUVFZqjOX",    "ip_address": "HNdKJMEOmkwodxFedyvxvrIQG",    "resource_path": "DewLuUTtVmKWermbihGMQInDU",    "representation": "nQRUXewXcrPKBQINOLfwqVAUN",    "error": "IeljSOSeVXaPRIlWjsiIeEsAd",    "resource_type": "LIdwvmemAbIXXBBbMeWOguxPO"}
 
 
 
@@ -40,29 +38,29 @@ JSON Sample
 // AdminEventEntity struct is a row record of the admin_event_entity table in the keycloak database
 type AdminEventEntity struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] admin_event_time                               INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	AdminEventTime sql.NullInt64 `gorm:"column:admin_event_time;type:INT8;" json:"admin_event_time"`
 	//[ 2] realm_id                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:255;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(255);size:255;" json:"realm_id"`
 	//[ 3] operation_type                                 VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	OperationType sql.NullString `gorm:"column:operation_type;type:VARCHAR;size:255;" json:"operation_type"`
+	OperationType sql.NullString `gorm:"column:operation_type;type:VARCHAR(255);size:255;" json:"operation_type"`
 	//[ 4] auth_realm_id                                  VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	AuthRealmID sql.NullString `gorm:"column:auth_realm_id;type:VARCHAR;size:255;" json:"auth_realm_id"`
+	AuthRealmID sql.NullString `gorm:"column:auth_realm_id;type:VARCHAR(255);size:255;" json:"auth_realm_id"`
 	//[ 5] auth_client_id                                 VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	AuthClientID sql.NullString `gorm:"column:auth_client_id;type:VARCHAR;size:255;" json:"auth_client_id"`
+	AuthClientID sql.NullString `gorm:"column:auth_client_id;type:VARCHAR(255);size:255;" json:"auth_client_id"`
 	//[ 6] auth_user_id                                   VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	AuthUserID sql.NullString `gorm:"column:auth_user_id;type:VARCHAR;size:255;" json:"auth_user_id"`
+	AuthUserID sql.NullString `gorm:"column:auth_user_id;type:VARCHAR(255);size:255;" json:"auth_user_id"`
 	//[ 7] ip_address                                     VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	IPAddress sql.NullString `gorm:"column:ip_address;type:VARCHAR;size:255;" json:"ip_address"`
+	IPAddress sql.NullString `gorm:"column:ip_address;type:VARCHAR(255);size:255;" json:"ip_address"`
 	//[ 8] resource_path                                  VARCHAR(2550)        null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 2550    default: []
-	ResourcePath sql.NullString `gorm:"column:resource_path;type:VARCHAR;size:2550;" json:"resource_path"`
+	ResourcePath sql.NullString `gorm:"column:resource_path;type:VARCHAR(2550);size:2550;" json:"resource_path"`
 	//[ 9] representation                                 TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Representation sql.NullString `gorm:"column:representation;type:TEXT;" json:"representation"`
 	//[10] error                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Error sql.NullString `gorm:"column:error;type:VARCHAR;size:255;" json:"error"`
+	Error sql.NullString `gorm:"column:error;type:VARCHAR(255);size:255;" json:"error"`
 	//[11] resource_type                                  VARCHAR(64)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 64      default: []
-	ResourceType sql.NullString `gorm:"column:resource_type;type:VARCHAR;size:64;" json:"resource_type"`
+	ResourceType sql.NullString `gorm:"column:resource_type;type:VARCHAR(64);size:64;" json:"resource_type"`
 }
 
 var admin_event_entityTableInfo = &TableInfo{

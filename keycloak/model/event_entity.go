@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -29,7 +29,7 @@ Table: event_entity
 
 JSON Sample
 -------------------------------------
-{    "id": "vphmmvJyNmRBeKiOGYlsSAEFr",    "client_id": "sjXLrDfeHhYsANDlPEstQUASl",    "details_json": "cJGMjLvDxeHPSSPQZZhpyLDEC",    "error": "uQutaliRrYUgfjVvZswRgOPsf",    "ip_address": "cGXNUckuyiZtjoOBTIApihYjH",    "realm_id": "tGJIqsRDqRKTMxyaYiXedqVen",    "session_id": "SMSxXTaTyhtSsVTFWlFYDbcBD",    "event_time": 52,    "type": "oKlDOnlHnOsuKdbuTujMnwalr",    "user_id": "PCBTmPaXfuGjfvuKIqUhVLSIa"}
+{    "id": "IvLpjvvpUJnycgJcrblZiZGZw",    "client_id": "rCgjdCbhvBidEOAGyIeGQosGW",    "details_json": "CRHrilyyfspQOFrZGZTrvmZCv",    "error": "EkLdDsIhiMMGZCvOSEJbnmTPH",    "ip_address": "LjrpHPfZovGjUidGdIKaLCyke",    "realm_id": "LpvnClEbUPVokedoHjMYgveRB",    "session_id": "tRrDPFkQPGjfLHaXeDRpUSiZL",    "event_time": 8,    "type": "clZfcixSOdYQgeGBrmnHcqOEL",    "user_id": "nUcoAeFTKhdXweJyQFiNWLtYr"}
 
 
 
@@ -38,25 +38,25 @@ JSON Sample
 // EventEntity struct is a row record of the event_entity table in the keycloak database
 type EventEntity struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] client_id                                      VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR;size:255;" json:"client_id"`
+	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR(255);size:255;" json:"client_id"`
 	//[ 2] details_json                                   VARCHAR(2550)        null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 2550    default: []
-	DetailsJSON sql.NullString `gorm:"column:details_json;type:VARCHAR;size:2550;" json:"details_json"`
+	DetailsJSON sql.NullString `gorm:"column:details_json;type:VARCHAR(2550);size:2550;" json:"details_json"`
 	//[ 3] error                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Error sql.NullString `gorm:"column:error;type:VARCHAR;size:255;" json:"error"`
+	Error sql.NullString `gorm:"column:error;type:VARCHAR(255);size:255;" json:"error"`
 	//[ 4] ip_address                                     VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	IPAddress sql.NullString `gorm:"column:ip_address;type:VARCHAR;size:255;" json:"ip_address"`
+	IPAddress sql.NullString `gorm:"column:ip_address;type:VARCHAR(255);size:255;" json:"ip_address"`
 	//[ 5] realm_id                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:255;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(255);size:255;" json:"realm_id"`
 	//[ 6] session_id                                     VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	SessionID sql.NullString `gorm:"column:session_id;type:VARCHAR;size:255;" json:"session_id"`
+	SessionID sql.NullString `gorm:"column:session_id;type:VARCHAR(255);size:255;" json:"session_id"`
 	//[ 7] event_time                                     INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	EventTime sql.NullInt64 `gorm:"column:event_time;type:INT8;" json:"event_time"`
 	//[ 8] type                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Type sql.NullString `gorm:"column:type;type:VARCHAR;size:255;" json:"type"`
+	Type sql.NullString `gorm:"column:type;type:VARCHAR(255);size:255;" json:"type"`
 	//[ 9] user_id                                        VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	UserID sql.NullString `gorm:"column:user_id;type:VARCHAR;size:255;" json:"user_id"`
+	UserID sql.NullString `gorm:"column:user_id;type:VARCHAR(255);size:255;" json:"user_id"`
 }
 
 var event_entityTableInfo = &TableInfo{

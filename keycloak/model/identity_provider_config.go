@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: identity_provider_config
 
 JSON Sample
 -------------------------------------
-{    "identity_provider_id": "kxuaBWvDbonXiNdsIiaZomQDQ",    "value": "YBynjFCTWYFxOGVAfXsFHbNkr",    "name": "hxlWqbtvoyLkMNKvjrOvuGcAR"}
+{    "identity_provider_id": "RElFebQaVnCZRgMVhgHMOMLxL",    "value": "kSgHcJsjvYYosftaoqynYyEKw",    "name": "lndnjOWLsAKxYSOEgofRTiOCD"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // IdentityProviderConfig struct is a row record of the identity_provider_config table in the keycloak database
 type IdentityProviderConfig struct {
 	//[ 0] identity_provider_id                           VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	IdentityProviderID string `gorm:"primary_key;column:identity_provider_id;type:VARCHAR;size:36;" json:"identity_provider_id"`
+	IdentityProviderID string `gorm:"primary_key;column:identity_provider_id;type:VARCHAR(36);size:36;" json:"identity_provider_id"`
 	//[ 1] value                                          TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Value sql.NullString `gorm:"column:value;type:TEXT;" json:"value"`
 	//[ 2] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 }
 
 var identity_provider_configTableInfo = &TableInfo{

@@ -127,7 +127,7 @@ func GetRealmEnabledEventTypes(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmenabledeventtypes [post]
-// echo '{"realm_id": "PHTglcfQDCfGTZHxDQboqgbVB","value": "vwdwDvoEDHjPrrhgGSfyZaveT"}' | http POST "http://localhost:8080/realmenabledeventtypes" X-Api-User:user123
+// echo '{"realm_id": "ipmBUFwJavFMfNdBeqYBIVUAR","value": "VdhPULVCCvHoShsiUhOmFqLEU"}' | http POST "http://localhost:8080/realmenabledeventtypes" X-Api-User:user123
 func AddRealmEnabledEventTypes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	realmenabledeventtypes := &model.RealmEnabledEventTypes{}
@@ -175,7 +175,7 @@ func AddRealmEnabledEventTypes(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /realmenabledeventtypes/{argRealmID}/{argValue} [put]
-// echo '{"realm_id": "PHTglcfQDCfGTZHxDQboqgbVB","value": "vwdwDvoEDHjPrrhgGSfyZaveT"}' | http PUT "http://localhost:8080/realmenabledeventtypes/hello world/hello world"  X-Api-User:user123
+// echo '{"realm_id": "ipmBUFwJavFMfNdBeqYBIVUAR","value": "VdhPULVCCvHoShsiUhOmFqLEU"}' | http PUT "http://localhost:8080/realmenabledeventtypes/hello world/hello world"  X-Api-User:user123
 func UpdateRealmEnabledEventTypes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

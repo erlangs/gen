@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: realm_default_groups
 
 JSON Sample
 -------------------------------------
-{    "realm_id": "yNoWUCFryeYnNRHMNyXYXmuDu",    "group_id": "AROKPrMIZJrQikXDAAqnWJiFc"}
+{    "realm_id": "ttDuRQhnCWCDHRhNZIOvZmOvT",    "group_id": "WfcBYmAvtxRBsyEWNjowAMoLC"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // RealmDefaultGroups struct is a row record of the realm_default_groups table in the keycloak database
 type RealmDefaultGroups struct {
 	//[ 0] realm_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 1] group_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	GroupID string `gorm:"primary_key;column:group_id;type:VARCHAR;size:36;" json:"group_id"`
+	GroupID string `gorm:"primary_key;column:group_id;type:VARCHAR(36);size:36;" json:"group_id"`
 }
 
 var realm_default_groupsTableInfo = &TableInfo{

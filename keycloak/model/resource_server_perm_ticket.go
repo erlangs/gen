@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -28,7 +28,7 @@ Table: resource_server_perm_ticket
 
 JSON Sample
 -------------------------------------
-{    "id": "hscerupBAGtlfSAMsUpjSOixy",    "owner": "akLMiyRGUthpLibtFHhgfPiWk",    "requester": "kBrlQVVJsBrnrFbFHHpFOKYDq",    "created_timestamp": 53,    "granted_timestamp": 25,    "resource_id": "SWWCMCrpZCTiifVdMGnHoWkni",    "scope_id": "pSgoJlqpBbqOEtDPgfOKdTwQK",    "resource_server_id": "DxPFnXhTuSCyYSlypbORijnhP",    "policy_id": "GRCTAqnjBMWRsKMELWAUZpgQD"}
+{    "id": "bxuMYqMHAtgHwRjoMcjTrrGMI",    "owner": "JsbsCtAOhMNRenuQgDcKdTpHZ",    "requester": "yNNvZcjRAuUpAHGAdepPpaMpo",    "created_timestamp": 7,    "granted_timestamp": 94,    "resource_id": "uggISDNfestDaNEPByVlDqXkq",    "scope_id": "IXkelesOkRncHMIrewlVGVGvr",    "resource_server_id": "lITxJPovTwIswDeLUgQbHtIyv",    "policy_id": "KSmtYUQnbnAcHtEwJibgHDwJA"}
 
 
 
@@ -37,23 +37,23 @@ JSON Sample
 // ResourceServerPermTicket struct is a row record of the resource_server_perm_ticket table in the keycloak database
 type ResourceServerPermTicket struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] owner                                          VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Owner string `gorm:"column:owner;type:VARCHAR;size:255;" json:"owner"`
+	Owner string `gorm:"column:owner;type:VARCHAR(255);size:255;" json:"owner"`
 	//[ 2] requester                                      VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Requester string `gorm:"column:requester;type:VARCHAR;size:255;" json:"requester"`
+	Requester string `gorm:"column:requester;type:VARCHAR(255);size:255;" json:"requester"`
 	//[ 3] created_timestamp                              INT8                 null: false  primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	CreatedTimestamp int64 `gorm:"column:created_timestamp;type:INT8;" json:"created_timestamp"`
 	//[ 4] granted_timestamp                              INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	GrantedTimestamp sql.NullInt64 `gorm:"column:granted_timestamp;type:INT8;" json:"granted_timestamp"`
 	//[ 5] resource_id                                    VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ResourceID string `gorm:"column:resource_id;type:VARCHAR;size:36;" json:"resource_id"`
+	ResourceID string `gorm:"column:resource_id;type:VARCHAR(36);size:36;" json:"resource_id"`
 	//[ 6] scope_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ScopeID sql.NullString `gorm:"column:scope_id;type:VARCHAR;size:36;" json:"scope_id"`
+	ScopeID sql.NullString `gorm:"column:scope_id;type:VARCHAR(36);size:36;" json:"scope_id"`
 	//[ 7] resource_server_id                             VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ResourceServerID string `gorm:"column:resource_server_id;type:VARCHAR;size:36;" json:"resource_server_id"`
+	ResourceServerID string `gorm:"column:resource_server_id;type:VARCHAR(36);size:36;" json:"resource_server_id"`
 	//[ 8] policy_id                                      VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	PolicyID sql.NullString `gorm:"column:policy_id;type:VARCHAR;size:36;" json:"policy_id"`
+	PolicyID sql.NullString `gorm:"column:policy_id;type:VARCHAR(36);size:36;" json:"policy_id"`
 }
 
 var resource_server_perm_ticketTableInfo = &TableInfo{

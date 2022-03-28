@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: resource_uris
 
 JSON Sample
 -------------------------------------
-{    "resource_id": "cBCgvJgSLKThsZagOwlldZmqu",    "value": "YfBZxBLUdxOinYCNFxUmyEVSa"}
+{    "resource_id": "oMhQPFbIQqIlrANNKidRjlJlr",    "value": "pUhIvyLoFTMcLMAGPvQiDAots"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // ResourceUris struct is a row record of the resource_uris table in the keycloak database
 type ResourceUris struct {
 	//[ 0] resource_id                                    VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ResourceID string `gorm:"primary_key;column:resource_id;type:VARCHAR;size:36;" json:"resource_id"`
+	ResourceID string `gorm:"primary_key;column:resource_id;type:VARCHAR(36);size:36;" json:"resource_id"`
 	//[ 1] value                                          VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Value string `gorm:"primary_key;column:value;type:VARCHAR;size:255;" json:"value"`
+	Value string `gorm:"primary_key;column:value;type:VARCHAR(255);size:255;" json:"value"`
 }
 
 var resource_urisTableInfo = &TableInfo{

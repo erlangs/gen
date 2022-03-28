@@ -119,7 +119,7 @@ func GetPasswordResets(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /passwordresets [post]
-// echo '{"email": "EUQirruhWPvWHoBePkYyNSpVp","token": "eoBOgjCejeDWdkqSNdovpQHRq","created_at": "2261-10-17T13:16:36.964313821+08:00"}' | http POST "http://localhost:8080/passwordresets" X-Api-User:user123
+// echo '{"email": "qQpwXWPniNWvatZyvSHNUwDir","token": "usMIpXffQaXsCEDvmMOHFhRpV","created_at": "2116-11-21T14:47:12.289782023+08:00"}' | http POST "http://localhost:8080/passwordresets" X-Api-User:user123
 func AddPasswordResets(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	passwordresets := &model.PasswordResets{}
@@ -167,7 +167,7 @@ func AddPasswordResets(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /passwordresets/{argEmail} [put]
-// echo '{"email": "EUQirruhWPvWHoBePkYyNSpVp","token": "eoBOgjCejeDWdkqSNdovpQHRq","created_at": "2261-10-17T13:16:36.964313821+08:00"}' | http PUT "http://localhost:8080/passwordresets/hello world"  X-Api-User:user123
+// echo '{"email": "qQpwXWPniNWvatZyvSHNUwDir","token": "usMIpXffQaXsCEDvmMOHFhRpV","created_at": "2116-11-21T14:47:12.289782023+08:00"}' | http PUT "http://localhost:8080/passwordresets/hello world"  X-Api-User:user123
 func UpdatePasswordResets(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

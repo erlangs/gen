@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: protocol_mapper_config
 
 JSON Sample
 -------------------------------------
-{    "protocol_mapper_id": "OOgpyohTTgLPkNkfAZZjCbaXl",    "value": "hNdmwlfUJudaodnJHSwDBgyVs",    "name": "CEpnZcygNnWXBqEjYgmDPlZyJ"}
+{    "protocol_mapper_id": "qeDgFmOJvRpoGYBhCCbamBXEE",    "value": "yVyaRWSDpbclIfpYjvoGrAPUt",    "name": "YtSEdYTqAfQBXaPgGZmLDRvSx"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // ProtocolMapperConfig struct is a row record of the protocol_mapper_config table in the keycloak database
 type ProtocolMapperConfig struct {
 	//[ 0] protocol_mapper_id                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ProtocolMapperID string `gorm:"primary_key;column:protocol_mapper_id;type:VARCHAR;size:36;" json:"protocol_mapper_id"`
+	ProtocolMapperID string `gorm:"primary_key;column:protocol_mapper_id;type:VARCHAR(36);size:36;" json:"protocol_mapper_id"`
 	//[ 1] value                                          TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Value sql.NullString `gorm:"column:value;type:TEXT;" json:"value"`
 	//[ 2] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 }
 
 var protocol_mapper_configTableInfo = &TableInfo{

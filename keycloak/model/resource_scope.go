@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: resource_scope
 
 JSON Sample
 -------------------------------------
-{    "resource_id": "kPLQCIdOnLjYQdLxGoUxLByMd",    "scope_id": "snwrYCroaZCAgsdKASJOcUFee"}
+{    "resource_id": "aGpGQOWQHlqSxTyRjNMbPTwsH",    "scope_id": "hUoIgyqHcAAOtvlwKvlmbqqGM"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // ResourceScope struct is a row record of the resource_scope table in the keycloak database
 type ResourceScope struct {
 	//[ 0] resource_id                                    VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ResourceID string `gorm:"primary_key;column:resource_id;type:VARCHAR;size:36;" json:"resource_id"`
+	ResourceID string `gorm:"primary_key;column:resource_id;type:VARCHAR(36);size:36;" json:"resource_id"`
 	//[ 1] scope_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ScopeID string `gorm:"primary_key;column:scope_id;type:VARCHAR;size:36;" json:"scope_id"`
+	ScopeID string `gorm:"primary_key;column:scope_id;type:VARCHAR(36);size:36;" json:"scope_id"`
 }
 
 var resource_scopeTableInfo = &TableInfo{

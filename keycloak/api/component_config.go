@@ -119,7 +119,7 @@ func GetComponentConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /componentconfig [post]
-// echo '{"id": "cfwYuMpmTlQAvAGKYwaTLuXnZ","component_id": "QZUEQOfTshkQKUwikyJMyPejj","name": "eFbhPVhknaCNaLCHBbKofhERn","value": "XRflMRvPZgCUaLVBuwDAaLkAb"}' | http POST "http://localhost:8080/componentconfig" X-Api-User:user123
+// echo '{"id": "KVeKvUqcnVlrlGGYfEnoVgFRD","component_id": "JNTUCEphapWEiPaCTmWpEUjQY","name": "UlBKqMHfGpLyKSfQVgToOPwix","value": "aNYTCyTRAZhUSMnUtlpMACNeV"}' | http POST "http://localhost:8080/componentconfig" X-Api-User:user123
 func AddComponentConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	componentconfig := &model.ComponentConfig{}
@@ -167,7 +167,7 @@ func AddComponentConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /componentconfig/{argID} [put]
-// echo '{"id": "cfwYuMpmTlQAvAGKYwaTLuXnZ","component_id": "QZUEQOfTshkQKUwikyJMyPejj","name": "eFbhPVhknaCNaLCHBbKofhERn","value": "XRflMRvPZgCUaLVBuwDAaLkAb"}' | http PUT "http://localhost:8080/componentconfig/hello world"  X-Api-User:user123
+// echo '{"id": "KVeKvUqcnVlrlGGYfEnoVgFRD","component_id": "JNTUCEphapWEiPaCTmWpEUjQY","name": "UlBKqMHfGpLyKSfQVgToOPwix","value": "aNYTCyTRAZhUSMnUtlpMACNeV"}' | http PUT "http://localhost:8080/componentconfig/hello world"  X-Api-User:user123
 func UpdateComponentConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

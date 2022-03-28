@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: keycloak_group
 
 JSON Sample
 -------------------------------------
-{    "id": "FbtuYDcmjogEnVLkeZlOcrwpw",    "name": "BSarhqRBvfZChfWSHbSeoIBok",    "parent_group": "lmCvEVkbUPpiOgiIXrqjciXlf",    "realm_id": "OoCpBBcuoeSpgqlShTiUQLWOA"}
+{    "id": "ESjBwZutCEebPUpHCbrjNnHsE",    "name": "hgXgNNbXeBChIwHhBiWKdvvoM",    "parent_group": "OJDHPQbqQFXPNWkxBVcJDfNQk",    "realm_id": "sApfURnSoDnAosnmjneYTWiIv"}
 
 
 
@@ -32,13 +32,13 @@ JSON Sample
 // KeycloakGroup struct is a row record of the keycloak_group table in the keycloak database
 type KeycloakGroup struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name sql.NullString `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name sql.NullString `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] parent_group                                   VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ParentGroup string `gorm:"column:parent_group;type:VARCHAR;size:36;" json:"parent_group"`
+	ParentGroup string `gorm:"column:parent_group;type:VARCHAR(36);size:36;" json:"parent_group"`
 	//[ 3] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 }
 
 var keycloak_groupTableInfo = &TableInfo{

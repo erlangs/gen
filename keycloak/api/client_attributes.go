@@ -127,7 +127,7 @@ func GetClientAttributes(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientattributes [post]
-// echo '{"client_id": "PanbPUtJqpMNNmaXlnVfWSGPR","value": "LCfnLZflMGQoeHQcZMsDkehji","name": "cxKnfPqjdfHdaTJhWmZjEqwJa"}' | http POST "http://localhost:8080/clientattributes" X-Api-User:user123
+// echo '{"client_id": "xMfYYJVgHTRZODpXwyjrBXZaQ","value": "MBnJJXhOsWNRrFMLJnIDGqGpK","name": "tPlZHGVqXhMuJDtatmyCbamPQ"}' | http POST "http://localhost:8080/clientattributes" X-Api-User:user123
 func AddClientAttributes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientattributes := &model.ClientAttributes{}
@@ -175,7 +175,7 @@ func AddClientAttributes(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientattributes/{argClientID}/{argName} [put]
-// echo '{"client_id": "PanbPUtJqpMNNmaXlnVfWSGPR","value": "LCfnLZflMGQoeHQcZMsDkehji","name": "cxKnfPqjdfHdaTJhWmZjEqwJa"}' | http PUT "http://localhost:8080/clientattributes/hello world/hello world"  X-Api-User:user123
+// echo '{"client_id": "xMfYYJVgHTRZODpXwyjrBXZaQ","value": "MBnJJXhOsWNRrFMLJnIDGqGpK","name": "tPlZHGVqXhMuJDtatmyCbamPQ"}' | http PUT "http://localhost:8080/clientattributes/hello world/hello world"  X-Api-User:user123
 func UpdateClientAttributes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

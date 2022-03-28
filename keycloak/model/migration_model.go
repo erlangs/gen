@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: migration_model
 
 JSON Sample
 -------------------------------------
-{    "id": "fWYvJTanFtaXGLJjjoolqFpwm",    "version": "kjpqkPyHIlpkesALLaotYKJCH",    "update_time": 37}
+{    "id": "emQmeyTlKOQXklsRDITllfBSQ",    "version": "EunxXxgZsCNyTNKPrhEigJRwY",    "update_time": 54}
 
 
 
@@ -31,9 +31,9 @@ JSON Sample
 // MigrationModel struct is a row record of the migration_model table in the keycloak database
 type MigrationModel struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] version                                        VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	Version sql.NullString `gorm:"column:version;type:VARCHAR;size:36;" json:"version"`
+	Version sql.NullString `gorm:"column:version;type:VARCHAR(36);size:36;" json:"version"`
 	//[ 2] update_time                                    INT8                 null: false  primary: false  isArray: false  auto: false  col: INT8            len: -1      default: [0]
 	UpdateTime int64 `gorm:"column:update_time;type:INT8;default:0;" json:"update_time"`
 }

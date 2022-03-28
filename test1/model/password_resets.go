@@ -1,6 +1,7 @@
 package model
 
 import (
+	"database/sql"
 	"time"
 
 	//"github.com/satori/go.uuid"
@@ -22,7 +23,7 @@ CREATE TABLE `password_resets` (
 
 JSON Sample
 -------------------------------------
-{    "email": "EUQirruhWPvWHoBePkYyNSpVp",    "token": "eoBOgjCejeDWdkqSNdovpQHRq",    "created_at": "2261-10-17T13:16:36.964313821+08:00"}
+{    "email": "qQpwXWPniNWvatZyvSHNUwDir",    "token": "usMIpXffQaXsCEDvmMOHFhRpV",    "created_at": "2116-11-21T14:47:12.289782023+08:00"}
 
 
 Comments

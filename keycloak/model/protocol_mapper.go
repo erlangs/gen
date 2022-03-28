@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -25,7 +25,7 @@ Table: protocol_mapper
 
 JSON Sample
 -------------------------------------
-{    "id": "nTaArRTldXPfYmjXAiVDdnPqC",    "name": "UmOSrHxrdLpUJTgqooSEIMngP",    "protocol": "CPbxeqeCOIjRDceLdhpyEebJg",    "protocol_mapper_name": "VwGxKGTThWnHahFYeqtUmysPY",    "client_id": "PNuZZyVOesBySFsfZbeSQUaCj",    "client_scope_id": "HErbwtMwxrZZforemhikUkteX"}
+{    "id": "TnBcdHbCOqDbURVDSxuMcOOYV",    "name": "WKCQxmTPerDhYosDNEcNrlOoL",    "protocol": "yDsummFjjyfOJTInAllpRVelx",    "protocol_mapper_name": "siaoXfYNyemegoCUwhtZAhOOp",    "client_id": "HZNqErvFZkCEYNfWVVYislgJE",    "client_scope_id": "kPNPyqQlgjKjvCplqiqcXmoEa"}
 
 
 
@@ -34,17 +34,17 @@ JSON Sample
 // ProtocolMapper struct is a row record of the protocol_mapper table in the keycloak database
 type ProtocolMapper struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] protocol                                       VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Protocol string `gorm:"column:protocol;type:VARCHAR;size:255;" json:"protocol"`
+	Protocol string `gorm:"column:protocol;type:VARCHAR(255);size:255;" json:"protocol"`
 	//[ 3] protocol_mapper_name                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ProtocolMapperName string `gorm:"column:protocol_mapper_name;type:VARCHAR;size:255;" json:"protocol_mapper_name"`
+	ProtocolMapperName string `gorm:"column:protocol_mapper_name;type:VARCHAR(255);size:255;" json:"protocol_mapper_name"`
 	//[ 4] client_id                                      VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR;size:36;" json:"client_id"`
+	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR(36);size:36;" json:"client_id"`
 	//[ 5] client_scope_id                                VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientScopeID sql.NullString `gorm:"column:client_scope_id;type:VARCHAR;size:36;" json:"client_scope_id"`
+	ClientScopeID sql.NullString `gorm:"column:client_scope_id;type:VARCHAR(36);size:36;" json:"client_scope_id"`
 }
 
 var protocol_mapperTableInfo = &TableInfo{

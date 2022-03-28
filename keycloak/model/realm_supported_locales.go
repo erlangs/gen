@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: realm_supported_locales
 
 JSON Sample
 -------------------------------------
-{    "realm_id": "uoIjTtRuxJJkfPWtgXXEaSlWX",    "value": "XKmGCQubgPOlDukUBUEsfYRNY"}
+{    "realm_id": "ZyTVBposPmLGcQNyShGHrhsni",    "value": "RdioqyiRNhmWeRxEqdAIYHkOw"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // RealmSupportedLocales struct is a row record of the realm_supported_locales table in the keycloak database
 type RealmSupportedLocales struct {
 	//[ 0] realm_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 1] value                                          VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Value string `gorm:"primary_key;column:value;type:VARCHAR;size:255;" json:"value"`
+	Value string `gorm:"primary_key;column:value;type:VARCHAR(255);size:255;" json:"value"`
 }
 
 var realm_supported_localesTableInfo = &TableInfo{

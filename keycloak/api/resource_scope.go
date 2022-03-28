@@ -127,7 +127,7 @@ func GetResourceScope(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourcescope [post]
-// echo '{"resource_id": "kPLQCIdOnLjYQdLxGoUxLByMd","scope_id": "snwrYCroaZCAgsdKASJOcUFee"}' | http POST "http://localhost:8080/resourcescope" X-Api-User:user123
+// echo '{"resource_id": "aGpGQOWQHlqSxTyRjNMbPTwsH","scope_id": "hUoIgyqHcAAOtvlwKvlmbqqGM"}' | http POST "http://localhost:8080/resourcescope" X-Api-User:user123
 func AddResourceScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	resourcescope := &model.ResourceScope{}
@@ -175,7 +175,7 @@ func AddResourceScope(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourcescope/{argResourceID}/{argScopeID} [put]
-// echo '{"resource_id": "kPLQCIdOnLjYQdLxGoUxLByMd","scope_id": "snwrYCroaZCAgsdKASJOcUFee"}' | http PUT "http://localhost:8080/resourcescope/hello world/hello world"  X-Api-User:user123
+// echo '{"resource_id": "aGpGQOWQHlqSxTyRjNMbPTwsH","scope_id": "hUoIgyqHcAAOtvlwKvlmbqqGM"}' | http PUT "http://localhost:8080/resourcescope/hello world/hello world"  X-Api-User:user123
 func UpdateResourceScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

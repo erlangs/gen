@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: user_consent_client_scope
 
 JSON Sample
 -------------------------------------
-{    "user_consent_id": "oiKGIBwOPQaryYlUivHirITQx",    "scope_id": "JAcbwfYMlYveWATRMKGIlrNoO"}
+{    "user_consent_id": "NDmTGUHGWPXDRhkrvqycvCSyy",    "scope_id": "hojjxUVWyZStIOxXqThwGLVIY"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // UserConsentClientScope struct is a row record of the user_consent_client_scope table in the keycloak database
 type UserConsentClientScope struct {
 	//[ 0] user_consent_id                                VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	UserConsentID string `gorm:"primary_key;column:user_consent_id;type:VARCHAR;size:36;" json:"user_consent_id"`
+	UserConsentID string `gorm:"primary_key;column:user_consent_id;type:VARCHAR(36);size:36;" json:"user_consent_id"`
 	//[ 1] scope_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ScopeID string `gorm:"primary_key;column:scope_id;type:VARCHAR;size:36;" json:"scope_id"`
+	ScopeID string `gorm:"primary_key;column:scope_id;type:VARCHAR(36);size:36;" json:"scope_id"`
 }
 
 var user_consent_client_scopeTableInfo = &TableInfo{

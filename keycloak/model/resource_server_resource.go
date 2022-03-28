@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -27,7 +27,7 @@ Table: resource_server_resource
 
 JSON Sample
 -------------------------------------
-{    "id": "ysdPBEcFuODWFrUnqGoEWAVTT",    "name": "dCsknLDmyJOqZwctcBflvjUuw",    "type": "uAOoZutsCUauEMshJfrXqfyjA",    "icon_uri": "IfYpcLyZQIqyyIawDUSUwlxst",    "owner": "IOjwfllwsnGTiPNemSyrsBaGH",    "resource_server_id": "FiifaBZFXPOCGlCnoAumYMSvl",    "owner_managed_access": false,    "display_name": "ZeQxJdTZOsVLomFdUqmoeoLlU"}
+{    "id": "WOeeJVLfRdsPUeuGWpRXSFWgn",    "name": "FsdsvncdNVgbxscIZNjBtyJgL",    "type": "lwwkrGZBiQTSgiLvMPEbHApTl",    "icon_uri": "jgGXyOwJntbDLtvwYIeCqWXbh",    "owner": "uyAQDLjiCwWpJZRTSIsrgsUgk",    "resource_server_id": "EqOaksmdjWjMYMcLCqIsKdiZG",    "owner_managed_access": false,    "display_name": "mnmYOygSGOVUQtwslDaRpXRsK"}
 
 
 
@@ -36,21 +36,21 @@ JSON Sample
 // ResourceServerResource struct is a row record of the resource_server_resource table in the keycloak database
 type ResourceServerResource struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] type                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Type sql.NullString `gorm:"column:type;type:VARCHAR;size:255;" json:"type"`
+	Type sql.NullString `gorm:"column:type;type:VARCHAR(255);size:255;" json:"type"`
 	//[ 3] icon_uri                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	IconURI sql.NullString `gorm:"column:icon_uri;type:VARCHAR;size:255;" json:"icon_uri"`
+	IconURI sql.NullString `gorm:"column:icon_uri;type:VARCHAR(255);size:255;" json:"icon_uri"`
 	//[ 4] owner                                          VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Owner string `gorm:"column:owner;type:VARCHAR;size:255;" json:"owner"`
+	Owner string `gorm:"column:owner;type:VARCHAR(255);size:255;" json:"owner"`
 	//[ 5] resource_server_id                             VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ResourceServerID string `gorm:"column:resource_server_id;type:VARCHAR;size:36;" json:"resource_server_id"`
+	ResourceServerID string `gorm:"column:resource_server_id;type:VARCHAR(36);size:36;" json:"resource_server_id"`
 	//[ 6] owner_managed_access                           BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	OwnerManagedAccess bool `gorm:"column:owner_managed_access;type:BOOL;default:false;" json:"owner_managed_access"`
 	//[ 7] display_name                                   VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	DisplayName sql.NullString `gorm:"column:display_name;type:VARCHAR;size:255;" json:"display_name"`
+	DisplayName sql.NullString `gorm:"column:display_name;type:VARCHAR(255);size:255;" json:"display_name"`
 }
 
 var resource_server_resourceTableInfo = &TableInfo{

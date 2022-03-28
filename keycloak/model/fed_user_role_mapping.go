@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: fed_user_role_mapping
 
 JSON Sample
 -------------------------------------
-{    "role_id": "lSIJDiQQHVevYxnVGwTCDxNIK",    "user_id": "amEObiIfhwXTavFFRhVxFAuXj",    "realm_id": "XhLVJRWcsLhykSLBoykBrlFHX",    "storage_provider_id": "NIsDKjqQAMSKHcXFmeLqeSSeX"}
+{    "role_id": "aAZBoFRSRosYdsEuWgWLOqXEI",    "user_id": "QEJjxqeXMiRNpalYcWcHARqXa",    "realm_id": "vHioeFiowmNxTerZQIAbmjNry",    "storage_provider_id": "IUQfGYyQCfpAyoyKvCdspdIbb"}
 
 
 
@@ -32,13 +32,13 @@ JSON Sample
 // FedUserRoleMapping struct is a row record of the fed_user_role_mapping table in the keycloak database
 type FedUserRoleMapping struct {
 	//[ 0] role_id                                        VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RoleID string `gorm:"primary_key;column:role_id;type:VARCHAR;size:36;" json:"role_id"`
+	RoleID string `gorm:"primary_key;column:role_id;type:VARCHAR(36);size:36;" json:"role_id"`
 	//[ 1] user_id                                        VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR;size:255;" json:"user_id"`
+	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR(255);size:255;" json:"user_id"`
 	//[ 2] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 3] storage_provider_id                            VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR;size:36;" json:"storage_provider_id"`
+	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR(36);size:36;" json:"storage_provider_id"`
 }
 
 var fed_user_role_mappingTableInfo = &TableInfo{

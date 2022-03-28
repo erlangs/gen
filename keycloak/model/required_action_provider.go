@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -27,7 +27,7 @@ Table: required_action_provider
 
 JSON Sample
 -------------------------------------
-{    "id": "pfsSKfAgawVUMhpmOKONLswQO",    "alias": "AbtLqgEqbmIjGtyPWVXwDBJqF",    "name": "ohobBltBGPUXcGnQTFcoYnhNH",    "realm_id": "ZsVOLLpVoVAGmgmYTcGxWvFTy",    "enabled": true,    "default_action": true,    "provider_id": "DxNrmnFZfMObONBCXJRjIqYkI",    "priority": 63}
+{    "id": "QPDVPUZySXcRRePKJNxySZggo",    "alias": "JBiUViIYurGhQpPxtYFaESwBS",    "name": "ADZFDDVZTcgxJycRQoxBOLkTc",    "realm_id": "UEDYlroONgqoKKbdjibyepggL",    "enabled": false,    "default_action": true,    "provider_id": "GBiKicikEyMhjWqQWvdVHxoJF",    "priority": 59}
 
 
 
@@ -36,19 +36,19 @@ JSON Sample
 // RequiredActionProvider struct is a row record of the required_action_provider table in the keycloak database
 type RequiredActionProvider struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] alias                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Alias sql.NullString `gorm:"column:alias;type:VARCHAR;size:255;" json:"alias"`
+	Alias sql.NullString `gorm:"column:alias;type:VARCHAR(255);size:255;" json:"alias"`
 	//[ 2] name                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name sql.NullString `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name sql.NullString `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 3] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 4] enabled                                        BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	Enabled bool `gorm:"column:enabled;type:BOOL;default:false;" json:"enabled"`
 	//[ 5] default_action                                 BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	DefaultAction bool `gorm:"column:default_action;type:BOOL;default:false;" json:"default_action"`
 	//[ 6] provider_id                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ProviderID sql.NullString `gorm:"column:provider_id;type:VARCHAR;size:255;" json:"provider_id"`
+	ProviderID sql.NullString `gorm:"column:provider_id;type:VARCHAR(255);size:255;" json:"provider_id"`
 	//[ 7] priority                                       INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	Priority sql.NullInt32 `gorm:"column:priority;type:INT4;" json:"priority"`
 }

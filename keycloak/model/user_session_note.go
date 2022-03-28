@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: user_session_note
 
 JSON Sample
 -------------------------------------
-{    "user_session": "cThdoVOGYNoiYlPxXAcVJporp",    "name": "aFivJcjbfOCSopEMbJZkqugDP",    "value": "aVIEublLQDqZTpYrIuitdwTiP"}
+{    "user_session": "lpaKxqSkXJfnFbiTXOyxBamVn",    "name": "ULxKOQNdVvRPiEJYtBooYuWuO",    "value": "MtRPipVxesCQMTqbhTyHtSvKW"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // UserSessionNote struct is a row record of the user_session_note table in the keycloak database
 type UserSessionNote struct {
 	//[ 0] user_session                                   VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	UserSession string `gorm:"primary_key;column:user_session;type:VARCHAR;size:36;" json:"user_session"`
+	UserSession string `gorm:"primary_key;column:user_session;type:VARCHAR(36);size:36;" json:"user_session"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] value                                          VARCHAR(2048)        null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 2048    default: []
-	Value sql.NullString `gorm:"column:value;type:VARCHAR;size:2048;" json:"value"`
+	Value sql.NullString `gorm:"column:value;type:VARCHAR(2048);size:2048;" json:"value"`
 }
 
 var user_session_noteTableInfo = &TableInfo{

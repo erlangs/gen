@@ -119,7 +119,7 @@ func GetResourceServerPolicy(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceserverpolicy [post]
-// echo '{"id": "yrpoVVtPWBWcQmrUklFDGlsHw","name": "ogapqVFgaWdrNGKuUOBBkTBvO","description": "xakZaicPEaSGtFMZFmdXsMBcb","type": "OqqTkGVNgjYCToPdgXcheDpPD","decision_strategy": "AElmltlwTtKAGaYnUQqYZBYEv","logic": "rkvXVcyHlyUaMBPXACripGrLn","resource_server_id": "dpgLAbJiTeUOQgKExgwdKREhG","owner": "eMjiIwRGPPqtGFlNOIXypQSot"}' | http POST "http://localhost:8080/resourceserverpolicy" X-Api-User:user123
+// echo '{"id": "erAorXWYZCexDkwKAYTkhUltJ","name": "YNfIIZpbuRroPcLWiFshLgPjv","description": "slBAJfRihnPAUTvOUmQEQDpel","type": "RsBkAeuVAwCLStEOOyorQulJe","decision_strategy": "wJOrkfTtKgXxeIwxYHDKVUEyD","logic": "qdwaTtjgjxlSYyihvOXHISmSc","resource_server_id": "SlvcorULgfBXxEKrhYmauylGv","owner": "LNGHJZJIxuBsnQwPORajAyvEJ"}' | http POST "http://localhost:8080/resourceserverpolicy" X-Api-User:user123
 func AddResourceServerPolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	resourceserverpolicy := &model.ResourceServerPolicy{}
@@ -167,7 +167,7 @@ func AddResourceServerPolicy(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceserverpolicy/{argID} [put]
-// echo '{"id": "yrpoVVtPWBWcQmrUklFDGlsHw","name": "ogapqVFgaWdrNGKuUOBBkTBvO","description": "xakZaicPEaSGtFMZFmdXsMBcb","type": "OqqTkGVNgjYCToPdgXcheDpPD","decision_strategy": "AElmltlwTtKAGaYnUQqYZBYEv","logic": "rkvXVcyHlyUaMBPXACripGrLn","resource_server_id": "dpgLAbJiTeUOQgKExgwdKREhG","owner": "eMjiIwRGPPqtGFlNOIXypQSot"}' | http PUT "http://localhost:8080/resourceserverpolicy/hello world"  X-Api-User:user123
+// echo '{"id": "erAorXWYZCexDkwKAYTkhUltJ","name": "YNfIIZpbuRroPcLWiFshLgPjv","description": "slBAJfRihnPAUTvOUmQEQDpel","type": "RsBkAeuVAwCLStEOOyorQulJe","decision_strategy": "wJOrkfTtKgXxeIwxYHDKVUEyD","logic": "qdwaTtjgjxlSYyihvOXHISmSc","resource_server_id": "SlvcorULgfBXxEKrhYmauylGv","owner": "LNGHJZJIxuBsnQwPORajAyvEJ"}' | http PUT "http://localhost:8080/resourceserverpolicy/hello world"  X-Api-User:user123
 func UpdateResourceServerPolicy(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

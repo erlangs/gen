@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -31,7 +31,7 @@ Table: user_session
 
 JSON Sample
 -------------------------------------
-{    "id": "EEIBpsZOLPfbyrCssonwtDNGH",    "auth_method": "oZPrVqkTxOrIAlbgOUNEGivvm",    "ip_address": "QxaSZWdGiltLGVloFgqOFrTBr",    "last_session_refresh": 67,    "login_username": "vdGAKcPZMakqspJVpEfCrwGLe",    "realm_id": "XmkBreXduOBIcFDaXlEtUYGZX",    "remember_me": false,    "started": 93,    "user_id": "oWZLLVPlXoYGRMrSqwJVyvYRX",    "user_session_state": 95,    "broker_session_id": "nBjbsiiQmHLsnkpvRbMrkWlRZ",    "broker_user_id": "oSNkJGjbAcosWmhBinCQZtpeE"}
+{    "id": "oDFkCXbJSuSukqWrKXAXKeBHn",    "auth_method": "EcrgoFcLWPFYHqrmkjIvkevpO",    "ip_address": "gWJTLfIRedpsbDUOGpyZKvBcJ",    "last_session_refresh": 45,    "login_username": "DZVoqmstYoFTwUggeUdOidgJQ",    "realm_id": "OvTemRUSMbxuUCemFbtVyXnxN",    "remember_me": true,    "started": 91,    "user_id": "NFuwVWWKDmYQrFADDLrYHMpNH",    "user_session_state": 60,    "broker_session_id": "EvftXXfKKPjrFnJebKTIYiJBl",    "broker_user_id": "ELDGdHbrMUSjKFcnOQhaxKILA"}
 
 
 
@@ -40,29 +40,29 @@ JSON Sample
 // UserSession struct is a row record of the user_session table in the keycloak database
 type UserSession struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] auth_method                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	AuthMethod sql.NullString `gorm:"column:auth_method;type:VARCHAR;size:255;" json:"auth_method"`
+	AuthMethod sql.NullString `gorm:"column:auth_method;type:VARCHAR(255);size:255;" json:"auth_method"`
 	//[ 2] ip_address                                     VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	IPAddress sql.NullString `gorm:"column:ip_address;type:VARCHAR;size:255;" json:"ip_address"`
+	IPAddress sql.NullString `gorm:"column:ip_address;type:VARCHAR(255);size:255;" json:"ip_address"`
 	//[ 3] last_session_refresh                           INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	LastSessionRefresh sql.NullInt32 `gorm:"column:last_session_refresh;type:INT4;" json:"last_session_refresh"`
 	//[ 4] login_username                                 VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	LoginUsername sql.NullString `gorm:"column:login_username;type:VARCHAR;size:255;" json:"login_username"`
+	LoginUsername sql.NullString `gorm:"column:login_username;type:VARCHAR(255);size:255;" json:"login_username"`
 	//[ 5] realm_id                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:255;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(255);size:255;" json:"realm_id"`
 	//[ 6] remember_me                                    BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	RememberMe bool `gorm:"column:remember_me;type:BOOL;default:false;" json:"remember_me"`
 	//[ 7] started                                        INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	Started sql.NullInt32 `gorm:"column:started;type:INT4;" json:"started"`
 	//[ 8] user_id                                        VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	UserID sql.NullString `gorm:"column:user_id;type:VARCHAR;size:255;" json:"user_id"`
+	UserID sql.NullString `gorm:"column:user_id;type:VARCHAR(255);size:255;" json:"user_id"`
 	//[ 9] user_session_state                             INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	UserSessionState sql.NullInt32 `gorm:"column:user_session_state;type:INT4;" json:"user_session_state"`
 	//[10] broker_session_id                              VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	BrokerSessionID sql.NullString `gorm:"column:broker_session_id;type:VARCHAR;size:255;" json:"broker_session_id"`
+	BrokerSessionID sql.NullString `gorm:"column:broker_session_id;type:VARCHAR(255);size:255;" json:"broker_session_id"`
 	//[11] broker_user_id                                 VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	BrokerUserID sql.NullString `gorm:"column:broker_user_id;type:VARCHAR;size:255;" json:"broker_user_id"`
+	BrokerUserID sql.NullString `gorm:"column:broker_user_id;type:VARCHAR(255);size:255;" json:"broker_user_id"`
 }
 
 var user_sessionTableInfo = &TableInfo{

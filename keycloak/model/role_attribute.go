@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: role_attribute
 
 JSON Sample
 -------------------------------------
-{    "id": "CNETGJbyhjSbmisVIPqGbhbop",    "role_id": "RvxBlCXIRwgDHSwXIrucDsQrj",    "name": "iLldJPcudrJDfagRviDQNCYIF",    "value": "LhAlXdgjKuvYsjfIZnJkRqKkW"}
+{    "id": "dGPMVQhEfHCnYwyYiYtJAOxoM",    "role_id": "lZNbxdolAcZuUqTFdePykTKVX",    "name": "NRwmCpEDFZwFQGgchfKNfBZSp",    "value": "NWXcurKcBhlsFWtMvtjHdipTX"}
 
 
 
@@ -32,13 +32,13 @@ JSON Sample
 // RoleAttribute struct is a row record of the role_attribute table in the keycloak database
 type RoleAttribute struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] role_id                                        VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RoleID string `gorm:"column:role_id;type:VARCHAR;size:36;" json:"role_id"`
+	RoleID string `gorm:"column:role_id;type:VARCHAR(36);size:36;" json:"role_id"`
 	//[ 2] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 3] value                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Value sql.NullString `gorm:"column:value;type:VARCHAR;size:255;" json:"value"`
+	Value sql.NullString `gorm:"column:value;type:VARCHAR(255);size:255;" json:"value"`
 }
 
 var role_attributeTableInfo = &TableInfo{

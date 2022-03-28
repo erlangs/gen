@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -25,7 +25,7 @@ Table: fed_user_attribute
 
 JSON Sample
 -------------------------------------
-{    "id": "GvQdqZOpqefmvgfqyAiQOMhOH",    "name": "CrZdNpOjRoenIZcawoShewbJD",    "user_id": "VUoLoXtBrsIlEuoefFVwWgrBp",    "realm_id": "oJFrtfjBMGreINlLUpQkXCnGp",    "storage_provider_id": "VLxrvQGZFCLoJHnxhZYnNBLos",    "value": "lMxicOLgNwPYiBUVtZkBJOFdd"}
+{    "id": "RevUOwFjYNJaqxmsmdcYwKLlD",    "name": "QaSVrMhLaHjsmLyIalhOXovEw",    "user_id": "xyysvmeQIYkSPdEBPHnUChvta",    "realm_id": "kKJHnyYSLvAMYGWsoDrMDwNTY",    "storage_provider_id": "qMijWdlGrrABDSVLChsaGUMUV",    "value": "uZBVBfqMGaqxNSTEimKLLxlDI"}
 
 
 
@@ -34,17 +34,17 @@ JSON Sample
 // FedUserAttribute struct is a row record of the fed_user_attribute table in the keycloak database
 type FedUserAttribute struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] user_id                                        VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	UserID string `gorm:"column:user_id;type:VARCHAR;size:255;" json:"user_id"`
+	UserID string `gorm:"column:user_id;type:VARCHAR(255);size:255;" json:"user_id"`
 	//[ 3] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 4] storage_provider_id                            VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR;size:36;" json:"storage_provider_id"`
+	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR(36);size:36;" json:"storage_provider_id"`
 	//[ 5] value                                          VARCHAR(2024)        null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 2024    default: []
-	Value sql.NullString `gorm:"column:value;type:VARCHAR;size:2024;" json:"value"`
+	Value sql.NullString `gorm:"column:value;type:VARCHAR(2024);size:2024;" json:"value"`
 }
 
 var fed_user_attributeTableInfo = &TableInfo{

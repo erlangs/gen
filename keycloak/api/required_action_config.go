@@ -127,7 +127,7 @@ func GetRequiredActionConfig(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /requiredactionconfig [post]
-// echo '{"required_action_id": "hReIadZFmVwZctePHejTExofL","value": "PMWhheSCBIwKcRMeZDxwsnqoW","name": "dvjukJdilDRjRflptZEbGiFBI"}' | http POST "http://localhost:8080/requiredactionconfig" X-Api-User:user123
+// echo '{"required_action_id": "aswSkwkLcwSXDadsLBQkqeqQM","value": "tJQeNAEiUaPhPNuEkcTcMpedT","name": "uKWbKRKQChwUeAnCXXnlUGaCB"}' | http POST "http://localhost:8080/requiredactionconfig" X-Api-User:user123
 func AddRequiredActionConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	requiredactionconfig := &model.RequiredActionConfig{}
@@ -175,7 +175,7 @@ func AddRequiredActionConfig(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /requiredactionconfig/{argRequiredActionID}/{argName} [put]
-// echo '{"required_action_id": "hReIadZFmVwZctePHejTExofL","value": "PMWhheSCBIwKcRMeZDxwsnqoW","name": "dvjukJdilDRjRflptZEbGiFBI"}' | http PUT "http://localhost:8080/requiredactionconfig/hello world/hello world"  X-Api-User:user123
+// echo '{"required_action_id": "aswSkwkLcwSXDadsLBQkqeqQM","value": "tJQeNAEiUaPhPNuEkcTcMpedT","name": "uKWbKRKQChwUeAnCXXnlUGaCB"}' | http PUT "http://localhost:8080/requiredactionconfig/hello world/hello world"  X-Api-User:user123
 func UpdateRequiredActionConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

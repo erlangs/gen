@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -32,7 +32,7 @@ Table: user_entity
 
 JSON Sample
 -------------------------------------
-{    "id": "ExCBdsjjTKIelLXDJRFyHIpuZ",    "email": "GMpwGIBxLhpAmhuqgGGrSoIjp",    "email_constraint": "sFMgGfnLKAwMrKNqGyXAkYWSg",    "email_verified": true,    "enabled": false,    "federation_link": "pnduZMkIwWZaCfXwTWtYUZgIb",    "first_name": "BlunBMONommjZPBTejeLxqkTl",    "last_name": "oklrQeCLVKfDlfNFRjDfXFxNO",    "realm_id": "OiHbbxpgqDtAlJfUqMWJfFVHS",    "username": "ScepWdqSUNkFmWLgKeSUGiYYI",    "created_timestamp": 50,    "service_account_client_link": "rxwPMvPOAhWBMitrYTrndyENF",    "not_before": 19}
+{    "id": "hXaAuMRkfoSTwdZtPXFdtbETT",    "email": "WcMwEckuMbOYSBdLnxVBNUQgh",    "email_constraint": "tKrRGKhlfskFYWExyMTAMARxe",    "email_verified": true,    "enabled": true,    "federation_link": "MQZBhyMauTUmepXeYVOevFdwg",    "first_name": "mkYNQWlWBixchMOWekuhslAZo",    "last_name": "oAWxleewsPewsaJtqcQTXWmvt",    "realm_id": "YpvLaSYsBkLRahZsLxNIGBmKO",    "username": "JAQDEsHCdHXGnYDQbOwnsDhbp",    "created_timestamp": 82,    "service_account_client_link": "hcjNVwOJkKVLLcOAxJUrfassh",    "not_before": 57}
 
 
 
@@ -41,29 +41,29 @@ JSON Sample
 // UserEntity struct is a row record of the user_entity table in the keycloak database
 type UserEntity struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] email                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Email sql.NullString `gorm:"column:email;type:VARCHAR;size:255;" json:"email"`
+	Email sql.NullString `gorm:"column:email;type:VARCHAR(255);size:255;" json:"email"`
 	//[ 2] email_constraint                               VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	EmailConstraint sql.NullString `gorm:"column:email_constraint;type:VARCHAR;size:255;" json:"email_constraint"`
+	EmailConstraint sql.NullString `gorm:"column:email_constraint;type:VARCHAR(255);size:255;" json:"email_constraint"`
 	//[ 3] email_verified                                 BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	EmailVerified bool `gorm:"column:email_verified;type:BOOL;default:false;" json:"email_verified"`
 	//[ 4] enabled                                        BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	Enabled bool `gorm:"column:enabled;type:BOOL;default:false;" json:"enabled"`
 	//[ 5] federation_link                                VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	FederationLink sql.NullString `gorm:"column:federation_link;type:VARCHAR;size:255;" json:"federation_link"`
+	FederationLink sql.NullString `gorm:"column:federation_link;type:VARCHAR(255);size:255;" json:"federation_link"`
 	//[ 6] first_name                                     VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	FirstName sql.NullString `gorm:"column:first_name;type:VARCHAR;size:255;" json:"first_name"`
+	FirstName sql.NullString `gorm:"column:first_name;type:VARCHAR(255);size:255;" json:"first_name"`
 	//[ 7] last_name                                      VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	LastName sql.NullString `gorm:"column:last_name;type:VARCHAR;size:255;" json:"last_name"`
+	LastName sql.NullString `gorm:"column:last_name;type:VARCHAR(255);size:255;" json:"last_name"`
 	//[ 8] realm_id                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:255;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(255);size:255;" json:"realm_id"`
 	//[ 9] username                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Username sql.NullString `gorm:"column:username;type:VARCHAR;size:255;" json:"username"`
+	Username sql.NullString `gorm:"column:username;type:VARCHAR(255);size:255;" json:"username"`
 	//[10] created_timestamp                              INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	CreatedTimestamp sql.NullInt64 `gorm:"column:created_timestamp;type:INT8;" json:"created_timestamp"`
 	//[11] service_account_client_link                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ServiceAccountClientLink sql.NullString `gorm:"column:service_account_client_link;type:VARCHAR;size:255;" json:"service_account_client_link"`
+	ServiceAccountClientLink sql.NullString `gorm:"column:service_account_client_link;type:VARCHAR(255);size:255;" json:"service_account_client_link"`
 	//[12] not_before                                     INT4                 null: false  primary: false  isArray: false  auto: false  col: INT4            len: -1      default: [0]
 	NotBefore int32 `gorm:"column:not_before;type:INT4;default:0;" json:"not_before"`
 }

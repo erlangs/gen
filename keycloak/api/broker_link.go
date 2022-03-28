@@ -127,7 +127,7 @@ func GetBrokerLink(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /brokerlink [post]
-// echo '{"identity_provider": "VbBwcFYmAPYbisXkIudsaauRY","storage_provider_id": "GMlICqqfosPQrNJuPZPmfoWEu","realm_id": "udcYVINwxgLMAYOlNaOBcRald","broker_user_id": "PCvPxwtHxjIyIgljnahJXxvRd","broker_username": "YPHCCKlqmwKyUDrOpvMQwpaqH","token": "xoKyNGkfHsBgCIojdRpgWdBqQ","user_id": "MxECrnwusbNOclwPEeSjiXIPZ"}' | http POST "http://localhost:8080/brokerlink" X-Api-User:user123
+// echo '{"identity_provider": "QEurbkYQdyPMYqjOaqyaygvYB","storage_provider_id": "VxncJhRcRbLNyyricLWbbTCXE","realm_id": "nCjjpkVMBmLfDptfjNRYKpUmq","broker_user_id": "KCBuppUsptYPfvFUhXPnTBdhh","broker_username": "kACOSGEJkiTJdaYGuNssIvtyJ","token": "RuQkoSeviRaGkEPCwWZkBHWln","user_id": "JqFQICbDdRyWJQaIRxNKTVPXI"}' | http POST "http://localhost:8080/brokerlink" X-Api-User:user123
 func AddBrokerLink(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	brokerlink := &model.BrokerLink{}
@@ -175,7 +175,7 @@ func AddBrokerLink(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /brokerlink/{argIdentityProvider}/{argUserID} [put]
-// echo '{"identity_provider": "VbBwcFYmAPYbisXkIudsaauRY","storage_provider_id": "GMlICqqfosPQrNJuPZPmfoWEu","realm_id": "udcYVINwxgLMAYOlNaOBcRald","broker_user_id": "PCvPxwtHxjIyIgljnahJXxvRd","broker_username": "YPHCCKlqmwKyUDrOpvMQwpaqH","token": "xoKyNGkfHsBgCIojdRpgWdBqQ","user_id": "MxECrnwusbNOclwPEeSjiXIPZ"}' | http PUT "http://localhost:8080/brokerlink/hello world/hello world"  X-Api-User:user123
+// echo '{"identity_provider": "QEurbkYQdyPMYqjOaqyaygvYB","storage_provider_id": "VxncJhRcRbLNyyricLWbbTCXE","realm_id": "nCjjpkVMBmLfDptfjNRYKpUmq","broker_user_id": "KCBuppUsptYPfvFUhXPnTBdhh","broker_username": "kACOSGEJkiTJdaYGuNssIvtyJ","token": "RuQkoSeviRaGkEPCwWZkBHWln","user_id": "JqFQICbDdRyWJQaIRxNKTVPXI"}' | http PUT "http://localhost:8080/brokerlink/hello world/hello world"  X-Api-User:user123
 func UpdateBrokerLink(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

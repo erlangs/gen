@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -24,7 +24,7 @@ Table: resource_server_scope
 
 JSON Sample
 -------------------------------------
-{    "id": "FhgfxtmBmVyqaIyjPlpNGxsWB",    "name": "ToySwgIoUMBqaulfdVLTvZhRr",    "icon_uri": "ssKFUZLoVEuxBwOmjqGOSeLbS",    "resource_server_id": "kvmRyEYcnquhdflcqdndrLZYL",    "display_name": "JutibSaOqpuWtqvmEuMFYlkTx"}
+{    "id": "pOHYMGmhPqwQvUOijIfvGkYPV",    "name": "CikgnLMTgfjPmxKkcUKWFgtTv",    "icon_uri": "MUeWslIQMvdbVfOvMaGjvVKEC",    "resource_server_id": "RsOmTbPERWmbpECIAJQkSTFKg",    "display_name": "IMcaxawgrwIlonrtHaoiKMVcb"}
 
 
 
@@ -33,15 +33,15 @@ JSON Sample
 // ResourceServerScope struct is a row record of the resource_server_scope table in the keycloak database
 type ResourceServerScope struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] icon_uri                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	IconURI sql.NullString `gorm:"column:icon_uri;type:VARCHAR;size:255;" json:"icon_uri"`
+	IconURI sql.NullString `gorm:"column:icon_uri;type:VARCHAR(255);size:255;" json:"icon_uri"`
 	//[ 3] resource_server_id                             VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ResourceServerID string `gorm:"column:resource_server_id;type:VARCHAR;size:36;" json:"resource_server_id"`
+	ResourceServerID string `gorm:"column:resource_server_id;type:VARCHAR(36);size:36;" json:"resource_server_id"`
 	//[ 4] display_name                                   VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	DisplayName sql.NullString `gorm:"column:display_name;type:VARCHAR;size:255;" json:"display_name"`
+	DisplayName sql.NullString `gorm:"column:display_name;type:VARCHAR(255);size:255;" json:"display_name"`
 }
 
 var resource_server_scopeTableInfo = &TableInfo{

@@ -127,7 +127,7 @@ func GetIdpMapperConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /idpmapperconfig [post]
-// echo '{"idp_mapper_id": "GmKJRaaPrYnwcFFcLbekHOlEu","value": "RPJAVNZGSLkEmcdUfhBDCJQgi","name": "UQMmCeBihKnyTKwxIWCOEYKfV"}' | http POST "http://localhost:8080/idpmapperconfig" X-Api-User:user123
+// echo '{"idp_mapper_id": "APoYpugfLEYgmNRpjYKVQxLye","value": "afqRLuXAQpjrecBwnVOkBXoMC","name": "nvufSJDbDmAhldjLNYZflAwpb"}' | http POST "http://localhost:8080/idpmapperconfig" X-Api-User:user123
 func AddIdpMapperConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	idpmapperconfig := &model.IdpMapperConfig{}
@@ -175,7 +175,7 @@ func AddIdpMapperConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /idpmapperconfig/{argIdpMapperID}/{argName} [put]
-// echo '{"idp_mapper_id": "GmKJRaaPrYnwcFFcLbekHOlEu","value": "RPJAVNZGSLkEmcdUfhBDCJQgi","name": "UQMmCeBihKnyTKwxIWCOEYKfV"}' | http PUT "http://localhost:8080/idpmapperconfig/hello world/hello world"  X-Api-User:user123
+// echo '{"idp_mapper_id": "APoYpugfLEYgmNRpjYKVQxLye","value": "afqRLuXAQpjrecBwnVOkBXoMC","name": "nvufSJDbDmAhldjLNYZflAwpb"}' | http PUT "http://localhost:8080/idpmapperconfig/hello world/hello world"  X-Api-User:user123
 func UpdateIdpMapperConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

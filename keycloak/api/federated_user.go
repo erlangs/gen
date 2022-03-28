@@ -119,7 +119,7 @@ func GetFederatedUser(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /federateduser [post]
-// echo '{"id": "BEfIatbfwowNcYkjdmPQnrxQP","storage_provider_id": "DVnDOaUpnCMWvXidJWywQVjac","realm_id": "SitnhFqmENAkECTdcXvFBNeBB"}' | http POST "http://localhost:8080/federateduser" X-Api-User:user123
+// echo '{"id": "NNboLSEGIKCjZECqmiXOiXHQU","storage_provider_id": "XksvGMqDMiZxJawynsfRfCPkb","realm_id": "ovqVrytYMGQZslJRIXUUNtPuD"}' | http POST "http://localhost:8080/federateduser" X-Api-User:user123
 func AddFederatedUser(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	federateduser := &model.FederatedUser{}
@@ -167,7 +167,7 @@ func AddFederatedUser(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /federateduser/{argID} [put]
-// echo '{"id": "BEfIatbfwowNcYkjdmPQnrxQP","storage_provider_id": "DVnDOaUpnCMWvXidJWywQVjac","realm_id": "SitnhFqmENAkECTdcXvFBNeBB"}' | http PUT "http://localhost:8080/federateduser/hello world"  X-Api-User:user123
+// echo '{"id": "NNboLSEGIKCjZECqmiXOiXHQU","storage_provider_id": "XksvGMqDMiZxJawynsfRfCPkb","realm_id": "ovqVrytYMGQZslJRIXUUNtPuD"}' | http PUT "http://localhost:8080/federateduser/hello world"  X-Api-User:user123
 func UpdateFederatedUser(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

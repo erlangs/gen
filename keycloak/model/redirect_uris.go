@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: redirect_uris
 
 JSON Sample
 -------------------------------------
-{    "client_id": "hpctYnfZbWoEuKuvNiSaXDPPA",    "value": "DLVZYTEnjYVXvAVisCqQdjsSB"}
+{    "client_id": "CZmKZvSCXoUCxaeaEEuxAiqgs",    "value": "lPCBkVNNGuseXtpYJtUXMJTkL"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // RedirectUris struct is a row record of the redirect_uris table in the keycloak database
 type RedirectUris struct {
 	//[ 0] client_id                                      VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR;size:36;" json:"client_id"`
+	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR(36);size:36;" json:"client_id"`
 	//[ 1] value                                          VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Value string `gorm:"primary_key;column:value;type:VARCHAR;size:255;" json:"value"`
+	Value string `gorm:"primary_key;column:value;type:VARCHAR(255);size:255;" json:"value"`
 }
 
 var redirect_urisTableInfo = &TableInfo{

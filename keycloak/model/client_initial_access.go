@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -25,7 +25,7 @@ Table: client_initial_access
 
 JSON Sample
 -------------------------------------
-{    "id": "XfgSuOblDDKddsbDEZKXHBHVK",    "realm_id": "MvEMCcvMIOYCenolfiylrdbyY",    "timestamp": 28,    "expiration": 82,    "count": 29,    "remaining_count": 40}
+{    "id": "yqRZvriWlmsRgscQODAueWfte",    "realm_id": "MNycTiqwJDSRXbhdUlOYdGwLn",    "timestamp": 83,    "expiration": 76,    "count": 21,    "remaining_count": 15}
 
 
 
@@ -34,9 +34,9 @@ JSON Sample
 // ClientInitialAccess struct is a row record of the client_initial_access table in the keycloak database
 type ClientInitialAccess struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 2] timestamp                                      INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	Timestamp sql.NullInt32 `gorm:"column:timestamp;type:INT4;" json:"timestamp"`
 	//[ 3] expiration                                     INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []

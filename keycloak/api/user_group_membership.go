@@ -127,7 +127,7 @@ func GetUserGroupMembership(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /usergroupmembership [post]
-// echo '{"group_id": "pGvigLhoWrdOTgmKribxPUWdT","user_id": "pTSINLeQyOKFhAidPEeISXNHf"}' | http POST "http://localhost:8080/usergroupmembership" X-Api-User:user123
+// echo '{"group_id": "TmSHkecVMTfwAWKHNleFJnYxx","user_id": "reToaBvYyMPktXQIbTpFsaThY"}' | http POST "http://localhost:8080/usergroupmembership" X-Api-User:user123
 func AddUserGroupMembership(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	usergroupmembership := &model.UserGroupMembership{}
@@ -175,7 +175,7 @@ func AddUserGroupMembership(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /usergroupmembership/{argGroupID}/{argUserID} [put]
-// echo '{"group_id": "pGvigLhoWrdOTgmKribxPUWdT","user_id": "pTSINLeQyOKFhAidPEeISXNHf"}' | http PUT "http://localhost:8080/usergroupmembership/hello world/hello world"  X-Api-User:user123
+// echo '{"group_id": "TmSHkecVMTfwAWKHNleFJnYxx","user_id": "reToaBvYyMPktXQIbTpFsaThY"}' | http PUT "http://localhost:8080/usergroupmembership/hello world/hello world"  X-Api-User:user123
 func UpdateUserGroupMembership(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

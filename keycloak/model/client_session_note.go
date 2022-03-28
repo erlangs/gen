@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_session_note
 
 JSON Sample
 -------------------------------------
-{    "name": "hiKlBumFbgIKbCNVHMEaspOiX",    "value": "yaTdEGlWfxcGgShYwYTVphqCZ",    "client_session": "CFupDLhVMfkPQPCvDhAORqJLr"}
+{    "name": "fjPWSxgaXwRBdEbupUrkmrRWM",    "value": "HFYdoRICEwXPtyOxDeUgklFxG",    "client_session": "fmtiNAbUBjonSdPOgkVJlawFo"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // ClientSessionNote struct is a row record of the client_session_note table in the keycloak database
 type ClientSessionNote struct {
 	//[ 0] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 1] value                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Value sql.NullString `gorm:"column:value;type:VARCHAR;size:255;" json:"value"`
+	Value sql.NullString `gorm:"column:value;type:VARCHAR(255);size:255;" json:"value"`
 	//[ 2] client_session                                 VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientSession string `gorm:"primary_key;column:client_session;type:VARCHAR;size:36;" json:"client_session"`
+	ClientSession string `gorm:"primary_key;column:client_session;type:VARCHAR(36);size:36;" json:"client_session"`
 }
 
 var client_session_noteTableInfo = &TableInfo{

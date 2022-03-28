@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -25,7 +25,7 @@ Table: federated_identity
 
 JSON Sample
 -------------------------------------
-{    "identity_provider": "FFvKNAdbxpCtogXZvfeYAShpY",    "realm_id": "ZqFwkVhEmriGeMUjErPNwvTVf",    "federated_user_id": "CPDJCvjMiVVTamglqtFFtZaDw",    "federated_username": "wRedRoWiVdoZRurbffDxVpgxr",    "token": "QLyjZxxZTRLwXlcBDBSeSKvgV",    "user_id": "KXoCcqeUlltnvcuxmLJHjxXHp"}
+{    "identity_provider": "SdPxPjwhfdwnGkFHSLwHRVnJe",    "realm_id": "oyWVkqaHYJplKCmTLTUdJLqxB",    "federated_user_id": "ZxTkgnKhnbIhSTkgxdBTadRaW",    "federated_username": "fTsAvLvgWkwNEAehGSkDuRWkA",    "token": "CJuOMYQtCOhnxibEPHMqpNxKc",    "user_id": "TeojvKKpqZmUFAVfXmUASvKcw"}
 
 
 
@@ -34,17 +34,17 @@ JSON Sample
 // FederatedIdentity struct is a row record of the federated_identity table in the keycloak database
 type FederatedIdentity struct {
 	//[ 0] identity_provider                              VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	IdentityProvider string `gorm:"primary_key;column:identity_provider;type:VARCHAR;size:255;" json:"identity_provider"`
+	IdentityProvider string `gorm:"primary_key;column:identity_provider;type:VARCHAR(255);size:255;" json:"identity_provider"`
 	//[ 1] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 2] federated_user_id                              VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	FederatedUserID sql.NullString `gorm:"column:federated_user_id;type:VARCHAR;size:255;" json:"federated_user_id"`
+	FederatedUserID sql.NullString `gorm:"column:federated_user_id;type:VARCHAR(255);size:255;" json:"federated_user_id"`
 	//[ 3] federated_username                             VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	FederatedUsername sql.NullString `gorm:"column:federated_username;type:VARCHAR;size:255;" json:"federated_username"`
+	FederatedUsername sql.NullString `gorm:"column:federated_username;type:VARCHAR(255);size:255;" json:"federated_username"`
 	//[ 4] token                                          TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Token sql.NullString `gorm:"column:token;type:TEXT;" json:"token"`
 	//[ 5] user_id                                        VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR;size:36;" json:"user_id"`
+	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR(36);size:36;" json:"user_id"`
 }
 
 var federated_identityTableInfo = &TableInfo{

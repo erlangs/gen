@@ -127,7 +127,7 @@ func GetFederatedIdentity(w http.ResponseWriter, r *http.Request, ps httprouter.
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /federatedidentity [post]
-// echo '{"identity_provider": "FFvKNAdbxpCtogXZvfeYAShpY","realm_id": "ZqFwkVhEmriGeMUjErPNwvTVf","federated_user_id": "CPDJCvjMiVVTamglqtFFtZaDw","federated_username": "wRedRoWiVdoZRurbffDxVpgxr","token": "QLyjZxxZTRLwXlcBDBSeSKvgV","user_id": "KXoCcqeUlltnvcuxmLJHjxXHp"}' | http POST "http://localhost:8080/federatedidentity" X-Api-User:user123
+// echo '{"identity_provider": "SdPxPjwhfdwnGkFHSLwHRVnJe","realm_id": "oyWVkqaHYJplKCmTLTUdJLqxB","federated_user_id": "ZxTkgnKhnbIhSTkgxdBTadRaW","federated_username": "fTsAvLvgWkwNEAehGSkDuRWkA","token": "CJuOMYQtCOhnxibEPHMqpNxKc","user_id": "TeojvKKpqZmUFAVfXmUASvKcw"}' | http POST "http://localhost:8080/federatedidentity" X-Api-User:user123
 func AddFederatedIdentity(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	federatedidentity := &model.FederatedIdentity{}
@@ -175,7 +175,7 @@ func AddFederatedIdentity(w http.ResponseWriter, r *http.Request, ps httprouter.
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /federatedidentity/{argIdentityProvider}/{argUserID} [put]
-// echo '{"identity_provider": "FFvKNAdbxpCtogXZvfeYAShpY","realm_id": "ZqFwkVhEmriGeMUjErPNwvTVf","federated_user_id": "CPDJCvjMiVVTamglqtFFtZaDw","federated_username": "wRedRoWiVdoZRurbffDxVpgxr","token": "QLyjZxxZTRLwXlcBDBSeSKvgV","user_id": "KXoCcqeUlltnvcuxmLJHjxXHp"}' | http PUT "http://localhost:8080/federatedidentity/hello world/hello world"  X-Api-User:user123
+// echo '{"identity_provider": "SdPxPjwhfdwnGkFHSLwHRVnJe","realm_id": "oyWVkqaHYJplKCmTLTUdJLqxB","federated_user_id": "ZxTkgnKhnbIhSTkgxdBTadRaW","federated_username": "fTsAvLvgWkwNEAehGSkDuRWkA","token": "CJuOMYQtCOhnxibEPHMqpNxKc","user_id": "TeojvKKpqZmUFAVfXmUASvKcw"}' | http PUT "http://localhost:8080/federatedidentity/hello world/hello world"  X-Api-User:user123
 func UpdateFederatedIdentity(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

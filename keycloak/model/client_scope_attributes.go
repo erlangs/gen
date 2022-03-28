@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_scope_attributes
 
 JSON Sample
 -------------------------------------
-{    "scope_id": "besGpPNvJtgeaYZAWsMOmHgkN",    "value": "FOconlfDnswvWLPKwerVVSOBG",    "name": "FTOyhsNNkyNiRnRPKfepvelaU"}
+{    "scope_id": "sZLGcCskroVJIsQsVCAcAuSPq",    "value": "dkgciIqSMCpTCFCnkhPQxPOuy",    "name": "DBQKYfkGOApscfjBGiLsFNGpc"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // ClientScopeAttributes struct is a row record of the client_scope_attributes table in the keycloak database
 type ClientScopeAttributes struct {
 	//[ 0] scope_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ScopeID string `gorm:"primary_key;column:scope_id;type:VARCHAR;size:36;" json:"scope_id"`
+	ScopeID string `gorm:"primary_key;column:scope_id;type:VARCHAR(36);size:36;" json:"scope_id"`
 	//[ 1] value                                          VARCHAR(2048)        null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 2048    default: []
-	Value sql.NullString `gorm:"column:value;type:VARCHAR;size:2048;" json:"value"`
+	Value sql.NullString `gorm:"column:value;type:VARCHAR(2048);size:2048;" json:"value"`
 	//[ 2] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 }
 
 var client_scope_attributesTableInfo = &TableInfo{

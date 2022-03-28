@@ -31,7 +31,7 @@ CREATE TABLE `personal_access_tokens` (
 
 JSON Sample
 -------------------------------------
-{    "id": 36,    "tokenable_type": "AvFFhdtNlgVXHUlJmWATWlvOT",    "tokenable_id": 65,    "name": "NMfYDkvIVSavnoURebtdGSsHF",    "token": "cCtSEkDcTSGhMdROITkftYHkr",    "abilities": "amMTbHHFuXjLvUrTtWjWwElPJ",    "last_used_at": "2254-01-23T05:25:01.863239856+08:00",    "created_at": "2205-02-22T16:39:54.987785369+08:00",    "updated_at": "2180-08-07T06:48:30.992701866+08:00"}
+{    "id": 20,    "tokenable_type": "gJTXZbympgguDdRSbKRrZUHEe",    "tokenable_id": 2,    "name": "OtrHhjbxlbkpxldCThEnZrFie",    "token": "IGobwpJTgmEjdjKqVwRGPTLdQ",    "abilities": "wtBxQYSMMSOwhtrRtbmwhScdI",    "last_used_at": "2273-07-03T09:53:20.870639989+08:00",    "created_at": "2279-07-03T20:55:45.958757079+08:00",    "updated_at": "2261-02-22T12:33:14.767856874+08:00"}
 
 
 Comments

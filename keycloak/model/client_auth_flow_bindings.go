@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_auth_flow_bindings
 
 JSON Sample
 -------------------------------------
-{    "client_id": "dUATkNAoKsTSRVspsvIYpshxX",    "flow_id": "coybbZVPIVwTGtbdrZIllwAyp",    "binding_name": "RPBDgLwrmckvZGTMZmDADLlfT"}
+{    "client_id": "KtfNwnLMSuHonDTHkDgGxFQPC",    "flow_id": "VhEwKYNsToVhgFMbIWJdiJPaH",    "binding_name": "potSwJnPWISnjBroDOxtceYED"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // ClientAuthFlowBindings struct is a row record of the client_auth_flow_bindings table in the keycloak database
 type ClientAuthFlowBindings struct {
 	//[ 0] client_id                                      VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR;size:36;" json:"client_id"`
+	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR(36);size:36;" json:"client_id"`
 	//[ 1] flow_id                                        VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	FlowID sql.NullString `gorm:"column:flow_id;type:VARCHAR;size:36;" json:"flow_id"`
+	FlowID sql.NullString `gorm:"column:flow_id;type:VARCHAR(36);size:36;" json:"flow_id"`
 	//[ 2] binding_name                                   VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	BindingName string `gorm:"primary_key;column:binding_name;type:VARCHAR;size:255;" json:"binding_name"`
+	BindingName string `gorm:"primary_key;column:binding_name;type:VARCHAR(255);size:255;" json:"binding_name"`
 }
 
 var client_auth_flow_bindingsTableInfo = &TableInfo{

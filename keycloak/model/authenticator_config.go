@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: authenticator_config
 
 JSON Sample
 -------------------------------------
-{    "id": "dtSiVJOhpjZCmmVmLUWATsgYW",    "alias": "SjWkOiPcMAwAIpXZVNCHHVPpW",    "realm_id": "HeBWhTqRZqqRhISliBtIpleva"}
+{    "id": "GuOQdaKwlZCboeQMHVZSPTrNS",    "alias": "HjotNcivigqiUbinPxtPFEVvN",    "realm_id": "PYFeWBermXtJhQHXiLQkmxGiA"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // AuthenticatorConfig struct is a row record of the authenticator_config table in the keycloak database
 type AuthenticatorConfig struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] alias                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Alias sql.NullString `gorm:"column:alias;type:VARCHAR;size:255;" json:"alias"`
+	Alias sql.NullString `gorm:"column:alias;type:VARCHAR(255);size:255;" json:"alias"`
 	//[ 2] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 }
 
 var authenticator_configTableInfo = &TableInfo{

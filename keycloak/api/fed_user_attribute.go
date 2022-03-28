@@ -119,7 +119,7 @@ func GetFedUserAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /feduserattribute [post]
-// echo '{"id": "GvQdqZOpqefmvgfqyAiQOMhOH","name": "CrZdNpOjRoenIZcawoShewbJD","user_id": "VUoLoXtBrsIlEuoefFVwWgrBp","realm_id": "oJFrtfjBMGreINlLUpQkXCnGp","storage_provider_id": "VLxrvQGZFCLoJHnxhZYnNBLos","value": "lMxicOLgNwPYiBUVtZkBJOFdd"}' | http POST "http://localhost:8080/feduserattribute" X-Api-User:user123
+// echo '{"id": "RevUOwFjYNJaqxmsmdcYwKLlD","name": "QaSVrMhLaHjsmLyIalhOXovEw","user_id": "xyysvmeQIYkSPdEBPHnUChvta","realm_id": "kKJHnyYSLvAMYGWsoDrMDwNTY","storage_provider_id": "qMijWdlGrrABDSVLChsaGUMUV","value": "uZBVBfqMGaqxNSTEimKLLxlDI"}' | http POST "http://localhost:8080/feduserattribute" X-Api-User:user123
 func AddFedUserAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	feduserattribute := &model.FedUserAttribute{}
@@ -167,7 +167,7 @@ func AddFedUserAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /feduserattribute/{argID} [put]
-// echo '{"id": "GvQdqZOpqefmvgfqyAiQOMhOH","name": "CrZdNpOjRoenIZcawoShewbJD","user_id": "VUoLoXtBrsIlEuoefFVwWgrBp","realm_id": "oJFrtfjBMGreINlLUpQkXCnGp","storage_provider_id": "VLxrvQGZFCLoJHnxhZYnNBLos","value": "lMxicOLgNwPYiBUVtZkBJOFdd"}' | http PUT "http://localhost:8080/feduserattribute/hello world"  X-Api-User:user123
+// echo '{"id": "RevUOwFjYNJaqxmsmdcYwKLlD","name": "QaSVrMhLaHjsmLyIalhOXovEw","user_id": "xyysvmeQIYkSPdEBPHnUChvta","realm_id": "kKJHnyYSLvAMYGWsoDrMDwNTY","storage_provider_id": "qMijWdlGrrABDSVLChsaGUMUV","value": "uZBVBfqMGaqxNSTEimKLLxlDI"}' | http PUT "http://localhost:8080/feduserattribute/hello world"  X-Api-User:user123
 func UpdateFedUserAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

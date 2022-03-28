@@ -127,7 +127,7 @@ func GetUserRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userrolemapping [post]
-// echo '{"role_id": "QHAelmhZFaaHBXfUDwfYgNHNA","user_id": "fIFkfLqgMgVSMZfsOlyCZaGZy"}' | http POST "http://localhost:8080/userrolemapping" X-Api-User:user123
+// echo '{"role_id": "MEYcSIxsGwSDHYJuFDwGgpcPS","user_id": "SaOeqGRyGMxdHEBxLTgLlkRBG"}' | http POST "http://localhost:8080/userrolemapping" X-Api-User:user123
 func AddUserRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	userrolemapping := &model.UserRoleMapping{}
@@ -175,7 +175,7 @@ func AddUserRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userrolemapping/{argRoleID}/{argUserID} [put]
-// echo '{"role_id": "QHAelmhZFaaHBXfUDwfYgNHNA","user_id": "fIFkfLqgMgVSMZfsOlyCZaGZy"}' | http PUT "http://localhost:8080/userrolemapping/hello world/hello world"  X-Api-User:user123
+// echo '{"role_id": "MEYcSIxsGwSDHYJuFDwGgpcPS","user_id": "SaOeqGRyGMxdHEBxLTgLlkRBG"}' | http PUT "http://localhost:8080/userrolemapping/hello world/hello world"  X-Api-User:user123
 func UpdateUserRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

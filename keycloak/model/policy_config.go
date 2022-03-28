@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: policy_config
 
 JSON Sample
 -------------------------------------
-{    "policy_id": "dLojwwrQgibTfFvZHhbprxnXb",    "name": "NQXvfTwWwCqrqXBhqGcZVqGwG",    "value": "xUilURaCbImOFILuJrbqyBEyS"}
+{    "policy_id": "mOuVXtorrjiuVBxnpamRSubKU",    "name": "tgIKcBZZHDpFOUcGIECtYPviu",    "value": "DZGgIJZCNKaCnukHLxAQpcjNk"}
 
 
 
@@ -31,9 +31,9 @@ JSON Sample
 // PolicyConfig struct is a row record of the policy_config table in the keycloak database
 type PolicyConfig struct {
 	//[ 0] policy_id                                      VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	PolicyID string `gorm:"primary_key;column:policy_id;type:VARCHAR;size:36;" json:"policy_id"`
+	PolicyID string `gorm:"primary_key;column:policy_id;type:VARCHAR(36);size:36;" json:"policy_id"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] value                                          TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Value sql.NullString `gorm:"column:value;type:TEXT;" json:"value"`
 }

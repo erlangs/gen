@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -24,7 +24,7 @@ Table: client_scope
 
 JSON Sample
 -------------------------------------
-{    "id": "JgrAOOoKudgCFpUxcovfjLRSF",    "name": "dTWbIjOoOVMMPPUvNGonYNYPJ",    "realm_id": "pcfFqygTRTdUhWtvhnbwjfclB",    "description": "FCbmNUkkfAscBsHKwbuhEGbCH",    "protocol": "QnmFNsBTTabPlLOhyexhjBEHr"}
+{    "id": "egQUicPaYYIAbOHqukjbrTtWo",    "name": "lCtHtiHQaltFCnSWcxjAAaggM",    "realm_id": "uWTVHBjrosijwDVUvjuFInRyw",    "description": "cllGmJtCRTlxlxrObFbmEwZMo",    "protocol": "urFDvRuKFotlMkdwogcosZJeH"}
 
 
 
@@ -33,15 +33,15 @@ JSON Sample
 // ClientScope struct is a row record of the client_scope table in the keycloak database
 type ClientScope struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name sql.NullString `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name sql.NullString `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 3] description                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Description sql.NullString `gorm:"column:description;type:VARCHAR;size:255;" json:"description"`
+	Description sql.NullString `gorm:"column:description;type:VARCHAR(255);size:255;" json:"description"`
 	//[ 4] protocol                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Protocol sql.NullString `gorm:"column:protocol;type:VARCHAR;size:255;" json:"protocol"`
+	Protocol sql.NullString `gorm:"column:protocol;type:VARCHAR(255);size:255;" json:"protocol"`
 }
 
 var client_scopeTableInfo = &TableInfo{

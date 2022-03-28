@@ -119,7 +119,7 @@ func GetMigrationModel(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /migrationmodel [post]
-// echo '{"id": "fWYvJTanFtaXGLJjjoolqFpwm","version": "kjpqkPyHIlpkesALLaotYKJCH","update_time": 37}' | http POST "http://localhost:8080/migrationmodel" X-Api-User:user123
+// echo '{"id": "emQmeyTlKOQXklsRDITllfBSQ","version": "EunxXxgZsCNyTNKPrhEigJRwY","update_time": 54}' | http POST "http://localhost:8080/migrationmodel" X-Api-User:user123
 func AddMigrationModel(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	migrationmodel := &model.MigrationModel{}
@@ -167,7 +167,7 @@ func AddMigrationModel(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /migrationmodel/{argID} [put]
-// echo '{"id": "fWYvJTanFtaXGLJjjoolqFpwm","version": "kjpqkPyHIlpkesALLaotYKJCH","update_time": 37}' | http PUT "http://localhost:8080/migrationmodel/hello world"  X-Api-User:user123
+// echo '{"id": "emQmeyTlKOQXklsRDITllfBSQ","version": "EunxXxgZsCNyTNKPrhEigJRwY","update_time": 54}' | http PUT "http://localhost:8080/migrationmodel/hello world"  X-Api-User:user123
 func UpdateMigrationModel(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

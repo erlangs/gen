@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -72,7 +72,7 @@ Table: realm
 
 JSON Sample
 -------------------------------------
-{    "id": "iwpedMQidDrpVhGclIdeIfisT",    "access_code_lifespan": 39,    "user_action_lifespan": 77,    "access_token_lifespan": 41,    "account_theme": "ShKkAqkWELrmcihJhWJNksVTl",    "admin_theme": "MUQXUMXdOXWlVrTSakHZxdcTo",    "email_theme": "RUonIshPcyaEduPMZjhRCFGYV",    "enabled": false,    "events_enabled": false,    "events_expiration": 24,    "login_theme": "QbwoJaLyFvLAIFWdblPpiwYnS",    "name": "jMyeuDMKMRJSNFNnpqktFwclI",    "not_before": 17,    "password_policy": "XPkWgNDGZljXhOkgIMcWBhMdh",    "registration_allowed": true,    "remember_me": true,    "reset_password_allowed": false,    "social": true,    "ssl_required": "ZQiFJNgVDxoetlMcKMqbEEpRj",    "sso_idle_timeout": 68,    "sso_max_lifespan": 74,    "update_profile_on_soc_login": false,    "verify_email": true,    "master_admin_client": "LQVmMHdOQbKBxIXRaMpbKOlJg",    "login_lifespan": 37,    "internationalization_enabled": true,    "default_locale": "vXtPRwiNeRIboXYRdsMElaqoL",    "reg_email_as_username": false,    "admin_events_enabled": false,    "admin_events_details_enabled": true,    "edit_username_allowed": true,    "otp_policy_counter": 37,    "otp_policy_window": 8,    "otp_policy_period": 28,    "otp_policy_digits": 29,    "otp_policy_alg": "NMTQEVYWucHqTaUWWnqEPhDAC",    "otp_policy_type": "BwStaXPiXfAeyDtMXIIeiXHsu",    "browser_flow": "bCwJfxUnZSMoEbbKXlerlSjaQ",    "registration_flow": "yuVTDmQpJqDFvGCnyQDTafDts",    "direct_grant_flow": "TDrDrhAyYJygPGIwnNQDwGHqE",    "reset_credentials_flow": "sNUcuxwUGnhaEgnOWGdjTIBTH",    "client_auth_flow": "yGNUyKfpiFXPwiolydEEYnawa",    "offline_session_idle_timeout": 83,    "revoke_refresh_token": true,    "access_token_life_implicit": 83,    "login_with_email_allowed": false,    "duplicate_emails_allowed": true,    "docker_auth_flow": "KRAXCEwDOwqwxGuLtCqvlRXKW",    "refresh_token_max_reuse": 30,    "allow_user_managed_access": true,    "sso_max_lifespan_remember_me": 36,    "sso_idle_timeout_remember_me": 25,    "default_role": "lhEjhlOFWUllcNExqreJJeDaS"}
+{    "id": "dvstuBnYgApgMsMTQseEnpiYR",    "access_code_lifespan": 98,    "user_action_lifespan": 92,    "access_token_lifespan": 52,    "account_theme": "wPvEcGILJcxoIpUBaVuDFSduE",    "admin_theme": "pbYCPDTSWOJBYnHxgVJjsLLOn",    "email_theme": "bTEBZskHCJdiXPwMZYOpjywsZ",    "enabled": false,    "events_enabled": true,    "events_expiration": 52,    "login_theme": "GeMIZQSiFcImYQGXWBURajIud",    "name": "aGdvcgwEGrkinqgFGKdeYsjSU",    "not_before": 17,    "password_policy": "CrSOdbVQbuMbwYhWyemfjeVUw",    "registration_allowed": true,    "remember_me": false,    "reset_password_allowed": false,    "social": true,    "ssl_required": "ekWHpsGjDtmBvwuqjUCPNwgHj",    "sso_idle_timeout": 29,    "sso_max_lifespan": 18,    "update_profile_on_soc_login": false,    "verify_email": false,    "master_admin_client": "esdFPbFnKrdPlovVKYoGRklrw",    "login_lifespan": 45,    "internationalization_enabled": false,    "default_locale": "iuFAbFcNsMdiahbVSJbSkVDAo",    "reg_email_as_username": false,    "admin_events_enabled": true,    "admin_events_details_enabled": true,    "edit_username_allowed": false,    "otp_policy_counter": 88,    "otp_policy_window": 41,    "otp_policy_period": 85,    "otp_policy_digits": 2,    "otp_policy_alg": "EeJhkRxaebvoieiQJWRuagMiN",    "otp_policy_type": "yPHVkXnZDhitUfxiBJKFkBWjN",    "browser_flow": "FIZgPpIvmCIZBXBjRnprKTmLk",    "registration_flow": "qiliECURgXtsdwwqMQbdUlyFE",    "direct_grant_flow": "GoeLxShiVmxoCXrIAWsNZNnob",    "reset_credentials_flow": "NHNDqayKdJLPjlecWVajfkuOk",    "client_auth_flow": "ugVBBnjGqrrNpwiaIaXffocOS",    "offline_session_idle_timeout": 9,    "revoke_refresh_token": false,    "access_token_life_implicit": 20,    "login_with_email_allowed": true,    "duplicate_emails_allowed": true,    "docker_auth_flow": "gjiaIGUTTBcHMqcKAwrtmFlMV",    "refresh_token_max_reuse": 25,    "allow_user_managed_access": true,    "sso_max_lifespan_remember_me": 48,    "sso_idle_timeout_remember_me": 10,    "default_role": "baoeHxtHLSRKNbhhNNqvdptWq"}
 
 
 
@@ -81,7 +81,7 @@ JSON Sample
 // Realm struct is a row record of the realm table in the keycloak database
 type Realm struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] access_code_lifespan                           INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	AccessCodeLifespan sql.NullInt32 `gorm:"column:access_code_lifespan;type:INT4;" json:"access_code_lifespan"`
 	//[ 2] user_action_lifespan                           INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
@@ -89,11 +89,11 @@ type Realm struct {
 	//[ 3] access_token_lifespan                          INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	AccessTokenLifespan sql.NullInt32 `gorm:"column:access_token_lifespan;type:INT4;" json:"access_token_lifespan"`
 	//[ 4] account_theme                                  VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	AccountTheme sql.NullString `gorm:"column:account_theme;type:VARCHAR;size:255;" json:"account_theme"`
+	AccountTheme sql.NullString `gorm:"column:account_theme;type:VARCHAR(255);size:255;" json:"account_theme"`
 	//[ 5] admin_theme                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	AdminTheme sql.NullString `gorm:"column:admin_theme;type:VARCHAR;size:255;" json:"admin_theme"`
+	AdminTheme sql.NullString `gorm:"column:admin_theme;type:VARCHAR(255);size:255;" json:"admin_theme"`
 	//[ 6] email_theme                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	EmailTheme sql.NullString `gorm:"column:email_theme;type:VARCHAR;size:255;" json:"email_theme"`
+	EmailTheme sql.NullString `gorm:"column:email_theme;type:VARCHAR(255);size:255;" json:"email_theme"`
 	//[ 7] enabled                                        BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	Enabled bool `gorm:"column:enabled;type:BOOL;default:false;" json:"enabled"`
 	//[ 8] events_enabled                                 BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
@@ -101,13 +101,13 @@ type Realm struct {
 	//[ 9] events_expiration                              INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	EventsExpiration sql.NullInt64 `gorm:"column:events_expiration;type:INT8;" json:"events_expiration"`
 	//[10] login_theme                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	LoginTheme sql.NullString `gorm:"column:login_theme;type:VARCHAR;size:255;" json:"login_theme"`
+	LoginTheme sql.NullString `gorm:"column:login_theme;type:VARCHAR(255);size:255;" json:"login_theme"`
 	//[11] name                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name sql.NullString `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name sql.NullString `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[12] not_before                                     INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	NotBefore sql.NullInt32 `gorm:"column:not_before;type:INT4;" json:"not_before"`
 	//[13] password_policy                                VARCHAR(2550)        null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 2550    default: []
-	PasswordPolicy sql.NullString `gorm:"column:password_policy;type:VARCHAR;size:2550;" json:"password_policy"`
+	PasswordPolicy sql.NullString `gorm:"column:password_policy;type:VARCHAR(2550);size:2550;" json:"password_policy"`
 	//[14] registration_allowed                           BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	RegistrationAllowed bool `gorm:"column:registration_allowed;type:BOOL;default:false;" json:"registration_allowed"`
 	//[15] remember_me                                    BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
@@ -117,7 +117,7 @@ type Realm struct {
 	//[17] social                                         BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	Social bool `gorm:"column:social;type:BOOL;default:false;" json:"social"`
 	//[18] ssl_required                                   VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	SslRequired sql.NullString `gorm:"column:ssl_required;type:VARCHAR;size:255;" json:"ssl_required"`
+	SslRequired sql.NullString `gorm:"column:ssl_required;type:VARCHAR(255);size:255;" json:"ssl_required"`
 	//[19] sso_idle_timeout                               INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	SsoIdleTimeout sql.NullInt32 `gorm:"column:sso_idle_timeout;type:INT4;" json:"sso_idle_timeout"`
 	//[20] sso_max_lifespan                               INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
@@ -127,13 +127,13 @@ type Realm struct {
 	//[22] verify_email                                   BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	VerifyEmail bool `gorm:"column:verify_email;type:BOOL;default:false;" json:"verify_email"`
 	//[23] master_admin_client                            VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	MasterAdminClient sql.NullString `gorm:"column:master_admin_client;type:VARCHAR;size:36;" json:"master_admin_client"`
+	MasterAdminClient sql.NullString `gorm:"column:master_admin_client;type:VARCHAR(36);size:36;" json:"master_admin_client"`
 	//[24] login_lifespan                                 INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	LoginLifespan sql.NullInt32 `gorm:"column:login_lifespan;type:INT4;" json:"login_lifespan"`
 	//[25] internationalization_enabled                   BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	InternationalizationEnabled bool `gorm:"column:internationalization_enabled;type:BOOL;default:false;" json:"internationalization_enabled"`
 	//[26] default_locale                                 VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	DefaultLocale sql.NullString `gorm:"column:default_locale;type:VARCHAR;size:255;" json:"default_locale"`
+	DefaultLocale sql.NullString `gorm:"column:default_locale;type:VARCHAR(255);size:255;" json:"default_locale"`
 	//[27] reg_email_as_username                          BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	RegEmailAsUsername bool `gorm:"column:reg_email_as_username;type:BOOL;default:false;" json:"reg_email_as_username"`
 	//[28] admin_events_enabled                           BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
@@ -151,19 +151,19 @@ type Realm struct {
 	//[34] otp_policy_digits                              INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: [6]
 	OtpPolicyDigits sql.NullInt32 `gorm:"column:otp_policy_digits;type:INT4;default:6;" json:"otp_policy_digits"`
 	//[35] otp_policy_alg                                 VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: [HmacSHA1]
-	OtpPolicyAlg sql.NullString `gorm:"column:otp_policy_alg;type:VARCHAR;size:36;default:HmacSHA1;" json:"otp_policy_alg"`
+	OtpPolicyAlg sql.NullString `gorm:"column:otp_policy_alg;type:VARCHAR(36);size:36;default:HmacSHA1;" json:"otp_policy_alg"`
 	//[36] otp_policy_type                                VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: [totp]
-	OtpPolicyType sql.NullString `gorm:"column:otp_policy_type;type:VARCHAR;size:36;default:totp;" json:"otp_policy_type"`
+	OtpPolicyType sql.NullString `gorm:"column:otp_policy_type;type:VARCHAR(36);size:36;default:totp;" json:"otp_policy_type"`
 	//[37] browser_flow                                   VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	BrowserFlow sql.NullString `gorm:"column:browser_flow;type:VARCHAR;size:36;" json:"browser_flow"`
+	BrowserFlow sql.NullString `gorm:"column:browser_flow;type:VARCHAR(36);size:36;" json:"browser_flow"`
 	//[38] registration_flow                              VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RegistrationFlow sql.NullString `gorm:"column:registration_flow;type:VARCHAR;size:36;" json:"registration_flow"`
+	RegistrationFlow sql.NullString `gorm:"column:registration_flow;type:VARCHAR(36);size:36;" json:"registration_flow"`
 	//[39] direct_grant_flow                              VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	DirectGrantFlow sql.NullString `gorm:"column:direct_grant_flow;type:VARCHAR;size:36;" json:"direct_grant_flow"`
+	DirectGrantFlow sql.NullString `gorm:"column:direct_grant_flow;type:VARCHAR(36);size:36;" json:"direct_grant_flow"`
 	//[40] reset_credentials_flow                         VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ResetCredentialsFlow sql.NullString `gorm:"column:reset_credentials_flow;type:VARCHAR;size:36;" json:"reset_credentials_flow"`
+	ResetCredentialsFlow sql.NullString `gorm:"column:reset_credentials_flow;type:VARCHAR(36);size:36;" json:"reset_credentials_flow"`
 	//[41] client_auth_flow                               VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientAuthFlow sql.NullString `gorm:"column:client_auth_flow;type:VARCHAR;size:36;" json:"client_auth_flow"`
+	ClientAuthFlow sql.NullString `gorm:"column:client_auth_flow;type:VARCHAR(36);size:36;" json:"client_auth_flow"`
 	//[42] offline_session_idle_timeout                   INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: [0]
 	OfflineSessionIdleTimeout sql.NullInt32 `gorm:"column:offline_session_idle_timeout;type:INT4;default:0;" json:"offline_session_idle_timeout"`
 	//[43] revoke_refresh_token                           BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
@@ -175,7 +175,7 @@ type Realm struct {
 	//[46] duplicate_emails_allowed                       BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	DuplicateEmailsAllowed bool `gorm:"column:duplicate_emails_allowed;type:BOOL;default:false;" json:"duplicate_emails_allowed"`
 	//[47] docker_auth_flow                               VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	DockerAuthFlow sql.NullString `gorm:"column:docker_auth_flow;type:VARCHAR;size:36;" json:"docker_auth_flow"`
+	DockerAuthFlow sql.NullString `gorm:"column:docker_auth_flow;type:VARCHAR(36);size:36;" json:"docker_auth_flow"`
 	//[48] refresh_token_max_reuse                        INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: [0]
 	RefreshTokenMaxReuse sql.NullInt32 `gorm:"column:refresh_token_max_reuse;type:INT4;default:0;" json:"refresh_token_max_reuse"`
 	//[49] allow_user_managed_access                      BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
@@ -185,7 +185,7 @@ type Realm struct {
 	//[51] sso_idle_timeout_remember_me                   INT4                 null: false  primary: false  isArray: false  auto: false  col: INT4            len: -1      default: [0]
 	SsoIdleTimeoutRememberMe int32 `gorm:"column:sso_idle_timeout_remember_me;type:INT4;default:0;" json:"sso_idle_timeout_remember_me"`
 	//[52] default_role                                   VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	DefaultRole sql.NullString `gorm:"column:default_role;type:VARCHAR;size:255;" json:"default_role"`
+	DefaultRole sql.NullString `gorm:"column:default_role;type:VARCHAR(255);size:255;" json:"default_role"`
 }
 
 var realmTableInfo = &TableInfo{

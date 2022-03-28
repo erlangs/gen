@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: group_attribute
 
 JSON Sample
 -------------------------------------
-{    "id": "XnECukbXOIAmlVdiTWcqurgrG",    "name": "bGqygFVvFtQbMIDlsyGZxMlpg",    "value": "GXwNiVVHxfjSOHWrFsdhEqlMi",    "group_id": "lggVWjUCQjxppVrcqAvQljyZU"}
+{    "id": "EAXVWyfXRQnuZvcsiJBqlqbEf",    "name": "FcejSCqHDDdowUAkdLTWulnAK",    "value": "tJQllonVOsTQCYaEtcraeKwjj",    "group_id": "JUIcJjfrSIrrqUqowyiULJVQC"}
 
 
 
@@ -32,13 +32,13 @@ JSON Sample
 // GroupAttribute struct is a row record of the group_attribute table in the keycloak database
 type GroupAttribute struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: [sybase-needs-something-here]
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;default:sybase-needs-something-here;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;default:sybase-needs-something-here;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] value                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Value sql.NullString `gorm:"column:value;type:VARCHAR;size:255;" json:"value"`
+	Value sql.NullString `gorm:"column:value;type:VARCHAR(255);size:255;" json:"value"`
 	//[ 3] group_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	GroupID string `gorm:"column:group_id;type:VARCHAR;size:36;" json:"group_id"`
+	GroupID string `gorm:"column:group_id;type:VARCHAR(36);size:36;" json:"group_id"`
 }
 
 var group_attributeTableInfo = &TableInfo{

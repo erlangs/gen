@@ -127,7 +127,7 @@ func GetClientScopeRoleMapping(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientscoperolemapping [post]
-// echo '{"scope_id": "NagddxcZfQvRYerHyuGDZsLRM","role_id": "AFscWhCnZTwiJSEDXuOEIyQVq"}' | http POST "http://localhost:8080/clientscoperolemapping" X-Api-User:user123
+// echo '{"scope_id": "rNrPqlyatkcElDZGghdXmfULF","role_id": "hYMGAoxfqbdICgyJVxyQOKkyL"}' | http POST "http://localhost:8080/clientscoperolemapping" X-Api-User:user123
 func AddClientScopeRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientscoperolemapping := &model.ClientScopeRoleMapping{}
@@ -175,7 +175,7 @@ func AddClientScopeRoleMapping(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientscoperolemapping/{argScopeID}/{argRoleID} [put]
-// echo '{"scope_id": "NagddxcZfQvRYerHyuGDZsLRM","role_id": "AFscWhCnZTwiJSEDXuOEIyQVq"}' | http PUT "http://localhost:8080/clientscoperolemapping/hello world/hello world"  X-Api-User:user123
+// echo '{"scope_id": "rNrPqlyatkcElDZGghdXmfULF","role_id": "hYMGAoxfqbdICgyJVxyQOKkyL"}' | http PUT "http://localhost:8080/clientscoperolemapping/hello world/hello world"  X-Api-User:user123
 func UpdateClientScopeRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: resource_server
 
 JSON Sample
 -------------------------------------
-{    "id": "pFtKSdHxPcvvJebpZXMHxjbeq",    "allow_rs_remote_mgmt": true,    "policy_enforce_mode": "syYgWgiZrYjIRvGZLwKdpPlWa",    "decision_strategy": 35}
+{    "id": "UimvTunbmGsItxTFKPwHAylQa",    "allow_rs_remote_mgmt": true,    "policy_enforce_mode": "lHQqeDwZLehPZMDvlirLfkHxB",    "decision_strategy": 63}
 
 
 
@@ -32,11 +32,11 @@ JSON Sample
 // ResourceServer struct is a row record of the resource_server table in the keycloak database
 type ResourceServer struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] allow_rs_remote_mgmt                           BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	AllowRsRemoteMgmt bool `gorm:"column:allow_rs_remote_mgmt;type:BOOL;default:false;" json:"allow_rs_remote_mgmt"`
 	//[ 2] policy_enforce_mode                            VARCHAR(15)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 15      default: []
-	PolicyEnforceMode string `gorm:"column:policy_enforce_mode;type:VARCHAR;size:15;" json:"policy_enforce_mode"`
+	PolicyEnforceMode string `gorm:"column:policy_enforce_mode;type:VARCHAR(15);size:15;" json:"policy_enforce_mode"`
 	//[ 3] decision_strategy                              INT2                 null: false  primary: false  isArray: false  auto: false  col: INT2            len: -1      default: [1]
 	DecisionStrategy int32 `gorm:"column:decision_strategy;type:INT2;default:1;" json:"decision_strategy"`
 }

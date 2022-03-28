@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: user_group_membership
 
 JSON Sample
 -------------------------------------
-{    "group_id": "pGvigLhoWrdOTgmKribxPUWdT",    "user_id": "pTSINLeQyOKFhAidPEeISXNHf"}
+{    "group_id": "TmSHkecVMTfwAWKHNleFJnYxx",    "user_id": "reToaBvYyMPktXQIbTpFsaThY"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // UserGroupMembership struct is a row record of the user_group_membership table in the keycloak database
 type UserGroupMembership struct {
 	//[ 0] group_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	GroupID string `gorm:"primary_key;column:group_id;type:VARCHAR;size:36;" json:"group_id"`
+	GroupID string `gorm:"primary_key;column:group_id;type:VARCHAR(36);size:36;" json:"group_id"`
 	//[ 1] user_id                                        VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR;size:36;" json:"user_id"`
+	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR(36);size:36;" json:"user_id"`
 }
 
 var user_group_membershipTableInfo = &TableInfo{

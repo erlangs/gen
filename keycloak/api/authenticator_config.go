@@ -119,7 +119,7 @@ func GetAuthenticatorConfig(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /authenticatorconfig [post]
-// echo '{"id": "dtSiVJOhpjZCmmVmLUWATsgYW","alias": "SjWkOiPcMAwAIpXZVNCHHVPpW","realm_id": "HeBWhTqRZqqRhISliBtIpleva"}' | http POST "http://localhost:8080/authenticatorconfig" X-Api-User:user123
+// echo '{"id": "GuOQdaKwlZCboeQMHVZSPTrNS","alias": "HjotNcivigqiUbinPxtPFEVvN","realm_id": "PYFeWBermXtJhQHXiLQkmxGiA"}' | http POST "http://localhost:8080/authenticatorconfig" X-Api-User:user123
 func AddAuthenticatorConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	authenticatorconfig := &model.AuthenticatorConfig{}
@@ -167,7 +167,7 @@ func AddAuthenticatorConfig(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /authenticatorconfig/{argID} [put]
-// echo '{"id": "dtSiVJOhpjZCmmVmLUWATsgYW","alias": "SjWkOiPcMAwAIpXZVNCHHVPpW","realm_id": "HeBWhTqRZqqRhISliBtIpleva"}' | http PUT "http://localhost:8080/authenticatorconfig/hello world"  X-Api-User:user123
+// echo '{"id": "GuOQdaKwlZCboeQMHVZSPTrNS","alias": "HjotNcivigqiUbinPxtPFEVvN","realm_id": "PYFeWBermXtJhQHXiLQkmxGiA"}' | http PUT "http://localhost:8080/authenticatorconfig/hello world"  X-Api-User:user123
 func UpdateAuthenticatorConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: scope_policy
 
 JSON Sample
 -------------------------------------
-{    "scope_id": "tXbLpCtcWTUXNHRRKKRWrXiIW",    "policy_id": "DglAcGpQwAlWmKeTcwQQkUrKB"}
+{    "scope_id": "HEHCwlIwBgRMkKdhbVQEKwCft",    "policy_id": "ffCjWOgFREFjeYaCnTtdOMPrK"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // ScopePolicy struct is a row record of the scope_policy table in the keycloak database
 type ScopePolicy struct {
 	//[ 0] scope_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ScopeID string `gorm:"primary_key;column:scope_id;type:VARCHAR;size:36;" json:"scope_id"`
+	ScopeID string `gorm:"primary_key;column:scope_id;type:VARCHAR(36);size:36;" json:"scope_id"`
 	//[ 1] policy_id                                      VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	PolicyID string `gorm:"primary_key;column:policy_id;type:VARCHAR;size:36;" json:"policy_id"`
+	PolicyID string `gorm:"primary_key;column:policy_id;type:VARCHAR(36);size:36;" json:"policy_id"`
 }
 
 var scope_policyTableInfo = &TableInfo{

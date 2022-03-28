@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -27,7 +27,7 @@ Table: resource_server_policy
 
 JSON Sample
 -------------------------------------
-{    "id": "yrpoVVtPWBWcQmrUklFDGlsHw",    "name": "ogapqVFgaWdrNGKuUOBBkTBvO",    "description": "xakZaicPEaSGtFMZFmdXsMBcb",    "type": "OqqTkGVNgjYCToPdgXcheDpPD",    "decision_strategy": "AElmltlwTtKAGaYnUQqYZBYEv",    "logic": "rkvXVcyHlyUaMBPXACripGrLn",    "resource_server_id": "dpgLAbJiTeUOQgKExgwdKREhG",    "owner": "eMjiIwRGPPqtGFlNOIXypQSot"}
+{    "id": "erAorXWYZCexDkwKAYTkhUltJ",    "name": "YNfIIZpbuRroPcLWiFshLgPjv",    "description": "slBAJfRihnPAUTvOUmQEQDpel",    "type": "RsBkAeuVAwCLStEOOyorQulJe",    "decision_strategy": "wJOrkfTtKgXxeIwxYHDKVUEyD",    "logic": "qdwaTtjgjxlSYyihvOXHISmSc",    "resource_server_id": "SlvcorULgfBXxEKrhYmauylGv",    "owner": "LNGHJZJIxuBsnQwPORajAyvEJ"}
 
 
 
@@ -36,21 +36,21 @@ JSON Sample
 // ResourceServerPolicy struct is a row record of the resource_server_policy table in the keycloak database
 type ResourceServerPolicy struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] description                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Description sql.NullString `gorm:"column:description;type:VARCHAR;size:255;" json:"description"`
+	Description sql.NullString `gorm:"column:description;type:VARCHAR(255);size:255;" json:"description"`
 	//[ 3] type                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Type string `gorm:"column:type;type:VARCHAR;size:255;" json:"type"`
+	Type string `gorm:"column:type;type:VARCHAR(255);size:255;" json:"type"`
 	//[ 4] decision_strategy                              VARCHAR(20)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 20      default: []
-	DecisionStrategy sql.NullString `gorm:"column:decision_strategy;type:VARCHAR;size:20;" json:"decision_strategy"`
+	DecisionStrategy sql.NullString `gorm:"column:decision_strategy;type:VARCHAR(20);size:20;" json:"decision_strategy"`
 	//[ 5] logic                                          VARCHAR(20)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 20      default: []
-	Logic sql.NullString `gorm:"column:logic;type:VARCHAR;size:20;" json:"logic"`
+	Logic sql.NullString `gorm:"column:logic;type:VARCHAR(20);size:20;" json:"logic"`
 	//[ 6] resource_server_id                             VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ResourceServerID string `gorm:"column:resource_server_id;type:VARCHAR;size:36;" json:"resource_server_id"`
+	ResourceServerID string `gorm:"column:resource_server_id;type:VARCHAR(36);size:36;" json:"resource_server_id"`
 	//[ 7] owner                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Owner sql.NullString `gorm:"column:owner;type:VARCHAR;size:255;" json:"owner"`
+	Owner sql.NullString `gorm:"column:owner;type:VARCHAR(255);size:255;" json:"owner"`
 }
 
 var resource_server_policyTableInfo = &TableInfo{

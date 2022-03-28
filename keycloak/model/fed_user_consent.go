@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -28,7 +28,7 @@ Table: fed_user_consent
 
 JSON Sample
 -------------------------------------
-{    "id": "PEHFNUnbSHXTEPFVVeijWUPwv",    "client_id": "xsXnhRDGWlnCXTuDwPqCsTbFN",    "user_id": "WrEcrPlKWKhLncTRWTPCLSsfr",    "realm_id": "RbkLYqWQVblWHaoqTlLQONDBe",    "storage_provider_id": "gCnqgnZovHThGqbLNOadXdHFM",    "created_date": 6,    "last_updated_date": 13,    "client_storage_provider": "UHWQmVtRAGhfpgtnYEqqWNwrh",    "external_client_id": "iHstJhowrynqGnkAZtsjKkjjS"}
+{    "id": "pFMhaLmPNxCOrVOscovXvEmjJ",    "client_id": "jkYoprGPrslAsUGQGnNZopuLh",    "user_id": "YJhpLBAVwbqZbsZSWICYarPyC",    "realm_id": "TYapqgRAEUGZtXTvFSZeWBHAD",    "storage_provider_id": "eivbwbQaRHGnjTPCfDKngnBGk",    "created_date": 88,    "last_updated_date": 44,    "client_storage_provider": "SkwmExEyAnyAJiVuBFtOHRwnY",    "external_client_id": "bTEtTBiBlkmCgkHIWgNwWQmxn"}
 
 
 
@@ -37,23 +37,23 @@ JSON Sample
 // FedUserConsent struct is a row record of the fed_user_consent table in the keycloak database
 type FedUserConsent struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] client_id                                      VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR;size:255;" json:"client_id"`
+	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR(255);size:255;" json:"client_id"`
 	//[ 2] user_id                                        VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	UserID string `gorm:"column:user_id;type:VARCHAR;size:255;" json:"user_id"`
+	UserID string `gorm:"column:user_id;type:VARCHAR(255);size:255;" json:"user_id"`
 	//[ 3] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 4] storage_provider_id                            VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR;size:36;" json:"storage_provider_id"`
+	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR(36);size:36;" json:"storage_provider_id"`
 	//[ 5] created_date                                   INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	CreatedDate sql.NullInt64 `gorm:"column:created_date;type:INT8;" json:"created_date"`
 	//[ 6] last_updated_date                              INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	LastUpdatedDate sql.NullInt64 `gorm:"column:last_updated_date;type:INT8;" json:"last_updated_date"`
 	//[ 7] client_storage_provider                        VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientStorageProvider sql.NullString `gorm:"column:client_storage_provider;type:VARCHAR;size:36;" json:"client_storage_provider"`
+	ClientStorageProvider sql.NullString `gorm:"column:client_storage_provider;type:VARCHAR(36);size:36;" json:"client_storage_provider"`
 	//[ 8] external_client_id                             VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ExternalClientID sql.NullString `gorm:"column:external_client_id;type:VARCHAR;size:255;" json:"external_client_id"`
+	ExternalClientID sql.NullString `gorm:"column:external_client_id;type:VARCHAR(255);size:255;" json:"external_client_id"`
 }
 
 var fed_user_consentTableInfo = &TableInfo{

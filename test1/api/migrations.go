@@ -119,7 +119,7 @@ func GetMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /migrations [post]
-// echo '{"id": 95,"migration": "BJGcgVgOFMWccdVNuwhZlkeTs","batch": 82}' | http POST "http://localhost:8080/migrations" X-Api-User:user123
+// echo '{"id": 64,"migration": "rmmKgFYxGwNJRtpUIFqtdPHaf","batch": 10}' | http POST "http://localhost:8080/migrations" X-Api-User:user123
 func AddMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	migrations := &model.Migrations{}
@@ -167,7 +167,7 @@ func AddMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /migrations/{argID} [put]
-// echo '{"id": 95,"migration": "BJGcgVgOFMWccdVNuwhZlkeTs","batch": 82}' | http PUT "http://localhost:8080/migrations/1"  X-Api-User:user123
+// echo '{"id": 64,"migration": "rmmKgFYxGwNJRtpUIFqtdPHaf","batch": 10}' | http PUT "http://localhost:8080/migrations/1"  X-Api-User:user123
 func UpdateMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

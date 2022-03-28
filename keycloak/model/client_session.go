@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -29,7 +29,7 @@ Table: client_session
 
 JSON Sample
 -------------------------------------
-{    "id": "CjyAFAVjENaxdEEtnWDamHlWB",    "client_id": "xchEsRcEkEdprpdboOVtBxIPO",    "redirect_uri": "xCLHRuZXcIKfvZWsllkVAhYUU",    "state": "uENfRYodJwbrjPKXgHlhEJwnn",    "timestamp": 26,    "session_id": "nsZCsJhQQxWQItTQbCtikxXiv",    "auth_method": "IxFBLtrpogoSAdOMJFWSnUtqw",    "realm_id": "MddQUYQNRmxiRhICkWNUdYmmq",    "auth_user_id": "yHbDCBgEnROaOqUBhAXACCaWW",    "current_action": "kTOTtYYfWQpcaUoELdWgmIpCf"}
+{    "id": "aUPyCHbcQNyqoUhBomVogEFnu",    "client_id": "KipPBZHggtiKEVynnhAdmAxrc",    "redirect_uri": "VoGFgjWAEiyYIBHskewmmDsal",    "state": "hJSMXsTUaHZNsGyWQvwlLtYQJ",    "timestamp": 75,    "session_id": "ahrBsNKPNYQNxgYRDxwjLrVxd",    "auth_method": "eAYgUKJxJNbqLjyJAKErQsVvb",    "realm_id": "XEBTrxoIanpkEsuSQCrAeCfBu",    "auth_user_id": "xadmvSkbXUbwqBEswxvrVhqpP",    "current_action": "VfPYMuoavgBBHiypnhhFbRcdY"}
 
 
 
@@ -38,25 +38,25 @@ JSON Sample
 // ClientSession struct is a row record of the client_session table in the keycloak database
 type ClientSession struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] client_id                                      VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR;size:36;" json:"client_id"`
+	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR(36);size:36;" json:"client_id"`
 	//[ 2] redirect_uri                                   VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RedirectURI sql.NullString `gorm:"column:redirect_uri;type:VARCHAR;size:255;" json:"redirect_uri"`
+	RedirectURI sql.NullString `gorm:"column:redirect_uri;type:VARCHAR(255);size:255;" json:"redirect_uri"`
 	//[ 3] state                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	State sql.NullString `gorm:"column:state;type:VARCHAR;size:255;" json:"state"`
+	State sql.NullString `gorm:"column:state;type:VARCHAR(255);size:255;" json:"state"`
 	//[ 4] timestamp                                      INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	Timestamp sql.NullInt32 `gorm:"column:timestamp;type:INT4;" json:"timestamp"`
 	//[ 5] session_id                                     VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	SessionID sql.NullString `gorm:"column:session_id;type:VARCHAR;size:36;" json:"session_id"`
+	SessionID sql.NullString `gorm:"column:session_id;type:VARCHAR(36);size:36;" json:"session_id"`
 	//[ 6] auth_method                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	AuthMethod sql.NullString `gorm:"column:auth_method;type:VARCHAR;size:255;" json:"auth_method"`
+	AuthMethod sql.NullString `gorm:"column:auth_method;type:VARCHAR(255);size:255;" json:"auth_method"`
 	//[ 7] realm_id                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:255;" json:"realm_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(255);size:255;" json:"realm_id"`
 	//[ 8] auth_user_id                                   VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	AuthUserID sql.NullString `gorm:"column:auth_user_id;type:VARCHAR;size:36;" json:"auth_user_id"`
+	AuthUserID sql.NullString `gorm:"column:auth_user_id;type:VARCHAR(36);size:36;" json:"auth_user_id"`
 	//[ 9] current_action                                 VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	CurrentAction sql.NullString `gorm:"column:current_action;type:VARCHAR;size:36;" json:"current_action"`
+	CurrentAction sql.NullString `gorm:"column:current_action;type:VARCHAR(36);size:36;" json:"current_action"`
 }
 
 var client_sessionTableInfo = &TableInfo{

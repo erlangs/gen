@@ -127,7 +127,7 @@ func GetAuthenticatorConfigEntry(w http.ResponseWriter, r *http.Request, ps http
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /authenticatorconfigentry [post]
-// echo '{"authenticator_id": "vVfrCOkMSIHEnVgKGvgXqrIuS","value": "KfTWkQHrhKijNTuKtpqajbkjw","name": "gxFIIHlunlSvivQDgBJHmQojH"}' | http POST "http://localhost:8080/authenticatorconfigentry" X-Api-User:user123
+// echo '{"authenticator_id": "sIQLihIRWGCDhURmKwXpseisN","value": "XVJYqwLtXevqCVJLONkZTMEjy","name": "hVsLuTemYWVdtRGnDIqbFshkE"}' | http POST "http://localhost:8080/authenticatorconfigentry" X-Api-User:user123
 func AddAuthenticatorConfigEntry(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	authenticatorconfigentry := &model.AuthenticatorConfigEntry{}
@@ -175,7 +175,7 @@ func AddAuthenticatorConfigEntry(w http.ResponseWriter, r *http.Request, ps http
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /authenticatorconfigentry/{argAuthenticatorID}/{argName} [put]
-// echo '{"authenticator_id": "vVfrCOkMSIHEnVgKGvgXqrIuS","value": "KfTWkQHrhKijNTuKtpqajbkjw","name": "gxFIIHlunlSvivQDgBJHmQojH"}' | http PUT "http://localhost:8080/authenticatorconfigentry/hello world/hello world"  X-Api-User:user123
+// echo '{"authenticator_id": "sIQLihIRWGCDhURmKwXpseisN","value": "XVJYqwLtXevqCVJLONkZTMEjy","name": "hVsLuTemYWVdtRGnDIqbFshkE"}' | http PUT "http://localhost:8080/authenticatorconfigentry/hello world/hello world"  X-Api-User:user123
 func UpdateAuthenticatorConfigEntry(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

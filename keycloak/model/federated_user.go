@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: federated_user
 
 JSON Sample
 -------------------------------------
-{    "id": "BEfIatbfwowNcYkjdmPQnrxQP",    "storage_provider_id": "DVnDOaUpnCMWvXidJWywQVjac",    "realm_id": "SitnhFqmENAkECTdcXvFBNeBB"}
+{    "id": "NNboLSEGIKCjZECqmiXOiXHQU",    "storage_provider_id": "XksvGMqDMiZxJawynsfRfCPkb",    "realm_id": "ovqVrytYMGQZslJRIXUUNtPuD"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // FederatedUser struct is a row record of the federated_user table in the keycloak database
 type FederatedUser struct {
 	//[ 0] id                                             VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:255;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(255);size:255;" json:"id"`
 	//[ 1] storage_provider_id                            VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR;size:255;" json:"storage_provider_id"`
+	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR(255);size:255;" json:"storage_provider_id"`
 	//[ 2] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 }
 
 var federated_userTableInfo = &TableInfo{

@@ -119,7 +119,7 @@ func GetResourceServerResource(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceserverresource [post]
-// echo '{"id": "ysdPBEcFuODWFrUnqGoEWAVTT","name": "dCsknLDmyJOqZwctcBflvjUuw","type": "uAOoZutsCUauEMshJfrXqfyjA","icon_uri": "IfYpcLyZQIqyyIawDUSUwlxst","owner": "IOjwfllwsnGTiPNemSyrsBaGH","resource_server_id": "FiifaBZFXPOCGlCnoAumYMSvl","owner_managed_access": false,"display_name": "ZeQxJdTZOsVLomFdUqmoeoLlU"}' | http POST "http://localhost:8080/resourceserverresource" X-Api-User:user123
+// echo '{"id": "WOeeJVLfRdsPUeuGWpRXSFWgn","name": "FsdsvncdNVgbxscIZNjBtyJgL","type": "lwwkrGZBiQTSgiLvMPEbHApTl","icon_uri": "jgGXyOwJntbDLtvwYIeCqWXbh","owner": "uyAQDLjiCwWpJZRTSIsrgsUgk","resource_server_id": "EqOaksmdjWjMYMcLCqIsKdiZG","owner_managed_access": false,"display_name": "mnmYOygSGOVUQtwslDaRpXRsK"}' | http POST "http://localhost:8080/resourceserverresource" X-Api-User:user123
 func AddResourceServerResource(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	resourceserverresource := &model.ResourceServerResource{}
@@ -167,7 +167,7 @@ func AddResourceServerResource(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceserverresource/{argID} [put]
-// echo '{"id": "ysdPBEcFuODWFrUnqGoEWAVTT","name": "dCsknLDmyJOqZwctcBflvjUuw","type": "uAOoZutsCUauEMshJfrXqfyjA","icon_uri": "IfYpcLyZQIqyyIawDUSUwlxst","owner": "IOjwfllwsnGTiPNemSyrsBaGH","resource_server_id": "FiifaBZFXPOCGlCnoAumYMSvl","owner_managed_access": false,"display_name": "ZeQxJdTZOsVLomFdUqmoeoLlU"}' | http PUT "http://localhost:8080/resourceserverresource/hello world"  X-Api-User:user123
+// echo '{"id": "WOeeJVLfRdsPUeuGWpRXSFWgn","name": "FsdsvncdNVgbxscIZNjBtyJgL","type": "lwwkrGZBiQTSgiLvMPEbHApTl","icon_uri": "jgGXyOwJntbDLtvwYIeCqWXbh","owner": "uyAQDLjiCwWpJZRTSIsrgsUgk","resource_server_id": "EqOaksmdjWjMYMcLCqIsKdiZG","owner_managed_access": false,"display_name": "mnmYOygSGOVUQtwslDaRpXRsK"}' | http PUT "http://localhost:8080/resourceserverresource/hello world"  X-Api-User:user123
 func UpdateResourceServerResource(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -127,7 +127,7 @@ func GetUserFederationMapperConfig(w http.ResponseWriter, r *http.Request, ps ht
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userfederationmapperconfig [post]
-// echo '{"user_federation_mapper_id": "RZXgZGUetbyfvEOJFZamFtqxD","value": "ilKlVwVHNsbHCbsIXtBeGuETk","name": "XpxeCQqbmuVEhnPRGhfREjyZo"}' | http POST "http://localhost:8080/userfederationmapperconfig" X-Api-User:user123
+// echo '{"user_federation_mapper_id": "EjefCyrnjlGcflKaGtMGgaxdS","value": "QKsmMvoSHGLweFjbbCmdHOXEP","name": "JxdrkitsNthuFdRIeXTGQCMAS"}' | http POST "http://localhost:8080/userfederationmapperconfig" X-Api-User:user123
 func AddUserFederationMapperConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	userfederationmapperconfig := &model.UserFederationMapperConfig{}
@@ -175,7 +175,7 @@ func AddUserFederationMapperConfig(w http.ResponseWriter, r *http.Request, ps ht
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userfederationmapperconfig/{argUserFederationMapperID}/{argName} [put]
-// echo '{"user_federation_mapper_id": "RZXgZGUetbyfvEOJFZamFtqxD","value": "ilKlVwVHNsbHCbsIXtBeGuETk","name": "XpxeCQqbmuVEhnPRGhfREjyZo"}' | http PUT "http://localhost:8080/userfederationmapperconfig/hello world/hello world"  X-Api-User:user123
+// echo '{"user_federation_mapper_id": "EjefCyrnjlGcflKaGtMGgaxdS","value": "QKsmMvoSHGLweFjbbCmdHOXEP","name": "JxdrkitsNthuFdRIeXTGQCMAS"}' | http PUT "http://localhost:8080/userfederationmapperconfig/hello world/hello world"  X-Api-User:user123
 func UpdateUserFederationMapperConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

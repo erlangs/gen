@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -24,7 +24,7 @@ Table: realm_required_credential
 
 JSON Sample
 -------------------------------------
-{    "type": "nnvymghbCuJlCTJmlqvMOTEdY",    "form_label": "yYGhwuHKqEpVYghRfnJqQKedv",    "input": false,    "secret": true,    "realm_id": "vNjFVodgXHRkZOOnTfcgheofb"}
+{    "type": "NHsYVarclSoTtlrZZLUbsAdnW",    "form_label": "iYWbOwaVhWxhWlBWVuOyiCXEy",    "input": false,    "secret": true,    "realm_id": "QapekyECHnYfGPNcZGqrYgcvW"}
 
 
 
@@ -33,15 +33,15 @@ JSON Sample
 // RealmRequiredCredential struct is a row record of the realm_required_credential table in the keycloak database
 type RealmRequiredCredential struct {
 	//[ 0] type                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Type string `gorm:"primary_key;column:type;type:VARCHAR;size:255;" json:"type"`
+	Type string `gorm:"primary_key;column:type;type:VARCHAR(255);size:255;" json:"type"`
 	//[ 1] form_label                                     VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	FormLabel sql.NullString `gorm:"column:form_label;type:VARCHAR;size:255;" json:"form_label"`
+	FormLabel sql.NullString `gorm:"column:form_label;type:VARCHAR(255);size:255;" json:"form_label"`
 	//[ 2] input                                          BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	Input bool `gorm:"column:input;type:BOOL;default:false;" json:"input"`
 	//[ 3] secret                                         BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	Secret bool `gorm:"column:secret;type:BOOL;default:false;" json:"secret"`
 	//[ 4] realm_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 }
 
 var realm_required_credentialTableInfo = &TableInfo{

@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: user_federation_config
 
 JSON Sample
 -------------------------------------
-{    "user_federation_provider_id": "cBKgspepGoPoHlsSnuvWRKxgl",    "value": "OhNhiBmGZgUglrMYseYTmtxol",    "name": "pBbrdvHZYABhbfcKuHiZIFmpo"}
+{    "user_federation_provider_id": "vOvEonKSntComOgYfbPVBByFj",    "value": "ekktjJFlpWknqkEApdGtkTCrC",    "name": "AXYLhjurscjiQxmCiqSCPTkPB"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // UserFederationConfig struct is a row record of the user_federation_config table in the keycloak database
 type UserFederationConfig struct {
 	//[ 0] user_federation_provider_id                    VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	UserFederationProviderID string `gorm:"primary_key;column:user_federation_provider_id;type:VARCHAR;size:36;" json:"user_federation_provider_id"`
+	UserFederationProviderID string `gorm:"primary_key;column:user_federation_provider_id;type:VARCHAR(36);size:36;" json:"user_federation_provider_id"`
 	//[ 1] value                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Value sql.NullString `gorm:"column:value;type:VARCHAR;size:255;" json:"value"`
+	Value sql.NullString `gorm:"column:value;type:VARCHAR(255);size:255;" json:"value"`
 	//[ 2] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 }
 
 var user_federation_configTableInfo = &TableInfo{

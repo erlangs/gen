@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -26,7 +26,7 @@ Table: offline_user_session
 
 JSON Sample
 -------------------------------------
-{    "user_session_id": "mOLLENBqvrvpLSOTWNJiCNFEF",    "user_id": "ChEbwjSNvhVaCbNfkyIwfTpEr",    "realm_id": "BMVUhigqBuARsIqhlfhcuulvi",    "created_on": 96,    "offline_flag": "gghwLbYRSWxDcoLoZKhIePXWK",    "data": "PcNifCwJvimdbALuliqEXrEPm",    "last_session_refresh": 33}
+{    "user_session_id": "DmXLgctOwjIpjTUyFhuaJAOdr",    "user_id": "fJSMDlBXSLESZbmTstTSoqAZy",    "realm_id": "TaquAGLHEiionRflMXXCaHfPH",    "created_on": 12,    "offline_flag": "iLXUmVRuspjdgnhHQoJlgRKgr",    "data": "BCCIsATtRiPfQeHdgPrAdgfSX",    "last_session_refresh": 36}
 
 
 
@@ -35,15 +35,15 @@ JSON Sample
 // OfflineUserSession struct is a row record of the offline_user_session table in the keycloak database
 type OfflineUserSession struct {
 	//[ 0] user_session_id                                VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	UserSessionID string `gorm:"primary_key;column:user_session_id;type:VARCHAR;size:36;" json:"user_session_id"`
+	UserSessionID string `gorm:"primary_key;column:user_session_id;type:VARCHAR(36);size:36;" json:"user_session_id"`
 	//[ 1] user_id                                        VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	UserID string `gorm:"column:user_id;type:VARCHAR;size:255;" json:"user_id"`
+	UserID string `gorm:"column:user_id;type:VARCHAR(255);size:255;" json:"user_id"`
 	//[ 2] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 3] created_on                                     INT4                 null: false  primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	CreatedOn int32 `gorm:"column:created_on;type:INT4;" json:"created_on"`
 	//[ 4] offline_flag                                   VARCHAR(4)           null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 4       default: []
-	OfflineFlag string `gorm:"primary_key;column:offline_flag;type:VARCHAR;size:4;" json:"offline_flag"`
+	OfflineFlag string `gorm:"primary_key;column:offline_flag;type:VARCHAR(4);size:4;" json:"offline_flag"`
 	//[ 5] data                                           TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Data sql.NullString `gorm:"column:data;type:TEXT;" json:"data"`
 	//[ 6] last_session_refresh                           INT4                 null: false  primary: false  isArray: false  auto: false  col: INT4            len: -1      default: [0]

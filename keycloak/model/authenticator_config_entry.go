@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: authenticator_config_entry
 
 JSON Sample
 -------------------------------------
-{    "authenticator_id": "vVfrCOkMSIHEnVgKGvgXqrIuS",    "value": "KfTWkQHrhKijNTuKtpqajbkjw",    "name": "gxFIIHlunlSvivQDgBJHmQojH"}
+{    "authenticator_id": "sIQLihIRWGCDhURmKwXpseisN",    "value": "XVJYqwLtXevqCVJLONkZTMEjy",    "name": "hVsLuTemYWVdtRGnDIqbFshkE"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // AuthenticatorConfigEntry struct is a row record of the authenticator_config_entry table in the keycloak database
 type AuthenticatorConfigEntry struct {
 	//[ 0] authenticator_id                               VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	AuthenticatorID string `gorm:"primary_key;column:authenticator_id;type:VARCHAR;size:36;" json:"authenticator_id"`
+	AuthenticatorID string `gorm:"primary_key;column:authenticator_id;type:VARCHAR(36);size:36;" json:"authenticator_id"`
 	//[ 1] value                                          TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Value sql.NullString `gorm:"column:value;type:TEXT;" json:"value"`
 	//[ 2] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 }
 
 var authenticator_config_entryTableInfo = &TableInfo{

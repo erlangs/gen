@@ -127,7 +127,7 @@ func GetDefaultClientScope(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /defaultclientscope [post]
-// echo '{"realm_id": "mTdXGBqPOaWFEcrLvIKXGpYnB","scope_id": "UChEmFykmLUsoUeNuvCYstJhW","default_scope": true}' | http POST "http://localhost:8080/defaultclientscope" X-Api-User:user123
+// echo '{"realm_id": "eRrKBHpKewOlmlcwcAmnJkSdB","scope_id": "pFEIcuOHIkAAEfnbvZgXUxhLC","default_scope": false}' | http POST "http://localhost:8080/defaultclientscope" X-Api-User:user123
 func AddDefaultClientScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	defaultclientscope := &model.DefaultClientScope{}
@@ -175,7 +175,7 @@ func AddDefaultClientScope(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /defaultclientscope/{argRealmID}/{argScopeID} [put]
-// echo '{"realm_id": "mTdXGBqPOaWFEcrLvIKXGpYnB","scope_id": "UChEmFykmLUsoUeNuvCYstJhW","default_scope": true}' | http PUT "http://localhost:8080/defaultclientscope/hello world/hello world"  X-Api-User:user123
+// echo '{"realm_id": "eRrKBHpKewOlmlcwcAmnJkSdB","scope_id": "pFEIcuOHIkAAEfnbvZgXUxhLC","default_scope": false}' | http PUT "http://localhost:8080/defaultclientscope/hello world/hello world"  X-Api-User:user123
 func UpdateDefaultClientScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

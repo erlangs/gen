@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: associated_policy
 
 JSON Sample
 -------------------------------------
-{    "policy_id": "sflSbOiBHPDBkVqAhSpvgkYHI",    "associated_policy_id": "knwQIbMtAgaCjWXgryxAnoHte"}
+{    "policy_id": "wVtWmTHnfrwNhhtKAovYkAnrZ",    "associated_policy_id": "PwtrxgYUlGUomgHfLwArBWaYm"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // AssociatedPolicy struct is a row record of the associated_policy table in the keycloak database
 type AssociatedPolicy struct {
 	//[ 0] policy_id                                      VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	PolicyID string `gorm:"primary_key;column:policy_id;type:VARCHAR;size:36;" json:"policy_id"`
+	PolicyID string `gorm:"primary_key;column:policy_id;type:VARCHAR(36);size:36;" json:"policy_id"`
 	//[ 1] associated_policy_id                           VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	AssociatedPolicyID string `gorm:"primary_key;column:associated_policy_id;type:VARCHAR;size:36;" json:"associated_policy_id"`
+	AssociatedPolicyID string `gorm:"primary_key;column:associated_policy_id;type:VARCHAR(36);size:36;" json:"associated_policy_id"`
 }
 
 var associated_policyTableInfo = &TableInfo{

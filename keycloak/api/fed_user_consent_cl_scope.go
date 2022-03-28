@@ -127,7 +127,7 @@ func GetFedUserConsentClScope(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /feduserconsentclscope [post]
-// echo '{"user_consent_id": "nTsqjQsFFHogllkMRLocOoyOE","scope_id": "HrbLcrjRpqxhmmGxymOdpCUre"}' | http POST "http://localhost:8080/feduserconsentclscope" X-Api-User:user123
+// echo '{"user_consent_id": "XMsWsTkviZTnxvBVqNclPmpUh","scope_id": "uVSZvTgnZWydgpaTjXQeVNIcS"}' | http POST "http://localhost:8080/feduserconsentclscope" X-Api-User:user123
 func AddFedUserConsentClScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	feduserconsentclscope := &model.FedUserConsentClScope{}
@@ -175,7 +175,7 @@ func AddFedUserConsentClScope(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /feduserconsentclscope/{argUserConsentID}/{argScopeID} [put]
-// echo '{"user_consent_id": "nTsqjQsFFHogllkMRLocOoyOE","scope_id": "HrbLcrjRpqxhmmGxymOdpCUre"}' | http PUT "http://localhost:8080/feduserconsentclscope/hello world/hello world"  X-Api-User:user123
+// echo '{"user_consent_id": "XMsWsTkviZTnxvBVqNclPmpUh","scope_id": "uVSZvTgnZWydgpaTjXQeVNIcS"}' | http PUT "http://localhost:8080/feduserconsentclscope/hello world/hello world"  X-Api-User:user123
 func UpdateFedUserConsentClScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

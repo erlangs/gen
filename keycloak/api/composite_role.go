@@ -127,7 +127,7 @@ func GetCompositeRole(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /compositerole [post]
-// echo '{"composite": "PWvXEBnpYGucXEsQflaucJQOa","child_role": "KNaoUsEwuetfBlLUGGNheJiCv"}' | http POST "http://localhost:8080/compositerole" X-Api-User:user123
+// echo '{"composite": "jMYoumZBSntorKYImMBbyLhRm","child_role": "suFYXEHslhJkipLfQPCfsfwAk"}' | http POST "http://localhost:8080/compositerole" X-Api-User:user123
 func AddCompositeRole(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	compositerole := &model.CompositeRole{}
@@ -175,7 +175,7 @@ func AddCompositeRole(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /compositerole/{argComposite}/{argChildRole} [put]
-// echo '{"composite": "PWvXEBnpYGucXEsQflaucJQOa","child_role": "KNaoUsEwuetfBlLUGGNheJiCv"}' | http PUT "http://localhost:8080/compositerole/hello world/hello world"  X-Api-User:user123
+// echo '{"composite": "jMYoumZBSntorKYImMBbyLhRm","child_role": "suFYXEHslhJkipLfQPCfsfwAk"}' | http PUT "http://localhost:8080/compositerole/hello world/hello world"  X-Api-User:user123
 func UpdateCompositeRole(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

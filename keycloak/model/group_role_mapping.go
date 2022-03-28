@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: group_role_mapping
 
 JSON Sample
 -------------------------------------
-{    "role_id": "aktVuesQgErWnPIqkYKkUjHHo",    "group_id": "enmBNSLxLjLOvqPmqkAUpenSj"}
+{    "role_id": "RwaJLUWmRDtyoDFOPIUpNQbLJ",    "group_id": "SoCixMFWfDyRKxmqXhxxGjxih"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // GroupRoleMapping struct is a row record of the group_role_mapping table in the keycloak database
 type GroupRoleMapping struct {
 	//[ 0] role_id                                        VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RoleID string `gorm:"primary_key;column:role_id;type:VARCHAR;size:36;" json:"role_id"`
+	RoleID string `gorm:"primary_key;column:role_id;type:VARCHAR(36);size:36;" json:"role_id"`
 	//[ 1] group_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	GroupID string `gorm:"primary_key;column:group_id;type:VARCHAR;size:36;" json:"group_id"`
+	GroupID string `gorm:"primary_key;column:group_id;type:VARCHAR(36);size:36;" json:"group_id"`
 }
 
 var group_role_mappingTableInfo = &TableInfo{

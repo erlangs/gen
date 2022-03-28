@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: resource_attribute
 
 JSON Sample
 -------------------------------------
-{    "id": "hAcWmPqiQZWfgqxqMqyucrClS",    "name": "LbAPCImeIfGeaAbaEpNHLAYiV",    "value": "ZNQrnaSmFanxUogseansuaPjm",    "resource_id": "pyxsUbXSxsROdLICxApcDSWRO"}
+{    "id": "YErwTAoTgxSSYkErVLYVDqgIu",    "name": "edeMxMjWFXefYOiPngctsoJbB",    "value": "dBLZNOUSHVZKLwtYaTEmZvVjM",    "resource_id": "suLTEECjDyLEDYrhnLACAuIPZ"}
 
 
 
@@ -32,13 +32,13 @@ JSON Sample
 // ResourceAttribute struct is a row record of the resource_attribute table in the keycloak database
 type ResourceAttribute struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: [sybase-needs-something-here]
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;default:sybase-needs-something-here;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;default:sybase-needs-something-here;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] value                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Value sql.NullString `gorm:"column:value;type:VARCHAR;size:255;" json:"value"`
+	Value sql.NullString `gorm:"column:value;type:VARCHAR(255);size:255;" json:"value"`
 	//[ 3] resource_id                                    VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ResourceID string `gorm:"column:resource_id;type:VARCHAR;size:36;" json:"resource_id"`
+	ResourceID string `gorm:"column:resource_id;type:VARCHAR(36);size:36;" json:"resource_id"`
 }
 
 var resource_attributeTableInfo = &TableInfo{

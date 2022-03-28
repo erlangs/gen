@@ -119,7 +119,7 @@ func GetRequiredActionProvider(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /requiredactionprovider [post]
-// echo '{"id": "pfsSKfAgawVUMhpmOKONLswQO","alias": "AbtLqgEqbmIjGtyPWVXwDBJqF","name": "ohobBltBGPUXcGnQTFcoYnhNH","realm_id": "ZsVOLLpVoVAGmgmYTcGxWvFTy","enabled": true,"default_action": true,"provider_id": "DxNrmnFZfMObONBCXJRjIqYkI","priority": 63}' | http POST "http://localhost:8080/requiredactionprovider" X-Api-User:user123
+// echo '{"id": "QPDVPUZySXcRRePKJNxySZggo","alias": "JBiUViIYurGhQpPxtYFaESwBS","name": "ADZFDDVZTcgxJycRQoxBOLkTc","realm_id": "UEDYlroONgqoKKbdjibyepggL","enabled": false,"default_action": true,"provider_id": "GBiKicikEyMhjWqQWvdVHxoJF","priority": 59}' | http POST "http://localhost:8080/requiredactionprovider" X-Api-User:user123
 func AddRequiredActionProvider(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	requiredactionprovider := &model.RequiredActionProvider{}
@@ -167,7 +167,7 @@ func AddRequiredActionProvider(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /requiredactionprovider/{argID} [put]
-// echo '{"id": "pfsSKfAgawVUMhpmOKONLswQO","alias": "AbtLqgEqbmIjGtyPWVXwDBJqF","name": "ohobBltBGPUXcGnQTFcoYnhNH","realm_id": "ZsVOLLpVoVAGmgmYTcGxWvFTy","enabled": true,"default_action": true,"provider_id": "DxNrmnFZfMObONBCXJRjIqYkI","priority": 63}' | http PUT "http://localhost:8080/requiredactionprovider/hello world"  X-Api-User:user123
+// echo '{"id": "QPDVPUZySXcRRePKJNxySZggo","alias": "JBiUViIYurGhQpPxtYFaESwBS","name": "ADZFDDVZTcgxJycRQoxBOLkTc","realm_id": "UEDYlroONgqoKKbdjibyepggL","enabled": false,"default_action": true,"provider_id": "GBiKicikEyMhjWqQWvdVHxoJF","priority": 59}' | http PUT "http://localhost:8080/requiredactionprovider/hello world"  X-Api-User:user123
 func UpdateRequiredActionProvider(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

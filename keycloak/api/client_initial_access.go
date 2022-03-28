@@ -119,7 +119,7 @@ func GetClientInitialAccess(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientinitialaccess [post]
-// echo '{"id": "XfgSuOblDDKddsbDEZKXHBHVK","realm_id": "MvEMCcvMIOYCenolfiylrdbyY","timestamp": 28,"expiration": 82,"count": 29,"remaining_count": 40}' | http POST "http://localhost:8080/clientinitialaccess" X-Api-User:user123
+// echo '{"id": "yqRZvriWlmsRgscQODAueWfte","realm_id": "MNycTiqwJDSRXbhdUlOYdGwLn","timestamp": 83,"expiration": 76,"count": 21,"remaining_count": 15}' | http POST "http://localhost:8080/clientinitialaccess" X-Api-User:user123
 func AddClientInitialAccess(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientinitialaccess := &model.ClientInitialAccess{}
@@ -167,7 +167,7 @@ func AddClientInitialAccess(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientinitialaccess/{argID} [put]
-// echo '{"id": "XfgSuOblDDKddsbDEZKXHBHVK","realm_id": "MvEMCcvMIOYCenolfiylrdbyY","timestamp": 28,"expiration": 82,"count": 29,"remaining_count": 40}' | http PUT "http://localhost:8080/clientinitialaccess/hello world"  X-Api-User:user123
+// echo '{"id": "yqRZvriWlmsRgscQODAueWfte","realm_id": "MNycTiqwJDSRXbhdUlOYdGwLn","timestamp": 83,"expiration": 76,"count": 21,"remaining_count": 15}' | http PUT "http://localhost:8080/clientinitialaccess/hello world"  X-Api-User:user123
 func UpdateClientInitialAccess(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

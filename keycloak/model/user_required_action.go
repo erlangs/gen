@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: user_required_action
 
 JSON Sample
 -------------------------------------
-{    "user_id": "gPrgMnkbXuHegnCxSOhwtvTtK",    "required_action": "XaXHExvHKqtTgoBnCYRMPcfZA"}
+{    "user_id": "JRZvhHGkBxibPLTPQAXBtogau",    "required_action": "RPSoynwJRFXZqDBLeaNXTuGvn"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // UserRequiredAction struct is a row record of the user_required_action table in the keycloak database
 type UserRequiredAction struct {
 	//[ 0] user_id                                        VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR;size:36;" json:"user_id"`
+	UserID string `gorm:"primary_key;column:user_id;type:VARCHAR(36);size:36;" json:"user_id"`
 	//[ 1] required_action                                VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: [ ]
-	RequiredAction string `gorm:"primary_key;column:required_action;type:VARCHAR;size:255;default: ;" json:"required_action"`
+	RequiredAction string `gorm:"primary_key;column:required_action;type:VARCHAR(255);size:255;default: ;" json:"required_action"`
 }
 
 var user_required_actionTableInfo = &TableInfo{

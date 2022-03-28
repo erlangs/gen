@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -21,7 +21,7 @@ Table: composite_role
 
 JSON Sample
 -------------------------------------
-{    "composite": "PWvXEBnpYGucXEsQflaucJQOa",    "child_role": "KNaoUsEwuetfBlLUGGNheJiCv"}
+{    "composite": "jMYoumZBSntorKYImMBbyLhRm",    "child_role": "suFYXEHslhJkipLfQPCfsfwAk"}
 
 
 
@@ -30,9 +30,9 @@ JSON Sample
 // CompositeRole struct is a row record of the composite_role table in the keycloak database
 type CompositeRole struct {
 	//[ 0] composite                                      VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	Composite string `gorm:"primary_key;column:composite;type:VARCHAR;size:36;" json:"composite"`
+	Composite string `gorm:"primary_key;column:composite;type:VARCHAR(36);size:36;" json:"composite"`
 	//[ 1] child_role                                     VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ChildRole string `gorm:"primary_key;column:child_role;type:VARCHAR;size:36;" json:"child_role"`
+	ChildRole string `gorm:"primary_key;column:child_role;type:VARCHAR(36);size:36;" json:"child_role"`
 }
 
 var composite_roleTableInfo = &TableInfo{

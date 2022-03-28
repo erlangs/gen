@@ -119,7 +119,7 @@ func GetClientScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientscope [post]
-// echo '{"id": "JgrAOOoKudgCFpUxcovfjLRSF","name": "dTWbIjOoOVMMPPUvNGonYNYPJ","realm_id": "pcfFqygTRTdUhWtvhnbwjfclB","description": "FCbmNUkkfAscBsHKwbuhEGbCH","protocol": "QnmFNsBTTabPlLOhyexhjBEHr"}' | http POST "http://localhost:8080/clientscope" X-Api-User:user123
+// echo '{"id": "egQUicPaYYIAbOHqukjbrTtWo","name": "lCtHtiHQaltFCnSWcxjAAaggM","realm_id": "uWTVHBjrosijwDVUvjuFInRyw","description": "cllGmJtCRTlxlxrObFbmEwZMo","protocol": "urFDvRuKFotlMkdwogcosZJeH"}' | http POST "http://localhost:8080/clientscope" X-Api-User:user123
 func AddClientScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientscope := &model.ClientScope{}
@@ -167,7 +167,7 @@ func AddClientScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientscope/{argID} [put]
-// echo '{"id": "JgrAOOoKudgCFpUxcovfjLRSF","name": "dTWbIjOoOVMMPPUvNGonYNYPJ","realm_id": "pcfFqygTRTdUhWtvhnbwjfclB","description": "FCbmNUkkfAscBsHKwbuhEGbCH","protocol": "QnmFNsBTTabPlLOhyexhjBEHr"}' | http PUT "http://localhost:8080/clientscope/hello world"  X-Api-User:user123
+// echo '{"id": "egQUicPaYYIAbOHqukjbrTtWo","name": "lCtHtiHQaltFCnSWcxjAAaggM","realm_id": "uWTVHBjrosijwDVUvjuFInRyw","description": "cllGmJtCRTlxlxrObFbmEwZMo","protocol": "urFDvRuKFotlMkdwogcosZJeH"}' | http PUT "http://localhost:8080/clientscope/hello world"  X-Api-User:user123
 func UpdateClientScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

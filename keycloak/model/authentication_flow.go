@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -19,14 +19,14 @@ Table: authentication_flow
 [ 1] alias                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
 [ 2] description                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
 [ 3] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-[ 4] provider_id                                    VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: [basic-flow]
+[ 4] provider_id                                    VARCHAR              null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: -1      default: [basic-flow]
 [ 5] top_level                                      BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 [ 6] built_in                                       BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 
 
 JSON Sample
 -------------------------------------
-{    "id": "SWRCYLbZDgEPtCyNPDfmmDwCL",    "alias": "eEmwAVUCoAlUEJihcqOkfLJKp",    "description": "hkeeLLoZWyPHOxTGblwbqYHih",    "realm_id": "eVkwNmPWCUPbXnHjPUaPPiHTO",    "provider_id": "wckFfviALrPGFmyihkTHqBfxI",    "top_level": true,    "built_in": true}
+{    "id": "CnGxeWChPVpHXuqsCgFShfCGr",    "alias": "PWGWUDcIpsdWOehKxSwfLgjIf",    "description": "xUgSmaeIaULDvVxZqXuHleugn",    "realm_id": "iLURTeabUwhdXJBbrkCCfrAaK",    "provider_id": "UColBBYOpYDGfNwPEdpHWmMrf",    "top_level": false,    "built_in": true}
 
 
 
@@ -35,15 +35,15 @@ JSON Sample
 // AuthenticationFlow struct is a row record of the authentication_flow table in the keycloak database
 type AuthenticationFlow struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] alias                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Alias sql.NullString `gorm:"column:alias;type:VARCHAR;size:255;" json:"alias"`
+	Alias sql.NullString `gorm:"column:alias;type:VARCHAR(255);size:255;" json:"alias"`
 	//[ 2] description                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Description sql.NullString `gorm:"column:description;type:VARCHAR;size:255;" json:"description"`
+	Description sql.NullString `gorm:"column:description;type:VARCHAR(255);size:255;" json:"description"`
 	//[ 3] realm_id                                       VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
-	//[ 4] provider_id                                    VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: [basic-flow]
-	ProviderID string `gorm:"column:provider_id;type:VARCHAR;size:36;default:basic-flow;" json:"provider_id"`
+	RealmID sql.NullString `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
+	//[ 4] provider_id                                    VARCHAR              null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: -1      default: [basic-flow]
+	ProviderID sql.NullString `gorm:"column:provider_id;type:VARCHAR;default:basic-flow;" json:"provider_id"`
 	//[ 5] top_level                                      BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
 	TopLevel bool `gorm:"column:top_level;type:BOOL;default:false;" json:"top_level"`
 	//[ 6] built_in                                       BOOL                 null: false  primary: false  isArray: false  auto: false  col: BOOL            len: -1      default: [false]
@@ -143,16 +143,16 @@ var authentication_flowTableInfo = &TableInfo{
 			Name:               "provider_id",
 			Comment:            ``,
 			Notes:              ``,
-			Nullable:           false,
+			Nullable:           true,
 			DatabaseTypeName:   "VARCHAR",
-			DatabaseTypePretty: "VARCHAR(36)",
+			DatabaseTypePretty: "VARCHAR",
 			IsPrimaryKey:       false,
 			IsAutoIncrement:    false,
 			IsArray:            false,
 			ColumnType:         "VARCHAR",
-			ColumnLength:       36,
+			ColumnLength:       -1,
 			GoFieldName:        "ProviderID",
-			GoFieldType:        "string",
+			GoFieldType:        "sql.NullString",
 			JSONFieldName:      "provider_id",
 			ProtobufFieldName:  "provider_id",
 			ProtobufType:       "string",

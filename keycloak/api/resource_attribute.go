@@ -119,7 +119,7 @@ func GetResourceAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceattribute [post]
-// echo '{"id": "hAcWmPqiQZWfgqxqMqyucrClS","name": "LbAPCImeIfGeaAbaEpNHLAYiV","value": "ZNQrnaSmFanxUogseansuaPjm","resource_id": "pyxsUbXSxsROdLICxApcDSWRO"}' | http POST "http://localhost:8080/resourceattribute" X-Api-User:user123
+// echo '{"id": "YErwTAoTgxSSYkErVLYVDqgIu","name": "edeMxMjWFXefYOiPngctsoJbB","value": "dBLZNOUSHVZKLwtYaTEmZvVjM","resource_id": "suLTEECjDyLEDYrhnLACAuIPZ"}' | http POST "http://localhost:8080/resourceattribute" X-Api-User:user123
 func AddResourceAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	resourceattribute := &model.ResourceAttribute{}
@@ -167,7 +167,7 @@ func AddResourceAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceattribute/{argID} [put]
-// echo '{"id": "hAcWmPqiQZWfgqxqMqyucrClS","name": "LbAPCImeIfGeaAbaEpNHLAYiV","value": "ZNQrnaSmFanxUogseansuaPjm","resource_id": "pyxsUbXSxsROdLICxApcDSWRO"}' | http PUT "http://localhost:8080/resourceattribute/hello world"  X-Api-User:user123
+// echo '{"id": "YErwTAoTgxSSYkErVLYVDqgIu","name": "edeMxMjWFXefYOiPngctsoJbB","value": "dBLZNOUSHVZKLwtYaTEmZvVjM","resource_id": "suLTEECjDyLEDYrhnLACAuIPZ"}' | http PUT "http://localhost:8080/resourceattribute/hello world"  X-Api-User:user123
 func UpdateResourceAttribute(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

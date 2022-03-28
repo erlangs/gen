@@ -127,7 +127,7 @@ func GetResourceUris(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceuris [post]
-// echo '{"resource_id": "cBCgvJgSLKThsZagOwlldZmqu","value": "YfBZxBLUdxOinYCNFxUmyEVSa"}' | http POST "http://localhost:8080/resourceuris" X-Api-User:user123
+// echo '{"resource_id": "oMhQPFbIQqIlrANNKidRjlJlr","value": "pUhIvyLoFTMcLMAGPvQiDAots"}' | http POST "http://localhost:8080/resourceuris" X-Api-User:user123
 func AddResourceUris(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	resourceuris := &model.ResourceUris{}
@@ -175,7 +175,7 @@ func AddResourceUris(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceuris/{argResourceID}/{argValue} [put]
-// echo '{"resource_id": "cBCgvJgSLKThsZagOwlldZmqu","value": "YfBZxBLUdxOinYCNFxUmyEVSa"}' | http PUT "http://localhost:8080/resourceuris/hello world/hello world"  X-Api-User:user123
+// echo '{"resource_id": "oMhQPFbIQqIlrANNKidRjlJlr","value": "pUhIvyLoFTMcLMAGPvQiDAots"}' | http PUT "http://localhost:8080/resourceuris/hello world/hello world"  X-Api-User:user123
 func UpdateResourceUris(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

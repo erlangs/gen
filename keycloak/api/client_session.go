@@ -119,7 +119,7 @@ func GetClientSession(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientsession [post]
-// echo '{"id": "CjyAFAVjENaxdEEtnWDamHlWB","client_id": "xchEsRcEkEdprpdboOVtBxIPO","redirect_uri": "xCLHRuZXcIKfvZWsllkVAhYUU","state": "uENfRYodJwbrjPKXgHlhEJwnn","timestamp": 26,"session_id": "nsZCsJhQQxWQItTQbCtikxXiv","auth_method": "IxFBLtrpogoSAdOMJFWSnUtqw","realm_id": "MddQUYQNRmxiRhICkWNUdYmmq","auth_user_id": "yHbDCBgEnROaOqUBhAXACCaWW","current_action": "kTOTtYYfWQpcaUoELdWgmIpCf"}' | http POST "http://localhost:8080/clientsession" X-Api-User:user123
+// echo '{"id": "aUPyCHbcQNyqoUhBomVogEFnu","client_id": "KipPBZHggtiKEVynnhAdmAxrc","redirect_uri": "VoGFgjWAEiyYIBHskewmmDsal","state": "hJSMXsTUaHZNsGyWQvwlLtYQJ","timestamp": 75,"session_id": "ahrBsNKPNYQNxgYRDxwjLrVxd","auth_method": "eAYgUKJxJNbqLjyJAKErQsVvb","realm_id": "XEBTrxoIanpkEsuSQCrAeCfBu","auth_user_id": "xadmvSkbXUbwqBEswxvrVhqpP","current_action": "VfPYMuoavgBBHiypnhhFbRcdY"}' | http POST "http://localhost:8080/clientsession" X-Api-User:user123
 func AddClientSession(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	clientsession := &model.ClientSession{}
@@ -167,7 +167,7 @@ func AddClientSession(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /clientsession/{argID} [put]
-// echo '{"id": "CjyAFAVjENaxdEEtnWDamHlWB","client_id": "xchEsRcEkEdprpdboOVtBxIPO","redirect_uri": "xCLHRuZXcIKfvZWsllkVAhYUU","state": "uENfRYodJwbrjPKXgHlhEJwnn","timestamp": 26,"session_id": "nsZCsJhQQxWQItTQbCtikxXiv","auth_method": "IxFBLtrpogoSAdOMJFWSnUtqw","realm_id": "MddQUYQNRmxiRhICkWNUdYmmq","auth_user_id": "yHbDCBgEnROaOqUBhAXACCaWW","current_action": "kTOTtYYfWQpcaUoELdWgmIpCf"}' | http PUT "http://localhost:8080/clientsession/hello world"  X-Api-User:user123
+// echo '{"id": "aUPyCHbcQNyqoUhBomVogEFnu","client_id": "KipPBZHggtiKEVynnhAdmAxrc","redirect_uri": "VoGFgjWAEiyYIBHskewmmDsal","state": "hJSMXsTUaHZNsGyWQvwlLtYQJ","timestamp": 75,"session_id": "ahrBsNKPNYQNxgYRDxwjLrVxd","auth_method": "eAYgUKJxJNbqLjyJAKErQsVvb","realm_id": "XEBTrxoIanpkEsuSQCrAeCfBu","auth_user_id": "xadmvSkbXUbwqBEswxvrVhqpP","current_action": "VfPYMuoavgBBHiypnhhFbRcdY"}' | http PUT "http://localhost:8080/clientsession/hello world"  X-Api-User:user123
 func UpdateClientSession(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

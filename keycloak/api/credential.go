@@ -119,7 +119,7 @@ func GetCredential(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /credential [post]
-// echo '{"id": "NDtHXRTNUKCweBHDjasqrtqJR","salt": "jmbNkmpyVmHYnnVKyVNYEDvKi","type": "hDSXXwpdAAakgrahRvWSqrrWY","user_id": "aSvWyXBPoVGdwBBiwDgYKKaXT","created_date": 84,"user_label": "OnumNWawqBWkaeMoxcXFcTpfU","secret_data": "JvWgKGPksBgWbIwfdOeAnLUrj","credential_data": "AJYneRZeaQoCecEYJkWAJorUT","priority": 99}' | http POST "http://localhost:8080/credential" X-Api-User:user123
+// echo '{"id": "GisBamUHwPBCMcXRvJLoTrMFy","salt": "cXCtperDeHigirgMYryMdcwEw","type": "hiJXfcRXcOVCXTsViWMvPscxe","user_id": "RRwkouTMiXQNPtAijaZgiWFAZ","created_date": 33,"user_label": "wxgvZKODKIHQRQcoGepvtXQHH","secret_data": "atyMFyiPiUsgIyGyKkQSqRLtY","credential_data": "RaYNcZDeGAqvKuWLQqRMSrngF","priority": 49}' | http POST "http://localhost:8080/credential" X-Api-User:user123
 func AddCredential(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	credential := &model.Credential{}
@@ -167,7 +167,7 @@ func AddCredential(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /credential/{argID} [put]
-// echo '{"id": "NDtHXRTNUKCweBHDjasqrtqJR","salt": "jmbNkmpyVmHYnnVKyVNYEDvKi","type": "hDSXXwpdAAakgrahRvWSqrrWY","user_id": "aSvWyXBPoVGdwBBiwDgYKKaXT","created_date": 84,"user_label": "OnumNWawqBWkaeMoxcXFcTpfU","secret_data": "JvWgKGPksBgWbIwfdOeAnLUrj","credential_data": "AJYneRZeaQoCecEYJkWAJorUT","priority": 99}' | http PUT "http://localhost:8080/credential/hello world"  X-Api-User:user123
+// echo '{"id": "GisBamUHwPBCMcXRvJLoTrMFy","salt": "cXCtperDeHigirgMYryMdcwEw","type": "hiJXfcRXcOVCXTsViWMvPscxe","user_id": "RRwkouTMiXQNPtAijaZgiWFAZ","created_date": 33,"user_label": "wxgvZKODKIHQRQcoGepvtXQHH","secret_data": "atyMFyiPiUsgIyGyKkQSqRLtY","credential_data": "RaYNcZDeGAqvKuWLQqRMSrngF","priority": 49}' | http PUT "http://localhost:8080/credential/hello world"  X-Api-User:user123
 func UpdateCredential(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

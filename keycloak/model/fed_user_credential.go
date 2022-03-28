@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -30,7 +30,7 @@ Table: fed_user_credential
 
 JSON Sample
 -------------------------------------
-{    "id": "esNIMlgvCiMySkNrFUoGcZKRB",    "salt": "vAlKtJoEFWNEPfVWkMgoMJgDa",    "type": "wwNHwPjZeYPuCgZQfRugAVEVp",    "created_date": 79,    "user_id": "TAWWuxBbnHkvApRlCcJQwLWGH",    "realm_id": "NscUUJjUkmZKrVRxiAJjyXafY",    "storage_provider_id": "sBxyMrIxVBFYYWQIMdNCoYIPu",    "user_label": "tpGWYfmfTruekUQBQNruOtSQh",    "secret_data": "lQuFkmqWNbjYnvWaXbKljRbAc",    "credential_data": "QsbBnSLfXcStKFIIdLNNIiQtW",    "priority": 88}
+{    "id": "LHpNDIkPFQqQFNGVLOMCZOUSY",    "salt": "LYLJWVLyhSqUjtSqVYtvhDgse",    "type": "XuNUZaSPoyaAkIlMItXpbuFGc",    "created_date": 81,    "user_id": "vbSWsQqVhjcmbIGpOqMbwqXoI",    "realm_id": "qRbToeCkfIFgOtwlaUfpRuKEo",    "storage_provider_id": "vqhfaLYryMLWIepMmxUCmcniF",    "user_label": "dygeawQVQoZHuTMVvjPJTgsEw",    "secret_data": "LTckFpMtlAFIrCpOeBrBsroRU",    "credential_data": "iSHymXnEQDWJEDHCnCFdhAsPc",    "priority": 93}
 
 
 
@@ -39,21 +39,21 @@ JSON Sample
 // FedUserCredential struct is a row record of the fed_user_credential table in the keycloak database
 type FedUserCredential struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] salt                                           BYTEA                null: true   primary: false  isArray: false  auto: false  col: BYTEA           len: -1      default: []
 	Salt sql.NullString `gorm:"column:salt;type:BYTEA;" json:"salt"`
 	//[ 2] type                                           VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Type sql.NullString `gorm:"column:type;type:VARCHAR;size:255;" json:"type"`
+	Type sql.NullString `gorm:"column:type;type:VARCHAR(255);size:255;" json:"type"`
 	//[ 3] created_date                                   INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	CreatedDate sql.NullInt64 `gorm:"column:created_date;type:INT8;" json:"created_date"`
 	//[ 4] user_id                                        VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	UserID string `gorm:"column:user_id;type:VARCHAR;size:255;" json:"user_id"`
+	UserID string `gorm:"column:user_id;type:VARCHAR(255);size:255;" json:"user_id"`
 	//[ 5] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 6] storage_provider_id                            VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR;size:36;" json:"storage_provider_id"`
+	StorageProviderID sql.NullString `gorm:"column:storage_provider_id;type:VARCHAR(36);size:36;" json:"storage_provider_id"`
 	//[ 7] user_label                                     VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	UserLabel sql.NullString `gorm:"column:user_label;type:VARCHAR;size:255;" json:"user_label"`
+	UserLabel sql.NullString `gorm:"column:user_label;type:VARCHAR(255);size:255;" json:"user_label"`
 	//[ 8] secret_data                                    TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	SecretData sql.NullString `gorm:"column:secret_data;type:TEXT;" json:"secret_data"`
 	//[ 9] credential_data                                TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []

@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -23,7 +23,7 @@ Table: user_attribute
 
 JSON Sample
 -------------------------------------
-{    "name": "ZMqwglCFYcMOwbgNNqvsBcrZb",    "value": "CeRiCVDsUVFYJREsRFoLwTsgX",    "user_id": "ycOwjTVsOnOvBvUTcTWaHNhOJ",    "id": "bxkDLDKPLJfmhknXjbYrwiqNd"}
+{    "name": "CHtgpiLLHAqsPWgZBcfWQGqpJ",    "value": "ViAWITKwTMEKsHFJgvPbPosbg",    "user_id": "aAiVeRwJkuHqVcXtbCMmpCiKE",    "id": "bGlwSCMOxlkyUiywSTxGnOCJf"}
 
 
 
@@ -32,13 +32,13 @@ JSON Sample
 // UserAttribute struct is a row record of the user_attribute table in the keycloak database
 type UserAttribute struct {
 	//[ 0] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 1] value                                          VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Value sql.NullString `gorm:"column:value;type:VARCHAR;size:255;" json:"value"`
+	Value sql.NullString `gorm:"column:value;type:VARCHAR(255);size:255;" json:"value"`
 	//[ 2] user_id                                        VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	UserID string `gorm:"column:user_id;type:VARCHAR;size:36;" json:"user_id"`
+	UserID string `gorm:"column:user_id;type:VARCHAR(36);size:36;" json:"user_id"`
 	//[ 3] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: [sybase-needs-something-here]
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;default:sybase-needs-something-here;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;default:sybase-needs-something-here;" json:"id"`
 }
 
 var user_attributeTableInfo = &TableInfo{

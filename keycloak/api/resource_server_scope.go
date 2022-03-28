@@ -119,7 +119,7 @@ func GetResourceServerScope(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceserverscope [post]
-// echo '{"id": "FhgfxtmBmVyqaIyjPlpNGxsWB","name": "ToySwgIoUMBqaulfdVLTvZhRr","icon_uri": "ssKFUZLoVEuxBwOmjqGOSeLbS","resource_server_id": "kvmRyEYcnquhdflcqdndrLZYL","display_name": "JutibSaOqpuWtqvmEuMFYlkTx"}' | http POST "http://localhost:8080/resourceserverscope" X-Api-User:user123
+// echo '{"id": "pOHYMGmhPqwQvUOijIfvGkYPV","name": "CikgnLMTgfjPmxKkcUKWFgtTv","icon_uri": "MUeWslIQMvdbVfOvMaGjvVKEC","resource_server_id": "RsOmTbPERWmbpECIAJQkSTFKg","display_name": "IMcaxawgrwIlonrtHaoiKMVcb"}' | http POST "http://localhost:8080/resourceserverscope" X-Api-User:user123
 func AddResourceServerScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	resourceserverscope := &model.ResourceServerScope{}
@@ -167,7 +167,7 @@ func AddResourceServerScope(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /resourceserverscope/{argID} [put]
-// echo '{"id": "FhgfxtmBmVyqaIyjPlpNGxsWB","name": "ToySwgIoUMBqaulfdVLTvZhRr","icon_uri": "ssKFUZLoVEuxBwOmjqGOSeLbS","resource_server_id": "kvmRyEYcnquhdflcqdndrLZYL","display_name": "JutibSaOqpuWtqvmEuMFYlkTx"}' | http PUT "http://localhost:8080/resourceserverscope/hello world"  X-Api-User:user123
+// echo '{"id": "pOHYMGmhPqwQvUOijIfvGkYPV","name": "CikgnLMTgfjPmxKkcUKWFgtTv","icon_uri": "MUeWslIQMvdbVfOvMaGjvVKEC","resource_server_id": "RsOmTbPERWmbpECIAJQkSTFKg","display_name": "IMcaxawgrwIlonrtHaoiKMVcb"}' | http PUT "http://localhost:8080/resourceserverscope/hello world"  X-Api-User:user123
 func UpdateResourceServerScope(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

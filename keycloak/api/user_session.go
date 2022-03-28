@@ -119,7 +119,7 @@ func GetUserSession(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /usersession [post]
-// echo '{"id": "EEIBpsZOLPfbyrCssonwtDNGH","auth_method": "oZPrVqkTxOrIAlbgOUNEGivvm","ip_address": "QxaSZWdGiltLGVloFgqOFrTBr","last_session_refresh": 67,"login_username": "vdGAKcPZMakqspJVpEfCrwGLe","realm_id": "XmkBreXduOBIcFDaXlEtUYGZX","remember_me": false,"started": 93,"user_id": "oWZLLVPlXoYGRMrSqwJVyvYRX","user_session_state": 95,"broker_session_id": "nBjbsiiQmHLsnkpvRbMrkWlRZ","broker_user_id": "oSNkJGjbAcosWmhBinCQZtpeE"}' | http POST "http://localhost:8080/usersession" X-Api-User:user123
+// echo '{"id": "oDFkCXbJSuSukqWrKXAXKeBHn","auth_method": "EcrgoFcLWPFYHqrmkjIvkevpO","ip_address": "gWJTLfIRedpsbDUOGpyZKvBcJ","last_session_refresh": 45,"login_username": "DZVoqmstYoFTwUggeUdOidgJQ","realm_id": "OvTemRUSMbxuUCemFbtVyXnxN","remember_me": true,"started": 91,"user_id": "NFuwVWWKDmYQrFADDLrYHMpNH","user_session_state": 60,"broker_session_id": "EvftXXfKKPjrFnJebKTIYiJBl","broker_user_id": "ELDGdHbrMUSjKFcnOQhaxKILA"}' | http POST "http://localhost:8080/usersession" X-Api-User:user123
 func AddUserSession(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	usersession := &model.UserSession{}
@@ -167,7 +167,7 @@ func AddUserSession(w http.ResponseWriter, r *http.Request, ps httprouter.Params
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /usersession/{argID} [put]
-// echo '{"id": "EEIBpsZOLPfbyrCssonwtDNGH","auth_method": "oZPrVqkTxOrIAlbgOUNEGivvm","ip_address": "QxaSZWdGiltLGVloFgqOFrTBr","last_session_refresh": 67,"login_username": "vdGAKcPZMakqspJVpEfCrwGLe","realm_id": "XmkBreXduOBIcFDaXlEtUYGZX","remember_me": false,"started": 93,"user_id": "oWZLLVPlXoYGRMrSqwJVyvYRX","user_session_state": 95,"broker_session_id": "nBjbsiiQmHLsnkpvRbMrkWlRZ","broker_user_id": "oSNkJGjbAcosWmhBinCQZtpeE"}' | http PUT "http://localhost:8080/usersession/hello world"  X-Api-User:user123
+// echo '{"id": "oDFkCXbJSuSukqWrKXAXKeBHn","auth_method": "EcrgoFcLWPFYHqrmkjIvkevpO","ip_address": "gWJTLfIRedpsbDUOGpyZKvBcJ","last_session_refresh": 45,"login_username": "DZVoqmstYoFTwUggeUdOidgJQ","realm_id": "OvTemRUSMbxuUCemFbtVyXnxN","remember_me": true,"started": 91,"user_id": "NFuwVWWKDmYQrFADDLrYHMpNH","user_session_state": 60,"broker_session_id": "EvftXXfKKPjrFnJebKTIYiJBl","broker_user_id": "ELDGdHbrMUSjKFcnOQhaxKILA"}' | http PUT "http://localhost:8080/usersession/hello world"  X-Api-User:user123
 func UpdateUserSession(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

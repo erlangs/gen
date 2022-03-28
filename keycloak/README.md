@@ -126,6 +126,7 @@ http://localhost:8080/swagger/index.html
 * http://localhost:8080/roleattribute
 * http://localhost:8080/scopemapping
 * http://localhost:8080/scopepolicy
+* http://localhost:8080/user
 * http://localhost:8080/userattribute
 * http://localhost:8080/userconsent
 * http://localhost:8080/userconsentclientscope

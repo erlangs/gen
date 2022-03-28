@@ -33,7 +33,7 @@ Table: databasechangelog
 
 JSON Sample
 -------------------------------------
-{    "id": "cIpQXjBHOnbjfaNVdkThBFdYI",    "author": "bQsawrRWvhMUZwKgrsPJAiaPu",    "filename": "cSmCuYCAcPaKxppMeJHURhUlY",    "dateexecuted": "2092-05-21T07:28:14.519747142+08:00",    "orderexecuted": 36,    "exectype": "IRtwQoWEQoKLsWqAfxLNTsgZD",    "md_5_sum": "RWoCvmSWlGaAIQgiLIbUEiCkl",    "description": "dnRVDkObZSJdvahodwVanRaoO",    "comments": "TxktCnPndWKoXenKpqNWYCxQL",    "tag": "LavvNspNHKEsbNxiMoZllJuSo",    "liquibase": "wiGayNElkZAvDqFANffHQotCq",    "contexts": "VfJIAAwHaaruWEwbtJqRUkyms",    "labels": "NDsEGXBwIPFIRsYlDYQcWbekX",    "deployment_id": "LsWSCNpkDjbjrSeJDuqcbkZrp"}
+{    "id": "prOijFcFRbcnRyYcLoUFsYXpU",    "author": "ffpVNOFtcQJwmOLYARmWTXHLA",    "filename": "IAcyaWNmtItRmfEtHuRHEXqTG",    "dateexecuted": "2070-05-07T06:25:48.610024374+08:00",    "orderexecuted": 96,    "exectype": "ItsAgvbyRpmTXHSNxPuhpDLlE",    "md_5_sum": "TkdqHTLOCHogjUroCCtylwQVV",    "description": "rkBJuJeLWAFFCuNIQoRCaRZTh",    "comments": "sjbQJcJprSJcxEAjKoXVVouYh",    "tag": "RZSbhawoFZTfEOQQqSbAjUnrb",    "liquibase": "WeKaipypDUWTTApgburuNUfQY",    "contexts": "VJeKMeuivUZeIPFjKVyhOYYmy",    "labels": "lqeUBcghBWbBLjGfZvGdDtsDo",    "deployment_id": "nCfJUqKqDaUuyKyKVigSqatHI"}
 
 
 Comments
@@ -48,33 +48,33 @@ Comments
 // Databasechangelog struct is a row record of the databasechangelog table in the keycloak database
 type Databasechangelog struct {
 	//[ 0] id                                             VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:255;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(255);size:255;" json:"id"`
 	//[ 1] author                                         VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Author string `gorm:"column:author;type:VARCHAR;size:255;" json:"author"`
+	Author string `gorm:"column:author;type:VARCHAR(255);size:255;" json:"author"`
 	//[ 2] filename                                       VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Filename string `gorm:"column:filename;type:VARCHAR;size:255;" json:"filename"`
+	Filename string `gorm:"column:filename;type:VARCHAR(255);size:255;" json:"filename"`
 	//[ 3] dateexecuted                                   TIMESTAMP            null: false  primary: false  isArray: false  auto: false  col: TIMESTAMP       len: -1      default: []
 	Dateexecuted time.Time `gorm:"column:dateexecuted;type:TIMESTAMP;" json:"dateexecuted"`
 	//[ 4] orderexecuted                                  INT4                 null: false  primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	Orderexecuted int32 `gorm:"column:orderexecuted;type:INT4;" json:"orderexecuted"`
 	//[ 5] exectype                                       VARCHAR(10)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 10      default: []
-	Exectype string `gorm:"column:exectype;type:VARCHAR;size:10;" json:"exectype"`
+	Exectype string `gorm:"column:exectype;type:VARCHAR(10);size:10;" json:"exectype"`
 	//[ 6] md5sum                                         VARCHAR(35)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 35      default: []
-	Md5sum sql.NullString `gorm:"column:md5sum;type:VARCHAR;size:35;" json:"md_5_sum"`
+	Md5sum sql.NullString `gorm:"column:md5sum;type:VARCHAR(35);size:35;" json:"md_5_sum"`
 	//[ 7] description                                    VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Description sql.NullString `gorm:"column:description;type:VARCHAR;size:255;" json:"description"`
+	Description sql.NullString `gorm:"column:description;type:VARCHAR(255);size:255;" json:"description"`
 	//[ 8] comments                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Comments sql.NullString `gorm:"column:comments;type:VARCHAR;size:255;" json:"comments"`
+	Comments sql.NullString `gorm:"column:comments;type:VARCHAR(255);size:255;" json:"comments"`
 	//[ 9] tag                                            VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Tag sql.NullString `gorm:"column:tag;type:VARCHAR;size:255;" json:"tag"`
+	Tag sql.NullString `gorm:"column:tag;type:VARCHAR(255);size:255;" json:"tag"`
 	//[10] liquibase                                      VARCHAR(20)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 20      default: []
-	Liquibase sql.NullString `gorm:"column:liquibase;type:VARCHAR;size:20;" json:"liquibase"`
+	Liquibase sql.NullString `gorm:"column:liquibase;type:VARCHAR(20);size:20;" json:"liquibase"`
 	//[11] contexts                                       VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Contexts sql.NullString `gorm:"column:contexts;type:VARCHAR;size:255;" json:"contexts"`
+	Contexts sql.NullString `gorm:"column:contexts;type:VARCHAR(255);size:255;" json:"contexts"`
 	//[12] labels                                         VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Labels sql.NullString `gorm:"column:labels;type:VARCHAR;size:255;" json:"labels"`
+	Labels sql.NullString `gorm:"column:labels;type:VARCHAR(255);size:255;" json:"labels"`
 	//[13] deployment_id                                  VARCHAR(10)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 10      default: []
-	DeploymentID sql.NullString `gorm:"column:deployment_id;type:VARCHAR;size:10;" json:"deployment_id"`
+	DeploymentID sql.NullString `gorm:"column:deployment_id;type:VARCHAR(10);size:10;" json:"deployment_id"`
 }
 
 var databasechangelogTableInfo = &TableInfo{

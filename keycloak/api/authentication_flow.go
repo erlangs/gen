@@ -119,7 +119,7 @@ func GetAuthenticationFlow(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /authenticationflow [post]
-// echo '{"id": "SWRCYLbZDgEPtCyNPDfmmDwCL","alias": "eEmwAVUCoAlUEJihcqOkfLJKp","description": "hkeeLLoZWyPHOxTGblwbqYHih","realm_id": "eVkwNmPWCUPbXnHjPUaPPiHTO","provider_id": "wckFfviALrPGFmyihkTHqBfxI","top_level": true,"built_in": true}' | http POST "http://localhost:8080/authenticationflow" X-Api-User:user123
+// echo '{"id": "CnGxeWChPVpHXuqsCgFShfCGr","alias": "PWGWUDcIpsdWOehKxSwfLgjIf","description": "xUgSmaeIaULDvVxZqXuHleugn","realm_id": "iLURTeabUwhdXJBbrkCCfrAaK","provider_id": "UColBBYOpYDGfNwPEdpHWmMrf","top_level": false,"built_in": true}' | http POST "http://localhost:8080/authenticationflow" X-Api-User:user123
 func AddAuthenticationFlow(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	authenticationflow := &model.AuthenticationFlow{}
@@ -167,7 +167,7 @@ func AddAuthenticationFlow(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /authenticationflow/{argID} [put]
-// echo '{"id": "SWRCYLbZDgEPtCyNPDfmmDwCL","alias": "eEmwAVUCoAlUEJihcqOkfLJKp","description": "hkeeLLoZWyPHOxTGblwbqYHih","realm_id": "eVkwNmPWCUPbXnHjPUaPPiHTO","provider_id": "wckFfviALrPGFmyihkTHqBfxI","top_level": true,"built_in": true}' | http PUT "http://localhost:8080/authenticationflow/hello world"  X-Api-User:user123
+// echo '{"id": "CnGxeWChPVpHXuqsCgFShfCGr","alias": "PWGWUDcIpsdWOehKxSwfLgjIf","description": "xUgSmaeIaULDvVxZqXuHleugn","realm_id": "iLURTeabUwhdXJBbrkCCfrAaK","provider_id": "UColBBYOpYDGfNwPEdpHWmMrf","top_level": false,"built_in": true}' | http PUT "http://localhost:8080/authenticationflow/hello world"  X-Api-User:user123
 func UpdateAuthenticationFlow(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -24,7 +24,7 @@ Table: user_federation_mapper
 
 JSON Sample
 -------------------------------------
-{    "id": "IZUuNGiOekQDCLLmURawxZFKl",    "name": "IwwaFQMWrOtuuGoViiCHeGKux",    "federation_provider_id": "TxsYptEiAvBVDBjJcYlbkVxBV",    "federation_mapper_type": "ZhSxgDMXHVqoaBLuPQCWwnpNO",    "realm_id": "XNeMUWvWOkmaSQdaKnsbmyokv"}
+{    "id": "lCcCQgErtaJRvxHIeVLomqAyX",    "name": "enHBOIeXgTRgvdNeVLmmUFunK",    "federation_provider_id": "LIicMIOpltOiDdXnRrMChthiJ",    "federation_mapper_type": "DsgMnVrcbFctwetIUWmDGqBsg",    "realm_id": "sytsLbZDSqEaAMddoKmJvhkcP"}
 
 
 
@@ -33,15 +33,15 @@ JSON Sample
 // UserFederationMapper struct is a row record of the user_federation_mapper table in the keycloak database
 type UserFederationMapper struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] federation_provider_id                         VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	FederationProviderID string `gorm:"column:federation_provider_id;type:VARCHAR;size:36;" json:"federation_provider_id"`
+	FederationProviderID string `gorm:"column:federation_provider_id;type:VARCHAR(36);size:36;" json:"federation_provider_id"`
 	//[ 3] federation_mapper_type                         VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	FederationMapperType string `gorm:"column:federation_mapper_type;type:VARCHAR;size:255;" json:"federation_mapper_type"`
+	FederationMapperType string `gorm:"column:federation_mapper_type;type:VARCHAR(255);size:255;" json:"federation_mapper_type"`
 	//[ 4] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 }
 
 var user_federation_mapperTableInfo = &TableInfo{

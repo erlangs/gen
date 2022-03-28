@@ -1,8 +1,8 @@
 package model
 
 import (
-	//"database/sql"
-	//"time"
+	"database/sql"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -24,7 +24,7 @@ Table: identity_provider_mapper
 
 JSON Sample
 -------------------------------------
-{    "id": "ZYvVUOmgbGOfkvNjrPStpGaYk",    "name": "dFGdxReXQRYGxhyANdQABbsTl",    "idp_alias": "tArQdTQZbtKavNymBCWnVCixB",    "idp_mapper_name": "hSpWYptSYaPtApRGigrwuMUbt",    "realm_id": "VNGOZHsjBpRxjDlyYwgysQXbE"}
+{    "id": "oVTxNovNKBHBrHrYsQKdGLKHj",    "name": "GPDxOjMRqsNsGDxvPPpKpKRvA",    "idp_alias": "BcQrGdJcojNhCNFTeZtdRclUR",    "idp_mapper_name": "gIeknuRquJbNqdBxcLEdjcRPd",    "realm_id": "BUDYwhRxkaMAAFmrXEcNRTeLN"}
 
 
 
@@ -33,15 +33,15 @@ JSON Sample
 // IdentityProviderMapper struct is a row record of the identity_provider_mapper table in the keycloak database
 type IdentityProviderMapper struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] name                                           VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 2] idp_alias                                      VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	IdpAlias string `gorm:"column:idp_alias;type:VARCHAR;size:255;" json:"idp_alias"`
+	IdpAlias string `gorm:"column:idp_alias;type:VARCHAR(255);size:255;" json:"idp_alias"`
 	//[ 3] idp_mapper_name                                VARCHAR(255)         null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	IdpMapperName string `gorm:"column:idp_mapper_name;type:VARCHAR;size:255;" json:"idp_mapper_name"`
+	IdpMapperName string `gorm:"column:idp_mapper_name;type:VARCHAR(255);size:255;" json:"idp_mapper_name"`
 	//[ 4] realm_id                                       VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 }
 
 var identity_provider_mapperTableInfo = &TableInfo{

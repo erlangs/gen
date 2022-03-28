@@ -8,7 +8,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strconv"
-	//"time"
+	"time"
 	"unsafe"
 	//_ "github.com/satori/go.uuid"
 
@@ -127,6 +127,7 @@ func ConfigRouter() http.Handler {
 	configRoleAttributeRouter(router)
 	configScopeMappingRouter(router)
 	configScopePolicyRouter(router)
+	configUserRouter(router)
 	configUserAttributeRouter(router)
 	configUserConsentRouter(router)
 	configUserConsentClientScopeRouter(router)
@@ -227,6 +228,7 @@ func ConfigGinRouter(router gin.IRoutes) {
 	configGinRoleAttributeRouter(router)
 	configGinScopeMappingRouter(router)
 	configGinScopePolicyRouter(router)
+	configGinUserRouter(router)
 	configGinUserAttributeRouter(router)
 	configGinUserConsentRouter(router)
 	configGinUserConsentClientScopeRouter(router)
@@ -1500,6 +1502,19 @@ func init() {
 
 	tmp.TableInfo, _ = model.GetTableInfo("scope_policy")
 	crudEndpoints["scope_policy"] = tmp
+
+	tmp = &CrudAPI{
+		Name:            "user",
+		CreateURL:       "/user",
+		RetrieveOneURL:  "/user",
+		RetrieveManyURL: "/user",
+		UpdateURL:       "/user",
+		DeleteURL:       "/user",
+		FetchDDLURL:     "/ddl/user",
+	}
+
+	tmp.TableInfo, _ = model.GetTableInfo("user")
+	crudEndpoints["user"] = tmp
 
 	tmp = &CrudAPI{
 		Name:            "user_attribute",

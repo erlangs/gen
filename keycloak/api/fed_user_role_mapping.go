@@ -127,7 +127,7 @@ func GetFedUserRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /feduserrolemapping [post]
-// echo '{"role_id": "lSIJDiQQHVevYxnVGwTCDxNIK","user_id": "amEObiIfhwXTavFFRhVxFAuXj","realm_id": "XhLVJRWcsLhykSLBoykBrlFHX","storage_provider_id": "NIsDKjqQAMSKHcXFmeLqeSSeX"}' | http POST "http://localhost:8080/feduserrolemapping" X-Api-User:user123
+// echo '{"role_id": "aAZBoFRSRosYdsEuWgWLOqXEI","user_id": "QEJjxqeXMiRNpalYcWcHARqXa","realm_id": "vHioeFiowmNxTerZQIAbmjNry","storage_provider_id": "IUQfGYyQCfpAyoyKvCdspdIbb"}' | http POST "http://localhost:8080/feduserrolemapping" X-Api-User:user123
 func AddFedUserRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	feduserrolemapping := &model.FedUserRoleMapping{}
@@ -175,7 +175,7 @@ func AddFedUserRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /feduserrolemapping/{argRoleID}/{argUserID} [put]
-// echo '{"role_id": "lSIJDiQQHVevYxnVGwTCDxNIK","user_id": "amEObiIfhwXTavFFRhVxFAuXj","realm_id": "XhLVJRWcsLhykSLBoykBrlFHX","storage_provider_id": "NIsDKjqQAMSKHcXFmeLqeSSeX"}' | http PUT "http://localhost:8080/feduserrolemapping/hello world/hello world"  X-Api-User:user123
+// echo '{"role_id": "aAZBoFRSRosYdsEuWgWLOqXEI","user_id": "QEJjxqeXMiRNpalYcWcHARqXa","realm_id": "vHioeFiowmNxTerZQIAbmjNry","storage_provider_id": "IUQfGYyQCfpAyoyKvCdspdIbb"}' | http PUT "http://localhost:8080/feduserrolemapping/hello world/hello world"  X-Api-User:user123
 func UpdateFedUserRoleMapping(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

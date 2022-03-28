@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -26,7 +26,7 @@ Table: user_consent
 
 JSON Sample
 -------------------------------------
-{    "id": "irFLsJNOgJeGBMgABLaMPpRQB",    "client_id": "XCFYakLThaTgMHiOtZwVaWUSd",    "user_id": "sQZQCHbpLvrmNbtwkFLKyhSqn",    "created_date": 21,    "last_updated_date": 75,    "client_storage_provider": "dlegZOOTPMUkZFmRRWeYhDosf",    "external_client_id": "CYdBMClodBCIcuxKNoRjJVvSn"}
+{    "id": "IZyviYHJTBUQTwyrDfxmQxZTM",    "client_id": "MxkxyahjivaSuyiKrxAVQUDTJ",    "user_id": "VpTapSpTfdIUdgeHEupUHgPoM",    "created_date": 16,    "last_updated_date": 22,    "client_storage_provider": "sniheGVErcEFSwMLVYHDdNNux",    "external_client_id": "KbnvKSRZIVLakMsYRwnrmVqPy"}
 
 
 
@@ -35,19 +35,19 @@ JSON Sample
 // UserConsent struct is a row record of the user_consent table in the keycloak database
 type UserConsent struct {
 	//[ 0] id                                             VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ID string `gorm:"primary_key;column:id;type:VARCHAR;size:36;" json:"id"`
+	ID string `gorm:"primary_key;column:id;type:VARCHAR(36);size:36;" json:"id"`
 	//[ 1] client_id                                      VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR;size:255;" json:"client_id"`
+	ClientID sql.NullString `gorm:"column:client_id;type:VARCHAR(255);size:255;" json:"client_id"`
 	//[ 2] user_id                                        VARCHAR(36)          null: false  primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	UserID string `gorm:"column:user_id;type:VARCHAR;size:36;" json:"user_id"`
+	UserID string `gorm:"column:user_id;type:VARCHAR(36);size:36;" json:"user_id"`
 	//[ 3] created_date                                   INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	CreatedDate sql.NullInt64 `gorm:"column:created_date;type:INT8;" json:"created_date"`
 	//[ 4] last_updated_date                              INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	LastUpdatedDate sql.NullInt64 `gorm:"column:last_updated_date;type:INT8;" json:"last_updated_date"`
 	//[ 5] client_storage_provider                        VARCHAR(36)          null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientStorageProvider sql.NullString `gorm:"column:client_storage_provider;type:VARCHAR;size:36;" json:"client_storage_provider"`
+	ClientStorageProvider sql.NullString `gorm:"column:client_storage_provider;type:VARCHAR(36);size:36;" json:"client_storage_provider"`
 	//[ 6] external_client_id                             VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	ExternalClientID sql.NullString `gorm:"column:external_client_id;type:VARCHAR;size:255;" json:"external_client_id"`
+	ExternalClientID sql.NullString `gorm:"column:external_client_id;type:VARCHAR(255);size:255;" json:"external_client_id"`
 }
 
 var user_consentTableInfo = &TableInfo{

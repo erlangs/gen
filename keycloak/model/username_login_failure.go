@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -25,7 +25,7 @@ Table: username_login_failure
 
 JSON Sample
 -------------------------------------
-{    "realm_id": "UTKWvlRGyeSJsupDwvUGbusoF",    "username": "gCBkmuYbXUPcLTYjQBClsDqto",    "failed_login_not_before": 30,    "last_failure": 64,    "last_ip_failure": "TrmeDvZjyIAfyHMecfxEfMhLw",    "num_failures": 37}
+{    "realm_id": "rmPQqAYkxBvQCvaQqCUbTADMR",    "username": "kHPLWTwUHRdeiYcbqrquAZneg",    "failed_login_not_before": 52,    "last_failure": 41,    "last_ip_failure": "jEUfjaKUayYvTdRnsPWxpFFqd",    "num_failures": 79}
 
 
 
@@ -34,15 +34,15 @@ JSON Sample
 // UsernameLoginFailure struct is a row record of the username_login_failure table in the keycloak database
 type UsernameLoginFailure struct {
 	//[ 0] realm_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 1] username                                       VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Username string `gorm:"primary_key;column:username;type:VARCHAR;size:255;" json:"username"`
+	Username string `gorm:"primary_key;column:username;type:VARCHAR(255);size:255;" json:"username"`
 	//[ 2] failed_login_not_before                        INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	FailedLoginNotBefore sql.NullInt32 `gorm:"column:failed_login_not_before;type:INT4;" json:"failed_login_not_before"`
 	//[ 3] last_failure                                   INT8                 null: true   primary: false  isArray: false  auto: false  col: INT8            len: -1      default: []
 	LastFailure sql.NullInt64 `gorm:"column:last_failure;type:INT8;" json:"last_failure"`
 	//[ 4] last_ip_failure                                VARCHAR(255)         null: true   primary: false  isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	LastIPFailure sql.NullString `gorm:"column:last_ip_failure;type:VARCHAR;size:255;" json:"last_ip_failure"`
+	LastIPFailure sql.NullString `gorm:"column:last_ip_failure;type:VARCHAR(255);size:255;" json:"last_ip_failure"`
 	//[ 5] num_failures                                   INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	NumFailures sql.NullInt32 `gorm:"column:num_failures;type:INT4;" json:"num_failures"`
 }

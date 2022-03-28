@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: realm_attribute
 
 JSON Sample
 -------------------------------------
-{    "name": "nVrZJdSgvQltNDTuOdapOPcoH",    "realm_id": "pWOaRGSgTkaWeBwGAsAYItuys",    "value": "FlYYBFcYgcthBKqSEGkoClSab"}
+{    "name": "xwCNwgeJRiWNeiSZKbeZMkCyb",    "realm_id": "sxbkmvZSbExAFdxdOASCgnhgT",    "value": "cFRQVbsvPVoxlqVusTysCpZsN"}
 
 
 
@@ -31,9 +31,9 @@ JSON Sample
 // RealmAttribute struct is a row record of the realm_attribute table in the keycloak database
 type RealmAttribute struct {
 	//[ 0] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 	//[ 1] realm_id                                       VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR;size:36;" json:"realm_id"`
+	RealmID string `gorm:"primary_key;column:realm_id;type:VARCHAR(36);size:36;" json:"realm_id"`
 	//[ 2] value                                          TEXT                 null: true   primary: false  isArray: false  auto: false  col: TEXT            len: -1      default: []
 	Value sql.NullString `gorm:"column:value;type:TEXT;" json:"value"`
 }

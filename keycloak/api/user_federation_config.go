@@ -127,7 +127,7 @@ func GetUserFederationConfig(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userfederationconfig [post]
-// echo '{"user_federation_provider_id": "cBKgspepGoPoHlsSnuvWRKxgl","value": "OhNhiBmGZgUglrMYseYTmtxol","name": "pBbrdvHZYABhbfcKuHiZIFmpo"}' | http POST "http://localhost:8080/userfederationconfig" X-Api-User:user123
+// echo '{"user_federation_provider_id": "vOvEonKSntComOgYfbPVBByFj","value": "ekktjJFlpWknqkEApdGtkTCrC","name": "AXYLhjurscjiQxmCiqSCPTkPB"}' | http POST "http://localhost:8080/userfederationconfig" X-Api-User:user123
 func AddUserFederationConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	userfederationconfig := &model.UserFederationConfig{}
@@ -175,7 +175,7 @@ func AddUserFederationConfig(w http.ResponseWriter, r *http.Request, ps httprout
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /userfederationconfig/{argUserFederationProviderID}/{argName} [put]
-// echo '{"user_federation_provider_id": "cBKgspepGoPoHlsSnuvWRKxgl","value": "OhNhiBmGZgUglrMYseYTmtxol","name": "pBbrdvHZYABhbfcKuHiZIFmpo"}' | http PUT "http://localhost:8080/userfederationconfig/hello world/hello world"  X-Api-User:user123
+// echo '{"user_federation_provider_id": "vOvEonKSntComOgYfbPVBByFj","value": "ekktjJFlpWknqkEApdGtkTCrC","name": "AXYLhjurscjiQxmCiqSCPTkPB"}' | http PUT "http://localhost:8080/userfederationconfig/hello world/hello world"  X-Api-User:user123
 func UpdateUserFederationConfig(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

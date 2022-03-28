@@ -2,7 +2,7 @@ package model
 
 import (
 	"database/sql"
-	//"time"
+	"time"
 
 	//"github.com/satori/go.uuid"
 
@@ -22,7 +22,7 @@ Table: client_node_registrations
 
 JSON Sample
 -------------------------------------
-{    "client_id": "bufXFBxeNARqZjVmlYAFQZsZu",    "value": 5,    "name": "KZMDlVDcVmcnjnnbZEoMEfVuy"}
+{    "client_id": "mJHkvfEhooGuQuUmLrhHRcNWU",    "value": 9,    "name": "QuJIcPcsGMYDqKbaYJnBDIJUd"}
 
 
 
@@ -31,11 +31,11 @@ JSON Sample
 // ClientNodeRegistrations struct is a row record of the client_node_registrations table in the keycloak database
 type ClientNodeRegistrations struct {
 	//[ 0] client_id                                      VARCHAR(36)          null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 36      default: []
-	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR;size:36;" json:"client_id"`
+	ClientID string `gorm:"primary_key;column:client_id;type:VARCHAR(36);size:36;" json:"client_id"`
 	//[ 1] value                                          INT4                 null: true   primary: false  isArray: false  auto: false  col: INT4            len: -1      default: []
 	Value sql.NullInt32 `gorm:"column:value;type:INT4;" json:"value"`
 	//[ 2] name                                           VARCHAR(255)         null: false  primary: true   isArray: false  auto: false  col: VARCHAR         len: 255     default: []
-	Name string `gorm:"primary_key;column:name;type:VARCHAR;size:255;" json:"name"`
+	Name string `gorm:"primary_key;column:name;type:VARCHAR(255);size:255;" json:"name"`
 }
 
 var client_node_registrationsTableInfo = &TableInfo{
